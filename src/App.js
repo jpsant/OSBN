@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <HeroSection/>
-      <HistorySection/>
-      <GallerySection/>
-      <TechnicalSection/>
-      <Footer/>
+      {/* <HistorySection/> */}
+      {/* <GallerySection/> */}
+      {/* <TechnicalSection/> */}
+      {/* <Footer/> */}
     </div>
   );
 }

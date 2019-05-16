@@ -1,0 +1,9 @@
+.heroContainer {
+  height: 100vh;
+}
+
+.heroContainer .title {
+  margin: 0;
+  color: white;
+}
+/*# sourceMappingURL=HeroSection.module.css.map */
