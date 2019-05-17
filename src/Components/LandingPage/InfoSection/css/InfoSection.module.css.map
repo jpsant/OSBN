@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,OAAO,EAAE,IAAI;EAEb,gBAAgB,EAAE,OAAO;CAU5B;;AAbD,AAKI,cALU,CAKV,SAAS,CAAC;EACN,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,EAAE;EACX,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,KAAK;CAEf",
+    "sources": [
+        "InfoSection.module.scss"
+    ],
+    "names": [],
+    "file": "InfoSection.module.css"
+}

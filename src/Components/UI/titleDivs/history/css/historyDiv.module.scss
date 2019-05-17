@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    background-color: #202126;
+    height: 14em;
+
+    .title {
+        align-self: center;
+        margin: 0;
+        color: white;
+        font-size: 5.5em;
+        font-family: xilosa;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}
+
+// background-color: #C8AA73;
+// background-color: #F8D8A2;

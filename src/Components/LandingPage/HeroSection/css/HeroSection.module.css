@@ -1,29 +1,36 @@
+.heroContainer {
+  font-family: xilosa;
+  color: white;
+}
+
 .heroContainer .firstTitle {
   position: absolute;
-  color: white;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 1% auto;
   font-size: 6em;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .heroContainer .logo {
   position: absolute;
-  height: 70vh;
+  height: 65vh;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 8%;
+  top: 30%;
 }
 
 .heroContainer .secondTitle {
   position: absolute;
-  color: white;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 1% auto;
   font-size: 6em;
-  top: 70%;
+  top: 20%;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .heroContainer .container {

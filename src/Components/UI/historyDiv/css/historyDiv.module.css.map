@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAC;EACC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "historyDiv.module.scss"
+    ],
+    "names": [],
+    "file": "historyDiv.module.css"
+}

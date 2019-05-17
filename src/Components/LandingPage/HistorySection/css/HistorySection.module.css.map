@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,UAAU,EAAE,MAAM;EAClB,gBAAgB,EAAE,OAAO;CAC5B",
+    "sources": [
+        "HistorySection.module.scss"
+    ],
+    "names": [],
+    "file": "HistorySection.module.css"
+}

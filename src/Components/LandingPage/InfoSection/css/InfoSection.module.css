@@ -1,0 +1,13 @@
+.infoContainer {
+  display: -ms-grid;
+  display: grid;
+  background-color: #293347;
+}
+
+.infoContainer .infoText {
+  height: 100vh;
+  padding: 1%;
+  text-align: left;
+  color: white;
+}
+/*# sourceMappingURL=InfoSection.module.css.map */

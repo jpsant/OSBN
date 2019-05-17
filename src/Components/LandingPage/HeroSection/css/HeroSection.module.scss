@@ -1,32 +1,36 @@
 .heroContainer {
-    
-        .firstTitle {
-            position: absolute;
-            color: white;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            font-size: 6em;
-        }
-    
-        .logo {
-            position: absolute;
-            height: 70vh;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            top: 8%;
-        }
-    
-        .secondTitle {
-            position: absolute;
-            color: white;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            font-size: 6em;
-            top: 70%;
-        }
+    font-family: xilosa;
+    color: white;
+
+    .firstTitle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 1% auto;
+        font-size: 6em;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .logo {
+        position: absolute;
+        height: 65vh;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 30%;
+    }
+
+    .secondTitle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 1% auto;
+        font-size: 6em;
+        top: 20%;
+        font-weight: 500;
+        line-height: 1.2;
+    }
 
     .container {
         height: 100vh;

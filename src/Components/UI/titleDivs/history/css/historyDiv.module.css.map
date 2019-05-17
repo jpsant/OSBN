@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,IAAI;CAWf;;AAdD,AAKI,UALM,CAKN,MAAM,CAAC;EACH,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "historyDiv.module.scss"
+    ],
+    "names": [],
+    "file": "historyDiv.module.css"
+}
