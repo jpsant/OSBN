@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <HeroSection/>
-      {/* <HistorySection/> */}
+      <HistorySection/>
       {/* <GallerySection/> */}
       {/* <TechnicalSection/> */}
       {/* <Footer/> */}

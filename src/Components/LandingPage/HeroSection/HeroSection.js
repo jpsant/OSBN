@@ -3,7 +3,7 @@ import classes from './css/HeroSection.module.css';
 import vide from 'vide';
 import $ from 'jquery';
 
-import image from './teste.mp4'
+import video from './teste.mp4'
 
 class HeroSection extends Component {
 
@@ -12,14 +12,17 @@ class HeroSection extends Component {
     }
 
     initVide = () => {
-       $(this.refs.video).data(vide);
+        $(this.refs.video).data(vide);
     }
 
     render() {
         return (
             <>
-                <div ref="video" data-vide-bg={image} data-vide-options="loop: true, muted: true, position: 50% 50%" className={classes.heroContainer}>
-                    <h1 className={classes.title}>PEEEGA NA MINHA POMBA MIZERAAAAAAAAAAA!</h1>
+                <div className={classes.heroContainer}>
+                    <h1 className={classes.firstTitle}>Orquestra Sanfonica</h1>
+                    <img className={classes.logo} src={require('../../../assets/logo.svg')}></img>
+                    <h1 className={classes.secondTitle}>Balaio Nordeste</h1>
+                    <div ref="video" data-vide-bg={video} data-vide-options="loop: true, muted: true" className={classes.container}></div>
                 </div>
             </>
         )
@@ -28,3 +31,4 @@ class HeroSection extends Component {
 
 
 export default HeroSection;
+
