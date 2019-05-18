@@ -3,12 +3,16 @@
     // background-color: #F8D8A2;
     background-color: #293347;
 
-    .infoText {
-        height: 100vh;
+    .textContainer {
+        height: auto;
         padding: 1%;
         text-align: left;
         color: white;
         // background-color: #202126; cinza-escuro
+
+        .infoText {
+            font-size: 1.5em;
+        }
     }
 
 }

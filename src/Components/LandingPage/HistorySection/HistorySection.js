@@ -9,7 +9,10 @@ class HistorySection extends Component {
         return (
             <div className={classes.historyContainer}> 
                 <TransitionDiv title="& Histórico" />
-                <HistoryDiv />
+                <HistoryDiv year="2017" />
+                <HistoryDiv year="2016" />
+                <HistoryDiv year="2015"/>
+                <HistoryDiv year="2014"/>
             </div>
         );
     }

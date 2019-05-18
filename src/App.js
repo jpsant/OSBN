@@ -15,7 +15,7 @@ function App() {
       <HeroSection/>
       <InfoSection/>
       <HistorySection/>
-      {/* <GallerySection/> */}
+      <GallerySection/>
       {/* <TechnicalSection/> */}
       {/* <Footer/> */}
     </div>

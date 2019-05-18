@@ -4,10 +4,14 @@
   background-color: #293347;
 }
 
-.infoContainer .infoText {
-  height: 100vh;
+.infoContainer .textContainer {
+  height: auto;
   padding: 1%;
   text-align: left;
   color: white;
+}
+
+.infoContainer .textContainer .infoText {
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=InfoSection.module.css.map */

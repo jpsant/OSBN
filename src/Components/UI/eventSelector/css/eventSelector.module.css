@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .1fr .8fr .1fr;
+      grid-template-columns: .1fr .8fr .1fr;
+  -ms-grid-rows: .5fr;
+      grid-template-rows: .5fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'Patrick Hand', cursive;
+  padding: 1%;
+}
+
+.container .date {
+  height: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  background-color: #B6895D;
+}
+
+.container .event {
+  height: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-color: #202126;
+}
+
+.container .local {
+  height: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-color: #B6895D;
+}
+/*# sourceMappingURL=eventSelector.module.css.map */
