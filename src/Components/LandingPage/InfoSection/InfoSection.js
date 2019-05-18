@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './css/InfoSection.module.css';
 
-import TransitionDiv from '../../UI/titleDivs/history/historyDiv';
+import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
 class InfoSection extends Component {
     render() {

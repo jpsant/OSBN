@@ -23,7 +23,7 @@ class historyDiv extends Component {
         if (this.state.history !== null) {
             let items = this.state.history;
             cards = items.map(item => {
-                return <EventDiv date={item.data} event={item.evento} local={item.uf} />
+                return <EventDiv date={item.data} event={item.evento} local={item.uf} key={item.key} />
             })
         }
 

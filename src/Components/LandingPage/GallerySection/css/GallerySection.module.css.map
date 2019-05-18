@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAoC;CAC9D",
+    "sources": [
+        "GallerySection.module.scss"
+    ],
+    "names": [],
+    "file": "GallerySection.module.css"
+}

@@ -27,6 +27,7 @@
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   background-color: #B6895D;
+  color: white;
 }
 
 .container .event {
@@ -37,7 +38,7 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  background-color: #202126;
+  background-color: rgba(255, 254, 249, 0.2);
 }
 
 .container .local {
@@ -49,5 +50,6 @@
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   background-color: #B6895D;
+  color: white;
 }
 /*# sourceMappingURL=eventSelector.module.css.map */

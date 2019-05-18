@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './css/HistorySection.module.css';
 
-import TransitionDiv from '../../UI/titleDivs/history/historyDiv';
+import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import HistoryDiv from '../../UI/historyDiv/historyDiv';
 
 class HistorySection extends Component {
