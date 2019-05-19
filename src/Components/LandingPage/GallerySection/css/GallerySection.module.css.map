@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,oCAAoC;CAC9D",
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,EAAE;EACnB,qBAAqB,EAAE,oCAAoC;CAC9D",
     "sources": [
         "GallerySection.module.scss"
     ],
