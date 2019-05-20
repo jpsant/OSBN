@@ -54,18 +54,18 @@
         grid-row: 3/4;
         grid-column: 1/2;
         height: 0px;
-        transition: all ease-in-out .3s;
+        transition: height .6s ease-out;
         visibility: hidden;
 
         .contentText {
             margin: 2% 0;
             opacity: 0;
-            transition: .5s;
+            transition: .2s
         }
 
         .redirect {
-            transition: .2s;
             opacity: 0;
+            transition: .2s;
         }
     }
 }
@@ -75,13 +75,16 @@
     .content {
         height: 90px;
         visibility: visible;
+        transition-duration: .3s; 
 
         .contentText {
             opacity: 1;
+            transition-duration: .8s; 
         }
 
         .redirect {
             opacity: 1;
+            transition-duration: .8s;
         }
     }
 }
