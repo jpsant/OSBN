@@ -3,7 +3,7 @@ import classes from './css/HeroSection.module.css';
 import vide from 'vide';
 import $ from 'jquery';
 
-import video from './teste.mp4'
+import video from '../../../assets/videos/teste.mp4';
 
 class HeroSection extends Component {
 

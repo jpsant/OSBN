@@ -1,3 +1,36 @@
+
+
 .container {
-    text-align: center;
+    display: grid;
+    grid-template-columns: .1fr .8fr .1fr;
+    grid-template-rows: .5fr;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 1%;
+    
+
+    .date {
+        height: 100%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: #B6895D;
+        color: white;
+    }
+
+    .event {
+        height: 100%;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        background-color: rgba(255,254,249,.2);
+    }
+
+    .local {
+        height: 100%;
+        grid-row: 1/2;
+        grid-column: 3/4;
+        background-color: #B6895D;
+        color: white;
+    }
 }

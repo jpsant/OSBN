@@ -19,12 +19,20 @@ class ScheduleSection extends Component {
     }
 
     render() {
-        console.log(this.state.agenda);
+    
+        let cards = null;
+        if (this.state.agenda !== null) {
+            let items = this.state.agenda;
+            cards = items.map(item =>{
+                return <ScheduleDiv key={item.id} date={item.data} event={item.evento} local={item.local} />
+            })
+        }
+
         return (
             <>
                 <TransitionDiv title="& Agenda" />
                 <div className={classes.container}>
-                    <ScheduleDiv/>
+                    {cards}
                 </div>
             </>
         );

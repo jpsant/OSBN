@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .4fr .1fr .2fr;
+      grid-template-rows: .4fr .1fr .2fr;
+  -ms-grid-columns: 1fr .5fr;
+      grid-template-columns: 1fr .5fr;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 90%;
+  height: 70%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  margin: 3%;
+  padding: 1%;
+  text-align: left;
+  font-family: 'Muli', sans-serif;
+  cursor: pointer;
+}
+
+.container .imageContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin: 0;
+}
+
+.container .titleContainer h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.container .subTitleContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.container .subTitleContainer h1 {
+  margin: 0%;
+  font-size: 1em;
+  opacity: .7;
+}
+
+.container .subTitleContainer .date {
+  font-size: .8em;
+}
+
+.container .content {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  height: 0px;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  visibility: hidden;
+}
+
+.container .content .contentText {
+  margin: 2% 0;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container .content .redirect {
+  -webkit-transition: .2s;
+  transition: .2s;
+  opacity: 0;
+}
+
+.container:hover .content {
+  height: 90px;
+  visibility: visible;
+}
+
+.container:hover .content .contentText {
+  opacity: 1;
+}
+
+.container:hover .content .redirect {
+  opacity: 1;
+}
+/*# sourceMappingURL=newsCard.module.css.map */

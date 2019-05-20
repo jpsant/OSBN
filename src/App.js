@@ -6,6 +6,7 @@ import InfoSection from './Components/LandingPage/InfoSection/InfoSection';
 import HistorySection from './Components/LandingPage/HistorySection/HistorySection';
 import GallerySection from './Components/LandingPage/GallerySection/GallerySection';
 import ScheduleSection from './Components/LandingPage/ScheduleSection/ScheduleSection';
+import NewsSection from './Components/LandingPage/NewsSection/NewsSection';
 import TechnicalSection from './Components/LandingPage/TechnicalSection/TechnicalSection';
 import Footer from './Components/LandingPage/Footer/Footer';
 
@@ -18,6 +19,7 @@ function App() {
       <HistorySection/>
       <GallerySection/>
       <ScheduleSection/>
+      <NewsSection/>
       {/* <TechnicalSection/> */}
       {/* <Footer/> */}
     </div>
