@@ -1,0 +1,38 @@
+.technicalContainer {
+    text-align: center;
+}
+
+.musicContainer {
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    
+    .table {
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        border-radius: 8px;
+        margin-top: 2%;
+        justify-self: center;
+        width: 85%;
+        color: white;
+        background-color: #212126;
+        
+        .music {
+            grid-column: 1/2;
+    
+        }
+    
+        .composer {
+            grid-column: 2/3;
+
+        }
+    }
+
+    .content {
+        grid-row: 2/3;
+        display: grid;
+    }
+
+
+}

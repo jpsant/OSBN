@@ -7,11 +7,11 @@
 .infoContainer .textContainer {
   height: auto;
   padding: 1%;
-  text-align: left;
+  text-align: justify;
   color: white;
 }
 
-.infoContainer .textContainer .infoText {
+.infoContainer .textContainer h2 {
   font-size: 1.5em;
 }
 /*# sourceMappingURL=InfoSection.module.css.map */

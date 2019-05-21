@@ -1,10 +1,53 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import classes from './css/TechnicalSection.module.css';
+
+import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
+import Table from '../../UI/table/table';
 
 class TechnicalSection extends Component {
-    render () {
+
+    componentDidMount() {
+        axios.get('https://osbn-a36f9.firebaseio.com/repertorio.json')
+        .then(response => {
+            this.setState({list: response.data})
+        });
+    }
+
+    state = {
+        list: null
+    }
+
+    render() {
+
+        let block = null;
+        if(this.state.list !== null) {
+            let items = this.state.list;
+            block = items.map(item => {
+                return <Table music={item.musica} composer={item.compositor} />
+            })
+        }
+
         return (
             <>
-                <h1>TechnicalSection!</h1>
+                <TransitionDiv title="& Técnica" />
+                <div className={classes.technicalContainer}>
+                    <h2>Parte Técnica</h2>
+                </div>
+                <TransitionDiv title="& Repertório" />
+                <div className={classes.musicContainer}>
+                    <div className={classes.table}>
+                        <div className={classes.music}>
+                            <h2>Musica</h2>
+                        </div>
+                        <div className={classes.composer}>
+                            <h2>Compositor</h2>
+                        </div>
+                    </div>
+                    <div className={classes.content}>
+                        {block}
+                    </div>
+                </div>
             </>
         )
     }

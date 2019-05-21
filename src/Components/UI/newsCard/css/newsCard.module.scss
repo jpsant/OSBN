@@ -6,12 +6,13 @@
     grid-template-columns: 1fr .5fr;
     justify-self: center;
     align-content: center;
-    width: 90%;
+    width: 80%;
     height: 70%;
     border-radius: 8px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
     margin: 3%;
-    padding: 1%;
+    margin-bottom: 10%;
+    padding: 0% 1%;
     text-align: left;
     font-family: 'Muli', sans-serif;
     cursor: pointer;
@@ -31,7 +32,7 @@
 
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.9em;
         }
     }
 
@@ -75,7 +76,7 @@
     .content {
         height: 90px;
         visibility: visible;
-        transition-duration: .3s; 
+        transition-duration: .2s; 
 
         .contentText {
             opacity: 1;

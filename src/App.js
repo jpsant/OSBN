@@ -20,7 +20,7 @@ function App() {
       <GallerySection/>
       <ScheduleSection/>
       <NewsSection/>
-      {/* <TechnicalSection/> */}
+      <TechnicalSection/>
       {/* <Footer/> */}
     </div>
   );

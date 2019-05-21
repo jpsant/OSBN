@@ -1,0 +1,50 @@
+.technicalContainer {
+  text-align: center;
+}
+
+.musicContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .1fr 1fr;
+      grid-template-rows: .1fr 1fr;
+}
+
+.musicContainer .table {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border-radius: 8px;
+  margin-top: 2%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 85%;
+  color: white;
+  background-color: #212126;
+}
+
+.musicContainer .table .music {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.musicContainer .table .composer {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.musicContainer .content {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+}
+/*# sourceMappingURL=TechnicalSection.module.css.map */

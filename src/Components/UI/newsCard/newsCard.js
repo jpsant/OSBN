@@ -13,7 +13,6 @@ const newsCard = (props) => {
             <div className={classes.subTitleContainer}>
                 <h1>{props.date}</h1>
             </div>
-            {/* campo que será exibido com o hover */}
             <div className={classes.content}> 
                 <h2 className={classes.contentText}>{props.content}</h2>
                 <a className={classes.redirect}>Continuar lendo→</a>
