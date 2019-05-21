@@ -1,6 +1,10 @@
 .heroContainer {
     font-family: xilosa;
+    // color:#fccb79; //PRINCIPAL!
+    // background-color: #C3AB74 //BG PRINCIPAL!!
     color: white;
+    line-height: 1;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
 
     .firstTitle {
         position: absolute;
@@ -36,6 +40,7 @@
         height: 100vh;
         z-index: -100;
         filter: brightness(50%);
-        // background-color: #e5be82;
+        // background-color: #E5BE82;
+        // background-color: #FEEBCD;
     }
 }

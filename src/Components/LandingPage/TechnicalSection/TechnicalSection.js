@@ -24,7 +24,7 @@ class TechnicalSection extends Component {
         if(this.state.list !== null) {
             let items = this.state.list;
             block = items.map(item => {
-                return <Table music={item.musica} composer={item.compositor} />
+                return <Table key={item.id} music={item.musica} composer={item.compositor} />
             })
         }
 

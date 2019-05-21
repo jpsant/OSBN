@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 .infoContainer {
     display: grid;
     // background-color: #F8D8A2;
-    background-color: #293347;
+    // background-color: #293347;
+    // background-color: #AC7E3A
+    background-color: #C3AB74;
 
     .textContainer {
         height: auto;
@@ -12,6 +16,7 @@
 
         h2 {
             font-size: 1.5em;
+            font-family: 'Muli', sans-serif;
         }
     }
 
