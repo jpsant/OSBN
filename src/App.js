@@ -8,6 +8,7 @@ import GallerySection from './Components/LandingPage/GallerySection/GallerySecti
 import ScheduleSection from './Components/LandingPage/ScheduleSection/ScheduleSection';
 import NewsSection from './Components/LandingPage/NewsSection/NewsSection';
 import TechnicalSection from './Components/LandingPage/TechnicalSection/TechnicalSection';
+import ContactSection from './Components/LandingPage/ContactSection/ContactSection';
 import Footer from './Components/LandingPage/Footer/Footer';
 
 
@@ -21,6 +22,7 @@ function App() {
       <ScheduleSection/>
       <NewsSection/>
       <TechnicalSection/>
+      <ContactSection/>
       {/* <Footer/> */}
     </div>
   );

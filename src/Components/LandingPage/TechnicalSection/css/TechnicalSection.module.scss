@@ -5,6 +5,7 @@
 .musicContainer {
     display: grid;
     grid-template-rows: .1fr 1fr;
+    margin-bottom: 2%;
     
     .table {
         grid-row: 1/2;
