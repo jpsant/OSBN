@@ -1,19 +1,23 @@
 .container {
     display: grid;
-    background-color: #202126;
+    background-color: #ac6937;
     height: 14em;
+    // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
     .title {
         align-self: center;
         margin: 0;
-        color: white;
         font-size: 5.5em;
         font-family: xilosa;
         font-weight: 500;
         line-height: 1.2;
+        
         text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+        color: white;
     }
 }
 
 // background-color: #C8AA73;
 // background-color: #F8D8A2;
+// background-color: #202126;  BLACK COLOR

@@ -8,7 +8,7 @@ class InfoSection extends Component {
         return (
             <>
                 <div className={classes.infoContainer}>
-                    <TransitionDiv title=" & A Orquestra" />
+                    <TransitionDiv title=" & A Orquestra!" />
                     <div className={classes.textContainer}>
                         <h2>
                             A Orquestra Sanfônica Balaio Nordeste teve origem em uma oficina de acordeon realizada pela “Associação Cultural Balaio Nordeste” e a FUNJOPE
