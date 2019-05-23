@@ -20,26 +20,31 @@ class HeroSection extends Component {
 
     handleScroll = () => {
         // console.log(document.documentElement.scrollTop);
-        if ((document.documentElement.scrollTop > 1634)) {
+        if ((document.documentElement.scrollTop > 1534)) {
             if (this.state.menu !== true) {
-                this.setState({ menu: true, section: 'history' });
+                this.setState({ menu: true });
             }
-            if (document.documentElement.scrollTop > 3700) {
+            if (document.documentElement.scrollTop > 1630) {
+                if (this.state.section !== 'history') {
+                    this.setState({ section: 'history' })
+                }
+            }
+            if (document.documentElement.scrollTop > 3800) {
                 if (this.state.section !== 'gallery') {
                     this.setState({ section: 'gallery' })
                 }
             }
-            if (document.documentElement.scrollTop > 4600) {
+            if (document.documentElement.scrollTop > 4200) {
                 if (this.state.section !== 'schedule') {
                     this.setState({ section: 'schedule' })
                 }
             }
-            if (document.documentElement.scrollTop > 5500) {
+            if (document.documentElement.scrollTop > 5000) {
                 if (this.state.section !== 'news') {
                     this.setState({ section: 'news' })
                 }
             }
-            if (document.documentElement.scrollTop > 6500) {
+            if (document.documentElement.scrollTop > 6300) {
                 if (this.state.section !== 'technical') {
                     this.setState({ section: 'technical' })
                 }

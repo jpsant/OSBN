@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,EAAE;CACb",
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,EAAE;EACV,OAAO,EAAE,IAAI;CAChB",
     "sources": [
         "ScheduleSection.module.scss"
     ],

@@ -9,12 +9,13 @@ const sideMenu = (props) => {
                 opacity: props.show ? '1' : '0'
             }}
         >
-            <button className={props.section == 'history' ? classes.historyButton + ' ' + classes.active : classes.historyButton}>Hero</button>
-            <button className={props.section == 'gallery' ? classes.historyButton + ' ' + classes.active : classes.historyButton}>Gall</button>
-            <button className={props.section == 'schedule' ? classes.historyButton + ' ' + classes.active : classes.historyButton}>schel</button>
-            <button className={props.section == 'news' ? classes.historyButton + ' ' + classes.active : classes.historyButton}>news</button>
-            <button className={props.section == 'technical' ? classes.historyButton + ' ' + classes.active : classes.historyButton}>tech</button>
-            <button className={props.section == 'contact' ? classes.historyButton + ' ' + classes.active : classes.historyButton}>conta</button>
+            <h2 className={classes.title}>&</h2>
+            <button className={props.section == 'history' ? classes.historyButton + ' ' + classes.active : classes.historyButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/book.svg')}></img></button>
+            <button className={props.section == 'gallery' ? classes.historyButton + ' ' + classes.active : classes.historyButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/portrait.svg')}></img></button>
+            <button className={props.section == 'schedule' ? classes.historyButton + ' ' + classes.active : classes.historyButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/calendar.svg')}></img></button>
+            <button className={props.section == 'news' ? classes.historyButton + ' ' + classes.active : classes.historyButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
+            <button className={props.section == 'technical' ? classes.historyButton + ' ' + classes.active : classes.historyButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
+            <button className={props.section == 'contact' ? classes.historyButton + ' ' + classes.active : classes.historyButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/facebook.svg')}></img></button>
         </div>
     );
 }

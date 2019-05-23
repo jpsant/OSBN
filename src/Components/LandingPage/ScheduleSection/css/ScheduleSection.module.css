@@ -1,4 +1,6 @@
 .container {
   margin: 5%;
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=ScheduleSection.module.css.map */
