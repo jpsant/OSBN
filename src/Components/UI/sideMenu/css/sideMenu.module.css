@@ -1,0 +1,33 @@
+.menu {
+  position: fixed;
+  z-index: 500;
+  width: 70%;
+  border: 1px solid transparent;
+  padding: 16px;
+  left: 15%;
+  top: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .6s ease-in-out !important;
+  transition: all .6s ease-in-out !important;
+}
+
+@media (max-width: 755px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu .button {
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 15% 0;
+}
+
+@media (min-width: 600px) {
+  .menu {
+    width: 100px;
+    left: calc(100% - 85px);
+  }
+}
+/*# sourceMappingURL=sideMenu.module.css.map */

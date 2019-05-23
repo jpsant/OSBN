@@ -5,15 +5,18 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import HistoryDiv from '../../UI/historyDiv/historyDiv';
 
 class HistorySection extends Component {
+
     render() {
         return (
-            <div className={classes.historyContainer}> 
-                <TransitionDiv title="& Histórico" />
-                <HistoryDiv year="2017" />
-                <HistoryDiv year="2016" />
-                <HistoryDiv year="2015"/>
-                <HistoryDiv year="2014"/>
-            </div>
+            <>
+                <div className={classes.historyContainer}>
+                    <TransitionDiv title="& Histórico" />
+                    <HistoryDiv year="2017" />
+                    <HistoryDiv year="2016" />
+                    <HistoryDiv year="2015" />
+                    <HistoryDiv year="2014" />
+                </div>
+            </>
         );
     }
 }

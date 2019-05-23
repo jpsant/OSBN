@@ -33,7 +33,7 @@ class historyDiv extends Component {
         return (
             <>
                 <div className={classes.container}>
-                    <div className={classes.yearDiv}> {this.props.year} </div>
+                    <div className={classes.yearDiv}> <h1>{this.props.year}</h1> </div>
                     <div className={classes.eventDiv}>
                         { cards }
                     </div>
