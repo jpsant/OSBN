@@ -5,7 +5,6 @@
     border: 1px solid transparent;
     padding: 16px;
     left: 15%;
-    top: 6%;
     box-sizing: border-box;
     transition: all .5s ease-in-out;
     background-color: white;
@@ -16,52 +15,273 @@
         display: none;
     }
 
-    .title {
-        text-align: center;
-        font-family: xilosa;
-        font-weight: 300;
-        line-height: 1.2;
-        margin: 15% 0;
-        font-size: 2em;
-        color: #ac6937;
+    .closeButton {
+        .title {
+            text-align: center;
+            font-family: xilosa;
+            font-weight: 300;
+            line-height: 1.2;
+            margin: 15% 0;
+            font-size: 2em;
+            color: #ac6937;
+            cursor: pointer;
+        }
+
+        .tooltipText {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .tooltipText::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+
     }
 
-    .svg {
-        height: 35px;
+    .historyButton {
+        .historyTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            top: 18%;
+            // margin-top: 23%;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .historyTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
     }
+
+    .galleryButton {
+        .galleryTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            top: 32%;
+            // margin-top: 23%;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .galleryTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+    }
+
+    .scheduleButton {
+        .scheduleTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            top: 46%;
+            // margin-top: 23%;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .scheduleTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+    }
+
+    .newsButton {
+        .newsTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            top: 59%;
+            // margin-top: 23%;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .newsTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+    }
+
+    .techButton {
+        .techTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            top: 73%;
+            // margin-top: 23%;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .techTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+    }
+
+    .socialButton {
+        .socialTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            top: 87%;
+            // margin-top: 23%;
+            left: -155%;
+            transition: opacity 0.3s;
+        }
+
+        .socialTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* To the right of the tooltip */
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+    }
+
+
+}
+
+
+.svg {
+    height: 35px;
 }
 
 @media (min-width: 600px) {
     .menu {
         width: 100px;
         left: calc(100% - 110px);
+        top: calc(50% - 270px);
     }
 }
 
-.historyButton {
+.Button {
     border: none;
     background-color: #ac6937;
     // background-color: #ae8b60;
     color: white;
     cursor: pointer;
     font-family: xilosa;
-    padding: 10px 10px; 
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 15% 0;
     opacity: 0.6;
-    transition: .3s cubic-bezier(.175,.885,.32,1.275);
+    transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     border-radius: 8px;
 }
 
-.historyButton:hover {
+.Button:hover {
     opacity: 1;
     padding: 13px 13px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
 
     .svg {
-        height: 45px;
+        height: 40px;
     }
 }
 
@@ -71,6 +291,55 @@
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
 
     .svg {
-        height: 45px;
+        height: 40px;
+    }
+}
+
+.closeButton:hover {
+    .tooltipText {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.historyButton:hover {
+    .historyTooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.galleryButton:hover {
+    .galleryTooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.scheduleButton:hover {
+    .scheduleTooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.newsButton:hover {
+    .newsTooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.techButton:hover {
+    .techTooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.socialButton:hover {
+    .socialTooltip {
+        visibility: visible;
+        opacity: 1;
     }
 }

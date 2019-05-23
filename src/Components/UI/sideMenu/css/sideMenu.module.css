@@ -5,7 +5,6 @@
   border: 1px solid transparent;
   padding: 16px;
   left: 15%;
-  top: 6%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transition: all .5s ease-in-out;
@@ -22,7 +21,7 @@
   }
 }
 
-.menu .title {
+.menu .closeButton .title {
   text-align: center;
   font-family: xilosa;
   font-weight: 300;
@@ -30,9 +29,212 @@
   margin: 15% 0;
   font-size: 2em;
   color: #ac6937;
+  cursor: pointer;
 }
 
-.menu .svg {
+.menu .closeButton .tooltipText {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .closeButton .tooltipText::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.menu .historyButton .historyTooltip {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 18%;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .historyButton .historyTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.menu .galleryButton .galleryTooltip {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 32%;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .galleryButton .galleryTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.menu .scheduleButton .scheduleTooltip {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 46%;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .scheduleButton .scheduleTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.menu .newsButton .newsTooltip {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 59%;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .newsButton .newsTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.menu .techButton .techTooltip {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 73%;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .techButton .techTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.menu .socialButton .socialTooltip {
+  visibility: hidden;
+  width: 140px;
+  background-color: white;
+  color: #26262b;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 87%;
+  left: -155%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu .socialButton .socialTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+.svg {
   height: 35px;
 }
 
@@ -40,10 +242,11 @@
   .menu {
     width: 100px;
     left: calc(100% - 110px);
+    top: calc(50% - 270px);
   }
 }
 
-.historyButton {
+.Button {
   border: none;
   background-color: #ac6937;
   color: white;
@@ -60,15 +263,15 @@
   border-radius: 8px;
 }
 
-.historyButton:hover {
+.Button:hover {
   opacity: 1;
   padding: 13px 13px;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
-.historyButton:hover .svg {
-  height: 45px;
+.Button:hover .svg {
+  height: 40px;
 }
 
 .active {
@@ -79,6 +282,41 @@
 }
 
 .active .svg {
-  height: 45px;
+  height: 40px;
+}
+
+.closeButton:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.historyButton:hover .historyTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.galleryButton:hover .galleryTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.scheduleButton:hover .scheduleTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.newsButton:hover .newsTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.techButton:hover .techTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.socialButton:hover .socialTooltip {
+  visibility: visible;
+  opacity: 1;
 }
 /*# sourceMappingURL=sideMenu.module.css.map */
