@@ -14,7 +14,7 @@ class historyDiv extends Component {
         axios.get('https://osbn-a36f9.firebaseio.com/historico/' + this.props.year + '.json')
             .then(response => {
                 this.setState({ history: response.data });
-            })
+            });
     }
 
     render() {
@@ -29,13 +29,12 @@ class historyDiv extends Component {
 
 
         // console.log(this.state.history);
-
         return (
             <>
-                <div className={classes.container}>
+                <div className={classes.container} id="historia">
                     <div className={classes.yearDiv}> <h1>{this.props.year}</h1> </div>
                     <div className={classes.eventDiv}>
-                        { cards }
+                        {cards}
                     </div>
                 </div>
             </>

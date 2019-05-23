@@ -7,14 +7,12 @@
     left: 15%;
     top: 20%;
     box-sizing: border-box;
-    transition: all .6s ease-in-out !important;
-    
+    transition: all .5s ease-in-out;
+
     @media (max-width: 755px) {
-        // top: 8%;
-        // width: 75%;
         display: none;
     }
-    
+
     .button {
         cursor: pointer;
         border-radius: 8px;
@@ -25,6 +23,53 @@
 @media (min-width: 600px) {
     .menu {
         width: 100px;
-        left: calc(100% - 85px);
+        left: calc(100% - 100px);
     }
+}
+
+.historyButton {
+    border: none;
+    background-color: #ac6937;
+    // background-color: #ae8b60;
+    color: white;
+    cursor: pointer;
+    font-family: xilosa;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10% 0;
+    font-weight: 500;
+    line-height: 1.2;
+    opacity: 0.6;
+    transition: .3s cubic-bezier(.175,.885,.32,1.275);
+}
+
+.historyButton:hover {
+    opacity: 1;
+    padding: 22px 22px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.active {
+    opacity: 1;
+    padding: 22px 22px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.infoButton {
+    color: white;
+    background-color: #ae8b60;
+    cursor: pointer;
+    font-family: xilosa;
+    border: none;
+    margin: 3% 0;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    // border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    font-weight: 500;
+    line-height: 1.2;
 }
