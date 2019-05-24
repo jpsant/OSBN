@@ -1,5 +1,9 @@
-.container {
-  margin: 5%;
+.scheduleContainer {
+  background-color: #ae8b60;
+}
+
+.scheduleContainer .container {
+  padding: 5%;
   display: -ms-grid;
   display: grid;
 }

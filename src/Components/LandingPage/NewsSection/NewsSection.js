@@ -29,12 +29,12 @@ class NewsSection extends Component {
         }
 
         return (
-            <>
+            <div className={classes.newsDiv}>
                 <TransitionDiv title="& Notícias" />
                 <div className={classes.container}>
                     {cards}
                 </div>
-            </>
+            </div>
         );
     }
 }

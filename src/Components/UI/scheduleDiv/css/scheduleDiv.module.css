@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .container {
   -ms-grid-column-align: center;
       justify-self: center;
@@ -7,16 +8,11 @@
       grid-template-columns: .1fr .8fr .1fr;
   -ms-grid-rows: .5fr;
       grid-template-rows: .5fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-weight: 400;
   line-height: 1.5;
   padding: 1%;
   width: 90%;
+  font-family: 'Muli', sans-serif;
 }
 
 .container .date {
@@ -27,8 +23,16 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  background-color: #B6895D;
+  background-color: #AC6837;
   color: white;
+  display: -ms-grid;
+  display: grid;
+}
+
+.container .date h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .container .event {
@@ -39,7 +43,15 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  background-color: rgba(255, 254, 249, 0.2);
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+}
+
+.container .event h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .container .local {
@@ -50,7 +62,7 @@
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  background-color: #B6895D;
+  background-color: #AC6837;
   color: white;
 }
 /*# sourceMappingURL=scheduleDiv.module.css.map */

@@ -1,4 +1,8 @@
-.container {
+.newsDiv {
+  background-color: #ae8b60;
+}
+
+.newsDiv .container {
   display: -ms-grid;
   display: grid;
 }

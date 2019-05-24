@@ -29,12 +29,12 @@ class ScheduleSection extends Component {
         }
 
         return (
-            <>
+            <div className={classes.scheduleContainer}>
                 <TransitionDiv title="& Agenda" />
                 <div className={classes.container}>
                     {cards}
                 </div>
-            </>
+            </div>
         );
     }
 }

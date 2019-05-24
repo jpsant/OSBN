@@ -7,7 +7,8 @@
   display: grid;
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
-  margin-bottom: 2%;
+  padding-bottom: 2%;
+  background-color: #ae8b60;
 }
 
 .musicContainer .table {
@@ -18,8 +19,6 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   border-radius: 8px;
   margin-top: 2%;
   -ms-grid-column-align: center;
@@ -27,6 +26,8 @@
   width: 85%;
   color: white;
   background-color: #212126;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
 }
 
 .musicContainer .table .music {

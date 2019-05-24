@@ -1,37 +1,50 @@
-
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .container {
     justify-self: center;
     display: grid;
     grid-template-columns: .1fr .8fr .1fr;
     grid-template-rows: .5fr;
-    align-items: center;
-    justify-content: center;
     font-weight: 400;
     line-height: 1.5;
     padding: 1%;
     width: 90%;
+    font-family: 'Muli', sans-serif;
+
 
     .date {
         height: 100%;
         grid-column: 1/2;
         grid-row: 1/2;
-        background-color: #B6895D;
+        // background-color: #B6895D;
+        background-color: #AC6837;
         color: white;
+        display: grid;
+
+        h1 {
+            align-self: center;
+        }
     }
 
     .event {
         height: 100%;
         grid-row: 1/2;
         grid-column: 2/3;
-        background-color: rgba(255,254,249,.2);
+        // background-color: rgba(255,254,249,.2);
+        background-color: white;
+        display: grid;
+
+        h2 {
+            align-self: center;
+        }
     }
 
     .local {
         height: 100%;
         grid-row: 1/2;
         grid-column: 3/4;
-        background-color: #B6895D;
+        // background-color: #B6895D;
+        background-color: #AC6837;
         color: white;
     }
 }

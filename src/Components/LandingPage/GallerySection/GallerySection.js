@@ -7,7 +7,7 @@ import GalleryImage from '../../UI/galleryImage/galleryImage';
 class GallerySection extends Component {
     render() {
         return (
-            <>
+            <div className={classes.container}>
                 <TransitionDiv title="& Galeria" />
                 <div className={classes.galleryContainer}>
                     <GalleryImage />
@@ -15,7 +15,7 @@ class GallerySection extends Component {
                     <GalleryImage />
                     <GalleryImage />
                 </div>
-            </>
+            </div>
         )
     }
 }
