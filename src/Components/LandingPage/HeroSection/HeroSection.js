@@ -49,7 +49,7 @@ class HeroSection extends Component {
                     this.setState({ section: 'technical' })
                 }
             }
-            if (document.documentElement.scrollTop > 7200) {
+            if (document.documentElement.scrollTop > 7100) {
                 if (this.state.section !== 'contact') {
                     this.setState({ section: 'contact' })
                 }
