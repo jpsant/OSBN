@@ -5,9 +5,9 @@
 .musicContainer {
     display: grid;
     grid-template-rows: .1fr 1fr;
-    padding-bottom: 2%;
+    padding: 3% 3%;
     background-color: #ae8b60;
-    
+
     .table {
         grid-row: 1/2;
         display: grid;
@@ -17,18 +17,25 @@
         justify-self: center;
         width: 85%;
         color: white;
-        background-color: #212126;
+        // background-color: #212126;
+        background-color: #AC6837;
         border-bottom-left-radius: 0%;
         border-bottom-right-radius: 0%;
-        
+
         .music {
             grid-column: 1/2;
-    
+            font-family: xilosa;
+            // font-weight: 300;
+            // line-height: 1.5;
+            letter-spacing: 3px;
+            font-size: 1.5em;
+            text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+            margin: 0;
         }
-    
+
         .composer {
             grid-column: 2/3;
-
+            font-family: xilosa;
         }
     }
 

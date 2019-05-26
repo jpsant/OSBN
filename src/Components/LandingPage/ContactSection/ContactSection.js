@@ -5,6 +5,7 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
 class ContactSection extends Component {
     render() {
+        // console.log(document.documentElement.offsetHeight);
         return (
             <>
                 <TransitionDiv title="& Contato" />

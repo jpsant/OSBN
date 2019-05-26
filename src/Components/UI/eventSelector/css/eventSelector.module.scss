@@ -7,33 +7,49 @@
     grid-template-rows: .5fr;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 400; 
     font-family: 'Muli', sans-serif;
     padding: 1%;
-    // background-color: white;
-    
 
     .date {
+        display: grid;
         height: 100%;
         grid-column: 1/2;
         grid-row: 1/2;
-        background-color: #B6895D;
+        background-color: #AC6837;
         color: white;
+        font-size: .7em;
+
+        h1 {
+            align-self: center;
+        }
     }
 
     .event {
+        display: grid;
+        cursor: pointer;
         height: 100%;
         grid-row: 1/2;
         grid-column: 2/3;
         background-color: rgba(255,254,249,.2);
+
+        h2 {
+            align-self: center;
+        }
     }
 
     .local {
+        display: grid;
         height: 100%;
         grid-row: 1/2;
         grid-column: 3/4;
-        background-color: #B6895D;
+        background-color: #AC6837;
         color: white;
+        font-size: .7em;
+
+        h2 {
+            align-self: center;
+            padding: 5%;
+        }
     }
 }

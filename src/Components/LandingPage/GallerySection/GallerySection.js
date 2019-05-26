@@ -9,7 +9,7 @@ class GallerySection extends Component {
         return (
             <div className={classes.container}>
                 <TransitionDiv title="& Galeria" />
-                <div className={classes.galleryContainer}>
+                <div ref="gallery" className={classes.galleryContainer}>
                     <GalleryImage />
                     <GalleryImage />
                     <GalleryImage />

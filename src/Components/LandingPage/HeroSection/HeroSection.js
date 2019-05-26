@@ -10,7 +10,7 @@ class HeroSection extends Component {
 
     componentDidMount() {
         this.initVide();
-        window.onscroll = () => this.handleScroll();
+        window.addEventListener('scroll', this.handleScroll);
 
     }
 
@@ -18,38 +18,37 @@ class HeroSection extends Component {
         $(this.refs.video).data(vide);
     }
 
-    handleScroll = () => {
-        // console.log(document.documentElement.scrollTop);
-        if ((document.documentElement.scrollTop > 1534)) {
+    handleScroll = (e) => {
+        if ((document.documentElement.scrollTop >= 1550)) {
             if (this.state.menu !== true) {
                 this.setState({ menu: true });
             }
-            if (document.documentElement.scrollTop > 1630) {
+            if (document.documentElement.offsetHeight >= 1887) {
                 if (this.state.section !== 'history') {
                     this.setState({ section: 'history' })
                 }
             }
-            if (document.documentElement.scrollTop > 3800) {
+            if (document.documentElement.scrollTop >= 3370) {
                 if (this.state.section !== 'gallery') {
                     this.setState({ section: 'gallery' })
                 }
             }
-            if (document.documentElement.scrollTop > 4200) {
+            if (document.documentElement.scrollTop >= 4000) {
                 if (this.state.section !== 'schedule') {
                     this.setState({ section: 'schedule' })
                 }
             }
-            if (document.documentElement.scrollTop > 5000) {
+            if (document.documentElement.scrollTop >= 4900) {
                 if (this.state.section !== 'news') {
                     this.setState({ section: 'news' })
                 }
             }
-            if (document.documentElement.scrollTop > 6300) {
-                if (this.state.section !== 'technical') {
-                    this.setState({ section: 'technical' })
-                }
-            }
-            if (document.documentElement.scrollTop > 7100) {
+            // if (document.documentElement.offsetHeight > 7444) {
+            //     if (this.state.section !== 'technical') {
+            //         this.setState({ section: 'technical' })
+            //     }
+            // }
+            if (document.documentElement.scrollTop >= 6700) {
                 if (this.state.section !== 'contact') {
                     this.setState({ section: 'contact' })
                 }
@@ -69,6 +68,7 @@ class HeroSection extends Component {
     }
 
     render() {
+        // console.log(document.documentElement.offsetHeight);
         return (
             <>
                 <SideMenu show={this.state.menu} section={this.state.section} />

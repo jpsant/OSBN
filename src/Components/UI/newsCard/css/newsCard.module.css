@@ -80,8 +80,8 @@
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   height: 0px;
-  -webkit-transition: height .6s ease-out;
-  transition: height .6s ease-out;
+  -webkit-transition: height .2s ease-out;
+  transition: height .2s ease-out;
   visibility: hidden;
 }
 
@@ -99,10 +99,10 @@
 }
 
 .container:hover .content {
-  height: 90px;
+  height: calc(150px - 10px);
   visibility: visible;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
+  -webkit-transition-duration: .2s !important;
+          transition-duration: .2s !important;
 }
 
 .container:hover .content .contentText {

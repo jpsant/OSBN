@@ -7,7 +7,7 @@
   display: grid;
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
-  padding-bottom: 2%;
+  padding: 3% 3%;
   background-color: #ae8b60;
 }
 
@@ -25,7 +25,7 @@
       justify-self: center;
   width: 85%;
   color: white;
-  background-color: #212126;
+  background-color: #AC6837;
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%;
 }
@@ -34,12 +34,18 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  font-family: xilosa;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  margin: 0;
 }
 
 .musicContainer .table .composer {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  font-family: xilosa;
 }
 
 .musicContainer .content {

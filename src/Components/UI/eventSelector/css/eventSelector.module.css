@@ -13,12 +13,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 400;
-  line-height: 1.5;
   font-family: 'Muli', sans-serif;
   padding: 1%;
 }
 
 .container .date {
+  display: -ms-grid;
+  display: grid;
   height: 100%;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -26,11 +27,21 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  background-color: #B6895D;
+  background-color: #AC6837;
   color: white;
+  font-size: .7em;
+}
+
+.container .date h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .container .event {
+  display: -ms-grid;
+  display: grid;
+  cursor: pointer;
   height: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -41,7 +52,15 @@
   background-color: rgba(255, 254, 249, 0.2);
 }
 
+.container .event h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .container .local {
+  display: -ms-grid;
+  display: grid;
   height: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -49,7 +68,15 @@
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  background-color: #B6895D;
+  background-color: #AC6837;
   color: white;
+  font-size: .7em;
+}
+
+.container .local h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 5%;
 }
 /*# sourceMappingURL=eventSelector.module.css.map */

@@ -9,9 +9,9 @@ class TechnicalSection extends Component {
 
     componentDidMount() {
         axios.get('https://osbn-a36f9.firebaseio.com/repertorio.json')
-        .then(response => {
-            this.setState({list: response.data})
-        });
+            .then(response => {
+                this.setState({ list: response.data })
+            });
     }
 
     state = {
@@ -21,7 +21,7 @@ class TechnicalSection extends Component {
     render() {
 
         let block = null;
-        if(this.state.list !== null) {
+        if (this.state.list !== null) {
             let items = this.state.list;
             block = items.map(item => {
                 return <Table key={item.id} music={item.musica} composer={item.compositor} />
@@ -38,7 +38,7 @@ class TechnicalSection extends Component {
                 <div className={classes.musicContainer}>
                     <div className={classes.table}>
                         <div className={classes.music}>
-                            <h2>Musica</h2>
+                            <h2>Música</h2>
                         </div>
                         <div className={classes.composer}>
                             <h2>Compositor</h2>
