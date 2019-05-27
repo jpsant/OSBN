@@ -11,7 +11,7 @@ class HistorySection extends Component {
             <>
                 <div className={classes.historyContainer}>
                     <TransitionDiv title={this.props.language === 'portuguese' ? '& Histórico' :
-                    this.props.language === 'english' ? '& History' : this.props.language === 'french' ? '& historique' : ''} />
+                    this.props.language === 'english' ? '& History' : this.props.language === 'french' ? '& Historique' : ''} />
                     <HistoryDiv year="2017" />
                     <HistoryDiv year="2016" />
                     <HistoryDiv year="2015" />

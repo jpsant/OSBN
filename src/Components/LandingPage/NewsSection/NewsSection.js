@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import classes from './css/NewsSection.module.css'
+import { connect } from 'react-redux';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import NewsCard from '../../UI/newsCard/newsCard';
@@ -8,14 +9,24 @@ import NewsCard from '../../UI/newsCard/newsCard';
 class NewsSection extends Component {
 
     componentDidMount() {
-        axios.get('https://osbn-a36f9.firebaseio.com/noticias.json')
+        axios.get('https://osbn-a36f9.firebaseio.com/noticias/' + this.state.language + '.json')
             .then(response => {
                 this.setState({ noticias: response.data });
             });
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.language !== this.state.language) {
+            axios.get('https://osbn-a36f9.firebaseio.com/noticias/' + nextProps.language + '.json')
+                .then(response => {
+                    this.setState({ noticias: response.data, language: nextProps.language });
+                });
+        }
+    }
+
     state = {
-        noticias: null
+        noticias: null,
+        language: 'portuguese'
     }
 
     render() {
@@ -24,13 +35,14 @@ class NewsSection extends Component {
         if (this.state.noticias !== null) {
             let items = this.state.noticias;
             cards = items.map(item => {
-                return <NewsCard key={item.id} content={item.resumo} title={item.titulo} date={item.data} />
+                return <NewsCard language={this.state.language} key={item.id} content={item.resumo} title={item.titulo} date={item.data} />
             })
         }
 
         return (
             <div className={classes.newsDiv}>
-                <TransitionDiv title="& Notícias" />
+                <TransitionDiv title={this.props.language === 'portuguese' ? '& Notícias' :
+                    this.props.language === 'english' ? '& News' : this.props.language === 'french' ? '& Nouvelles' : ''} />
                 <div className={classes.container}>
                     {cards}
                 </div>
@@ -39,4 +51,10 @@ class NewsSection extends Component {
     }
 }
 
-export default NewsSection;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps)(NewsSection);

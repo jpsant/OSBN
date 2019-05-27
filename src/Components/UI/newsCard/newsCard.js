@@ -15,7 +15,9 @@ const newsCard = (props) => {
             </div>
             <div className={classes.content}> 
                 <h2 className={classes.contentText}>{props.content}</h2>
-                <a className={classes.redirect}>Continuar lendo→</a>
+                <a className={classes.redirect}>{props.language === 'portuguese' ? 'Continuar lendo→' : 
+                props.language === 'english' ? 'Continue reading→' : 
+                props.language === 'french' ? 'Continuer la lecture→' : ''}</a>
             </div>
         </div>
     );
