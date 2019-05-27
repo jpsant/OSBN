@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './css/ScheduleSection.module.css';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import ScheduleDiv from '../../UI/scheduleDiv/scheduleDiv';
@@ -30,7 +31,9 @@ class ScheduleSection extends Component {
 
         return (
             <div className={classes.scheduleContainer}>
-                <TransitionDiv title="& Agenda" />
+                <TransitionDiv title={this.props.language === 'portuguese' ? '& Agenda' :
+                this.props.language === 'english' ? '& Schedule' : 
+                this.props.language === 'french' ? ' & Agenda' : ''} />
                 <div className={classes.container}>
                     {cards}
                 </div>
@@ -39,4 +42,10 @@ class ScheduleSection extends Component {
     }
 }
 
-export default ScheduleSection;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps) (ScheduleSection);

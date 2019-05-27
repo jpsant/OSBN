@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { connect } from 'react-redux';
 import classes from './css/TechnicalSection.module.css';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
@@ -30,18 +31,26 @@ class TechnicalSection extends Component {
 
         return (
             <>
-            <TransitionDiv title="& Técnica" />
+                <TransitionDiv title={this.props.language === 'portuguese' ? '& Técnica' :
+                    this.props.language === 'english' ? '& Technical' :
+                    this.props.language === 'french' ? '& Technique' : ''} />
                 <div className={classes.technicalContainer}>
                     <h2>Parte Técnica</h2>
                 </div>
-                <TransitionDiv title="& Repertório" />
+                <TransitionDiv title={this.props.language === 'portuguese' ? '& Repertório' :
+                    this.props.language === 'english' ? '& Repertoire' :
+                    this.props.language === 'french' ? '& Répertoire' : ''} />
                 <div className={classes.musicContainer}>
                     <div className={classes.table}>
                         <div className={classes.music}>
-                            <h2>Música <span>&</span></h2>
+                            <h2>{this.props.language === 'portuguese' ? 'Música' :
+                                this.props.language === 'english' ? 'Music' :
+                                this.props.language === 'french' ? 'Musique' : ''} <span>&</span></h2>
                         </div>
                         <div className={classes.composer}>
-                            <h2>Compositor <span>&</span></h2>
+                            <h2>{this.props.language === 'portuguese' ? 'Compositor' :
+                                this.props.language === 'english' ? 'Composer' : 
+                                this.props.language === 'french' ? 'Compositeur' : ''}<span>&</span></h2>
                         </div>
                     </div>
                     <div className={classes.content}>
@@ -53,4 +62,10 @@ class TechnicalSection extends Component {
     }
 }
 
-export default TechnicalSection;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps)(TechnicalSection);

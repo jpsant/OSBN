@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import classes from './css/ContactSection.module.css';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
@@ -9,11 +10,13 @@ class ContactSection extends Component {
             <>
                 <TransitionDiv title="& Contato" />
                 <div className={classes.contactContainer}>
-                <div className={classes.titleContainer}>
-                    <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste! <span>&</span></h1>
-                </div>
+                    <div className={classes.titleContainer}>
+                        <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste! <span>&</span></h1>
+                    </div>
                     <div className={classes.social}>
-                        <h1>Nos siga nas Redes Sociais!</h1>
+                        <h1>{this.props.language === 'portuguese' ? 'Nos siga nas Redes Sociais!' : 
+                            this.props.language === 'english' ? 'Follow us on Social Media!' : 
+                            this.props.language === 'french' ? 'Suivez nous sur les réseaux sociaux!' : ''}</h1>
                         <div className={classes.socialMedia}>
                             <h2>twitter</h2>
                             <h2>instagram</h2>
@@ -21,7 +24,9 @@ class ContactSection extends Component {
                         </div>
                     </div>
                     <div className={classes.contact}>
-                        <h1>Entre em Contato!</h1>
+                        <h1>{this.props.language === 'portuguese' ? 'Entre em Contato!' : 
+                            this.props.language === 'english' ? 'Contact us!' : 
+                            this.props.language === 'french' ? 'Contactez nous!' : ''}</h1>
                         <div className={classes.contactMedia}>
                             <h2>contato1</h2>
                             <h2>contato2</h2>
@@ -33,4 +38,10 @@ class ContactSection extends Component {
     }
 }
 
-export default ContactSection;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps)(ContactSection);

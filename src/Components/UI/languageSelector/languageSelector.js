@@ -9,34 +9,35 @@ import france from '../../../assets/svgs/france.svg';
 
 class LanguageSelector extends Component {
 
+
     state = {
         image: brazil,
-        language: 'portuguese'
     }
 
     portugueseHandler = () => {
         this.setState({ language: 'portuguese', image: brazil });
-        this.languageHandler('portuguese');
+        this.languageHandler('portuguese', 'brazil');
     }
 
     englishHandler = () => {
         this.setState({ language: 'english', image: usa });
-        this.languageHandler('english');
+        this.languageHandler('english', 'usa');
     }
 
     frenchHandler = () => {
         this.setState({ language: 'french', image: france });
-        this.languageHandler('french');
+        this.languageHandler('french', 'france');
     }
 
-    languageHandler = (language) => {
-        this.props.changeLanguage(language);
+    languageHandler = (language, flag) => {
+        this.props.changeLanguage(language, flag);
     }
 
     render() {
         return (
             <div className={classes.dropdown}>
-                <button className={classes.dropbtn}><img className={classes.svg} src={this.state.image} alt=""></img></button>
+                <button className={classes.dropbtn}><img className={classes.svg} src={this.props.flag === 'brazil' ? brazil : 
+                this.props.flag === 'usa' ? usa : this.props.flag === 'france' ? france : brazil} alt=""></img></button>
                 <div className={classes.dropdownContent}>
                     <button onClick={this.portugueseHandler}><img className={classes.svg} src={brazil} alt=""></img></button>
                     <button onClick={this.englishHandler}><img className={classes.svg} src={usa} alt=""></img></button>
@@ -47,10 +48,17 @@ class LanguageSelector extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
     return {
-        changeLanguage: (language) => dispatch(actions.changeLanguage(language))
+        language: state.languageReducer.language,
+        flag: state.languageReducer.flag
     }
 }
 
-export default connect(null, mapDispatchToProps)(LanguageSelector);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeLanguage: (language, flag) => dispatch(actions.changeLanguage(language, flag))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LanguageSelector);

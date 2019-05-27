@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classes from './css/sideMenu.module.css';
 
+import LanguageSelector from '../../UI/languageSelector/languageSelector';
+
 class sideMenu extends Component {
 
     state = {
@@ -17,13 +19,18 @@ class sideMenu extends Component {
 
         return (
             <>
-                <div className={classes.subMenu} onClick={this.onCloseHandler} style={{
+                <div className={classes.subMenu} style={{
                     transform: this.state.show ? 'translateX(100vh)' : 'translateX(0)',
                     visibility: this.state.show ? 'hidden' : 'visible',
                     opacity: this.props.show ? '1' : '0'
                 }}>
-                    <span className={classes.subTooltip}>Abrir Menu</span>
-                    <h1 className={classes.subText}>&</h1>
+                    <div className={classes.closeDiv} onClick={this.onCloseHandler}>
+                        <span className={classes.subTooltip}>Abrir Menu</span>
+                        <h1 className={classes.subText}>&</h1>
+                    </div>
+                    <div className={classes.languageContainer}>
+                        <LanguageSelector />
+                    </div>
                 </div>
                 <div className={classes.menu}
                     style={{

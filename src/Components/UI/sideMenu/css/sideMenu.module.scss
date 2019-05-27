@@ -266,46 +266,53 @@
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
     cursor: pointer;
 
-    .subText {
-        text-align: center;
-        font-family: xilosa;
-        font-weight: 300;
-        line-height: 1.2;
-        margin: 15% 0;
-        font-size: 1.9em;
-        color: #ac6937;
+    .closeDiv {
+        
+        .subText {
+            text-align: center;
+            font-family: xilosa;
+            font-weight: 300;
+            line-height: 1.2;
+            margin: 15% 0;
+            font-size: 1.9em;
+            color: #ac6937;
+            z-index: 1000;
+        }
+    
+        .subTooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: white;
+            color: #26262b;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 27%;
+            opacity: 0;
+            right: 115%;
+            transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+        }
+    
+        .subTooltip::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
     }
 
-    .subTooltip {
-        visibility: hidden;
-        width: 140px;
-        background-color: white;
-        color: #26262b;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        position: absolute;
-        z-index: 1;
-        top: 27%;
-        opacity: 0;
-        right: 115%;
-        transition: opacity 0.3s;
-        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    .languageContainer {
+        position: fixed;
+        right: 4%;
+        bottom: -5%;
     }
-
-    .subTooltip::after {
-        content: " ";
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        /* To the right of the tooltip */
-        margin-top: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent transparent white;
-    }
-
-
 }
 
 
@@ -359,12 +366,12 @@
     }
 }
 
-.subMenu:hover {
+.closeDiv:hover {
     .subTooltip {
         visibility: visible;
         opacity: 1;
     }
-}
+}   
 
 .closeButton:hover {
     .tooltipText {
