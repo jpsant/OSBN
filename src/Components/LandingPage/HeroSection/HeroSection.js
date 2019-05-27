@@ -69,7 +69,6 @@ class HeroSection extends Component {
     }
 
     render() {
-        // console.log(document.documentElement.offsetHeight);
         return (
             <>
                 <LanguageSelector />

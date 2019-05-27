@@ -8,7 +8,7 @@ const initalState = {
 const reducer = (state = initalState, action) => {
     switch (action.type) {
         case actionTypes.CHANGE_LANGUAGE:
-            return updateObject(state, {language: null})
+            return updateObject(state, {language: action.language})
 
         default:
             return state;

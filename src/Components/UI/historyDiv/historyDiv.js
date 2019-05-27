@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import classes from './css/historyDiv.module.css';
+import { connect } from 'react-redux';
 
 import EventDiv from '../eventSelector/eventSelector';
 
 class historyDiv extends Component {
 
     state = {
-        history: null
+        history: null,
+        language: ''
     }
 
     componentDidMount() {
-        axios.get('https://osbn-a36f9.firebaseio.com/historico/' + this.props.year + '.json')
+        axios.get('https://osbn-a36f9.firebaseio.com/historico/' + this.props.language + '/' + this.props.year + '.json')
             .then(response => {
                 this.setState({ history: response.data });
             });
+    }
+
+    shouldComponentUpdate() {
+        if (this.state.language !== this.props.language) {
+            return true;
+        }
     }
 
     render() {
@@ -27,8 +35,6 @@ class historyDiv extends Component {
             })
         }
 
-
-        // console.log(this.state.history);
         return (
             <>
                 <div className={classes.container} id="historia">
@@ -42,4 +48,10 @@ class historyDiv extends Component {
     }
 }
 
-export default historyDiv;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps)(historyDiv);
