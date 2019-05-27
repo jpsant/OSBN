@@ -9,7 +9,7 @@ class historyDiv extends Component {
 
     state = {
         history: null,
-        language: ''
+        language: 'portuguese'
     }
 
     componentDidMount() {
@@ -19,9 +19,14 @@ class historyDiv extends Component {
             });
     }
 
-    shouldComponentUpdate() {
-        if (this.state.language !== this.props.language) {
-            return true;
+    //SE OS PROPS RECEBIDOS FOREM DIFERENTES DO ATUAL ELE FAZ UMA NOVA REQUEST.
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.language !== this.state.language) {
+            axios.get('https://osbn-a36f9.firebaseio.com/historico/' + nextProps.language + '/' + this.props.year + '.json')
+            .then(response => {
+                this.setState({ history: response.data, language: nextProps.language });
+            });
+            
         }
     }
 
