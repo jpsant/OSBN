@@ -2,22 +2,19 @@
 
 .infoContainer {
     display: grid;
-    // background-color: #F8D8A2;
-    // background-color: #293347;
-    // background-color: #AC7E3A
-    // background-color: #C3AB74;
-    background-color: #ae8b60;
+    // background-color: #ae8b60;
+    background-color: #AC7C44;
 
     .textContainer {
         height: auto;
         padding: 1%;
         text-align: justify;
         color: white;
-        // background-color: #202126; cinza-escuro
 
         h2 {
             font-size: 1.5em;
             font-family: 'Muli', sans-serif;
+            text-shadow: .5px .5px .5px #000;
         }
     }
 

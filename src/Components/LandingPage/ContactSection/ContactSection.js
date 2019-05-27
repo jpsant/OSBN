@@ -5,12 +5,13 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
 class ContactSection extends Component {
     render() {
-        // console.log(document.documentElement.offsetHeight);
         return (
             <>
                 <TransitionDiv title="& Contato" />
                 <div className={classes.contactContainer}>
-                    <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste!</h1>
+                <div className={classes.titleContainer}>
+                    <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste! <span>&</span></h1>
+                </div>
                     <div className={classes.social}>
                         <h1>Nos siga nas Redes Sociais!</h1>
                         <div className={classes.socialMedia}>

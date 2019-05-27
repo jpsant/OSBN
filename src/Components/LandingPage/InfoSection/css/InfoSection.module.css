@@ -2,7 +2,7 @@
 .infoContainer {
   display: -ms-grid;
   display: grid;
-  background-color: #ae8b60;
+  background-color: #AC7C44;
 }
 
 .infoContainer .textContainer {
@@ -15,5 +15,6 @@
 .infoContainer .textContainer h2 {
   font-size: 1.5em;
   font-family: 'Muli', sans-serif;
+  text-shadow: .5px .5px .5px #000;
 }
 /*# sourceMappingURL=InfoSection.module.css.map */

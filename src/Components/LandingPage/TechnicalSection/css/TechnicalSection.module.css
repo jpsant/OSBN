@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .technicalContainer {
   text-align: center;
 }
 
 .musicContainer {
+  background-color: #ae8b60;
+  overflow-y: scroll;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
   padding: 3% 3%;
-  background-color: #ae8b60;
 }
 
 .musicContainer .table {
@@ -31,21 +33,41 @@
 }
 
 .musicContainer .table .music {
+  font-family: 'Muli', sans-serif;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  font-family: xilosa;
   letter-spacing: 3px;
   font-size: 1.5em;
-  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #000;
   margin: 0;
 }
 
+.musicContainer .table .music span {
+  font-family: xilosa;
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+}
+
 .musicContainer .table .composer {
+  font-family: 'Muli', sans-serif;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px #000;
+  margin: 0;
+}
+
+.musicContainer .table .composer span {
   font-family: xilosa;
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
 }
 
 .musicContainer .content {

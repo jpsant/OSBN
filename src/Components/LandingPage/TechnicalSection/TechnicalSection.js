@@ -30,7 +30,7 @@ class TechnicalSection extends Component {
 
         return (
             <>
-                <TransitionDiv title="& Técnica" />
+            <TransitionDiv title="& Técnica" />
                 <div className={classes.technicalContainer}>
                     <h2>Parte Técnica</h2>
                 </div>
@@ -38,10 +38,10 @@ class TechnicalSection extends Component {
                 <div className={classes.musicContainer}>
                     <div className={classes.table}>
                         <div className={classes.music}>
-                            <h2>Música</h2>
+                            <h2>Música <span>&</span></h2>
                         </div>
                         <div className={classes.composer}>
-                            <h2>Compositor</h2>
+                            <h2>Compositor <span>&</span></h2>
                         </div>
                     </div>
                     <div className={classes.content}>

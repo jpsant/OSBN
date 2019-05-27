@@ -40,6 +40,8 @@
             opacity: 0;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+
         }
 
         .tooltipText::after {
@@ -72,6 +74,7 @@
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
 
         .historyTooltip::after {
@@ -103,6 +106,7 @@
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
 
         .galleryTooltip::after {
@@ -134,6 +138,7 @@
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
 
         .scheduleTooltip::after {
@@ -165,6 +170,7 @@
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
 
         .newsTooltip::after {
@@ -196,6 +202,7 @@
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
 
         .techTooltip::after {
@@ -227,6 +234,7 @@
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
 
         .socialTooltip::after {
@@ -252,7 +260,7 @@
     border: 1px solid transparent;
     padding: 10px;
     box-sizing: border-box;
-    transition:  .5s ease-in-out;
+    transition: .5s ease-in-out;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
@@ -282,6 +290,7 @@
         opacity: 0;
         right: 115%;
         transition: opacity 0.3s;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
     }
 
     .subTooltip::after {

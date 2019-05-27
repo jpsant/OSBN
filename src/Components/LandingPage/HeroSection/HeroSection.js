@@ -5,6 +5,7 @@ import $ from 'jquery';
 
 import video from '../../../assets/videos/teste.mp4';
 import SideMenu from '../../UI/sideMenu/sideMenu';
+import LanguageSelector from '../../UI/languageSelector/languageSelector';
 
 class HeroSection extends Component {
 
@@ -43,11 +44,11 @@ class HeroSection extends Component {
                     this.setState({ section: 'news' })
                 }
             }
-            // if (document.documentElement.offsetHeight > 7444) {
-            //     if (this.state.section !== 'technical') {
-            //         this.setState({ section: 'technical' })
-            //     }
-            // }
+            if (document.documentElement.scrollTop >= 5422) {
+                if (this.state.section !== 'technical') {
+                    this.setState({ section: 'technical' })
+                }
+            }
             if (document.documentElement.scrollTop >= 6700) {
                 if (this.state.section !== 'contact') {
                     this.setState({ section: 'contact' })
@@ -71,6 +72,7 @@ class HeroSection extends Component {
         // console.log(document.documentElement.offsetHeight);
         return (
             <>
+                <LanguageSelector />
                 <SideMenu show={this.state.menu} section={this.state.section} />
                 <div className={classes.heroContainer} id="container">
                     <h1 className={classes.firstTitle}>Orquestra Sanfônica</h1>

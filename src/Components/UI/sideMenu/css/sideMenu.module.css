@@ -46,6 +46,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .closeButton .tooltipText::after {
@@ -75,6 +77,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .historyButton .historyTooltip::after {
@@ -104,6 +108,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .galleryButton .galleryTooltip::after {
@@ -133,6 +139,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .scheduleButton .scheduleTooltip::after {
@@ -162,6 +170,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .newsButton .newsTooltip::after {
@@ -191,6 +201,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .techButton .techTooltip::after {
@@ -220,6 +232,8 @@
   left: -155%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .menu .socialButton .socialTooltip::after {
@@ -278,6 +292,8 @@
   right: 115%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
 .subMenu .subTooltip::after {
