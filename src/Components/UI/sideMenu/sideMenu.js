@@ -44,27 +44,27 @@ class sideMenu extends Component {
                     </div>
                     <div className={classes.historyButton}>
                         <span className={classes.historyTooltip}>Histórico</span>
-                        <button className={this.props.section == 'history' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/book.svg')}></img></button>
+                        <button className={this.props.section === 'history' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/book.svg')}></img></button>
                     </div>
                     <div className={classes.galleryButton}>
                         <span className={classes.galleryTooltip}>Galeria</span>
-                        <button className={this.props.section == 'gallery' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/portrait.svg')}></img></button>
+                        <button className={this.props.section === 'gallery' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/portrait.svg')}></img></button>
                     </div>
                     <div className={classes.scheduleButton}>
                         <span className={classes.scheduleTooltip}>Agenda</span>
-                        <button className={this.props.section == 'schedule' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/calendar.svg')}></img></button>
+                        <button className={this.props.section === 'schedule' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/calendar.svg')}></img></button>
                     </div>
                     <div className={classes.newsButton}>
                         <span className={classes.newsTooltip}>Notícias</span>
-                        <button className={this.props.section == 'news' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
+                        <button className={this.props.section === 'news' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
                     </div>
                     <div className={classes.techButton}>
                         <span className={classes.techTooltip}>Tecnica</span>
-                        <button className={this.props.section == 'technical' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
+                        <button className={this.props.section === 'technical' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
                     </div>
                     <div className={classes.socialButton}>
                         <span className={classes.socialTooltip}>Social</span>
-                        <button className={this.props.section == 'contact' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/facebook.svg')}></img></button>
+                        <button className={this.props.section === 'contact' ? classes.Button + ' ' + classes.active : classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/facebook.svg')}></img></button>
                     </div>
                 </div>
             </>

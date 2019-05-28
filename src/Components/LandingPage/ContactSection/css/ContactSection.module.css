@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
 .contactContainer {
   display: -ms-grid;
   display: grid;

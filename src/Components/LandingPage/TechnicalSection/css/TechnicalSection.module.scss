@@ -1,5 +1,13 @@
+@mixin font-face($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+}
+
+@include font-face(Xilosa);
+
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@include font('xilosa', url('../../../../assets/font/xilosa.css'));
 
 .technicalContainer {
     text-align: center;
@@ -37,7 +45,7 @@
             margin: 0;
 
             span {
-                font-family: xilosa;
+                font-family: Xilosa;
                 font-weight: 300;
                 line-height: 1;
                 text-shadow: 1px 1px 1px #000;
@@ -54,7 +62,7 @@
             margin: 0;
 
             span {
-                font-family: xilosa;
+                font-family: Xilosa;
                 font-weight: 300;
                 line-height: 1;
                 text-shadow: 1px 1px 1px #000;

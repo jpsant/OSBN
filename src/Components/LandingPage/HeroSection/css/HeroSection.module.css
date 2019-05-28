@@ -1,5 +1,10 @@
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
 .heroContainer {
-  font-family: xilosa;
+  font-family: Xilosa;
   color: white;
   line-height: 1;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;

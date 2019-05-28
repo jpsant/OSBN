@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
 .menu {
   position: fixed;
   z-index: 500;

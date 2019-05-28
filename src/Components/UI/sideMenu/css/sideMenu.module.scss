@@ -1,4 +1,11 @@
-@include font('xilosa', url('../../../../assets/font/xilosa.css'));
+@mixin font-face($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+}
+
+@include font-face(Xilosa);
 
 .menu {
     position: fixed;
@@ -269,7 +276,7 @@
     cursor: pointer;
 
     .closeDiv {
-        
+
         .subText {
             text-align: center;
             font-family: xilosa;
@@ -280,7 +287,7 @@
             color: #ac6937;
             z-index: 1000;
         }
-    
+
         .subTooltip {
             visibility: hidden;
             width: 140px;
@@ -297,7 +304,7 @@
             transition: opacity 0.3s;
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
         }
-    
+
         .subTooltip::after {
             content: " ";
             position: absolute;
@@ -373,7 +380,7 @@
         visibility: visible;
         opacity: 1;
     }
-}   
+}
 
 .closeButton:hover {
     .tooltipText {

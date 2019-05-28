@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -13,7 +18,7 @@
       align-self: center;
   margin: 0;
   font-size: 5.5em;
-  font-family: xilosa;
+  font-family: Xilosa;
   font-weight: 500;
   line-height: 1.2;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;

@@ -1,7 +1,14 @@
-@include font('xablmes', url('../../../../assets/font/xilosa.css'));
+@mixin font-face($font-name) {
+    @font-face {
+      font-family: $font-name;
+      src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+  }
+
+@include font-face(Xilosa);
 
 .heroContainer {
-    font-family: xablmes;
+    font-family: Xilosa;
     // color:#fccb79; //PRINCIPAL!
     // background-color: #C3AB74 //BG PRINCIPAL!!
     color: white;

@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
 .technicalContainer {
   text-align: center;
   color: white;
@@ -45,7 +50,7 @@
 }
 
 .musicContainer .table .music span {
-  font-family: xilosa;
+  font-family: Xilosa;
   font-weight: 300;
   line-height: 1;
   text-shadow: 1px 1px 1px #000;
@@ -64,7 +69,7 @@
 }
 
 .musicContainer .table .composer span {
-  font-family: xilosa;
+  font-family: Xilosa;
   font-weight: 300;
   line-height: 1;
   text-shadow: 1px 1px 1px #000;

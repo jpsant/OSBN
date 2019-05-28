@@ -37,10 +37,11 @@ class InfoSection extends Component {
                             "Livre Paris 2016", au Teatro Lúcio Costa, à la Fondation "Maison du Brésil" à Paris.` : ''}
                         </h2>
                         <h2>
-                            {this.props.language === 'portuguese' ? `Em maio de 2017, a Orquestra foi contemplada pelo programa Ibermúsicas e viajou para o Peru onde se apresentou no festival FESTIFOLCOR, em Arequipa.` :
-                            this.props.language === 'english' ? `In May 2017, the Orchestra was contemplated by the Ibermúsicas program and traveled to Peru where it performed at the FESTIFOLCOR festival in Arequipa.` : 
-                            this.props.language === 'french' ? `En mai 2017, le programme Ibermúsicas a permis à l'orchestre de se rendre au Pérou, où il s'est produit lors du festival FESTIFOLCOR à Arequipa.` : ''}
-`}
+                            {
+                            this.props.language === 'portuguese' ? 'Em maio de 2017, a Orquestra foi contemplada pelo programa Ibermúsicas e viajou para o Peru onde se apresentou no festival FESTIFOLCOR, em Arequipa.' :
+                            this.props.language === 'english' ? 'In May 2017, the Orchestra was contemplated by the Ibermúsicas program and traveled to Peru where it performed at the FESTIFOLCOR festival in Arequipa.' : 
+                            this.props.language === 'french' ? 'En mai 2017, le programme Ibermúsicas a permis à l\'orchestre de se rendre au Pérou, où il s\'est produit lors du festival FESTIFOLCOR à Arequipa.' : ''
+                            }
                         </h2>
                         <h2>
                             {this.props.language === 'portuguese' ? `Em junho de 2017, gravou no Theatro Santa Roza, em João Pessoa, o DVD “Orquestra Sanfônica em Ritmos de Nordeste” com a participação de artistas renomados como Irah Caldeira,
