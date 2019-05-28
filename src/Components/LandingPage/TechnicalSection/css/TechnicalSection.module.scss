@@ -2,10 +2,12 @@
 
 .technicalContainer {
     text-align: center;
+    color: white;
+    margin: 5%;
 }
 
 .musicContainer {
-    background-color: #ae8b60;
+    // background-color: #ae8b60;
     overflow-y: scroll;
     display: grid;
     grid-template-rows: .1fr 1fr;

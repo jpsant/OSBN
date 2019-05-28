@@ -1,9 +1,10 @@
 .footerContainer {
-  background-color: #202126;
+  background-color: #ac6937;
   color: white;
 }
 
 .footerContainer h1 {
+  padding: 5%;
   margin: 0;
 }
 /*# sourceMappingURL=Footer.module.css.map */

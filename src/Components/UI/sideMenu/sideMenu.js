@@ -6,7 +6,7 @@ import LanguageSelector from '../../UI/languageSelector/languageSelector';
 class sideMenu extends Component {
 
     state = {
-        show: true
+        show: false
     }
 
     onCloseHandler = () => {

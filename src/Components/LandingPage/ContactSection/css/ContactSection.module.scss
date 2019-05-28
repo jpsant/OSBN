@@ -4,9 +4,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .2fr 1fr;
-    // background-color: #ae8b60;
-    background-color: #AC7C44;
     color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.33) !important;
 
     .titleContainer {
         background-color: #ac6937;
@@ -37,6 +36,11 @@
         grid-column: 1/2;
         display: grid;
         grid-template-rows: .5fr 1fr;
+        background-color: #ac6937;
+        margin: 2% 6%;
+        border-radius: 8px;
+        transition: .2s cubic-bezier(.175,.885,.32,1.275);
+        cursor: pointer;
 
         h2 {
             grid-row: 1/2;
@@ -47,11 +51,21 @@
         }
     }
 
+    .social:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-10px);
+    }
+
     .contact {
         grid-row: 2/3;
         grid-column: 2/3;
         display: grid;
         grid-template-rows: .5fr 1fr;
+        background-color: #ac6937;
+        margin: 2% 6%;
+        border-radius: 8px;
+        transition: .2s cubic-bezier(.175,.885,.32,1.275);
+        cursor: pointer;
 
         h2 {
             grid-row: 1/2;
@@ -60,5 +74,10 @@
         .contactMedia {
             grid-row: 2/3;
         }
+    }
+
+    .contact:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-10px);
     }
 }

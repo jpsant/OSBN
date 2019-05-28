@@ -7,8 +7,10 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 class ContactSection extends Component {
     render() {
         return (
-            <>
-                <TransitionDiv title="& Contato" />
+            <div style={{backgroundColor: '#AC7C44'}}>
+                <TransitionDiv title={this.props.language === 'portuguese' ? '& Contato' : 
+                this.props.language === 'english' ? '& Contact' : 
+                this.props.language === 'french' ? '& Nous contacter' : ''} />
                 <div className={classes.contactContainer}>
                     <div className={classes.titleContainer}>
                         <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste! <span>&</span></h1>
@@ -33,7 +35,7 @@ class ContactSection extends Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }

@@ -30,7 +30,7 @@ class TechnicalSection extends Component {
         }
 
         return (
-            <>
+            <div style={{backgroundColor: '#AC7C44'}}>
                 <TransitionDiv title={this.props.language === 'portuguese' ? '& Técnica' :
                     this.props.language === 'english' ? '& Technical' :
                     this.props.language === 'french' ? '& Technique' : ''} />
@@ -57,7 +57,7 @@ class TechnicalSection extends Component {
                         {block}
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }

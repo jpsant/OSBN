@@ -6,8 +6,9 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: .2fr 1fr;
       grid-template-rows: .2fr 1fr;
-  background-color: #AC7C44;
   color: white;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.33) !important;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.33) !important;
 }
 
 .contactContainer .titleContainer {
@@ -49,6 +50,12 @@
   display: grid;
   -ms-grid-rows: .5fr 1fr;
       grid-template-rows: .5fr 1fr;
+  background-color: #ac6937;
+  margin: 2% 6%;
+  border-radius: 8px;
+  -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 
 .contactContainer .social h2 {
@@ -63,6 +70,13 @@
   grid-row: 2/3;
 }
 
+.contactContainer .social:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
 .contactContainer .contact {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -74,6 +88,12 @@
   display: grid;
   -ms-grid-rows: .5fr 1fr;
       grid-template-rows: .5fr 1fr;
+  background-color: #ac6937;
+  margin: 2% 6%;
+  border-radius: 8px;
+  -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 
 .contactContainer .contact h2 {
@@ -86,5 +106,12 @@
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+}
+
+.contactContainer .contact:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 /*# sourceMappingURL=ContactSection.module.css.map */

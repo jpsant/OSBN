@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .technicalContainer {
   text-align: center;
+  color: white;
+  margin: 5%;
 }
 
 .musicContainer {
-  background-color: #ae8b60;
   overflow-y: scroll;
   display: -ms-grid;
   display: grid;
