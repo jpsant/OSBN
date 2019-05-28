@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@include font('xilosa', url('../../../../assets/font/xilosa.css'));
 
 .contactContainer {
     display: grid;
