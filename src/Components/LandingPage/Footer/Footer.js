@@ -24,9 +24,9 @@ class Footer extends Component {
                         <h1>João Paulo Santana</h1>
                     </div>
                     <div className={classes.socialMedia}>
-                        <a><img className={classes.svg} alt="" src={require('../../../assets/svgs/instagram.svg')}></img></a>
-                        <a><img className={classes.svg} alt="" src={require('../../../assets/svgs/github.svg')}></img></a>
-                        <a><img className={classes.svg} alt="" src={require('../../../assets/svgs/instagram.svg')}></img></a>
+                        <a href="https://portfolio-6de84.firebaseapp.com/"><img className={classes.svg} alt="" src={require('../../../assets/svgs/profile.svg')}></img></a>
+                        <a href="https://github.com/jpsant"><img className={classes.svg} alt="" src={require('../../../assets/svgs/github.svg')}></img></a>
+                        <a href="https://www.instagram.com/jampalo_/"><img className={classes.svg} alt="" src={require('../../../assets/svgs/instagram.svg')}></img></a>
                     </div>
                 </div>
             </div>
