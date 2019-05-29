@@ -60,19 +60,28 @@
   border-radius: 8px;
   -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
 }
 
-.contactContainer .social h2 {
+.contactContainer .social h1 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .contactContainer .social .socialMedia {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+}
+
+.contactContainer .social .socialMedia a {
+  cursor: pointer;
+  margin: 0 2%;
+}
+
+.contactContainer .social .socialMedia a .svg {
+  height: 65px;
 }
 
 .contactContainer .social:hover {
@@ -98,10 +107,10 @@
   border-radius: 8px;
   -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
 }
 
-.contactContainer .contact h2 {
+.contactContainer .contact h1 {
+  text-shadow: 1px 1px 1px #000;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
@@ -111,6 +120,15 @@
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+}
+
+.contactContainer .contact .contactMedia a {
+  cursor: pointer;
+  margin: 0 2%;
+}
+
+.contactContainer .contact .contactMedia a .svg {
+  height: 65px;
 }
 
 .contactContainer .contact:hover {

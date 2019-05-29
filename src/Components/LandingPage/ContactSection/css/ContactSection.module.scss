@@ -1,9 +1,9 @@
 @mixin font-face($font-name) {
     @font-face {
-      font-family: $font-name;
-      src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
     }
-  }
+}
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @include font-face(Xilosa);
@@ -13,7 +13,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .2fr 1fr;
     color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.33) !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.33) !important;
 
     .titleContainer {
         background-color: #ac6937;
@@ -47,15 +47,25 @@
         background-color: #ac6937;
         margin: 2% 6%;
         border-radius: 8px;
-        transition: .2s cubic-bezier(.175,.885,.32,1.275);
-        cursor: pointer;
+        transition: .2s cubic-bezier(.175, .885, .32, 1.275);
 
-        h2 {
+        h1 {
             grid-row: 1/2;
+            text-shadow: 1px 1px 1px #000;
         }
 
         .socialMedia {
             grid-row: 2/3;
+
+            a {
+                cursor: pointer;
+                margin: 0 2%;
+
+                .svg {
+                    height: 65px;
+                }
+            }
+
         }
     }
 
@@ -72,15 +82,24 @@
         background-color: #ac6937;
         margin: 2% 6%;
         border-radius: 8px;
-        transition: .2s cubic-bezier(.175,.885,.32,1.275);
-        cursor: pointer;
+        transition: .2s cubic-bezier(.175, .885, .32, 1.275);
 
-        h2 {
+        h1 {
+            text-shadow: 1px 1px 1px #000;
             grid-row: 1/2;
         }
 
         .contactMedia {
             grid-row: 2/3;
+
+            a {
+                cursor: pointer;
+                margin: 0 2%;
+
+                .svg {
+                    height: 65px;
+                }
+            }
         }
     }
 
