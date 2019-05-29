@@ -13,7 +13,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .2fr 1fr;
     color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.33) !important;
+    padding-bottom: 3%;
 
     .titleContainer {
         background-color: #ac6937;
@@ -24,7 +24,7 @@
         border-radius: 8px;
 
         span {
-            font-family: xilosa;
+            font-family: Xilosa;
             font-weight: 300;
             line-height: 1;
             text-shadow: 1px 1px 1px #000;
@@ -69,6 +69,13 @@
 
                 .svg {
                     height: 65px;
+                    transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+                }
+            }
+
+            a:hover {
+                .svg {
+                    height: 75px;
                 }
             }
 

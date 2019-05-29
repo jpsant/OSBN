@@ -1,10 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
 .footerContainer {
   background-color: #ac6937;
   color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .7fr 1fr 1fr;
+      grid-template-columns: .7fr 1fr 1fr;
+  padding: 2% 0;
 }
 
-.footerContainer h1 {
-  padding: 5%;
-  margin: 0;
+.footerContainer .footerImage {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  display: -ms-grid;
+  display: grid;
+}
+
+.footerContainer .footerImage .logo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  height: 250px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footerContainer .footerText {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -ms-grid;
+  display: grid;
+}
+
+.footerContainer .footerText .textContainer {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footerContainer .footerText .textContainer .text {
+  font-family: Xilosa;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+  font-size: 3em;
+  margin: 2% 0;
+  text-align: center;
+}
+
+.footerContainer .footerText .textContainer h2 {
+  font-family: 'Muli', sans-serif;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.footerContainer .contactText {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .6fr .3fr;
+      grid-template-rows: .6fr .3fr;
+  text-shadow: 1px 1px 1px #000;
+  font-family: 'Muli', sans-serif;
+}
+
+.footerContainer .contactText .container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footerContainer .contactText .container h1 {
+  font-size: 2.7em;
+  margin: 2% 0;
+}
+
+.footerContainer .contactText .container h2 {
+  margin: 0%;
+}
+
+.footerContainer .contactText .socialMedia {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.footerContainer .contactText .socialMedia .svg {
+  height: 45px;
+  opacity: .6;
+  margin: 0 2%;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.footerContainer .contactText .socialMedia .svg:hover {
+  height: 60px;
+  opacity: 1;
 }
 /*# sourceMappingURL=Footer.module.css.map */

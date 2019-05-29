@@ -1,9 +1,93 @@
+@mixin font-face($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@include font-face(Xilosa);
+
 .footerContainer {
     background-color: #ac6937;
     color: white;
+    display: grid;
+    grid-template-columns: .7fr 1fr 1fr;
+    padding: 2% 0;
 
-    h1 {
-        padding: 5%;
-        margin: 0;
+    .footerImage {
+        grid-column: 1/2;
+        display: grid;
+
+        .logo {
+            grid-row: 1/2;
+            height: 250px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+    .footerText {
+        grid-column: 2/3;
+        display: grid;
+
+        .textContainer {
+            justify-self: center;
+            align-self: center;
+
+            .text {
+                font-family: Xilosa;
+                font-weight: 300;
+                text-shadow: 1px 1px 1px #000;
+                color: white;
+                font-size: 3em;
+                margin: 2% 0;
+                text-align: center;
+            }
+
+            h2 {
+                font-family: 'Muli', sans-serif;
+                text-shadow: 1px 1px 1px #000;
+            }
+        }
+    }
+
+    .contactText {
+        grid-column: 3/4;
+        display: grid;
+        grid-template-rows: .6fr .3fr;
+        text-shadow: 1px 1px 1px #000;
+        font-family: 'Muli', sans-serif;
+
+        .container {
+            grid-row: 1/2;
+            align-self: center;
+
+            h1 {
+                font-size: 2.7em;
+                margin: 2% 0;
+            }
+
+            h2 {
+                margin: 0%;
+            }
+        }
+
+        .socialMedia {
+            grid-row: 2/3;
+
+            .svg {
+                height: 45px;
+                opacity: .6;
+                margin: 0 2%;
+                transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+                cursor: pointer;
+            }
+
+            .svg:hover {
+                height: 60px;
+                opacity: 1;
+            }
+        }
     }
 }

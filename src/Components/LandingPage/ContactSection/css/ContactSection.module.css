@@ -12,8 +12,7 @@
   -ms-grid-rows: .2fr 1fr;
       grid-template-rows: .2fr 1fr;
   color: white;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.33) !important;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.33) !important;
+  padding-bottom: 3%;
 }
 
 .contactContainer .titleContainer {
@@ -31,7 +30,7 @@
 }
 
 .contactContainer .titleContainer span {
-  font-family: xilosa;
+  font-family: Xilosa;
   font-weight: 300;
   line-height: 1;
   text-shadow: 1px 1px 1px #000;
@@ -91,6 +90,12 @@
 
 .contactContainer .social .socialMedia a .svg {
   height: 65px;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contactContainer .social .socialMedia a:hover .svg {
+  height: 75px;
 }
 
 .contactContainer .social:hover {
