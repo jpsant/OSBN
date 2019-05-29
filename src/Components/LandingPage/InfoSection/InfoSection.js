@@ -48,8 +48,8 @@ class InfoSection extends Component {
                             Pinto do Acordeon, Cezzinha e Silvério Pessoa.` : 
                             this.props.language === 'english' ? `In June of 2017, he recorded in the Theatro Santa Roza, in João Pessoa, the DVD "Orphestra Sanfônica in Ritmos de Nordeste" with the participation of renowned artists like Irah Caldeira,
                             Pinto do Acordeon, Cezzinha and Silvério Pessoa.` : 
-                            this.props.language === 'french' ? `In June of 2017, he recorded in the Theatro Santa Roza, in João Pessoa, the DVD "Orphestra Sanfônica in Ritmos de Nordeste" with the participation of renowned artists like Irah Caldeira,
-                            Pinto do Acordeon, Cezzinha and Silvério Pessoa.` : ''}
+                            this.props.language === 'french' ? `En juin 2017, il a enregistré au Theatro Santa Roza, à João Pessoa, le DVD "Orphestra Sanfônica in Ritmos de Nordeste", avec la participation d'artistes de renom tels que Irah Caldeira,
+                            Pinto do Acordeon, Cezzinha et Silvério Pessoa.` : ''}
                         </h2>
                         <h2>
                             {this.props.language === 'portuguese' ? `O repertório da Orquestra apresenta grandes mestres da música brasileira, como Luiz Gonzaga, Jackson do Pandeiro, Chico César,  Sivuca, dentre outros, levando o público a cantar e dançar ao som de cirandas,

@@ -30,8 +30,14 @@ class ContactSection extends Component {
                             this.props.language === 'english' ? 'Contact us!' :
                                 this.props.language === 'french' ? 'Contactez nous!' : ''}</h1>
                         <div className={classes.contactMedia}>
-                            <a><img className={classes.svg} src={require('../../../assets/svgs/whatsappFooter.svg')} alt=""></img></a>
-                            <a><img className={classes.svg} src={require('../../../assets/svgs/emailFooter.svg')} alt=""></img></a>
+                        <div className={classes.wppDiv}>
+                            <a className={classes.wpp}><img className={classes.svg} src={require('../../../assets/svgs/whatsappFooter.svg')} alt=""/></a>
+                            <h2>(83) 98872-2278</h2>
+                        </div>
+                        <div className={classes.emailDiv}>
+                            <a className={classes.email}><img className={classes.svg} src={require('../../../assets/svgs/emailFooter.svg')} alt=""/></a>
+                            <h2>orquestra.balaionordeste@gmail.com</h2>
+                        </div>
                         </div>
                     </div>
                 </div>

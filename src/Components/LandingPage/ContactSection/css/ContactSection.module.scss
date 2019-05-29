@@ -43,23 +43,29 @@
         grid-row: 2/3;
         grid-column: 1/2;
         display: grid;
-        grid-template-rows: .5fr 1fr;
+        grid-template-rows: .5fr .8fr;
         background-color: #ac6937;
         margin: 2% 6%;
         border-radius: 8px;
         transition: .2s cubic-bezier(.175, .885, .32, 1.275);
+        font-family: 'Muli', sans-serif;
 
         h1 {
             grid-row: 1/2;
             text-shadow: 1px 1px 1px #000;
+            font-size: 2.2em;
+            margin: 2%;
+            align-self: center;
         }
 
         .socialMedia {
             grid-row: 2/3;
+            align-self: center;
 
             a {
                 cursor: pointer;
                 margin: 0 2%;
+
 
                 .svg {
                     height: 65px;
@@ -83,23 +89,66 @@
         margin: 2% 6%;
         border-radius: 8px;
         transition: .2s cubic-bezier(.175, .885, .32, 1.275);
+        font-family: 'Muli', sans-serif;
 
         h1 {
             text-shadow: 1px 1px 1px #000;
             grid-row: 1/2;
+            font-size: 2.4em;
+            margin: 1%;
+            align-self: center;
         }
 
         .contactMedia {
             grid-row: 2/3;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            .wppDiv {
+                display: grid;
+                grid-template-columns: .2fr 1fr;
+
+                a {
+                    grid-column: 1/2;
+                    justify-self: center;
+                    height: 100%;
+                }
+
+                h2 {
+                    margin: 0%;
+                    align-self: center;
+                    justify-self: left;
+                    grid-column: 2/3;
+                    text-shadow: 1px 1px 1px #000;
+                }
+
+            }
+
+            .emailDiv {
+                display: grid;
+                grid-template-columns: .2fr 1fr;
+            }
 
             a {
-                cursor: pointer;
-                margin: 0 2%;
-
-                .svg {
-                    height: 65px;
-                }
+                grid-column: 1/2;
+                justify-self: center;
+                height: 100%;
             }
+
+            h2 {
+                font-size: 1.4em;
+                margin: 0%;
+                align-self: center;
+                justify-self: left;
+                grid-column: 2/3;
+                text-shadow: 1px 1px 1px #000;
+            }
+
+        }
+
+        .svg {
+            height: 65px;
+            margin: 5% 0;
         }
     }
 
