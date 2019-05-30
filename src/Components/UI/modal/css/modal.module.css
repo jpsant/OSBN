@@ -1,38 +1,9 @@
-@-webkit-keyframes IGCoreModalShow {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes IGCoreModalShow {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
 .Modal {
   position: fixed;
   z-index: 500;
-  background-color: white;
-  width: 90%;
-  padding: 16px;
+  width: 100%;
+  padding: 1px;
   left: 25%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 8px;
 }
 
@@ -45,9 +16,9 @@
 
 @media (min-width: 600px) {
   .Modal {
-    width: 1050px;
-    left: calc(35% - 250px);
-    top: calc(38% - 250px);
+    width: 850px;
+    top: calc(80% - 450px);
+    left: calc(50% - 450px);
   }
 }
 /*# sourceMappingURL=modal.module.css.map */

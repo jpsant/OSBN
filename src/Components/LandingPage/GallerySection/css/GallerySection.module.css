@@ -34,10 +34,6 @@
           transform: translateY(-12px);
 }
 
-.imgContainer {
-  background-color: transparent;
-}
-
 .imgContainer .img {
   border-radius: 8px;
   width: 100%;
