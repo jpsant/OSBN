@@ -12,6 +12,42 @@
     text-align: center;
     color: white;
     margin: 5%;
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+
+    .textContainer {
+        grid-row: 1/2;
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 1px 1px 1px #000;
+            font-family: 'Muli', sans-serif;
+        }
+    }
+
+    .downloadButton {
+        grid-row: 2/3;
+
+        .button {
+            background-color: #ac6937;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px #000;
+            border: none;
+            color: white;
+            padding: 25px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            margin: 2%;
+            transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+        
+        .button:hover {
+            transform: translateY(-12px);
+        }
+    }
 }
 
 .musicContainer {

@@ -8,6 +8,51 @@
   text-align: center;
   color: white;
   margin: 5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .5fr 1fr;
+      grid-template-rows: .5fr 1fr;
+}
+
+.technicalContainer .textContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.technicalContainer .textContainer h1 {
+  font-size: 3em;
+  text-shadow: 1px 1px 1px #000;
+  font-family: 'Muli', sans-serif;
+}
+
+.technicalContainer .downloadButton {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.technicalContainer .downloadButton .button {
+  background-color: #ac6937;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #000;
+  border: none;
+  color: white;
+  padding: 25px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 2%;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.technicalContainer .downloadButton .button:hover {
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
 }
 
 .musicContainer {

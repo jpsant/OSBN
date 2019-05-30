@@ -35,7 +35,16 @@ class TechnicalSection extends Component {
                     this.props.language === 'english' ? '& Technical' :
                     this.props.language === 'french' ? '& Technique' : ''} />
                 <div className={classes.technicalContainer}>
-                    <h2>Parte Técnica</h2>
+                    <div className={classes.textContainer}>
+                        <h1>{this.props.language === 'portuguese' ? 'Mapa de Palco & Rider Técnico' : 
+                        this.props.language === 'english' ? 'Stage Map and Technical Rider' :
+                        this.props.language === 'french' ? 'Plan de la scène et fiche technique' : ''}</h1>
+                    </div>
+                    <div className={classes.downloadButton}>
+                        <button className={classes.button}>{this.props.language === 'portuguese' ? 'Realizar Download' : 
+                        this.props.language === 'english' ? 'Download' : 
+                        this.props.language === 'french' ? 'Télécharger' : ''}</button>
+                    </div>
                 </div>
                 <TransitionDiv title={this.props.language === 'portuguese' ? '& Repertório' :
                     this.props.language === 'english' ? '& Repertoire' :

@@ -3,7 +3,7 @@ import classes from './css/HeroSection.module.css';
 import vide from 'vide';
 import $ from 'jquery';
 
-import video from '../../../assets/videos/teste.mp4';
+// import video from '../../../assets/videos/teste.mp4';
 import SideMenu from '../../UI/sideMenu/sideMenu';
 import LanguageSelector from '../../UI/languageSelector/languageSelector';
 
@@ -77,7 +77,7 @@ class HeroSection extends Component {
                     <h1 className={classes.firstTitle}>Orquestra Sanfônica</h1>
                     <h1 className={classes.secondTitle}>Balaio Nordeste</h1>
                     <img className={classes.logo} alt="" src={require('../../../assets/logo.svg')}></img>
-                    <div ref="video" data-vide-bg={video} data-vide-options="loop: true, muted: true" className={classes.container}></div>
+                    <div ref="video" data-vide-bg={"https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Fteste.mp4?alt=media&token=10610a76-1f88-45bc-82ae-00960fe06e3a"} data-vide-options="loop: true, muted: true" className={classes.container}></div>
                 </div>
             </>
         )

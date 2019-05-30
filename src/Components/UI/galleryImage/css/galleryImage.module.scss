@@ -7,6 +7,9 @@
     background-color: white;
     transition: .2s cubic-bezier(.175, .885, .32, 1.275);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    // border: 20px solid transparent;
+    // border-image: url('../../../../assets/border/border.png') 20% round;
+    // border-image-width: 10px;
 
     .image {
         height: 100%;

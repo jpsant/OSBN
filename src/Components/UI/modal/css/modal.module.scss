@@ -1,0 +1,39 @@
+@keyframes IGCoreModalShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+    .Modal {
+        position: fixed;
+        z-index: 500;
+        background-color: white;
+        width: 90%;
+        // border: 1px solid #ccc;
+        padding: 16px;
+        left: 25%;
+        box-sizing: border-box;
+        border-radius: 8px;
+
+        @media (max-width: 755px) {
+            top: 8%;
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .Modal {
+            width: 1050px;
+            left: calc(35% - 250px);
+            top: calc(38% - 250px);
+        }
+    }
