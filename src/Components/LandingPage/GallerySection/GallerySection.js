@@ -12,11 +12,13 @@ class GallerySection extends Component {
                 <TransitionDiv title={this.props.language === 'portuguese' ? '& Galeria' :
                     this.props.language === 'english' ? '& Gallery' : this.props.language === 'french' ? '& Galerie' : ''} />
                 <div className={classes.galleryContainer}>
-                    <GalleryImage />
-                    <GalleryImage />
-                    <GalleryImage />
-                    <GalleryImage />
+                    <GalleryImage image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Ffoto%20-%20divulga%C3%A7%C3%A3o%2010.png?alt=media&token=62777d47-c975-4e8a-8aeb-b64b614e4c7b"/>
+                    <GalleryImage image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%209.png?alt=media&token=cbb0aad7-60b2-4c41-b04c-648132d162b0" />
+                    <GalleryImage image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-divulga%C3%A7%C3%A3o%205.png?alt=media&token=69cb31b9-80ad-4bdb-9649-c89850d96477" />
                 </div>
+                <button>{this.props.language === 'portuguese' ? 'Ir para Galeria!' : 
+                this.props.language === 'english' ? 'Visit the Gallery!' :
+                this.props.language === 'french' ? 'Ir para a Galeria!' : ''}</button>
             </div>
         )
     }

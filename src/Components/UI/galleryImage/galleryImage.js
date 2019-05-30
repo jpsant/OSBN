@@ -4,10 +4,7 @@ import classes from './css/galleryImage.module.css'
 const galleryImage = (props) => {
     return (
         <div className={classes.container}>
-            <h1>GalleryImage!</h1>
-            <h1>GalleryImage!</h1>
-            <h1>GalleryImage!</h1>
-            <h1>GalleryImage!</h1>
+            <img className={classes.image} src={props.image}></img>
         </div>
     );
 }
