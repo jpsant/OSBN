@@ -24,4 +24,18 @@
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   color: white;
 }
+
+.container .leftBorder {
+  position: absolute;
+  height: inherit;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: 0;
+}
+
+.container .rightBorder {
+  position: absolute;
+  right: 0;
+  height: inherit;
+}
 /*# sourceMappingURL=historyDiv.module.css.map */

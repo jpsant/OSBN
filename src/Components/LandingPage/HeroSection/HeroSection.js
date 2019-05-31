@@ -20,7 +20,7 @@ class HeroSection extends Component {
     }
 
     pageLoad = () => {
-        // this.setState({ loading: false });
+        this.setState({ loading: false });
     }
 
     state = {

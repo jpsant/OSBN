@@ -23,4 +23,17 @@
         text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
         color: white;
     }
+
+    .leftBorder {
+        position: absolute;
+        height: inherit;
+        transform: rotate(180deg);
+        left: 0;
+    }
+
+    .rightBorder {
+        position: absolute;
+        right: 0;
+        height: inherit;
+    }
 }
