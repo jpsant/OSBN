@@ -16,6 +16,8 @@ class HistorySection extends Component {
                     <HistoryDiv year="2016" />
                     <HistoryDiv year="2015" />
                     <HistoryDiv year="2014" />
+                    <HistoryDiv year="2013" />
+                    <HistoryDiv year="2012" />
                 </div>
             </>
         );

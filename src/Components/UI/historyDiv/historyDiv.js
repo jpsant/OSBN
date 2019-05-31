@@ -8,7 +8,7 @@ import EventDiv from '../eventSelector/eventSelector';
 class historyDiv extends Component {
 
     state = {
-        history: null,
+        history: [],
         language: 'portuguese'
     }
 
@@ -16,6 +16,7 @@ class historyDiv extends Component {
         axios.get('https://osbn-a36f9.firebaseio.com/historico/' + this.state.language + '/' + this.props.year + '.json')
             .then(response => {
                 this.setState({ history: response.data });
+                console.log(response.data);
             });
     }
 
@@ -44,7 +45,8 @@ class historyDiv extends Component {
             <>
                 <div className={classes.container} id="historia">
                     <div className={classes.yearDiv}> <h1>{this.props.year}</h1> </div>
-                    <div className={classes.eventDiv}>
+                    <div className={classes.eventDiv}
+                    style={{minHeight: this.state.history !== null && this.state.history.length === 1 ? '7.5em' : '25em'}}>
                         {cards}
                     </div>
                 </div>

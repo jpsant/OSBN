@@ -4,9 +4,9 @@
   height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .2fr .1fr;
-      grid-template-rows: .2fr .1fr;
-  padding: 2% 0;
+  -ms-grid-rows: .1fr .1fr;
+      grid-template-rows: .1fr .1fr;
+  padding: 1% 0;
 }
 
 .container .yearDiv {
@@ -35,9 +35,6 @@
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
   width: 80%;
@@ -46,5 +43,21 @@
   border-radius: 8px;
   margin: 3%;
   background-color: white;
+  overflow-y: scroll;
+}
+
+.container .eventDiv::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em !important;
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #AC6837;
+  outline: 1px solid black;
+  border-radius: 8px;
 }
 /*# sourceMappingURL=historyDiv.module.css.map */

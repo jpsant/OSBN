@@ -3,13 +3,14 @@
 
 .container {
     display: grid;
-    grid-template-columns: .1fr .8fr .1fr;
+    grid-template-columns: .1fr .9fr .1fr;
     grid-template-rows: .5fr;
     align-items: center;
     justify-content: center;
     font-weight: 400; 
     font-family: 'Muli', sans-serif;
     padding: 1%;
+    
 
     .date {
         display: grid;
