@@ -17,8 +17,12 @@
 @media (min-width: 600px) {
   .Modal {
     width: 850px;
-    top: calc(80% - 450px);
-    left: calc(50% - 450px);
+    max-width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 /*# sourceMappingURL=modal.module.css.map */

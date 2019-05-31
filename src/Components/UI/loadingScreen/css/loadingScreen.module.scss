@@ -1,0 +1,90 @@
+@mixin font-face($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@include font-face(Xilosa);
+
+
+.container {
+    font-family: Xilosa;
+    z-index: 999999;
+    background-color: #AC6837;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition-property: opacity;
+    transition: .5s ease-in-out;
+    display: grid;
+
+    .textContainer {
+        align-self: center;
+        h1 {
+            font-weight: 300;
+            line-height: 1;
+            text-shadow: 1px 1px 1px #000;
+            color: white;
+            font-size: 3.1em;
+            margin: 1% 0;
+        }
+
+        .title {
+            margin: 3%;
+            color: white;
+            font-size: 5em;
+        }
+
+        .logo {
+            height: 45vh;
+            animation: float 3s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.topLeft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 29vh;
+    transform: rotate(270deg)
+}
+
+.topRight {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 29vh;
+}
+
+.bottomLeft {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 29vh;
+    transform: rotate(90deg);
+}
+
+.bottomRight {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 29vh;
+    transform: rotate(180deg);
+}

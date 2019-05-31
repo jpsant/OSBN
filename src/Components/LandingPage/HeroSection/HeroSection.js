@@ -3,20 +3,31 @@ import classes from './css/HeroSection.module.css';
 import vide from 'vide';
 import $ from 'jquery';
 
-// import video from '../../../assets/videos/teste.mp4';
 import SideMenu from '../../UI/sideMenu/sideMenu';
 import LanguageSelector from '../../UI/languageSelector/languageSelector';
+import LoadingScreen from '../../UI/loadingScreen/loadingScreen';
 
 class HeroSection extends Component {
 
     componentDidMount() {
         this.initVide();
         window.addEventListener('scroll', this.handleScroll);
-
+        window.addEventListener('load', this.pageLoad);
     }
 
     initVide = () => {
         $(this.refs.video).data(vide);
+    }
+
+    pageLoad = () => {
+        // this.setState({ loading: false });
+    }
+
+    state = {
+        language: null,
+        menu: false,
+        section: '',
+        loading: true
     }
 
     handleScroll = (e) => {
@@ -62,15 +73,10 @@ class HeroSection extends Component {
         }
     }
 
-    state = {
-        language: null,
-        menu: false,
-        section: ''
-    }
-
     render() {
         return (
             <>
+                <LoadingScreen show={this.state.loading} />
                 <LanguageSelector />
                 <SideMenu show={this.state.menu} section={this.state.section} />
                 <div className={classes.heroContainer} id="container">

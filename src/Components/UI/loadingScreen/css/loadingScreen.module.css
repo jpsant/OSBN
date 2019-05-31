@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
+.container {
+  font-family: Xilosa;
+  z-index: 999999;
+  background-color: #AC6837;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  display: -ms-grid;
+  display: grid;
+}
+
+.container .textContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .textContainer h1 {
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+  font-size: 3.1em;
+  margin: 1% 0;
+}
+
+.container .textContainer .title {
+  margin: 3%;
+  color: white;
+  font-size: 5em;
+}
+
+.container .textContainer .logo {
+  height: 45vh;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+.topLeft {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 29vh;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.topRight {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 29vh;
+}
+
+.bottomLeft {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 29vh;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.bottomRight {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 29vh;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=loadingScreen.module.css.map */
