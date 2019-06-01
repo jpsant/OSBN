@@ -55,7 +55,7 @@
     overflow-y: scroll;
     display: grid;
     grid-template-rows: .1fr 1fr;
-    padding: 3% 3%;
+    padding: 3% 0;
 
     .table {
         grid-row: 1/2;
@@ -64,7 +64,7 @@
         border-radius: 8px;
         margin-top: 2%;
         justify-self: center;
-        width: 85%;
+        width: 70%;
         color: white;
         // background-color: #212126;
         background-color: #AC6837;
@@ -109,7 +109,14 @@
     .content {
         grid-row: 2/3;
         display: grid;
+        overflow-y: scroll; 
+        height: 300px;
+        width: 70%;
+        justify-self: center;
+    }
 
+    .content::-webkit-scrollbar { 
+        display: none; 
     }
 
 

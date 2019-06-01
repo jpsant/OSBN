@@ -3,7 +3,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  width: 85%;
+  width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
   background-color: #f5f5f5;

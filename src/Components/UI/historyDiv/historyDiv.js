@@ -22,6 +22,7 @@ class historyDiv extends Component {
 
     //SE OS PROPS RECEBIDOS FOREM DIFERENTES DO ATUAL ELE FAZ UMA NOVA REQUEST.
     componentWillReceiveProps(nextProps) {
+        this.setState({history: []})
         if(nextProps.language !== this.state.language) {
             axios.get('https://osbn-a36f9.firebaseio.com/historico/' + nextProps.language + '/' + this.props.year + '.json')
             .then(response => {

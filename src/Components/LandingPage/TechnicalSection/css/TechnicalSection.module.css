@@ -61,7 +61,7 @@
   display: grid;
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
-  padding: 3% 3%;
+  padding: 3% 0;
 }
 
 .musicContainer .table {
@@ -76,7 +76,7 @@
   margin-top: 2%;
   -ms-grid-column-align: center;
       justify-self: center;
-  width: 85%;
+  width: 70%;
   color: white;
   background-color: #AC6837;
   border-bottom-left-radius: 0%;
@@ -127,5 +127,14 @@
   grid-row: 2/3;
   display: -ms-grid;
   display: grid;
+  overflow-y: scroll;
+  height: 300px;
+  width: 70%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.musicContainer .content::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=TechnicalSection.module.css.map */
