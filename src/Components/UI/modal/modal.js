@@ -5,7 +5,9 @@ const modal = (props) => {
     return (
         <div className={classes.Modal}
             style={{
-            opacity: props.show ? '1' : '0'
+            opacity: props.show ? '1' : '0',
+            height: props.show ? '' : '0',
+            width: props.show ? '' : '0'
             }}
         >
             {props.children}

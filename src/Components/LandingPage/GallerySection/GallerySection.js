@@ -36,7 +36,7 @@ class GallerySection extends Component {
                     </div>
                     <button className={classes.galleryButton}>{this.props.language === 'portuguese' ? 'Ir para Galeria!' :
                         this.props.language === 'english' ? 'Visit the Gallery!' :
-                            this.props.language === 'french' ? 'Ir para a Galeria!' : ''}</button>
+                            this.props.language === 'french' ? 'Aller à la galerie!' : ''}</button>
                 </div>
                 <Backdrop show={this.state.showModal} clicked={this.closeHandler} />
                 <Modal show={this.state.showModal}>
