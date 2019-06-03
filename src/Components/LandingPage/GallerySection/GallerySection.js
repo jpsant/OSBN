@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './css/GallerySection.module.css';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import GalleryImage from '../../UI/galleryImage/galleryImage';
@@ -34,9 +35,9 @@ class GallerySection extends Component {
                         <GalleryImage clicked={() => this.openHandler('https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-divulga%C3%A7%C3%A3o%205.png?alt=media&token=69cb31b9-80ad-4bdb-9649-c89850d96477')} image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-divulga%C3%A7%C3%A3o%205.png?alt=media&token=69cb31b9-80ad-4bdb-9649-c89850d96477" />
                         <GalleryImage clicked={() => this.openHandler('https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.png?alt=media&token=7f4729b3-8256-44b7-9cb1-0ef5e2a0dcb6')} image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.png?alt=media&token=7f4729b3-8256-44b7-9cb1-0ef5e2a0dcb6" />
                     </div>
-                    <button className={classes.galleryButton}>{this.props.language === 'portuguese' ? 'Ir para Galeria!' :
+                    <NavLink to="/gallery" className={classes.galleryButton}>{this.props.language === 'portuguese' ? 'Ir para Galeria!' :
                         this.props.language === 'english' ? 'Visit the Gallery!' :
-                            this.props.language === 'french' ? 'Aller à la galerie!' : ''}</button>
+                            this.props.language === 'french' ? 'Aller à la galerie!' : ''}</NavLink>
                 </div>
                 <Backdrop show={this.state.showModal} clicked={this.closeHandler} />
                 <Modal show={this.state.showModal}>

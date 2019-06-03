@@ -5,7 +5,7 @@ const newsCard = (props) => {
     return (
         <div className={classes.container}>
             <div className={classes.imageContainer}>
-                <h2>image</h2>
+                <img className={classes.image} src={props.img} alt=""></img>
             </div>
             <div className={classes.titleContainer}>
                 <h1>{props.title}</h1>

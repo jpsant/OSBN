@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './css/HeroSection.module.css';
 import vide from 'vide';
 import $ from 'jquery';
+import video from '../../../assets/videos/teste.mp4';
 
 import SideMenu from '../../UI/sideMenu/sideMenu';
 import LanguageSelector from '../../UI/languageSelector/languageSelector';
@@ -13,6 +14,7 @@ class HeroSection extends Component {
         this.initVide();
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('load', this.pageLoad);
+        this.setState({ video: video })
     }
 
     initVide = () => {
@@ -20,15 +22,17 @@ class HeroSection extends Component {
     }
 
     pageLoad = () => {
-        this.setState({ loading: false });
+        this.setState({ loading: document.readyState });
     }
 
     state = {
         language: null,
         menu: false,
         section: '',
-        loading: true
+        loading: document.readyState,
+        video: null
     }
+
 
     handleScroll = (e) => {
         if ((document.documentElement.scrollTop >= 1550)) {
@@ -76,14 +80,18 @@ class HeroSection extends Component {
     render() {
         return (
             <>
-                <LoadingScreen show={this.state.loading} />
+                <LoadingScreen show={document.readyState === 'loading' ? true : false} />
                 <LanguageSelector />
                 <SideMenu show={this.state.menu} section={this.state.section} />
                 <div className={classes.heroContainer} id="container">
                     <h1 className={classes.firstTitle}>Orquestra Sanfônica</h1>
                     <h1 className={classes.secondTitle}>Balaio Nordeste</h1>
                     <img className={classes.logo} alt="" src={require('../../../assets/logo.svg')}></img>
-                    <div ref="video" data-vide-bg={"https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Fteste.mp4?alt=media&token=10610a76-1f88-45bc-82ae-00960fe06e3a"} data-vide-options="loop: true, muted: true" className={classes.container}></div>
+                    <div className={classes.container}>
+                        <video className={classes.video} autoPlay loop muted>
+                            <source src={this.state.video} type='video/mp4' />
+                        </video>
+                    </div>
                 </div>
             </>
         )

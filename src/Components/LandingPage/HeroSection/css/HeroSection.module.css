@@ -18,6 +18,7 @@
   font-size: 6em;
   font-weight: 500;
   line-height: 1.2;
+  z-index: 99999;
 }
 
 .heroContainer .logo {
@@ -27,6 +28,7 @@
   right: 0;
   margin: 0 auto;
   top: 30%;
+  z-index: 99999;
 }
 
 .heroContainer .secondTitle {
@@ -38,12 +40,20 @@
   top: 20%;
   font-weight: 500;
   line-height: 1.2;
+  z-index: 99999;
 }
 
 .heroContainer .container {
-  height: 100vh;
-  z-index: -100;
+  background-color: black;
+}
+
+.heroContainer .container .video {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+  background-color: black;
 }
 /*# sourceMappingURL=HeroSection.module.css.map */

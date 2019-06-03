@@ -23,6 +23,7 @@
         font-size: 6em;
         font-weight: 500;
         line-height: 1.2;
+        z-index: 99999;
     }
 
     .logo {
@@ -32,6 +33,7 @@
         right: 0;
         margin: 0 auto;
         top: 30%;
+        z-index: 99999;
     }
 
     .secondTitle {
@@ -43,13 +45,19 @@
         top: 20%;
         font-weight: 500;
         line-height: 1.2;
+        z-index: 99999;
     }
 
     .container {
-        height: 100vh;
-        z-index: -100;
-        filter: brightness(50%);
-        // background-color: #E5BE82;
-        // background-color: #FEEBCD;
+        background-color: black;
+        .video {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            filter: brightness(50%);
+            background-color: black;
+        }
     }
+
 }

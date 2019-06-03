@@ -16,7 +16,6 @@ class historyDiv extends Component {
         axios.get('https://osbn-a36f9.firebaseio.com/historico/' + this.state.language + '/' + this.props.year + '.json')
             .then(response => {
                 this.setState({ history: response.data });
-                console.log(response.data);
             });
     }
 
