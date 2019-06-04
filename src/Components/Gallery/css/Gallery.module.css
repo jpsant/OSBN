@@ -1,4 +1,36 @@
-h1 {
-  visibility: visible;
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
+.galleryContainer {
+  height: 100vh;
+  background-color: #ac6937;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .2fr 1fr;
+      grid-template-rows: .2fr 1fr;
+}
+
+.galleryContainer .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.galleryContainer .titleContainer h1 {
+  font-weight: 300;
+  line-height: 1;
+  font-size: 5em;
+  font-family: Xilosa;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+}
+
+.galleryContainer .galleryContent {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 /*# sourceMappingURL=Gallery.module.css.map */

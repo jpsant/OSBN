@@ -18,7 +18,7 @@
   font-size: 6em;
   font-weight: 500;
   line-height: 1.2;
-  z-index: 99999;
+  z-index: 9999;
 }
 
 .heroContainer .logo {
@@ -28,7 +28,7 @@
   right: 0;
   margin: 0 auto;
   top: 30%;
-  z-index: 99999;
+  z-index: 9999;
 }
 
 .heroContainer .secondTitle {
@@ -40,7 +40,7 @@
   top: 20%;
   font-weight: 500;
   line-height: 1.2;
-  z-index: 99999;
+  z-index: 9999;
 }
 
 .heroContainer .container {

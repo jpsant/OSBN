@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
-import classes from './css/Gallery.module.css';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import classes from './css/Gallery.module.css';
+
+import LanguageSelector from '../UI/languageSelector/languageSelector';
 
 class Gallery extends Component {
+
     render() {
         return (
             <>
-                <h1>gallery!</h1>
-                <NavLink to="/" >volta</NavLink>
+                <LanguageSelector />
+                <div className={classes.galleryContainer}>
+                <div className={classes.titleContainer}>
+                    <h1>{this.props.language === 'portuguese' ? '& Galeria' : 
+                    this.props.language === 'english' ? '& Gallery' : 
+                    this.props.language === 'french' ? '& Galerie' : ''}</h1>
+                </div>
+                <div className={classes.galleryContent}>
+                    <h1>content!</h1>
+                </div>
+                    <NavLink to="/" >voltar</NavLink>
+                </div>
             </>
         )
     }
 }
 
-export default Gallery;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps)(Gallery);

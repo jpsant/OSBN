@@ -9,9 +9,9 @@ class InfoSection extends Component {
         return (
             <>
                 <div className={classes.infoContainer}>
-                    <TransitionDiv title={this.props.language === 'portuguese' ? '& A Orquestra!' :
-                        this.props.language === 'english' ? '& The Orchestra!' :
-                            this.props.language === 'french' ? '& L\'orchestre!' : ''} />
+                    <TransitionDiv title={this.props.language === 'portuguese' ? '& A Orquestra' :
+                        this.props.language === 'english' ? '& The Orchestra' :
+                            this.props.language === 'french' ? '& L\'orchestre' : ''} />
                     <div className={classes.textContainer}>
                         <h2>
                             {this.props.language === 'portuguese' ? `A Orquestra Sanfônica Balaio Nordeste teve origem em uma oficina de acordeon realizada pela “Associação Cultural Balaio Nordeste” e a FUNJOPE (Fundação Cultural de João Pessoa) em março de 2010. Com arranjos próprios e produção musical do maestro Lucílio e de alguns músicos participantes,

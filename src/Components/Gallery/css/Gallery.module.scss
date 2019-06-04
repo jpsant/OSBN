@@ -1,3 +1,35 @@
-h1 {
-    visibility: visible;
+@mixin font-face($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@include font-face(Xilosa);
+
+.galleryContainer {
+    height: 100vh;
+    background-color: #ac6937;
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+
+    .titleContainer {
+        grid-row: 1/2;
+
+        h1 {
+            font-weight: 300;
+            line-height: 1;
+            font-size: 5em;
+            font-family: Xilosa;
+            text-shadow: 1px 1px 1px #000;
+            color: white;
+        }
+    }
+
+    .galleryContent {
+        grid-row: 2/3;
+
+
+    }
 }

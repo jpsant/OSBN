@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import classes from './css/HeroSection.module.css';
-import vide from 'vide';
-import $ from 'jquery';
 import video from '../../../assets/videos/teste.mp4';
 
 import SideMenu from '../../UI/sideMenu/sideMenu';
@@ -11,14 +9,9 @@ import LoadingScreen from '../../UI/loadingScreen/loadingScreen';
 class HeroSection extends Component {
 
     componentDidMount() {
-        this.initVide();
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('load', this.pageLoad);
         this.setState({ video: video })
-    }
-
-    initVide = () => {
-        $(this.refs.video).data(vide);
     }
 
     pageLoad = () => {
@@ -89,7 +82,7 @@ class HeroSection extends Component {
                     <img className={classes.logo} alt="" src={require('../../../assets/logo.svg')}></img>
                     <div className={classes.container}>
                         <video className={classes.video} autoPlay loop muted>
-                            <source src={this.state.video} type='video/mp4' />
+                            <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Fteste.mp4?alt=media&token=10610a76-1f88-45bc-82ae-00960fe06e3a'} type='video/mp4' />
                         </video>
                     </div>
                 </div>
