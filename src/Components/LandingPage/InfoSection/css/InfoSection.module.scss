@@ -2,19 +2,69 @@
 
 .infoContainer {
     display: grid;
-    // background-color: #ae8b60;
-    background-color: #AC7C44;
+    grid-template-rows: 1fr .5fr;
 
     .textContainer {
         height: auto;
         padding: 1%;
         text-align: justify;
         color: white;
+        grid-row: 1/2;
 
         h2 {
             font-size: 1.5em;
             font-family: 'Muli', sans-serif;
             text-shadow: .5px .5px .5px #000;
+            grid-row: 1/2;
+        }
+    }
+
+    .videoContainer {
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+    
+    
+        .video1 {
+    
+            .videoPlayer1 {
+                grid-column: 1/2;
+                margin: 5% 0;
+                width: 550px;
+                mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                transform: rotate(0.000001deg);
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+    
+                -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                /*ios 7 border-radius-bug */
+                -webkit-transform: rotate(0.000001deg);
+                /*mac os 10.6 safari 5 border-radius-bug */
+    
+            }
+        }
+    
+        .video2 {
+    
+            .videoPlayer2 {
+                grid-column: 2/3;
+                margin: 5% 0;
+                width: 550px;
+                mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                transform: rotate(0.000001deg);
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+    
+                -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                /*ios 7 border-radius-bug */
+                -webkit-transform: rotate(0.000001deg);
+                /*mac os 10.6 safari 5 border-radius-bug */
+            }
+    
         }
     }
 

@@ -2,7 +2,8 @@
 .infoContainer {
   display: -ms-grid;
   display: grid;
-  background-color: #AC7C44;
+  -ms-grid-rows: 1fr .5fr;
+      grid-template-rows: 1fr .5fr;
 }
 
 .infoContainer .textContainer {
@@ -10,11 +11,59 @@
   padding: 1%;
   text-align: justify;
   color: white;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 
 .infoContainer .textContainer h2 {
   font-size: 1.5em;
   font-family: 'Muli', sans-serif;
   text-shadow: .5px .5px .5px #000;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.infoContainer .videoContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(640px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+}
+
+.infoContainer .videoContainer .video1 .videoPlayer1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin: 5% 0;
+  width: 550px;
+  mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  transform: rotate(0deg);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  /*ios 7 border-radius-bug */
+  -webkit-transform: rotate(0deg);
+  /*mac os 10.6 safari 5 border-radius-bug */
+}
+
+.infoContainer .videoContainer .video2 .videoPlayer2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  margin: 5% 0;
+  width: 550px;
+  mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  transform: rotate(0deg);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  /*ios 7 border-radius-bug */
+  -webkit-transform: rotate(0deg);
+  /*mac os 10.6 safari 5 border-radius-bug */
 }
 /*# sourceMappingURL=InfoSection.module.css.map */

@@ -4,7 +4,6 @@ import HeroSection from '../HeroSection/HeroSection';
 import InfoSection from '../InfoSection/InfoSection';
 import HistorySection from '../HistorySection/HistorySection';
 import GallerySection from '../GallerySection/GallerySection';
-import VideoSection from '../VideoSection/VideoSection';
 import ScheduleSection from '../ScheduleSection/ScheduleSection';
 import NewsSection from '../NewsSection/NewsSection';
 import TechnicalSection from '../TechnicalSection/TechnicalSection';
@@ -19,7 +18,6 @@ const FullPage = (props) => {
             <InfoSection/>
             <HistorySection/>
             <GallerySection/>
-            <VideoSection/>
             <ScheduleSection/>
             <NewsSection/>
             <TechnicalSection/>
