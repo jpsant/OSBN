@@ -1,0 +1,22 @@
+.item {
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: .2s cubic-bezier(.175, .885, .32, 1.275);
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    .content {
+        width: auto;
+        height: auto;
+        .img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transition: .2s cubic-bezier(.175, .885, .32, 1.275);
+        }
+    }
+}
+
+.item:hover {
+        transform: translateY(-10px);
+}

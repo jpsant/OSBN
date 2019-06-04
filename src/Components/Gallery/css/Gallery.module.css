@@ -6,11 +6,11 @@
 
 .galleryContainer {
   height: 100vh;
-  background-color: #ac6937;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: .2fr 1fr;
       grid-template-rows: .2fr 1fr;
+  grid-row-gap: 5%;
 }
 
 .galleryContainer .titleContainer {
@@ -29,8 +29,43 @@
 }
 
 .galleryContainer .galleryContent {
+  background-color: #AB7C44;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[6];
+  -ms-grid-columns: (auto)[6];
+      grid-template: repeat(6, auto)/repeat(6, auto);
+  grid-gap: 0.5em;
+  padding: 0 1%;
+}
+
+@media (max-width: 800px) {
+  .galleryContainer .galleryContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .galleryContainer .galleryContent > div {
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+@media (max-width: 800px) and (max-width: 350px) {
+  .galleryContainer .galleryContent > div {
+    width: 98%;
+  }
+}
+
+.galleryContainer .galleryContent > div {
+  text-align: center;
 }
 /*# sourceMappingURL=Gallery.module.css.map */

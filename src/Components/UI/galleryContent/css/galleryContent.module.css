@@ -1,0 +1,34 @@
+.item {
+  -webkit-transition: grid-row-start 300ms linear;
+  transition: grid-row-start 300ms linear;
+  transition: grid-row-start 300ms linear, -ms-grid-row 300ms linear;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+.item .content {
+  width: auto;
+  height: auto;
+}
+
+.item .content .img {
+  max-width: 100%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+/*# sourceMappingURL=galleryContent.module.css.map */
