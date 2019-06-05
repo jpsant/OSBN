@@ -1,10 +1,11 @@
 .item {
     transition: grid-row-start 300ms linear;
     transition: transform 300ms ease;
-    transition: .2s cubic-bezier(.175, .885, .32, 1.275);
+    transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     cursor: pointer;
     width: auto;
     height: auto;
+    
     .content {
         width: auto;
         height: auto;
@@ -18,5 +19,5 @@
 }
 
 .item:hover {
-        transform: translateY(-10px);
+        transform: translateY(-7px);
 }
