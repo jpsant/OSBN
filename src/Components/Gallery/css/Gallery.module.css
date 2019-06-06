@@ -94,7 +94,8 @@
   background-color: #AB7C44;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  -ms-grid-columns: (minmax(360px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  padding-top: 2%;
 }
 /*# sourceMappingURL=Gallery.module.css.map */

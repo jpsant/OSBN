@@ -2,17 +2,22 @@ import React, { Component } from 'react';
 import classes from './css/ScheduleSection.module.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import IntersectionVisible from 'react-intersection-visible';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import ScheduleDiv from '../../UI/scheduleDiv/scheduleDiv';
 
 class ScheduleSection extends Component {
 
+    onShow(entries) {
+        console.log('schedule');
+    }
+
     componentDidMount() {
         axios.get('https://osbn-a36f9.firebaseio.com/agenda.json')
-        .then(response => {
-            this.setState({agenda: response.data});
-        });
+            .then(response => {
+                this.setState({ agenda: response.data });
+            });
     }
 
     state = {
@@ -20,24 +25,26 @@ class ScheduleSection extends Component {
     }
 
     render() {
-    
+
         let cards = null;
         if (this.state.agenda !== null) {
             let items = this.state.agenda;
-            cards = items.map(item =>{
+            cards = items.map(item => {
                 return <ScheduleDiv key={item.id} date={item.data} event={item.evento} local={item.local} />
             })
         }
 
         return (
-            <div className={classes.scheduleContainer}>
-                <TransitionDiv title={this.props.language === 'portuguese' ? '& Agenda' :
-                this.props.language === 'english' ? '& Schedule' : 
-                this.props.language === 'french' ? ' & Agenda' : ''} />
-                <div className={classes.container}>
-                    {cards}
+            <IntersectionVisible onShow={e => this.onShow(e)}>
+                <div className={classes.scheduleContainer}>
+                    <TransitionDiv title={this.props.language === 'portuguese' ? '& Agenda' :
+                        this.props.language === 'english' ? '& Schedule' :
+                            this.props.language === 'french' ? ' & Agenda' : ''} />
+                    <div className={classes.container}>
+                        {cards}
+                    </div>
                 </div>
-            </div>
+            </IntersectionVisible>
         );
     }
 }
@@ -48,4 +55,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps) (ScheduleSection);
+export default connect(mapStateToProps)(ScheduleSection);

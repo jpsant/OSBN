@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 import classes from './css/HistorySection.module.css';
 import { connect } from 'react-redux';
+import IntersectionVisible from 'react-intersection-visible';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import HistoryDiv from '../../UI/historyDiv/historyDiv';
 
 class HistorySection extends Component {
+
+    onShow(entries) {
+        console.log('history');
+    }
+
     render() {
         return (
             <>
-                <div className={classes.historyContainer}>
-                    <TransitionDiv title={this.props.language === 'portuguese' ? '& Histórico' :
-                    this.props.language === 'english' ? '& History' : this.props.language === 'french' ? '& Historique' : ''} />
-                    <HistoryDiv year="2017" />
-                    <HistoryDiv year="2016" />
-                    <HistoryDiv year="2015" />
-                    <HistoryDiv year="2014" />
-                    <HistoryDiv year="2013" />
-                    <HistoryDiv year="2012" />
-                </div>
+                <IntersectionVisible onShow={(e) => this.onShow(e)}>
+                    <div className={classes.historyContainer}>
+                        <TransitionDiv title={this.props.language === 'portuguese' ? '& Histórico' :
+                            this.props.language === 'english' ? '& History' : this.props.language === 'french' ? '& Historique' : ''} />
+                        <HistoryDiv year="2017" />
+                        <HistoryDiv year="2016" />
+                        <HistoryDiv year="2015" />
+                        <HistoryDiv year="2014" />
+                        <HistoryDiv year="2013" />
+                        <HistoryDiv year="2012" />
+                    </div>
+                </IntersectionVisible>
             </>
         );
     }
