@@ -11,11 +11,6 @@ import NewsCard from '../../UI/newsCard/newsCard';
 
 class NewsSection extends Component {
 
-
-    onShow(entries) {
-        this.props.changeSection('news');
-    }
-
     componentDidMount() {
         axios.get('https://osbn-a36f9.firebaseio.com/noticias/' + this.state.language + '.json')
             .then(response => {
@@ -35,6 +30,10 @@ class NewsSection extends Component {
     state = {
         noticias: null,
         language: 'portuguese'
+    }
+
+    onShow(entries) {
+        this.props.changeSection('news');
     }
 
     render() {
@@ -69,7 +68,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeSection: (section) => dispatch(actions.changeLanguage(section))
+        changeSection: (section) => dispatch(actions.changeSection(section))
     }
 }
 

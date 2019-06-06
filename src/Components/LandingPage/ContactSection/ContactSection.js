@@ -9,14 +9,13 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
 class ContactSection extends Component {
 
-    onHide(entries) {
-        console.log('tech')
+    onShow(entries) {
+        this.props.changeSection('contact');
     }
-
 
     render() {
         return (
-            <IntersectionVisible onHide={e => this.onHide(e)}>
+            <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div style={{ backgroundColor: '#AC7C44' }}>
                     <TransitionDiv title={this.props.language === 'portuguese' ? '& Contato' :
                         this.props.language === 'english' ? '& Contact' :
@@ -59,7 +58,8 @@ class ContactSection extends Component {
 
 const mapStateToProps = state => {
     return {
-        language: state.languageReducer.language
+        language: state.languageReducer.language,
+        section: state.languageReducer.section
     }
 }
 

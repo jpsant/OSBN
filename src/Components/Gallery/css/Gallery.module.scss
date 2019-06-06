@@ -10,27 +10,8 @@
 $size: 6;
 
 .galleryContainer {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: .2fr 1fr;
-    // grid-row-gap: 2%;
-
-    .titleContainer {
-        grid-row: 1/2;
-
-        h1 {
-            font-weight: 300;
-            line-height: 1;
-            font-size: 5em;
-            font-family: Xilosa;
-            text-shadow: 1px 1px 1px #000;
-            color: white;
-        }
-    }
 
     .galleryContent {
-        background-color: #AB7C44;
-        grid-row: 2/3;
         display: grid;
         grid-template: repeat($size, auto) / repeat($size, auto);
         grid-gap: 0.5em;
@@ -85,7 +66,27 @@ $size: 6;
     .clipping {
         background-color: #AB7C44;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        padding-top: 2%;
+        grid-template-rows: .1fr 1fr;
+
+        .title {
+            grid-row: 1/2;
+        }
+
+        .image {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(271px, 1fr));
+        }
+    }
+}
+
+.imgContainer {
+    // max-width: 80%;
+    // max-height: 80%;
+
+    // background-color: transparent;
+    .img {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
     }
 }

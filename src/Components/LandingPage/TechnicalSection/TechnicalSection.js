@@ -11,10 +11,6 @@ import Table from '../../UI/table/table';
 
 class TechnicalSection extends Component {
 
-    onShow(entries) {
-        this.props.changeSection('tech');
-    }
-
     componentDidMount() {
         axios.get('https://osbn-a36f9.firebaseio.com/repertorio.json')
             .then(response => {
@@ -24,6 +20,10 @@ class TechnicalSection extends Component {
 
     state = {
         list: null
+    }
+
+    onShow(entries) {
+        this.props.changeSection('technical');
     }
 
     render() {
