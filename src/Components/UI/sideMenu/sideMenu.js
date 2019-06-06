@@ -91,8 +91,9 @@ class sideMenu extends Component {
 
 const mapStateToProps = state => {
     return {
-        language: state.languageReducer.language
+        language: state.languageReducer.language,
+        section: state.languageReducer.section
     }
 }
 
-export default connect(mapStateToProps) (sideMenu);
+export default connect(mapStateToProps)(sideMenu);

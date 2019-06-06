@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import * as actions from '../../../store/actions/actioncreators';
+
 import classes from './css/TechnicalSection.module.css';
 import IntersectionVisible from 'react-intersection-visible';
 
@@ -9,12 +11,8 @@ import Table from '../../UI/table/table';
 
 class TechnicalSection extends Component {
 
-    onHide(entries) {
-        console.log('contact')
-    }
-
     onShow(entries) {
-        console.log('tech');
+        this.props.changeSection('tech');
     }
 
     componentDidMount() {
@@ -39,7 +37,7 @@ class TechnicalSection extends Component {
         }
 
         return (
-            <IntersectionVisible onShow={e => this.onShow(e)} onHide={e => this.onHide(e)}>
+            <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div style={{ backgroundColor: '#AC7C44' }}>
                     <TransitionDiv title={this.props.language === 'portuguese' ? '& Técnica' :
                         this.props.language === 'english' ? '& Technical' :
@@ -88,4 +86,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(TechnicalSection);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeSection: (section) => dispatch(actions.changeSection(section))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TechnicalSection);

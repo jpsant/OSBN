@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import classes from './css/GallerySection.module.css';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import * as actions from '../../../store/actions/actioncreators';
+
+import classes from './css/GallerySection.module.css';
 import IntersectionVisible from 'react-intersection-visible';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
@@ -17,7 +19,7 @@ class GallerySection extends Component {
     }
 
     onShow(entries) {
-        console.log('gallery');
+        this.props.changeSection('gallery')
     }
 
 
@@ -64,4 +66,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(GallerySection);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeSection: (section) => dispatch(actions.changeSection(section))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(GallerySection);

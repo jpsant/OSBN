@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import classes from './css/NewsSection.module.css'
 import { connect } from 'react-redux';
+import axios from 'axios';
+import * as actions from '../../../store/actions/actioncreators';
+
+import classes from './css/NewsSection.module.css'
 import IntersectionVisible from 'react-intersection-visible';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
@@ -11,7 +13,7 @@ class NewsSection extends Component {
 
 
     onShow(entries) {
-        console.log('news');
+        this.props.changeSection('news');
     }
 
     componentDidMount() {
@@ -65,4 +67,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(NewsSection);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeSection: (section) => dispatch(actions.changeLanguage(section))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsSection);

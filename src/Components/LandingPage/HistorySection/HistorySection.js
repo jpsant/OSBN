@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import classes from './css/HistorySection.module.css';
 import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/actioncreators';
+
+import classes from './css/HistorySection.module.css';
 import IntersectionVisible from 'react-intersection-visible';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
@@ -9,7 +11,7 @@ import HistoryDiv from '../../UI/historyDiv/historyDiv';
 class HistorySection extends Component {
 
     onShow(entries) {
-        console.log('history');
+        this.props.changeSection('history')
     }
 
     render() {
@@ -38,4 +40,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(HistorySection);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeSection: (section) => dispatch(actions.changeSection(section))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HistorySection);

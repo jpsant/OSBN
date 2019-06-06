@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../../../store/actions/actioncreators';
+
 import classes from './css/ContactSection.module.css';
 import IntersectionVisible from 'react-intersection-visible';
 
@@ -61,4 +63,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ContactSection);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeSection: (section) => dispatch(actions.changeSection(section))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactSection);

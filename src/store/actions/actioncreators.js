@@ -7,3 +7,10 @@ export const changeLanguage = (language, flag) => {
         flag: flag
     }
 }
+
+export const changeSection = (section) => {
+    return {
+        type: actionTypes.CHANGE_SECTION,
+        section: section
+    }
+}
