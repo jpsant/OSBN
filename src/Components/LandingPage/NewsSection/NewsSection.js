@@ -48,7 +48,7 @@ class NewsSection extends Component {
 
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
-                <div className={classes.newsDiv}>
+                <div ref={this.props.forwardRef} className={classes.newsDiv}>
                     <TransitionDiv title={this.props.language === 'portuguese' ? '& Notícias' :
                         this.props.language === 'english' ? '& News' : this.props.language === 'french' ? '& Nouvelles' : ''} />
                     <div className={classes.container}>

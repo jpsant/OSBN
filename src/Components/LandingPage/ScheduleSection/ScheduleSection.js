@@ -38,7 +38,7 @@ class ScheduleSection extends Component {
 
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
-                <div className={classes.scheduleContainer}>
+                <div ref={this.props.forwardRef} className={classes.scheduleContainer}>
                     <TransitionDiv title={this.props.language === 'portuguese' ? '& Agenda' :
                         this.props.language === 'english' ? '& Schedule' :
                             this.props.language === 'french' ? ' & Agenda' : ''} />

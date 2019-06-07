@@ -35,7 +35,7 @@ class GallerySection extends Component {
         return (
             <>
                 <IntersectionVisible onShow={e => this.onShow(e)}>
-                    <div className={classes.container}>
+                    <div ref={this.props.forwardRef} className={classes.container}>
                         <TransitionDiv title={this.props.language === 'portuguese' ? '& Galeria' :
                             this.props.language === 'english' ? '& Gallery' : this.props.language === 'french' ? '& Galerie' : ''} />
                         <div className={classes.galleryContainer}>
