@@ -21,7 +21,7 @@ class FullPage extends Component {
     }
 
     state = {
-        menu: true
+        menu: false
     }
 
     constructor(props) {
