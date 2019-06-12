@@ -47,6 +47,13 @@
   background-color: black;
 }
 
+@media screen and (min-width: 600px) {
+  .heroContainer .container {
+    background-color: white;
+    height: 100vh;
+  }
+}
+
 .heroContainer .container .video {
   height: 100%;
   width: 100%;
@@ -55,5 +62,12 @@
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
   background-color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .heroContainer .container .video {
+    background-size: auto;
+    height: 100vh;
+  }
 }
 /*# sourceMappingURL=HeroSection.module.css.map */

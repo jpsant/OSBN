@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions/actioncreators';
+import classes from './css/FullPage.module.css';
 
 import HeroSection from '../HeroSection/HeroSection';
 import InfoSection from '../InfoSection/InfoSection';
@@ -79,7 +80,7 @@ class FullPage extends Component {
 
     render() {
         return (
-            <>
+            <div className={classes.pageContainer}>
                 <SideMenu clicked={this.scrollToSection} show={this.state.menu} />
                 <HeroSection />
                 <InfoSection />
@@ -90,7 +91,7 @@ class FullPage extends Component {
                 <TechnicalSection forwardRef={this.technicalSection} />
                 <ContactSection forwardRef={this.contactSection} />
                 <Footer />
-            </>
+            </div>
         );
     }
 }

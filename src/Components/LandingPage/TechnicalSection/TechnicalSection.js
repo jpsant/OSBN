@@ -43,12 +43,20 @@ class TechnicalSection extends Component {
                         this.props.language === 'english' ? '& Technical' :
                             this.props.language === 'french' ? '& Technique' : ''} />
                     <div className={classes.technicalContainer}>
-                        <div className={classes.textContainer}>
-                            <h1>{this.props.language === 'portuguese' ? 'Mapa de Palco & Rider Técnico' :
-                                this.props.language === 'english' ? 'Stage Map and Technical Rider' :
-                                    this.props.language === 'french' ? 'Plan de la scène et fiche technique' : ''}</h1>
+                        <div className={classes.textContainer1}>
+                            <h1>{this.props.language === 'portuguese' ? 'Mapa de Palco' :
+                                this.props.language === 'english' ? 'Stage Map' :
+                                    this.props.language === 'french' ? 'Plan de la scène' : ''}</h1>
+
+                            <button className={classes.button}>{this.props.language === 'portuguese' ? 'Realizar Download' :
+                                this.props.language === 'english' ? 'Download' :
+                                    this.props.language === 'french' ? 'Télécharger' : ''}</button>
                         </div>
-                        <div className={classes.downloadButton}>
+                        <div className={classes.textContainer2}>
+                            <h1>{this.props.language === 'portuguese' ? 'Rider Técnico' :
+                                this.props.language === 'english' ? 'Technical Rider' :
+                                    this.props.language === 'french' ? 'Fiche Technique' : ''}</h1>
+
                             <button className={classes.button}>{this.props.language === 'portuguese' ? 'Realizar Download' :
                                 this.props.language === 'english' ? 'Download' :
                                     this.props.language === 'french' ? 'Télécharger' : ''}</button>
