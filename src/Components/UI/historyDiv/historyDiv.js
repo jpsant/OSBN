@@ -46,7 +46,7 @@ class historyDiv extends Component {
                 <div className={classes.container} id="historia">
                     <div className={classes.yearDiv}> <h1>{this.props.year}</h1> </div>
                     <div className={classes.eventDiv}
-                    style={{minHeight: this.state.history !== null && this.state.history.length === 1 ? '7.5em' : '25em'}}>
+                    style={{minHeight: this.state.history !== null && this.state.history.length === 1 ? '6.5em' : '25em'}}>
                         {cards}
                     </div>
                 </div>

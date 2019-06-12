@@ -22,11 +22,11 @@
     .videoContainer {
         grid-row: 2/3;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
-    
-    
+        grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+
+
         .video1 {
-    
+
             .videoPlayer1 {
                 grid-column: 1/2;
                 margin: 5% 0;
@@ -36,18 +36,21 @@
                 -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
                 border-radius: 10px;
-                overflow: hidden;
-    
+
                 -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
                 /*ios 7 border-radius-bug */
                 -webkit-transform: rotate(0.000001deg);
                 /*mac os 10.6 safari 5 border-radius-bug */
-    
+
+                @media screen and (max-width: 960px) {
+                    width: 520px;
+                }
+
             }
         }
-    
+
         .video2 {
-    
+
             .videoPlayer2 {
                 grid-column: 2/3;
                 margin: 5% 0;
@@ -58,13 +61,17 @@
                 -moz-border-radius: 10px;
                 border-radius: 10px;
                 overflow: hidden;
-    
+
                 -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
                 /*ios 7 border-radius-bug */
                 -webkit-transform: rotate(0.000001deg);
                 /*mac os 10.6 safari 5 border-radius-bug */
+
+                @media screen and (max-width: 960px) {
+                    width: 520px;
+                }
             }
-    
+
         }
     }
 

@@ -38,7 +38,7 @@ class FullPage extends Component {
     }
 
     handleScroll = (e) => {
-        if ((document.documentElement.scrollTop >= 1550)) {
+        if ((document.documentElement.scrollTop >= 1850)) {
             if (this.state.menu !== true) {
                 this.setState({ menu: true });
             }
@@ -89,8 +89,8 @@ class FullPage extends Component {
                 <ScheduleSection forwardRef={this.scheduleSection} />
                 <NewsSection forwardRef={this.newsSection} />
                 <TechnicalSection forwardRef={this.technicalSection} />
-                <ContactSection forwardRef={this.contactSection} />
-                <Footer />
+                {/* <ContactSection forwardRef={this.contactSection} /> */}
+                {/* <Footer /> */}
             </div>
         );
     }

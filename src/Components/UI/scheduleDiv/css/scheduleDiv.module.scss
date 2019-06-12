@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .container {
-    justify-self: center;
+    justify-self: center !important;
     display: grid;
     grid-template-columns: .1fr .8fr .1fr;
-    grid-template-rows: .5fr;
     font-weight: 400;
     line-height: 1.5;
-    margin: 1%;
-    width: 90%;
+    width: 100%;
+    height: auto;
     font-family: 'Muli', sans-serif;
     cursor: pointer;
+    margin: 1% 10%;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+
+    @media screen and (max-width: 960px) {
+        grid-template-columns: .1fr .8fr .3fr;
+    }
 
 
     .date {
         height: 100%;
         grid-column: 1/2;
-        grid-row: 1/2;
-        // background-color: #B6895D;
         background-color: #AC6837;
         color: white;
         display: grid;
@@ -26,27 +28,36 @@
         h1 {
             align-self: center;
         }
+
+        @media screen and (max-width: 960px) {
+            font-size: .6em;
+            padding: 0 15%;
+        }
     }
 
     .event {
-        height: 100%;
-        grid-row: 1/2;
+        // height: 100%;
         grid-column: 2/3;
-        // background-color: rgba(255,254,249,.2);
         background-color: white;
         display: grid;
 
         h2 {
             align-self: center;
         }
+
+        @media screen and (max-width: 960px) {
+            font-size: .9em;
+        }
     }
 
     .local {
-        height: 100%;
-        grid-row: 1/2;
+        width: 100%;
         grid-column: 3/4;
-        // background-color: #B6895D;
         background-color: #AC6837;
         color: white;
+
+        @media screen and (max-width: 960px) {
+            font-size: .9em;
+        }
     }
 }

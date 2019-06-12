@@ -7,6 +7,12 @@
   transition: all .6s ease-in-out;
 }
 
+@media screen and (max-width: 960px) {
+  .dropdown {
+    top: 35%;
+  }
+}
+
 .dropdown .dropbtn {
   border-radius: 8px;
   background-color: white;

@@ -46,6 +46,12 @@
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 960px) {
+  .container .eventDiv {
+    width: 90%;
+  }
+}
+
 .container .eventDiv::-webkit-scrollbar {
   display: none;
 }

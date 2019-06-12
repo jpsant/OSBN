@@ -1,13 +1,11 @@
 @mixin font-face($font-name) {
     @font-face {
-      font-family: $font-name;
-      src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
     }
-  }
+}
 
 @include font-face(Xilosa);
-
-
 
 .heroContainer {
     font-family: Xilosa;
@@ -27,6 +25,10 @@
         font-weight: 500;
         line-height: 1.2;
         z-index: 9999;
+
+        @media screen and (max-width: 960px) {
+            font-size: 3.8em;
+        }
     }
 
     .logo {
@@ -49,28 +51,24 @@
         font-weight: 500;
         line-height: 1.2;
         z-index: 9999;
+
+        @media screen and (max-width: 960px) {
+            font-size: 3.8em;
+        }
     }
 
     .container {
         background-color: black;
 
-        @media screen and (min-width: 600px) {
-            background-color: white;
-            height: 100vh;
-        }
         .video {
             height: 100%;
             width: 100%;
-            margin: 0;
-            padding: 0;
             filter: brightness(50%);
             background-color: black;
 
-            @media screen and (min-width: 600px) {
-                background-size: auto;
+            @media screen and (max-width: 960px) {
                 height: 100vh;
             }
         }
     }
-
 }

@@ -1,21 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .container {
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-column-align: center !important;
+      justify-self: center !important;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: .1fr .8fr .1fr;
       grid-template-columns: .1fr .8fr .1fr;
-  -ms-grid-rows: .5fr;
-      grid-template-rows: .5fr;
   font-weight: 400;
   line-height: 1.5;
-  margin: 1%;
-  width: 90%;
+  width: 100%;
+  height: auto;
   font-family: 'Muli', sans-serif;
   cursor: pointer;
+  margin: 1% 10%;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    -ms-grid-columns: .1fr .8fr .3fr;
+        grid-template-columns: .1fr .8fr .3fr;
+  }
 }
 
 .container .date {
@@ -23,9 +29,6 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
   background-color: #AC6837;
   color: white;
   display: -ms-grid;
@@ -38,11 +41,14 @@
       align-self: center;
 }
 
+@media screen and (max-width: 960px) {
+  .container .date {
+    font-size: .6em;
+    padding: 0 15%;
+  }
+}
+
 .container .event {
-  height: 100%;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -57,15 +63,24 @@
       align-self: center;
 }
 
+@media screen and (max-width: 960px) {
+  .container .event {
+    font-size: .9em;
+  }
+}
+
 .container .local {
-  height: 100%;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  width: 100%;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   background-color: #AC6837;
   color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .container .local {
+    font-size: .9em;
+  }
 }
 /*# sourceMappingURL=scheduleDiv.module.css.map */

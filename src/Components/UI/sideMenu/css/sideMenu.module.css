@@ -272,6 +272,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 960px) {
+  .subMenu {
+    top: calc(50% - 250px);
+  }
+}
+
 .subMenu .closeDiv .subText {
   text-align: center;
   font-family: xilosa;

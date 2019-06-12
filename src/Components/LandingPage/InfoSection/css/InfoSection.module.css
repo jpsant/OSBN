@@ -31,8 +31,8 @@
   grid-row: 2/3;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(640px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  -ms-grid-columns: (minmax(540px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
 }
 
 .infoContainer .videoContainer .video1 .videoPlayer1 {
@@ -44,11 +44,16 @@
   mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
   transform: rotate(0deg);
   border-radius: 10px;
-  overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
   /*ios 7 border-radius-bug */
   -webkit-transform: rotate(0deg);
   /*mac os 10.6 safari 5 border-radius-bug */
+}
+
+@media screen and (max-width: 960px) {
+  .infoContainer .videoContainer .video1 .videoPlayer1 {
+    width: 520px;
+  }
 }
 
 .infoContainer .videoContainer .video2 .videoPlayer2 {
@@ -65,5 +70,11 @@
   /*ios 7 border-radius-bug */
   -webkit-transform: rotate(0deg);
   /*mac os 10.6 safari 5 border-radius-bug */
+}
+
+@media screen and (max-width: 960px) {
+  .infoContainer .videoContainer .video2 .videoPlayer2 {
+    width: 520px;
+  }
 }
 /*# sourceMappingURL=InfoSection.module.css.map */
