@@ -22,7 +22,11 @@
     .videoContainer {
         grid-row: 2/3;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+        @media screen and (max-width: 381px) {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
 
 
         .video1 {
@@ -43,7 +47,11 @@
                 /*mac os 10.6 safari 5 border-radius-bug */
 
                 @media screen and (max-width: 960px) {
-                    width: 520px;
+                    width: 370px;
+                }
+
+                @media screen and (max-width: 381px) {
+                    width: 350px;
                 }
 
             }
@@ -68,7 +76,11 @@
                 /*mac os 10.6 safari 5 border-radius-bug */
 
                 @media screen and (max-width: 960px) {
-                    width: 520px;
+                    width: 370px;
+                }
+
+                @media screen and (max-width: 381px) {
+                    width: 350px;
                 }
             }
 

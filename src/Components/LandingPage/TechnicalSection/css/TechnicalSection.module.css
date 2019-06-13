@@ -15,6 +15,12 @@
   grid-column-gap: 5%;
 }
 
+@media screen and (max-width: 381px) {
+  .technicalContainer {
+    margin: 2%;
+  }
+}
+
 .technicalContainer .textContainer1 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -30,6 +36,12 @@
 @media screen and (max-width: 960px) {
   .technicalContainer .textContainer1 h1 {
     font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .technicalContainer .textContainer1 h1 {
+    font-size: 2.5em;
   }
 }
 
@@ -80,6 +92,12 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .technicalContainer .textContainer2 h1 {
+    font-size: 2.5em;
+  }
+}
+
 .technicalContainer .textContainer2 .button {
   background-color: #ac6937;
   cursor: pointer;
@@ -116,6 +134,9 @@
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
   padding: 3% 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .musicContainer .table {
@@ -143,6 +164,12 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .musicContainer .table {
+    width: 92%;
+  }
+}
+
 .musicContainer .table .music {
   font-family: 'Muli', sans-serif;
   -ms-grid-column: 1;
@@ -160,12 +187,24 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .musicContainer .table .music {
+    font-size: 1em;
+  }
+}
+
 .musicContainer .table .music span {
   font-family: Xilosa;
   font-weight: 300;
   line-height: 1;
   text-shadow: 1px 1px 1px #000;
   color: white;
+}
+
+@media screen and (max-width: 489px) {
+  .musicContainer .table .music span {
+    display: none;
+  }
 }
 
 .musicContainer .table .composer {
@@ -185,12 +224,24 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .musicContainer .table .composer {
+    font-size: 1em;
+  }
+}
+
 .musicContainer .table .composer span {
   font-family: Xilosa;
   font-weight: 300;
   line-height: 1;
   text-shadow: 1px 1px 1px #000;
   color: white;
+}
+
+@media screen and (max-width: 489px) {
+  .musicContainer .table .composer span {
+    display: none;
+  }
 }
 
 .musicContainer .content {
@@ -209,6 +260,12 @@
 @media screen and (max-width: 960px) {
   .musicContainer .content {
     width: 82%;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .musicContainer .content {
+    width: 92%;
   }
 }
 

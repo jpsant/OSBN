@@ -31,6 +31,12 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .container .title {
+    font-size: 2.5em;
+  }
+}
+
 .container .leftBorder {
   position: absolute;
   height: inherit;

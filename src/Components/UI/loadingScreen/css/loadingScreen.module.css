@@ -42,6 +42,12 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .container .textContainer h1 {
+    font-size: 2em;
+  }
+}
+
 .container .textContainer .title {
   margin: 3%;
   color: white;
@@ -55,10 +61,23 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .container .textContainer .title {
+    font-size: 2.4em;
+    margin: 5%;
+  }
+}
+
 .container .textContainer .logo {
   height: 40vh;
   -webkit-animation: float 3s ease-in-out infinite;
           animation: float 3s ease-in-out infinite;
+}
+
+@media screen and (max-width: 381px) {
+  .container .textContainer .logo {
+    height: 37vh;
+  }
 }
 
 @-webkit-keyframes float {

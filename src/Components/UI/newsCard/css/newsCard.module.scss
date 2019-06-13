@@ -22,6 +22,11 @@
         height: 80%
     }
 
+    @media screen and (max-width: 381px) {
+        width: 85%;
+        height: 85%;
+    }
+
 
     .imageContainer {
         grid-row: 1/4;
@@ -34,7 +39,16 @@
             height: 140px;
             transition: height .2s ease-in-out;
             border-radius: 8px;
+
+            @media screen and (max-width: 381px) {
+                height: 110px;
+            }
+
+            @media screen and (max-width: 960px) {
+                height: 120px;
+            }
         }
+        
     }
 
     .titleContainer {
@@ -47,7 +61,11 @@
             font-size: 2.9em;
 
             @media screen and (max-width: 960px) {
-                font-size: 2em;
+                font-size: 1.8em;
+            }
+
+            @media screen and (max-width: 381px) {
+                font-size: 1.8em;
             }
         }
     }
@@ -82,6 +100,10 @@
             @media screen and (max-width: 960px) {
                 font-size: 1.2em;
             }
+
+            @media screen and (max-width: 381px) {
+                font-size: .9em;
+            }
         }
 
         .redirect {
@@ -98,6 +120,10 @@
 
         .image {
             height: 180px;
+
+            @media screen and (max-width: 960px) {
+                height: 150px;
+            }
         }
     }
 
@@ -109,6 +135,10 @@
         
         @media screen and (max-width: 960px) {
             height: calc(200px - 10px);
+        }
+
+        @media screen and (max-width: 381px) {
+            height: calc(190px - 10px);
         }
         
         .contentText {

@@ -52,6 +52,12 @@
   text-shadow: 1px 1px 1px #000;
 }
 
+@media screen and (max-width: 381px) {
+  .contactContainer .titleContainer .title {
+    font-size: 2em;
+  }
+}
+
 .contactContainer .social {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -272,6 +278,12 @@
   }
 }
 
+@media screen and (max-width: 381px) {
+  .contactContainer .contact .contactMedia h2 {
+    font-size: 1em;
+  }
+}
+
 .contactContainer .contact .svg {
   height: 65px;
   margin: 5% 0;
@@ -280,6 +292,12 @@
 @media screen and (max-width: 960px) {
   .contactContainer .contact .svg {
     width: 55px;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .contactContainer .contact .svg {
+    width: 45px;
   }
 }
 

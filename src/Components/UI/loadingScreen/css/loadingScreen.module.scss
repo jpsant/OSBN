@@ -35,6 +35,10 @@
             @media screen and (max-width: 960px) {
                 font-size: 2.6em;
             }
+
+            @media screen and (max-width: 381px) {
+                font-size: 2em;
+            }
         }
 
         .title {
@@ -46,11 +50,20 @@
                 font-size: 3.5em;
                 padding: 0 5%;
             }
+
+            @media screen and (max-width: 381px) {
+                font-size: 2.4em;
+                margin: 5%;
+            }
         }
 
         .logo {
             height: 40vh;
             animation: float 3s ease-in-out infinite;
+
+            @media screen and (max-width: 381px) {
+                height: 37vh;
+            }
         }
     }
 }

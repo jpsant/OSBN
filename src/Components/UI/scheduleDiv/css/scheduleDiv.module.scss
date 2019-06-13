@@ -48,16 +48,24 @@
         @media screen and (max-width: 960px) {
             font-size: .9em;
         }
+
+        @media screen and (max-width: 381px) {
+            font-size: .8em;
+        }
     }
 
     .local {
         width: 100%;
-        grid-column: 3/4;
+        grid-column: 3/5;
         background-color: #AC6837;
         color: white;
 
         @media screen and (max-width: 960px) {
             font-size: .9em;
+        }
+
+        @media screen and (max-width: 381px) {
+            font-size: .7em;
         }
     }
 }

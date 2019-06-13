@@ -31,6 +31,12 @@
   margin: 0;
 }
 
+@media screen and (max-width: 381px) {
+  .container .yearDiv h1 {
+    font-size: 1.5em;
+  }
+}
+
 .container .eventDiv {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
