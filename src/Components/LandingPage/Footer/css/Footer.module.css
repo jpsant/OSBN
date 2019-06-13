@@ -14,12 +14,32 @@
   padding: 2% 0;
 }
 
+@media screen and (max-width: 960px) {
+  .footerContainer {
+    -ms-grid-rows: 1fr .8fr;
+        grid-template-rows: 1fr .8fr;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
 .footerContainer .footerImage {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   display: -ms-grid;
   display: grid;
+}
+
+@media screen and (max-width: 960px) {
+  .footerContainer .footerImage {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
 }
 
 .footerContainer .footerImage .logo {
@@ -34,12 +54,29 @@
       align-self: center;
 }
 
+@media screen and (max-width: 960px) {
+  .footerContainer .footerImage .logo {
+    height: 200px;
+  }
+}
+
 .footerContainer .footerText {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   display: -ms-grid;
   display: grid;
+}
+
+@media screen and (max-width: 960px) {
+  .footerContainer .footerText {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
 }
 
 .footerContainer .footerText .textContainer {
@@ -60,6 +97,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 960px) {
+  .footerContainer .footerText .textContainer .text {
+    font-size: 2em;
+  }
+}
+
 .footerContainer .footerText .textContainer h2 {
   font-family: 'Muli', sans-serif;
   text-shadow: 1px 1px 1px #000;
@@ -77,6 +120,17 @@
   font-family: 'Muli', sans-serif;
 }
 
+@media screen and (max-width: 960px) {
+  .footerContainer .contactText {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+}
+
 .footerContainer .contactText .container {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -84,6 +138,13 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media screen and (max-width: 960px) {
+  .footerContainer .contactText .container {
+    font-size: .9em;
+    margin-top: 4%;
+  }
 }
 
 .footerContainer .contactText .container h1 {

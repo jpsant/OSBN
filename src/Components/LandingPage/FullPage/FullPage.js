@@ -90,7 +90,7 @@ class FullPage extends Component {
                 <NewsSection forwardRef={this.newsSection} />
                 <TechnicalSection forwardRef={this.technicalSection} />
                 <ContactSection forwardRef={this.contactSection} />
-                {/* <Footer /> */}
+                <Footer />
             </div>
         );
     }
