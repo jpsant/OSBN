@@ -19,8 +19,8 @@
 
 @media screen and (max-width: 960px) {
   .container {
-    -ms-grid-columns: .1fr .8fr .3fr;
-        grid-template-columns: .1fr .8fr .3fr;
+    -ms-grid-columns: .2fr .8fr .3fr;
+        grid-template-columns: .2fr .8fr .3fr;
   }
 }
 

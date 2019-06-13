@@ -5,12 +5,14 @@
     }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 @include font-face(Xilosa);
 
 .heroContainer {
-    font-family: Xilosa;
     // color:#fccb79; //PRINCIPAL!
     // background-color: #C3AB74 //BG PRINCIPAL!!
+    font-family: Xilosa;
     color: white;
     line-height: 1;
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
@@ -33,7 +35,7 @@
 
     .logo {
         position: absolute;
-        height: 65vh;
+        height: 40vh;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -54,6 +56,7 @@
 
         @media screen and (max-width: 960px) {
             font-size: 3.8em;
+            top: 15%;
         }
     }
 

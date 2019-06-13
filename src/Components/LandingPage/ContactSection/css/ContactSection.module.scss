@@ -50,12 +50,21 @@
         transition: .2s cubic-bezier(.175, .885, .32, 1.275);
         font-family: 'Muli', sans-serif;
 
+        @media screen and (max-width: 960px) {
+            margin: 0 5%;
+        }
+
         h1 {
             grid-row: 1/2;
             text-shadow: 1px 1px 1px #000;
             font-size: 2.2em;
             margin: 2%;
             align-self: center;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.6em;
+                padding: 3px;
+            }
         }
 
         .socialMedia {
@@ -70,6 +79,10 @@
                 .svg {
                     height: 65px;
                     transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+
+                    @media screen and (max-width: 960px) {
+                        height: 45px;
+                    }
                 }
             }
 
@@ -98,12 +111,20 @@
         transition: .2s cubic-bezier(.175, .885, .32, 1.275);
         font-family: 'Muli', sans-serif;
 
+        // @media screen and (max-width: 960px) {
+        //     margin: 0 %;
+        // }
+
         h1 {
             text-shadow: 1px 1px 1px #000;
             grid-row: 1/2;
             font-size: 2.4em;
             margin: 1%;
             align-self: center;
+
+            @media screen and (max-width: 960px) {
+                font-size: 2em;
+            }
         }
 
         .contactMedia {
@@ -127,6 +148,10 @@
                     justify-self: left;
                     grid-column: 2/3;
                     text-shadow: 1px 1px 1px #000;
+
+                    @media screen and (max-width: 960px) {
+                        font-size: 1em;
+                    }
                 }
 
             }
@@ -149,6 +174,10 @@
                 justify-self: left;
                 grid-column: 2/3;
                 text-shadow: 1px 1px 1px #000;
+
+                @media screen and (max-width: 960px) {
+                    font-size: 1em;
+                }
             }
 
         }
@@ -156,6 +185,10 @@
         .svg {
             height: 65px;
             margin: 5% 0;
+
+            @media screen and (max-width: 960px) {
+                width: 55px;
+            }
         }
     }
 

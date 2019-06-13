@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 @font-face {
   font-family: Xilosa;
   src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
@@ -29,7 +30,7 @@
 
 .heroContainer .logo {
   position: absolute;
-  height: 65vh;
+  height: 40vh;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -52,6 +53,7 @@
 @media screen and (max-width: 960px) {
   .heroContainer .secondTitle {
     font-size: 3.8em;
+    top: 15%;
   }
 }
 

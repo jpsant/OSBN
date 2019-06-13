@@ -12,6 +12,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
 }
 
 .technicalContainer .textContainer1 {
@@ -24,6 +25,12 @@
   font-size: 4em;
   text-shadow: 1px 1px 1px #000;
   font-family: 'Muli', sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  .technicalContainer .textContainer1 h1 {
+    font-size: 3em;
+  }
 }
 
 .technicalContainer .textContainer1 .button {
@@ -44,6 +51,12 @@
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+@media screen and (max-width: 960px) {
+  .technicalContainer .textContainer1 .button {
+    padding: 15px 35px;
+  }
+}
+
 .technicalContainer .textContainer1 .button:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
@@ -59,6 +72,12 @@
   font-size: 4em;
   text-shadow: 1px 1px 1px #000;
   font-family: 'Muli', sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  .technicalContainer .textContainer2 h1 {
+    font-size: 3em;
+  }
 }
 
 .technicalContainer .textContainer2 .button {
@@ -77,6 +96,12 @@
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (max-width: 960px) {
+  .technicalContainer .textContainer2 .button {
+    padding: 15px 35px;
+  }
 }
 
 .technicalContainer .textContainer2 .button:hover {
@@ -112,6 +137,12 @@
   border-bottom-right-radius: 0%;
 }
 
+@media screen and (max-width: 960px) {
+  .musicContainer .table {
+    width: 82%;
+  }
+}
+
 .musicContainer .table .music {
   font-family: 'Muli', sans-serif;
   -ms-grid-column: 1;
@@ -121,6 +152,12 @@
   font-size: 1.5em;
   text-shadow: 1px 1px 1px #000;
   margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .musicContainer .table .music {
+    font-size: 1.1em;
+  }
 }
 
 .musicContainer .table .music span {
@@ -142,6 +179,12 @@
   margin: 0;
 }
 
+@media screen and (max-width: 960px) {
+  .musicContainer .table .composer {
+    font-size: 1.1em;
+  }
+}
+
 .musicContainer .table .composer span {
   font-family: Xilosa;
   font-weight: 300;
@@ -161,6 +204,12 @@
   width: 70%;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+@media screen and (max-width: 960px) {
+  .musicContainer .content {
+    width: 82%;
+  }
 }
 
 .musicContainer .content::-webkit-scrollbar {

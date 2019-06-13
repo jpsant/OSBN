@@ -14,6 +14,7 @@
     margin: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5%;
 
     .textContainer1 {
         grid-column: 1/2;
@@ -22,6 +23,10 @@
             font-size: 4em;
             text-shadow: 1px 1px 1px #000;
             font-family: 'Muli', sans-serif;
+
+            @media screen and (max-width: 960px) {
+                font-size: 3em;
+            }
         }
 
         .button {
@@ -38,6 +43,10 @@
             margin: 2%;
             transition: .3s cubic-bezier(.175, .885, .32, 1.275);
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+            @media screen and (max-width: 960px) {
+                padding: 15px 35px;
+            }
         }
         
         .button:hover {
@@ -52,6 +61,10 @@
             font-size: 4em;
             text-shadow: 1px 1px 1px #000;
             font-family: 'Muli', sans-serif;
+
+            @media screen and (max-width: 960px) {
+                font-size: 3em;
+            }
         }
 
         .button {
@@ -68,6 +81,10 @@
             margin: 2%;
             transition: .3s cubic-bezier(.175, .885, .32, 1.275);
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+            @media screen and (max-width: 960px) {
+                padding: 15px 35px;
+            }
         }
         
         .button:hover {
@@ -97,6 +114,10 @@
         border-bottom-left-radius: 0%;
         border-bottom-right-radius: 0%;
 
+        @media screen and (max-width: 960px) {
+            width: 82%;
+        }
+
         .music {
             font-family: 'Muli', sans-serif;
             grid-column: 1/2;
@@ -104,6 +125,10 @@
             font-size: 1.5em;
             text-shadow: 1px 1px 1px #000;
             margin: 0;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.1em;
+            }
 
             span {
                 font-family: Xilosa;
@@ -122,6 +147,10 @@
             text-shadow: 1px 1px 1px #000;
             margin: 0;
 
+            @media screen and (max-width: 960px) {
+                font-size: 1.1em;
+            }
+
             span {
                 font-family: Xilosa;
                 font-weight: 300;
@@ -139,6 +168,10 @@
         height: 300px;
         width: 70%;
         justify-self: center;
+
+        @media screen and (max-width: 960px) {
+            width: 82%;
+        }
     }
 
     .content::-webkit-scrollbar { 
