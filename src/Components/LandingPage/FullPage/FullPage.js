@@ -81,7 +81,7 @@ class FullPage extends Component {
     render() {
         return (
             <div className={classes.pageContainer}>
-                {/* <SideMenu clicked={this.scrollToSection} show={this.state.menu} /> */}
+                <SideMenu clicked={this.scrollToSection} show={this.state.menu} />
                 <HeroSection />
                 <InfoSection />
                 <HistorySection forwardRef={this.historySection} />

@@ -28,7 +28,13 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 525px) {
+  .heroContainer .firstTitle {
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (max-width: 459px) {
   .heroContainer .firstTitle {
     font-size: 3.2em;
   }
@@ -50,7 +56,13 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 525px) {
+  .heroContainer .logo {
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (max-width: 459px) {
   .heroContainer .logo {
     top: 35%;
   }
@@ -75,7 +87,13 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 525px) {
+  .heroContainer .secondTitle {
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (max-width: 459px) {
   .heroContainer .secondTitle {
     font-size: 3em;
     top: 22%;

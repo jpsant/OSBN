@@ -79,6 +79,14 @@
             h2 {
                 font-family: 'Muli', sans-serif;
                 text-shadow: 1px 1px 1px #000;
+
+                @media screen and (max-width: 960px) {
+                    font-size: 2em;
+                }
+
+                @media screen and (max-width: 381px) {
+                    font-size: 1.7em;
+                }
             }
         }
     }

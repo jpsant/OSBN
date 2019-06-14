@@ -31,10 +31,15 @@
         @media screen and (max-width: 960px) {
             font-size: 3.8em;
         }
+        
+        @media screen and (max-width: 525px) {
+            font-size: 3.1em
+        }
 
-        @media screen and (max-width: 381px) {
+        @media screen and (max-width: 459px) {
             font-size: 3.2em;
         }
+
     }
 
     .logo {
@@ -50,7 +55,11 @@
             top: 30%
         }
 
-        @media screen and (max-width: 381px) {
+        @media screen and (max-width: 525px) {
+            font-size: 3.1em
+        }
+
+        @media screen and (max-width: 459px) {
             top: 35%;
         }
     }
@@ -71,7 +80,11 @@
             top: 15%;
         }
 
-        @media screen and (max-width: 381px) {
+        @media screen and (max-width: 525px) {
+            font-size: 3.1em
+        }
+
+        @media screen and (max-width: 459px) {
             font-size: 3em;
             top: 22%;
         }

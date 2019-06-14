@@ -33,7 +33,7 @@ class HeroSection extends Component {
                     <h1 className={classes.secondTitle}>Balaio Nordeste</h1>
                     <img className={classes.logo} alt="" src={require('../../../assets/logo6.png')}></img>
                     <div className={classes.container}>
-                        <video className={classes.video} autoPlay loop muted>
+                        <video className={classes.video} autoplay="autoplay" loop="loop" muted defaultMuted playsinline>
                             <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Fteste.mp4?alt=media&token=10610a76-1f88-45bc-82ae-00960fe06e3a'} type='video/mp4' />
                         </video>
                     </div>

@@ -120,6 +120,18 @@
   text-shadow: 1px 1px 1px #000;
 }
 
+@media screen and (max-width: 960px) {
+  .footerContainer .footerText .textContainer h2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .footerContainer .footerText .textContainer h2 {
+    font-size: 1.7em;
+  }
+}
+
 .footerContainer .contactText {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;

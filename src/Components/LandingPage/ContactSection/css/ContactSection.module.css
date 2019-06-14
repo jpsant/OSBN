@@ -278,7 +278,7 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 459px) {
   .contactContainer .contact .contactMedia h2 {
     font-size: 1em;
   }
@@ -295,7 +295,7 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 459px) {
   .contactContainer .contact .svg {
     width: 45px;
   }

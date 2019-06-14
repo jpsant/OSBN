@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 381px) {
   .technicalContainer .textContainer1 h1 {
-    font-size: 2.5em;
+    font-size: 2.1em;
   }
 }
 
@@ -65,7 +65,8 @@
 
 @media screen and (max-width: 960px) {
   .technicalContainer .textContainer1 .button {
-    padding: 15px 35px;
+    padding: 15px 30px;
+    font-size: 20px;
   }
 }
 
@@ -94,7 +95,7 @@
 
 @media screen and (max-width: 381px) {
   .technicalContainer .textContainer2 h1 {
-    font-size: 2.5em;
+    font-size: 2.1em;
   }
 }
 
@@ -118,7 +119,8 @@
 
 @media screen and (max-width: 960px) {
   .technicalContainer .textContainer2 .button {
-    padding: 15px 35px;
+    padding: 15px 30px;
+    font-size: 20px;
   }
 }
 
@@ -128,15 +130,12 @@
 }
 
 .musicContainer {
-  overflow-y: scroll;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
   padding: 3% 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
 }
 
 .musicContainer .table {
@@ -151,7 +150,7 @@
   margin-top: 2%;
   -ms-grid-column-align: center;
       justify-self: center;
-  width: 70%;
+  width: 100%;
   color: white;
   background-color: #AC6837;
   border-bottom-left-radius: 0%;
@@ -252,7 +251,7 @@
   display: grid;
   overflow-y: scroll;
   height: 300px;
-  width: 70%;
+  width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
 }
