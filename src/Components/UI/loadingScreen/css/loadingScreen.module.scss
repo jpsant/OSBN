@@ -36,7 +36,7 @@
                 font-size: 2.6em;
             }
 
-            @media screen and (max-width: 381px) {
+            @media screen and (max-width: 470px) {
                 font-size: 2em;
             }
         }
@@ -51,7 +51,7 @@
                 padding: 0 5%;
             }
 
-            @media screen and (max-width: 381px) {
+            @media screen and (max-width: 470px) {
                 font-size: 2.4em;
                 margin: 5%;
             }
@@ -61,7 +61,7 @@
             height: 40vh;
             animation: float 3s ease-in-out infinite;
 
-            @media screen and (max-width: 381px) {
+            @media screen and (max-width: 470px) {
                 height: 37vh;
             }
         }

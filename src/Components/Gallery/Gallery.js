@@ -5,7 +5,6 @@ import axios from 'axios';
 
 import classes from './css/Gallery.module.css';
 
-import LanguageSelector from '../UI/languageSelector/languageSelector';
 import TransitionDiv from '../UI/transitionDiv/history/historyDiv';
 import GalleryContent from '../UI/galleryContent/galleryContent';
 import GalleryPanel from '../UI/galleryPanel/galleryPanel';
@@ -64,7 +63,6 @@ class Gallery extends Component {
                     <TransitionDiv title={this.props.language === 'portuguese' ? '& Galeria !' :
                         this.props.language === 'english' ? '& Gallery !' :
                             this.props.language === 'french' ? '& Galerie !' : ''} />
-                    <LanguageSelector />
                     <div className={classes.galleryContainer}>
                         <div className={classes.galleryContent}>
                             {images}
