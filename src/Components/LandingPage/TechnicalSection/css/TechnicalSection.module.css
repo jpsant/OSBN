@@ -135,7 +135,21 @@
   -ms-grid-rows: .1fr 1fr;
       grid-template-rows: .1fr 1fr;
   padding: 3% 0;
-  width: 100%;
+  width: 80%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media screen and (max-width: 960px) {
+  .musicContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .musicContainer {
+    width: 95%;
+  }
 }
 
 .musicContainer .table {
