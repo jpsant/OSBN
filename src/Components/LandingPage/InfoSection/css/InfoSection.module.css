@@ -63,7 +63,7 @@
   /*mac os 10.6 safari 5 border-radius-bug */
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1140px) {
   .infoContainer .videoContainer .video1 .videoPlayer1 {
     width: 370px;
   }
@@ -103,7 +103,7 @@
   /*mac os 10.6 safari 5 border-radius-bug */
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1140px) {
   .infoContainer .videoContainer .video2 .videoPlayer2 {
     width: 370px;
   }
