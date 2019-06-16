@@ -36,8 +36,8 @@ class GallerySection extends Component {
             <>
                 <IntersectionVisible onShow={e => this.onShow(e)}>
                     <div ref={this.props.forwardRef} className={classes.container}>
-                        <TransitionDiv title={this.props.language === 'portuguese' ? '& Galeria' :
-                            this.props.language === 'english' ? '& Gallery' : this.props.language === 'french' ? '& Galerie' : ''} />
+                        <TransitionDiv title={this.props.language === 'portuguese' ? 'Galeria' :
+                            this.props.language === 'english' ? 'Gallery' : this.props.language === 'french' ? 'Galerie' : ''} />
                         <div className={classes.galleryContainer}>
                             <GalleryImage clicked={() => this.openHandler('https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Ffoto%20-%20divulga%C3%A7%C3%A3o%2010.png?alt=media&token=62777d47-c975-4e8a-8aeb-b64b614e4c7b')} image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Ffoto%20-%20divulga%C3%A7%C3%A3o%2010.png?alt=media&token=62777d47-c975-4e8a-8aeb-b64b614e4c7b" />
                             <GalleryImage clicked={() => this.openHandler('https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%209.png?alt=media&token=cbb0aad7-60b2-4c41-b04c-648132d162b0')} image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%209.png?alt=media&token=cbb0aad7-60b2-4c41-b04c-648132d162b0" />

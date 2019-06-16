@@ -146,7 +146,7 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 442px) {
   .container .content .contentText {
     font-size: .9em;
   }
@@ -156,6 +156,10 @@
   opacity: 0;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+.container:hover .titleContainer {
+  margin: 5% 0;
 }
 
 .container:hover .imageContainer {
@@ -184,7 +188,7 @@
 
 @media screen and (max-width: 960px) {
   .container:hover .content {
-    height: calc(200px - 10px);
+    height: calc(200px - 15px);
   }
 }
 

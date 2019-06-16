@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 960px) {
   .technicalContainer .textContainer1 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
@@ -89,7 +89,7 @@
 
 @media screen and (max-width: 960px) {
   .technicalContainer .textContainer2 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
@@ -142,13 +142,13 @@
 
 @media screen and (max-width: 960px) {
   .musicContainer {
-    width: 90%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 381px) {
   .musicContainer {
-    width: 95%;
+    width: 100%;
   }
 }
 

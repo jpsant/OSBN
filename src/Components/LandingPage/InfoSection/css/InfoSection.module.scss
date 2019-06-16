@@ -16,6 +16,10 @@
             font-family: 'Muli', sans-serif;
             text-shadow: .5px .5px .5px #000;
             grid-row: 1/2;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.2em;
+            }
         }
     }
 
@@ -24,7 +28,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
-        @media screen and (max-width: 381px) {
+        @media screen and (max-width: 395px) {
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
 

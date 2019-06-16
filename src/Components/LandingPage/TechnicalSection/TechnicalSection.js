@@ -39,9 +39,9 @@ class TechnicalSection extends Component {
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div ref={this.props.forwardRef} style={{ backgroundColor: '#AC7C44', display: 'grid' }}>
-                    <TransitionDiv title={this.props.language === 'portuguese' ? '& Técnica' :
-                        this.props.language === 'english' ? '& Technical' :
-                            this.props.language === 'french' ? '& Technique' : ''} />
+                    <TransitionDiv title={this.props.language === 'portuguese' ? 'Técnica' :
+                        this.props.language === 'english' ? 'Technical' :
+                            this.props.language === 'french' ? 'Technique' : ''} />
                     <div className={classes.technicalContainer}>
                         <div className={classes.textContainer1}>
                             <h1>{this.props.language === 'portuguese' ? 'Mapa de Palco' :
@@ -62,9 +62,9 @@ class TechnicalSection extends Component {
                                     this.props.language === 'french' ? 'Télécharger' : ''}</button>
                         </div>
                     </div>
-                    <TransitionDiv title={this.props.language === 'portuguese' ? '& Repertório' :
-                        this.props.language === 'english' ? '& Repertoire' :
-                            this.props.language === 'french' ? '& Répertoire' : ''} />
+                    <TransitionDiv title={this.props.language === 'portuguese' ? 'Repertório' :
+                        this.props.language === 'english' ? 'Repertoire' :
+                            this.props.language === 'french' ? 'Répertoire' : ''} />
                     <div className={classes.musicContainer}>
                         <div className={classes.table}>
                             <div className={classes.music}>

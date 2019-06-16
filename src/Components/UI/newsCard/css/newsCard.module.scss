@@ -102,7 +102,7 @@
                 font-size: 1.2em;
             }
 
-            @media screen and (max-width: 381px) {
+            @media screen and (max-width: 442px) {
                 font-size: .9em;
             }
         }
@@ -115,6 +115,10 @@
 }
 
 .container:hover {
+
+    .titleContainer {
+        margin: 5% 0;
+    }
 
     .imageContainer {
         grid-row: 1/4;
@@ -135,7 +139,7 @@
         margin-top: 5%;
         
         @media screen and (max-width: 960px) {
-            height: calc(200px - 10px);
+            height: calc(200px - 15px);
         }
 
         @media screen and (max-width: 381px) {

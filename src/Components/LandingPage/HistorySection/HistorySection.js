@@ -19,8 +19,8 @@ class HistorySection extends Component {
             <>
                 <IntersectionVisible onShow={(e) => this.onShow(e)}>
                     <div ref={this.props.forwardRef} className={classes.historyContainer}>
-                        <TransitionDiv title={this.props.language === 'portuguese' ? '& Histórico' :
-                            this.props.language === 'english' ? '& History' : this.props.language === 'french' ? '& Historique' : ''} />
+                        <TransitionDiv title={this.props.language === 'portuguese' ? 'Histórico' :
+                            this.props.language === 'english' ? 'History' : this.props.language === 'french' ? 'Historique' : ''} />
                         <HistoryDiv year="2017" />
                         <HistoryDiv year="2016" />
                         <HistoryDiv year="2015" />

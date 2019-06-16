@@ -12,10 +12,33 @@
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
 }
 
+.container .hat {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0;
+  font-size: 5.5em;
+  font-family: Xilosa;
+  font-weight: 500;
+  line-height: 1.2;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .container .hat {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .container .hat {
+    font-size: 2.5em;
+  }
+}
+
 .container .title {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin: 0;
   font-size: 5.5em;
   font-family: Xilosa;

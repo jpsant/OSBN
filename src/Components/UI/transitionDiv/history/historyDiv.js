@@ -6,6 +6,7 @@ const historyDiv = (props) => {
         <>
             <div className={classes.container}>
                 <img src={require('../../../../assets/OSBNBORDAS/full.png')} alt="" className={classes.leftBorder}></img>
+                <span className={classes.hat}>&</span>
                 <h1 className={classes.title}> {props.title}</h1>
                 <img src={require('../../../../assets/OSBNBORDAS/full.png')} alt="" className={classes.rightBorder}></img>
             </div>

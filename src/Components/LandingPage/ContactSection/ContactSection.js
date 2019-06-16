@@ -17,9 +17,9 @@ class ContactSection extends Component {
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div ref={this.props.forwardRef} style={{ backgroundColor: '#AC7C44' }}>
-                    <TransitionDiv title={this.props.language === 'portuguese' ? '& Contato' :
-                        this.props.language === 'english' ? '& Contact' :
-                            this.props.language === 'french' ? '& Nous contacter' : ''} />
+                    <TransitionDiv title={this.props.language === 'portuguese' ? 'Contato' :
+                        this.props.language === 'english' ? 'Contact' :
+                            this.props.language === 'french' ? 'Nous contacter' : ''} />
                     <div className={classes.contactContainer}>
                         <div className={classes.titleContainer}>
                             <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste! <span>&</span></h1>
