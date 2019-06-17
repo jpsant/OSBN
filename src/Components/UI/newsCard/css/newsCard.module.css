@@ -85,7 +85,7 @@
 }
 
 .container .titleContainer h1 {
-  margin: 0;
+  margin: 5% 0;
   font-size: 2.9em;
 }
 
@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 381px) {
   .container .titleContainer h1 {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
 
@@ -140,7 +140,7 @@
   transition: .2s;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1022px) {
   .container .content .contentText {
     font-size: 1.2em;
   }

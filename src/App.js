@@ -5,6 +5,7 @@ import './App.css';
 
 import LandingPage from './Components/LandingPage/FullPage/FullPage';
 import Gallery from './Components/Gallery/Gallery';
+import FullPost from './Components/Posts//NewsPost';
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/gallery" exact component={Gallery} />
+          <Route path="/news/:id" exact component={FullPost} />
         </Switch>
       </div>
     );

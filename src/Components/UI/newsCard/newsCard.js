@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './css/newsCard.module.css';
+import { NavLink } from 'react-router-dom';
 
 const newsCard = (props) => {
     return (
@@ -15,9 +16,9 @@ const newsCard = (props) => {
             </div>
             <div className={classes.content}> 
                 <h2 className={classes.contentText}>{props.content}</h2>
-                <a className={classes.redirect}>{props.language === 'portuguese' ? 'Continuar lendo→' : 
+                <NavLink to={"/news/" + props.id} className={classes.redirect}>{props.language === 'portuguese' ? 'Continuar lendo→' : 
                 props.language === 'english' ? 'Continue reading→' : 
-                props.language === 'french' ? 'Continuer la lecture→' : ''}</a>
+                props.language === 'french' ? 'Continuer la lecture→' : ''}</NavLink>
             </div>
         </div>
     );
