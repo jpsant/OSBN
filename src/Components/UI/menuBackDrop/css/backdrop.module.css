@@ -13,4 +13,10 @@
   -webkit-transition-property: opacity;
   transition-property: opacity;
 }
+
+@media (min-width: 755px) {
+  .Backdrop {
+    display: none;
+  }
+}
 /*# sourceMappingURL=backdrop.module.css.map */

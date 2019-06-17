@@ -38,12 +38,205 @@
   line-height: 1;
   text-shadow: 1px 1px 1px #000;
   color: white;
+  margin: 1% 0;
 }
 
 .container .buttonsContainer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  border-radius: 8px;
+  background-color: #AB7C44;
+  margin: 3%;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .buttonsContainer h1 {
+  font-family: Xilosa;
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+  margin: 1% 0;
+}
+
+.container .buttonsContainer .svg {
+  height: 35px;
+}
+
+.container .buttonsContainer .history {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .6fr;
+      grid-template-columns: 1fr .6fr;
+}
+
+.container .buttonsContainer .history h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .buttonsContainer .history:hover img {
+  height: 40px;
+}
+
+.container .buttonsContainer .history:hover button {
+  opacity: 1;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .buttonsContainer .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .6fr;
+      grid-template-columns: 1fr .6fr;
+}
+
+.container .buttonsContainer .gallery h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .buttonsContainer .gallery:hover img {
+  height: 40px;
+}
+
+.container .buttonsContainer .gallery:hover button {
+  opacity: 1;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .buttonsContainer .schedule {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .6fr;
+      grid-template-columns: 1fr .6fr;
+}
+
+.container .buttonsContainer .schedule h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .buttonsContainer .schedule:hover img {
+  height: 40px;
+}
+
+.container .buttonsContainer .schedule:hover button {
+  opacity: 1;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .buttonsContainer .news {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .6fr;
+      grid-template-columns: 1fr .6fr;
+}
+
+.container .buttonsContainer .news h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .buttonsContainer .news:hover img {
+  height: 40px;
+}
+
+.container .buttonsContainer .news:hover button {
+  opacity: 1;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .buttonsContainer .technical {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .6fr;
+      grid-template-columns: 1fr .6fr;
+}
+
+.container .buttonsContainer .technical h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .buttonsContainer .technical:hover img {
+  height: 40px;
+}
+
+.container .buttonsContainer .technical:hover button {
+  opacity: 1;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .buttonsContainer .social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .6fr;
+      grid-template-columns: 1fr .6fr;
+}
+
+.container .buttonsContainer .social h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container .buttonsContainer .social:hover img {
+  height: 40px;
+}
+
+.container .buttonsContainer .social:hover button {
+  opacity: 1;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .buttonsContainer:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container .Button {
+  border: none;
+  background-color: #ac6937;
+  color: white;
+  cursor: pointer;
+  font-family: xilosa;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 12%;
+  padding: 5px 0;
+  opacity: 0.6;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 8px;
+  outline: none;
 }
 
 @media (min-width: 755px) {

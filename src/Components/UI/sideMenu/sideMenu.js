@@ -4,6 +4,7 @@ import classes from './css/sideMenu.module.css';
 
 import LanguageSelector from '../../UI/languageSelector/languageSelector';
 import MobileMenu from '../../UI/mobileMenu/mobileMenu';
+import MenuBackDrop from '../../UI/menuBackDrop/menuBackDrop';
 
 class sideMenu extends Component {
 
@@ -21,7 +22,8 @@ class sideMenu extends Component {
 
         return (
             <>
-                <MobileMenu buttonClicked={(section) => this.props.clicked(section)} clicked={this.onCloseHandler} show={this.state.show} />
+                <MenuBackDrop show={this.state.show} clicked={this.onCloseHandler} />
+                <MobileMenu language={this.props.language} buttonClicked={(section) => this.props.clicked(section)} clicked={this.onCloseHandler} show={this.state.show} />
                 <div className={classes.subMenu} style={{
                     transform: this.state.show ? 'translateX(100vh)' : 'translateX(0)',
                     visibility: this.state.show ? 'hidden' : 'visible',

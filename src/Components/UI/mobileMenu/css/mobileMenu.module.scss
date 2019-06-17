@@ -34,12 +34,188 @@
             line-height: 1;
             text-shadow: 1px 1px 1px #000;
             color: white;
+            margin: 1% 0;
         }
     }
 
     .buttonsContainer {
-        grid-row: 2/3
+        grid-row: 2/3;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        border-radius: 8px;
+        background-color: #AB7C44;
+        margin: 3%;
+        transition: all .2s ease-in-out;
+        // transition: .5s cubic-bezier(.175, .885, .32, 1.275);
+        align-items: center;
+
+        h1 {
+            font-family: Xilosa;
+            font-weight: 300;
+            line-height: 1;
+            text-shadow: 1px 1px 1px #000;
+            color: white;
+            margin: 1% 0;
+        }
+
+        .svg {
+            height: 35px;
+        }
+
+        .history {
+            display: grid;
+            grid-template-columns: 1fr .6fr;
+
+            h1 {
+                align-self: center; 
+            }
+        }
+
+        .history:hover {
+            img {
+                height: 40px;
+            }
+
+            button {
+                opacity: 1;
+                padding: 10px;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
+                    0 1px 3px 1px rgba(60, 64, 67, .15);
+            }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr .6fr;
+
+            h1 {
+                align-self: center; 
+            }
+        }
+
+        .gallery:hover {
+            img {
+                height: 40px;
+            }
+
+            button {
+                opacity: 1;
+                padding: 10px;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
+                    0 1px 3px 1px rgba(60, 64, 67, .15);
+            }
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: 1fr .6fr;
+
+            h1 {
+                align-self: center; 
+            }
+        }
+
+        .schedule:hover {
+            img {
+                height: 40px;
+            }
+
+            button {
+                opacity: 1;
+                padding: 10px;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
+                    0 1px 3px 1px rgba(60, 64, 67, .15);
+            }
+        }
+
+        .news {
+            display: grid;
+            grid-template-columns: 1fr .6fr;
+
+            h1 {
+                align-self: center; 
+            }
+        }
+
+        .news:hover {
+            img {
+                height: 40px;
+            }
+
+            button {
+                opacity: 1;
+                padding: 10px;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
+                    0 1px 3px 1px rgba(60, 64, 67, .15);
+            }
+        }
+
+        .technical {
+            display: grid;
+            grid-template-columns: 1fr .6fr;
+
+            h1 {
+                align-self: center; 
+            }
+        }
+
+        .technical:hover {
+            img {
+                height: 40px;
+            }
+
+            button {
+                opacity: 1;
+                padding: 10px;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
+                    0 1px 3px 1px rgba(60, 64, 67, .15);
+            }
+        }
+
+        .social {
+            display: grid;
+            grid-template-columns: 1fr .6fr;
+
+            h1 {
+                align-self: center; 
+            }
+        }
+
+        .social:hover {
+            img {
+                height: 40px;
+            }
+
+            button {
+                opacity: 1;
+                padding: 10px;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),
+                    0 1px 3px 1px rgba(60, 64, 67, .15);
+            }
+        }
     }
+
+    .buttonsContainer:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    .Button {
+        border: none;
+        background-color: #ac6937;
+        color: white;
+        cursor: pointer;
+        font-family: xilosa;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 12%;
+        padding: 5px 0;
+        opacity: 0.6;
+        transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+        border-radius: 8px;
+        outline: none;
+    }
+
 
     @media (min-width: 755px) {
         display: none;
