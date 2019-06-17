@@ -278,6 +278,13 @@
   }
 }
 
+@media screen and (max-width: 580px) {
+  .subMenu {
+    width: 70px;
+    left: calc(100% - 75px);
+  }
+}
+
 .subMenu .closeDiv .subText {
   text-align: center;
   font-family: xilosa;
@@ -287,6 +294,13 @@
   font-size: 1.9em;
   color: #ac6937;
   z-index: 1000;
+}
+
+@media screen and (max-width: 580px) {
+  .subMenu .closeDiv .subText {
+    font-size: 1.6em;
+    margin: 10% 0;
+  }
 }
 
 .subMenu .closeDiv .subTooltip {
@@ -323,6 +337,12 @@
   position: fixed;
   right: 4%;
   bottom: -10%;
+}
+
+@media screen and (max-width: 580px) {
+  .subMenu .languageContainer {
+    right: 0%;
+  }
 }
 
 .svg {

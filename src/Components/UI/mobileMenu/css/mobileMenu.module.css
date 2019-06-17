@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
+.container {
+  text-align: center;
+  top: 0;
+  right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  z-index: 99999;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  background-color: #ac6937;
+}
+
+.container .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.container .titleContainer h1 {
+  font-family: Xilosa;
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 1px 1px 1px #000;
+  color: white;
+}
+
+.container .buttonsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+@media (min-width: 755px) {
+  .container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=mobileMenu.module.css.map */
