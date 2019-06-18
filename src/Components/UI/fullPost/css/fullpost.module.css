@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
+.postContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .1fr auto;
+      grid-template-rows: .1fr auto;
+}
+
+.postContainer .imageContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 30%;
+  padding-top: 1%;
+}
+
+.postContainer .textContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  margin: 0 5%;
+}
+
+.postContainer .textContainer h2 {
+  color: white;
+  text-align: justify;
+  font-size: 1.8em;
+  font-family: 'Muli', sans-serif;
+  text-shadow: .5px .5px .5px #000;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+@media screen and (max-width: 960px) {
+  .postContainer .textContainer h2 {
+    font-size: 1.2em;
+  }
+}
+
+.postContainer .textContainer .Button {
+  font-family: Xilosa;
+  background-color: #ac6937;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #000;
+  border: none;
+  color: white;
+  padding: 25px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 33px;
+  margin: 2%;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.postContainer .textContainer .Button:hover {
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+}
+
+.imgContainer .img {
+  border-radius: 8px;
+  width: 60%;
+  height: 60%;
+}
+/*# sourceMappingURL=fullpost.module.css.map */

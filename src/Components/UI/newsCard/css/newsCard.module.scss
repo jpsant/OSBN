@@ -58,7 +58,7 @@
         margin: 0;
 
         h1 {
-            margin: 5% 0;
+            margin: 1% 0;
             font-size: 2.9em;
 
             @media screen and (max-width: 960px) {
@@ -67,6 +67,7 @@
 
             @media screen and (max-width: 381px) {
                 font-size: 1.5em;
+                margin: 5% 0;
             }
         }
     }

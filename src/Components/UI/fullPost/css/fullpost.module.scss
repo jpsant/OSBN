@@ -1,0 +1,70 @@
+@mixin font-face($font-name) {
+    @font-face {
+        font-family: $font-name;
+        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@include font-face(Xilosa);
+
+.postContainer {
+    display: grid;
+    grid-template-rows: .1fr auto;
+
+    .imageContainer {
+        align-self: center;
+        justify-self: center;
+        grid-row: 1/2;
+        width: 30%;
+        padding-top: 1%;
+    }
+
+    .textContainer {
+        grid-row: 2/3;
+        margin: 0 5%;
+
+        h2 {
+            color: white;
+            text-align: justify;
+            font-size: 1.8em;
+            font-family: 'Muli', sans-serif;
+            text-shadow: .5px .5px .5px #000;
+            grid-row: 1/2;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.2em;
+            }
+        }
+
+        .Button {
+            font-family: Xilosa;
+            background-color: #ac6937;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px #000;
+            border: none;
+            color: white;
+            padding: 25px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 33px;
+            margin: 2%;
+            transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+    
+        .Button:hover {
+            transform: translateY(-12px);
+        }
+    }
+}
+
+.imgContainer {
+    // background-color: transparent;
+    .img {
+        border-radius: 8px;
+        width: 60%;
+        height: 60%;
+    }
+}
