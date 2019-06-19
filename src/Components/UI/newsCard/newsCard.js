@@ -10,9 +10,9 @@ const newsCard = (props) => {
             </div>
             <div className={classes.titleContainer}>
                 <h1>{props.title}</h1>
+                <h2>{props.date}</h2>
             </div>
             <div className={classes.subTitleContainer}>
-                <h1>{props.date}</h1>
             </div>
             <div className={classes.content}>
                 <h2 className={classes.contentText}>{props.content}</h2>

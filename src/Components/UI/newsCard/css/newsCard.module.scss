@@ -3,8 +3,8 @@
 .container {
     background-color: white;
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr .7fr;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
     justify-self: center;
     align-content: center;
     width: 80%;
@@ -18,13 +18,14 @@
     font-family: 'Muli', sans-serif;
     min-width: 92%;
     // min-height: 85%;
-
+    
     @media screen and (max-width: 960px) {
+        transition: height .1s ease-in-out;
         height: 80%
     }
 
     @media screen and (min-width: 675px) {
-        grid-template-rows: auto auto .1fr;
+        grid-template-rows: auto .1fr;
         // min-width: 90%;
         // min-height: 85%;
     }
@@ -71,25 +72,32 @@
                 margin: 5% 0;
             }
         }
-    }
 
-    .subTitleContainer {
-        grid-row: 2/3;
-        grid-column: 1/2;
-
-        h1 {
+        h2 {
+            font-size: .8em;
             margin: 0%;
             font-size: 1em;
             opacity: .7;
         }
-
-        .date {
-            font-size: .8em;
-        }
     }
 
+    // .subTitleContainer {
+    //     grid-row: 2/3;
+    //     grid-column: 1/2;
+
+    //     h1 {
+    //         margin: 0%;
+    //         font-size: 1em;
+    //         opacity: .7;
+    //     }
+
+    //     .date {
+    //         font-size: .8em;
+    //     }
+    // }
+
     .content {
-        grid-row: 3/4;
+        grid-row: 2/3;
         grid-column: 1/2;
         display: grid;
         grid-template-rows: auto auto;
@@ -98,7 +106,6 @@
         visibility: hidden;
 
         .contentText {
-            // margin: 1% 0;
             opacity: 0;
             transition: .2s;
             grid-row: 1/2;
@@ -147,7 +154,10 @@
 }
 
 .container:hover {
-    min-height: 88%;
+
+    @media screen and (max-width: 600px) {
+        min-height: 88%;
+    }
 
     .titleContainer {
         margin: 5% 0;
@@ -170,6 +180,7 @@
         visibility: visible;
         transition-duration: .2s !important;
         margin: 5% 0;
+        align-self: top;
 
         @media screen and (max-width: 960px) {
             height: calc(200px - 15px);
@@ -182,7 +193,8 @@
 
         .contentText {
             opacity: 1;
-            transition-duration: .8s;
+            transition-duration: .4s;
+            margin: 0;
         }
 
         .redirect {

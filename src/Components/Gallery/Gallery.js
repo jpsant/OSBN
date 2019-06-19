@@ -60,16 +60,16 @@ class Gallery extends Component {
         return (
             <>
                 <div style={{ backgroundColor: '#AB7C44' }}>
-                    <TransitionDiv title={this.props.language === 'portuguese' ? '& Galeria !' :
-                        this.props.language === 'english' ? '& Gallery !' :
-                            this.props.language === 'french' ? '& Galerie !' : ''} />
+                    <TransitionDiv title={this.props.language === 'portuguese' ? 'Galeria !' :
+                        this.props.language === 'english' ? 'Gallery !' :
+                            this.props.language === 'french' ? 'Galerie !' : ''} />
                     <div className={classes.galleryContainer}>
                         <div className={classes.galleryContent}>
                             {images}
                         </div>
                         <div className={classes.clipping}>
                             <div className={classes.title}>
-                                <TransitionDiv title="& Clipping" />
+                                <TransitionDiv title="Clipping" />
                             </div>
                             <div className={classes.image}>
                                 {clipping}
