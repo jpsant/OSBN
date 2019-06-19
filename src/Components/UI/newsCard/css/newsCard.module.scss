@@ -16,16 +16,17 @@
     padding: 0% 1%;
     text-align: left;
     font-family: 'Muli', sans-serif;
-    min-width: 82%;
+    min-width: 92%;
+    // min-height: 85%;
 
     @media screen and (max-width: 960px) {
         height: 80%
     }
 
-    @media screen and (max-width: 381px) {
+    @media screen and (min-width: 675px) {
         grid-template-rows: auto auto .1fr;
-        width: 85%;
-        height: 85%;
+        // min-width: 90%;
+        // min-height: 85%;
     }
 
 
@@ -65,7 +66,7 @@
                 font-size: 1.8em;
             }
 
-            @media screen and (max-width: 381px) {
+            @media screen and (max-width: 443px) {
                 font-size: 1.5em;
                 margin: 5% 0;
             }
@@ -97,17 +98,21 @@
         visibility: hidden;
 
         .contentText {
-            margin: 1% 0;
+            // margin: 1% 0;
             opacity: 0;
             transition: .2s;
             grid-row: 1/2;
 
             @media screen and (max-width: 1022px) {
-                font-size: 1em;
+                font-size: 1.2em;
             }
 
-            @media screen and (max-width: 442px) {
-                font-size: .9em;
+            // @media screen and (max-width: 630px) {
+            //     font-size: 1.2em;
+            // }
+
+            @media screen and (max-width: 510px) {
+                font-size: 1em;
             }
         }
 
@@ -127,16 +132,22 @@
                 position: relative;
                 bottom: 0;
 
-                @media screen and (max-width: 767px) {
+                @media screen and (max-width: 600px) {
                     font-size: 11px;
                     padding: 10px 10px;
                 }
+
+                // @media screen and (max-width: 630px) {
+                //     font-size: 15px;
+                //     padding: 15px 15px;;
+                // }
             }
         }
     }
 }
 
 .container:hover {
+    min-height: 88%;
 
     .titleContainer {
         margin: 5% 0;
@@ -158,10 +169,11 @@
         height: calc(150px - 10px);
         visibility: visible;
         transition-duration: .2s !important;
-        margin-top: 5%;
+        margin: 5% 0;
 
         @media screen and (max-width: 960px) {
             height: calc(200px - 15px);
+            margin-top: 5%;
         }
 
         @media screen and (max-width: 381px) {

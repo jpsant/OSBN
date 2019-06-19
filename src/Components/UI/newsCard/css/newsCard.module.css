@@ -21,7 +21,7 @@
   padding: 0% 1%;
   text-align: left;
   font-family: 'Muli', sans-serif;
-  min-width: 82%;
+  min-width: 92%;
 }
 
 @media screen and (max-width: 960px) {
@@ -30,12 +30,10 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (min-width: 675px) {
   .container {
     -ms-grid-rows: auto auto .1fr;
         grid-template-rows: auto auto .1fr;
-    width: 85%;
-    height: 85%;
   }
 }
 
@@ -95,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 443px) {
   .container .titleContainer h1 {
     font-size: 1.5em;
     margin: 5% 0;
@@ -139,7 +137,6 @@
 }
 
 .container .content .contentText {
-  margin: 1% 0;
   opacity: 0;
   -webkit-transition: .2s;
   transition: .2s;
@@ -150,13 +147,13 @@
 
 @media screen and (max-width: 1022px) {
   .container .content .contentText {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 
-@media screen and (max-width: 442px) {
+@media screen and (max-width: 510px) {
   .container .content .contentText {
-    font-size: .9em;
+    font-size: 1em;
   }
 }
 
@@ -181,11 +178,15 @@
   bottom: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .container .content .contentButton .redirect {
     font-size: 11px;
     padding: 10px 10px;
   }
+}
+
+.container:hover {
+  min-height: 88%;
 }
 
 .container:hover .titleContainer {
@@ -213,12 +214,13 @@
   visibility: visible;
   -webkit-transition-duration: .2s !important;
           transition-duration: .2s !important;
-  margin-top: 5%;
+  margin: 5% 0;
 }
 
 @media screen and (max-width: 960px) {
   .container:hover .content {
     height: calc(200px - 15px);
+    margin-top: 5%;
   }
 }
 
