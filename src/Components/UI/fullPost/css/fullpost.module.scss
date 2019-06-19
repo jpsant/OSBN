@@ -18,6 +18,10 @@
         grid-row: 1/2;
         width: 30%;
         padding-top: 1%;
+
+        @media screen and (max-width: 767px) {
+            width: 60%;
+        }
     }
 
     .textContainer {
@@ -34,6 +38,10 @@
 
             @media screen and (max-width: 960px) {
                 font-size: 1.2em;
+            }
+
+            @media screen and (max-width: 767px) {
+                font-size: 1.5em
             }
         }
 
