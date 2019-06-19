@@ -27,9 +27,17 @@ class NewsSection extends Component {
         }
     }
 
+    componentWillUnmount() {
+        this.clear();
+    }
+
     state = {
         noticias: null,
-        language: 'portuguese'
+        language: this.props.language
+    }
+
+    clear = () => {
+        this.setState({noticias: null, language: null})
     }
 
     onShow(entries) {

@@ -53,7 +53,7 @@ class Gallery extends Component {
         if (this.state.clipping) {
             let image = this.state.clipping;
             clipping = image.map(image => {
-                return <GalleryPanel clicked={() => this.openHandler(image.imagem)} image={image.imagem} />
+                return <GalleryPanel clicked={() => this.openHandler(image.imagem)} key={image.key} image={image.imagem} />
             })
         }
 

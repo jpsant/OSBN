@@ -22,6 +22,14 @@ class TechnicalSection extends Component {
         list: null
     }
 
+    componentWillUnmount() {
+        this.clear();
+    }
+
+    clear = () => {
+        this.setState({list: null});
+    }
+
     onShow(entries) {
         this.props.changeSection('technical');
     }

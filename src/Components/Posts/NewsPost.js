@@ -24,7 +24,7 @@ class NewsPost extends Component {
         if (this.state.post) {
             let item = this.state.post;
             post = Object.values(item).map(item => {
-                return item.id === this.state.id ? <FullPost language={this.props.language} text={item.noticia} image={item.imagem} title={item.titulo} /> : null;
+                return item.id === this.state.id ? <FullPost key={item.id} language={this.props.language} text={item.noticia} image={item.imagem} title={item.titulo} /> : null;
             })
         }
 

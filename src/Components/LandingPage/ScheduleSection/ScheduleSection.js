@@ -22,8 +22,16 @@ class ScheduleSection extends Component {
             });
     }
 
+    componentWillUnmount() {
+        this.clear();
+    }
+
     state = {
         agenda: null
+    }
+
+    clear = () => {
+        this.setState({agenda: null});
     }
 
     render() {

@@ -31,6 +31,14 @@ class historyDiv extends Component {
         }
     }
 
+    componentWillUnmount() { 
+        this.clear();
+    }
+
+    clear = () => {
+        this.setState({history: null})
+    }
+
     render() {
 
         let cards = null;

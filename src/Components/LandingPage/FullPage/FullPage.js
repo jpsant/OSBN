@@ -21,6 +21,10 @@ class FullPage extends Component {
         window.addEventListener('scroll', this.handleScroll);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
     state = {
         menu: false
     }
@@ -95,6 +99,7 @@ class FullPage extends Component {
         );
     }
 }
+
 
 const mapDispatchToProps = dispatch => {
     return {

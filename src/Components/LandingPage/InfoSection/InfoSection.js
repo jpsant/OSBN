@@ -8,10 +8,6 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
 class InfoSection extends Component {
 
-    teste = (x) => {
-        this.props.changeSection(x)
-    }
-
     render() {
         const opts = {
             height: '390',
