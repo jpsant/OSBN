@@ -23,20 +23,23 @@ class App extends Component {
     );
 
     if (this.props.token) {
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/gallery" exact component={Gallery} />
-        <Route path="/news/:id" exact component={FullPost} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/admin/pageManagement" exact component={PageManager} />
-      </Switch>
+      routes = (
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/gallery" exact component={Gallery} />
+          <Route path="/news/:id" exact component={FullPost} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/admin/pageManagement" exact component={PageManager} />
+        </Switch>
+      )
     }
 
 
-      return (
-        <div className="App">
-        </div>
-      );
+    return (
+      <div className="App">
+        {routes}
+      </div>
+    );
   }
 }
 
