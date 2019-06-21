@@ -8,15 +8,19 @@ import auth from './store/reducers/authentication';
 import language from './store/reducers/language';
 
 import { BrowserRouter } from 'react-router-dom';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
     authReducer: auth,
     languageReducer: language
 });
 
-const store = createStore(rootReducer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //REDUX-DEVTOOLS!
+
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
+
 
 const app = (
 
