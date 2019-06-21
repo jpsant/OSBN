@@ -40,7 +40,7 @@
 .container .formContainer .form {
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  margin: 4% 30% 2%;
+  margin: 4% 35% 2%;
   padding: 3% 5%;
   border-radius: 3px;
   background-color: white;
@@ -49,6 +49,12 @@
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   text-align: left;
+}
+
+@media screen and (max-width: 870px) {
+  .container .formContainer .form {
+    margin: 4% 22% 2%;
+  }
 }
 
 .container .formContainer .form input[type=text],
@@ -112,7 +118,7 @@
 
 .container .formContainer .returnButton {
   margin: 10% 0;
-  padding: .8% 2%;
+  padding: .5% 2%;
   border-radius: 3px;
   background-color: white;
   text-decoration: none;
@@ -121,12 +127,12 @@
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 
-::-webkit-scrollbar {
+.container ::-webkit-scrollbar {
   width: 0.8em !important;
   scroll-behavior: smooth !important;
 }
 
-::-webkit-scrollbar-thumb {
+.container ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: #ccc;
 }

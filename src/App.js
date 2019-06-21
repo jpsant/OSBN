@@ -27,12 +27,12 @@ class App extends Component {
       routes = (
         <Switch>
           <Route path="/" exact component={LandingPage} />
+          <Route path="/admin/pageManagement" component={PageManager} />
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/news/:id" exact component={FullPost} />
           <Route path="/login" exact component={Login} />
-          <Route path="/admin/pageManagement" exact component={PageManager} />
         </Switch>
-      )
+      );
     }
 
 
@@ -46,7 +46,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    token: state.authReducer.token
+    token: state.authReducer.token !== null
   }
 }
 
