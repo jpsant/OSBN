@@ -6,20 +6,37 @@ import './App.css';
 import LandingPage from './Components/LandingPage/FullPage/FullPage';
 import Gallery from './Components/Gallery/Gallery';
 import FullPost from './Components/Posts//NewsPost';
-
+import Login from './Components/Admin/Login/Login';
+import PageManager from './Components/Admin/PageManager/PageManager';
 
 class App extends Component {
   render() {
-      // SE LIGAR NA SEQUENCIA DAS ROUTES!
-    return (
-      <div className="App">
-        <Switch>
-          <Route path="/" exact component={LandingPage} />
-          <Route path="/gallery" exact component={Gallery} />
-          <Route path="/news/:id" exact component={FullPost} />
-        </Switch>
-      </div>
+    // SE LIGAR NA SEQUENCIA DAS ROUTES!
+
+    let routes = (
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/gallery" exact component={Gallery} />
+        <Route path="/news/:id" exact component={FullPost} />
+        <Route path="/login" exact component={Login} />
+      </Switch>
     );
+
+    if (this.props.token) {
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/gallery" exact component={Gallery} />
+        <Route path="/news/:id" exact component={FullPost} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/admin/pageManagement" exact component={PageManager} />
+      </Switch>
+    }
+
+
+      return (
+        <div className="App">
+        </div>
+      );
   }
 }
 
