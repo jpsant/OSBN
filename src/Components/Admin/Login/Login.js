@@ -37,6 +37,7 @@ class Login extends Component {
                 <div className={classes.formContainer}>
                     <div>
                         <form onSubmit={this.loginHandler} className={classes.form} onSubmit={this.loginHandler}>
+                            <h1 className={classes.title}>Login</h1>
                             <div className={classes.email}>
                                 <label className={classes.label} htmlFor="email">E-mail</label>
                                 <input onChange={this.emailHandler} type="text" id="email" placeholder="Seu Email"></input>
@@ -45,7 +46,7 @@ class Login extends Component {
                                 <label className={classes.label} htmlFor="password">Senha</label>
                                 <input onChange={this.passwordHandler} type="password" id="password" placeholder="Sua Senha"></input>
                             </div>
-                            <button className={classes.button}>Login</button>
+                            <button className={classes.button}>Submit</button>
                         </form>
                     </div>
                     <div>

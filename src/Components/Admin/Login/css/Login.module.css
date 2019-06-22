@@ -46,15 +46,22 @@
   background-color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  text-align: left;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
 }
 
 @media screen and (max-width: 870px) {
   .container .formContainer .form {
     margin: 4% 22% 2%;
   }
+}
+
+.container .formContainer .form .title {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  text-align: center;
+  margin: 0;
 }
 
 .container .formContainer .form input[type=text],
@@ -80,16 +87,18 @@
 }
 
 .container .formContainer .form .email {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  margin: 3% 0;
-}
-
-.container .formContainer .form .password {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  margin: 3% 0;
+  text-align: left;
+}
+
+.container .formContainer .form .password {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  text-align: left;
 }
 
 .container .formContainer .form .button {
