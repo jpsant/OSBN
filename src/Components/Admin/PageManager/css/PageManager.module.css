@@ -4,9 +4,10 @@
   background-color: #508CA4;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .2fr .8fr;
-      grid-template-rows: .2fr .8fr;
+  -ms-grid-rows: .1fr .5fr;
+      grid-template-rows: .1fr .5fr;
   font-family: 'Muli', sans-serif;
+  overflow-X: hidden;
 }
 
 .pageContainer .titleContainer {
@@ -17,6 +18,8 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .pageContainer .titleContainer .title {
@@ -24,6 +27,11 @@
   margin-top: 2%;
   font-size: 4em;
   text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+.pageContainer .titleContainer h2 {
+  text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+  margin: 0;
 }
 
 .pageContainer .cardsContainer {
@@ -35,6 +43,8 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .pageContainer .cardsContainer .card1 {
@@ -47,7 +57,7 @@
       grid-template-rows: 1fr 1fr;
   background-color: white;
   border-radius: 3px;
-  margin: 16% 10%;
+  margin: 12% 10%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -92,6 +102,8 @@
   color: white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
 }
 
 .pageContainer .cardsContainer .card1 .buttons .editContainer {
@@ -115,6 +127,8 @@
   color: white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
 }
 
 .pageContainer .cardsContainer .card1:hover {
@@ -132,7 +146,7 @@
       grid-template-rows: 1fr 1fr;
   background-color: white;
   border-radius: 3px;
-  margin: 16% 10%;
+  margin: 12% 10%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -167,6 +181,8 @@
   color: white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
 }
 
 .pageContainer .cardsContainer .card2:hover {

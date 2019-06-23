@@ -29,7 +29,7 @@ class Login extends Component {
     render() {
 
         let body = (
-            <>
+            <div className={classes.container}>
                 <div className={classes.titleContainer}>
                     <h2>Orquestra Sanfônica Balaio Nordeste</h2>
                     <h1 className={classes.title}>Gerenciador de Página</h1>
@@ -49,12 +49,12 @@ class Login extends Component {
                             <button className={classes.button}>Submit</button>
                         </form>
                     </div>
-                    <div>
+                    <div style={{backgroundColor: '#508CA4'}}>
                         <h3 className={classes.subTitle}>Não sabe como veio parar nessa página?</h3>
                         <NavLink className={classes.returnButton} to="/">Voltar</NavLink>
                     </div>
                 </div>
-            </>
+            </div>
         );
 
         if (this.props.loading) {

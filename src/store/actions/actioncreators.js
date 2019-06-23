@@ -51,7 +51,6 @@ export const initLogin = (email, password) => {
         }
         axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyC6V_xGTaJQ55Zd_cRqZjrGcL95k2jb5EM', authData)
             .then(response => {
-                console.log(response);
                 dispatch(loginSuccess(response.data.idToken, response.data.localId));
             })
             .catch(error => {

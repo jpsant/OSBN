@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .container {
-    // background-color: #BFD7EA;
     background-color: #508CA4;
     height: 100vh;
     display: grid;
-    grid-template-rows: .1fr .9fr;
+    grid-template-rows: auto 1fr;
     font-family: 'Muli', sans-serif;
 
     .titleContainer {
         align-self: center;
         grid-row: 1/2;
         font-family: 'Muli', sans-serif;
-        font-size: 1.7em;
+        font-size: 1.5em;
         color: white;
         text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+        padding-bottom: 2%;
 
         h2 {
             margin-bottom: 0;
@@ -31,12 +31,12 @@
 
         .form {
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-            margin: 4% 35% 2%;
+            margin: 0% 35% 2%;
             padding: 3% 5%;
             border-radius: 3px;
             background-color: white;
             display: grid;
-            grid-template-rows: auto auto auto;
+            grid-template-rows: .5fr 1fr;
 
             @media screen and (max-width: 870px) {
                 margin: 4% 22% 2%;
@@ -112,14 +112,5 @@
             color: black;
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
         }
-    }
-    ::-webkit-scrollbar {
-        width: 0.8em !important;
-        scroll-behavior: smooth !important;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: #ccc
     }
 }
