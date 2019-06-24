@@ -1,0 +1,10 @@
+.container {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: white;
+}
+
+.container h1 {
+  margin: 0;
+}
+/*# sourceMappingURL=NewsAdder.module.css.map */

@@ -1,0 +1,43 @@
+.alert-enter {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.alert-exit {
+    opacity: 1;
+}
+
+.alert-exit-active {
+    opacity: 0;
+    height: 0;
+    transform: translateX(-50px);
+    transition: height 300ms ,opacity 300ms, transform 300ms;
+}
+
+
+.slide-enter {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.slide-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 400ms, transform 400ms;
+}
+
+.slide-exit {
+    opacity: 1;
+}
+
+.slide-exit-active {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 300ms, transform 300ms;
+}

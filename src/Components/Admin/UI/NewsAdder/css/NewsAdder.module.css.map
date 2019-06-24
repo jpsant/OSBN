@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,UAAU,EAAE,mBAAmB;EAC/B,KAAK,EAAE,KAAK;CAIf;;AAND,AAGK,UAHK,CAGL,EAAE,CAAC;EACC,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "NewsAdder.module.scss"
+    ],
+    "names": [],
+    "file": "NewsAdder.module.css"
+}
