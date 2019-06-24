@@ -21,21 +21,48 @@ class PageManager extends Component {
     }
 
     newsAddHandler = () => {
-        this.setState(prevState => ({
-            newsAdd: !prevState.newsAdd
-        }));
+        if (this.state.menu === false) {
+            this.setState(prevState => ({
+                newsAdd: !prevState.newsAdd
+            }))
+        } else {
+            this.setState({menu: false});
+            setTimeout(() => {
+                this.setState(prevState => ({
+                    newsAdd: !prevState.newsAdd
+                }))
+            }, 300);
+        }
     }
 
     newsEditHandler = () => {
-        this.setState(prevState => ({
-            newsEdit: !prevState.newsEdit
-        }));
+        if (this.state.menu === false) {
+            this.setState(prevState => ({
+                newsEdit: !prevState.newsEdit
+            }))
+        } else {
+            this.setState({menu: false});
+            setTimeout(() => {
+                this.setState(prevState => ({
+                    newsEdit: !prevState.newsEdit
+                }))
+            }, 300);
+        }
     }
 
     galleryEditHandler = () => {
-        this.setState(prevState => ({
-            galleryEdit: !prevState.galleryEdit
-        }));
+        if (this.state.menu === false) {
+            this.setState(prevState => ({
+                galleryEdit: !prevState.galleryEdit
+            }))
+        } else {
+            this.setState({menu: false});
+            setTimeout(() => {
+                this.setState(prevState => ({
+                    galleryEdit: !prevState.galleryEdit
+                }))
+            }, 350);
+        }
     }
 
 
@@ -52,8 +79,8 @@ class PageManager extends Component {
                 <CSSTransition in={this.state.newsAdd}
                     timeout={300}
                     classNames="slide"
-                    onExited={() => this.setState({menu: true})}
-                    onEnter={() => this.setState({menu: false})}
+                    onExited={() => this.setState({ menu: true })}
+                    onEnter={() => this.setState({ menu: false })}
                     unmountOnExit>
                     <NewsAdder clicked={this.newsAddHandler} />
                 </CSSTransition>
@@ -61,8 +88,8 @@ class PageManager extends Component {
                 <CSSTransition in={this.state.newsEdit}
                     timeout={300}
                     classNames="slide"
-                    onExited={() => this.setState({menu: true})}
-                    onEnter={() => this.setState({menu: false})}
+                    onExited={() => this.setState({ menu: true })}
+                    onEnter={() => this.setState({ menu: false })}
                     unmountOnExit>
                     <NewsEditor clicked={this.newsEditHandler} />
                 </CSSTransition>
@@ -70,8 +97,8 @@ class PageManager extends Component {
                 <CSSTransition in={this.state.galleryEdit}
                     timeout={300}
                     classNames="slide"
-                    onExited={() => this.setState({menu: true})}
-                    onEnter={() => this.setState({menu: false})}
+                    onExited={() => this.setState({ menu: true })}
+                    onEnter={() => this.setState({ menu: false })}
                     unmountOnExit>
                     <GalleryEditor clicked={this.galleryEditHandler} />
                 </CSSTransition>
@@ -79,7 +106,7 @@ class PageManager extends Component {
                 <CSSTransition in={this.state.menu}
                     timeout={300}
                     classNames="alert"
-                    onExiting={() => this.setState({menu: false})}
+                    onExiting={() => this.setState({ menu: false })}
                     unmountOnExit>
                     <Menu newsAdd={this.newsAddHandler} newsEdit={this.newsEditHandler} galleryEdit={this.galleryEditHandler} />
                 </CSSTransition>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 import * as actions from '../../../store/actions/actioncreators';
+import CSSTransition from 'react-transition-group/CSSTransition';
+
 
 import classes from './css/Login.module.css';
 import Spinner from '../../UI/spinner/spinner';
@@ -29,32 +31,34 @@ class Login extends Component {
     render() {
 
         let body = (
-            <div className={classes.container}>
-                <div className={classes.titleContainer}>
-                    <h2>Orquestra Sanfônica Balaio Nordeste</h2>
-                    <h1 className={classes.title}>Gerenciador de Página</h1>
-                </div>
-                <div className={classes.formContainer}>
-                    <div>
-                        <form onSubmit={this.loginHandler} className={classes.form} onSubmit={this.loginHandler}>
-                            <h1 className={classes.title}>Login</h1>
-                            <div className={classes.email}>
-                                <label className={classes.label} htmlFor="email">E-mail</label>
-                                <input onChange={this.emailHandler} type="text" id="email" placeholder="Seu Email"></input>
-                            </div>
-                            <div className={classes.password}>
-                                <label className={classes.label} htmlFor="password">Senha</label>
-                                <input onChange={this.passwordHandler} type="password" id="password" placeholder="Sua Senha"></input>
-                            </div>
-                            <button className={classes.button}>Submit</button>
-                        </form>
+            <CSSTransition>
+                <div className={classes.container}>
+                    <div className={classes.titleContainer}>
+                        <h2>Orquestra Sanfônica Balaio Nordeste</h2>
+                        <h1 className={classes.title}>Gerenciador de Página</h1>
                     </div>
-                    <div style={{backgroundColor: '#508CA4'}}>
-                        <h3 className={classes.subTitle}>Não sabe como veio parar nessa página?</h3>
-                        <NavLink className={classes.returnButton} to="/">Voltar</NavLink>
+                    <div className={classes.formContainer}>
+                        <div>
+                            <form onSubmit={this.loginHandler} className={classes.form} onSubmit={this.loginHandler}>
+                                <h1 className={classes.title}>Login</h1>
+                                <div className={classes.email}>
+                                    <label className={classes.label} htmlFor="email">E-mail</label>
+                                    <input onChange={this.emailHandler} type="text" id="email" placeholder="Seu Email"></input>
+                                </div>
+                                <div className={classes.password}>
+                                    <label className={classes.label} htmlFor="password">Senha</label>
+                                    <input onChange={this.passwordHandler} type="password" id="password" placeholder="Sua Senha"></input>
+                                </div>
+                                <button className={classes.button}>Submit</button>
+                            </form>
+                        </div>
+                        <div style={{ backgroundColor: '#508CA4' }}>
+                            <h3 className={classes.subTitle}>Não sabe como veio parar nessa página?</h3>
+                            <NavLink className={classes.returnButton} to="/">Voltar</NavLink>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </CSSTransition>
         );
 
         if (this.props.loading) {
