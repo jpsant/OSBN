@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 import auth from './store/reducers/authentication';
 import language from './store/reducers/language';
+import post from './store/reducers/posting';
 
 import { BrowserRouter } from 'react-router-dom';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
@@ -14,7 +15,8 @@ import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
     authReducer: auth,
-    languageReducer: language
+    languageReducer: language,
+    postReducer: post
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //REDUX-DEVTOOLS!

@@ -59,3 +59,46 @@ export const initLogin = (email, password) => {
             })
     }
 }
+
+export const initPosting = () => {
+    return {
+        type: actionTypes.START_POSTING
+    }
+}
+
+export const postingSuccess = () => {
+    return {
+        type: actionTypes.POST_SUCCESS
+    }
+}
+
+export const postingFail = (error) => {
+    return {
+        type: actionTypes.POST_FAIL,
+        error: error
+    }
+}
+
+export const startPosting = (post) => {
+    return dispatch => {
+
+        dispatch(initPosting());
+        let position = null;
+        axios.get('https://osbn-a36f9.firebaseio.com/noticias/portuguese.json')
+            .then(response => {
+                position = response.data.length;
+
+                axios.put('https://osbn-a36f9.firebaseio.com/noticias/portuguese/' + position + '.json', post)
+                .then(response => {
+                    dispatch(postingSuccess());
+                    console.log(response.data);
+                })
+                .catch(error => {
+                    dispatch(postingFail(error));
+                    console.log(error);
+                })
+
+            })
+
+    }
+}

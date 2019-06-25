@@ -12,14 +12,12 @@ const newsCard = (props) => {
                 <h1>{props.title}</h1>
                 <h2>{props.date}</h2>
             </div>
-            <div className={classes.subTitleContainer}>
-            </div>
             <div className={classes.content}>
                 <h2 className={classes.contentText}>{props.content}</h2>
                 <div className={classes.contentButton}>
                     <NavLink to={"/news/" + props.id} className={classes.redirect}>{props.language === 'portuguese' ? 'Continuar lendo→' :
                         props.language === 'english' ? 'Continue reading→' :
-                            props.language === 'french' ? 'Continuer la lecture→' : ''}</NavLink>
+                            props.language === 'french' ? 'Continuer la lecture→' : 'Continuar lendo→'}</NavLink>
                 </div>
             </div>
         </div>

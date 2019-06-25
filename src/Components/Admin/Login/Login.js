@@ -39,7 +39,7 @@ class Login extends Component {
                     </div>
                     <div className={classes.formContainer}>
                         <div>
-                            <form onSubmit={this.loginHandler} className={classes.form} onSubmit={this.loginHandler}>
+                            <form className={classes.form} onSubmit={this.loginHandler}>
                                 <h1 className={classes.title}>Login</h1>
                                 <div className={classes.email}>
                                     <label className={classes.label} htmlFor="email">E-mail</label>
