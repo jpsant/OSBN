@@ -104,7 +104,7 @@ class NewsAdder extends Component {
                                 </div>
                             </form>
                             <div className={classes.preview}>
-                                <NewsCard title={this.state.brTitle} date={this.state.brDate} content={this.state.brContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
+                                <NewsCard disabled={e => e.preventDefault()} title={this.state.brTitle} date={this.state.brDate} content={this.state.brContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
                             </div>
                         </div>
                         <div className={classes.form2}>
@@ -128,7 +128,7 @@ class NewsAdder extends Component {
                                 </div>
                             </form>
                             <div className={classes.preview}>
-                                <NewsCard title={this.state.enTitle} date={this.state.enDate} content={this.state.enContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
+                                <NewsCard disabled={e => e.preventDefault()} title={this.state.enTitle} date={this.state.enDate} content={this.state.enContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
                             </div>
                         </div>
                         <div className={classes.form3}>
@@ -152,7 +152,7 @@ class NewsAdder extends Component {
                                 </div>
                             </form>
                             <div className={classes.preview}>
-                                <NewsCard title={this.state.frTitle} date={this.state.frDate} content={this.state.frContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
+                                <NewsCard disabled={e => e.preventDefault()} title={this.state.frTitle} date={this.state.frDate} content={this.state.frContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
                             </div>
                         </div>
                     </div>

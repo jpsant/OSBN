@@ -50,7 +50,7 @@ class NewsSection extends Component {
         if (this.state.noticias !== null) {
             let items = this.state.noticias;
             cards = items.map(item => {
-                return <NewsCard img={item.imagem} language={this.state.language} id={item.id} key={item.id} content={item.resumo} title={item.titulo} date={item.data} />
+                return <NewsCard disabled={false} img={item.imagem} language={this.state.language} id={item.id} key={item.id} content={item.resumo} title={item.titulo} date={item.data} />
             })
         }
 
