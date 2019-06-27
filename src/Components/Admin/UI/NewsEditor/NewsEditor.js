@@ -10,6 +10,7 @@ import './css/cardAnimations.module.css';
 import Modal from '../../../UI/modal/modal';
 import Backdrop from '../../../UI/backDrop/backDrop';
 import NewsEditorCard from '../components/newsEditorCards/newsEditorCards';
+import Spinner from '../../../UI/spinner/spinner';
 
 class NewsEditor extends Component {
 
@@ -30,7 +31,8 @@ class NewsEditor extends Component {
         modalResume: null,
         modalContent: null,
         modalDate: null,
-        language: ''
+        language: '',
+        modal: false
     }
 
     itemHandler = (item, position, language) => {
@@ -47,6 +49,7 @@ class NewsEditor extends Component {
 
     submitPost = (event) => {
         event.preventDefault();
+        this.setState({showModal: false});
         let post = {
             titulo: this.state.modalTitle,
             data: this.state.modalDate,
@@ -113,7 +116,9 @@ class NewsEditor extends Component {
                             {frPosts}
                         </div>
                     </div>
-                    <button onClick={this.props.clicked}>votar</button>
+                    <div className={classes.buttonContainer}>
+                        <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                    </div>
                 </div>
 
                 <CSSTransition in={this.state.showModal}
@@ -162,6 +167,36 @@ class NewsEditor extends Component {
                         </Modal>
                     </div>
                 </CSSTransition>
+
+                <CSSTransition in={this.props.loading}
+                    classNames="news"
+                    unmountOnExit
+                    timeout={500}
+                    onExit={() => this.setState({ modal: true })}
+                >
+                    <div>
+                        <Backdrop show={this.props.loading} />
+                        <Spinner />
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={this.props.success && this.state.modal}
+                    classNames="news"
+                    unmountOnExit
+                    onExit={() => this.setState({ modal: false })}
+                    timeout={500}
+                >
+                    <div>
+                        <Backdrop clicked={this.props.clicked} show={this.props.success && this.state.modal} />
+                        <Modal show={this.props.success && this.state.modal}>
+                            <div className={classes.Modal}>
+                                <h1>Notícia Modificada com sucesso!</h1>
+                                <h2>Voltar para o menu principal:</h2>
+                                <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                            </div>
+                        </Modal>
+                    </div>
+                </CSSTransition>
             </>
         )
     }
@@ -180,4 +215,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (NewsEditor);
+export default connect(mapStateToProps, mapDispatchToProps)(NewsEditor);

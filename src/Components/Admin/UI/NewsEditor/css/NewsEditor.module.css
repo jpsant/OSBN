@@ -3,8 +3,8 @@
   color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .5fr 1fr 1fr 1fr;
-      grid-template-rows: .5fr 1fr 1fr 1fr;
+  -ms-grid-rows: .5fr 1fr 1fr 1fr .3fr;
+      grid-template-rows: .5fr 1fr 1fr 1fr .3fr;
 }
 
 .container .titleContainer {
@@ -139,8 +139,37 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.container h1 {
-  margin: 0;
+.container .buttonContainer {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  display: -ms-grid;
+  display: grid;
+}
+
+.container .buttonContainer .button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 1.5% 7%;
+  border-radius: 3px;
+  background-color: #318647;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container .buttonContainer .button:hover {
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
 }
 
 .editorContainer {
@@ -292,5 +321,43 @@
   border: none;
   cursor: pointer;
   font-size: 20px;
+}
+
+.Modal {
+  background-color: white;
+  border-radius: 3px;
+  font-family: 'Muli', sans-serif;
+  padding: 10% 0;
+}
+
+.Modal h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.Modal h2 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 4%;
+}
+
+.Modal .button {
+  padding: 2% 6%;
+  border-radius: 3px;
+  background: #318647;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Modal .button:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 /*# sourceMappingURL=NewsEditor.module.css.map */
