@@ -9,3 +9,7 @@ export const CHANGE_SECTION = 'CHANGE_SECTION';
 export const START_POSTING = 'START_POSTING';
 export const POST_SUCCESS = 'POST_SUCCESS';
 export const POST_FAIL = 'POST_FAIL';
+
+export const CHANGE_POST = 'CHANGE_POST';
+export const CHANGE_POST_SUCCESS = 'CHANGE_POST_SUCCESS';
+export const CHANGE_POST_FAIL = 'CHANGE_POST_FAIL';

@@ -79,6 +79,38 @@ export const postingFail = (error) => {
     }
 }
 
+export const changePost = () => {
+    return {
+        type: actionTypes.CHANGE_POST
+    }
+}
+
+export const changePostSuccess = () => {
+    return {
+        type: actionTypes.CHANGE_POST_SUCCESS
+    }
+}
+
+export const changePostFail = () => {
+    return {
+        type: actionTypes.CHANGE_POST_FAIL
+    }
+}
+
+export const initChangePost = (newPost, position, language) => {
+    return dispatch => {
+        dispatch(changePost());
+        axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
+            .then(response => {
+                dispatch(changePostSuccess());
+                console.log(response.data);
+            })
+            .catch(error => {
+                dispatch(changePostFail());
+            })
+    }
+}
+
 export const singlePost = (brPost) => {
     return dispatch => {
         dispatch(initPosting());

@@ -30,7 +30,7 @@ class NewsAdder extends Component {
         frBody: '',
         image: 'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545',
         showForm: true,
-        modal: false
+        modal: false,
     }
 
     postHandler = (event) => {
@@ -185,7 +185,7 @@ class NewsAdder extends Component {
                             <div className={classes.Modal}>
                                 <h1>Notícia adicionada com sucesso!</h1>
                                 <h2>Voltar para o menu principal:</h2>
-                                <button className={classes.button} onClick={this.props.clicked} >Voltar</button>
+                                <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
                             </div>
                         </Modal>
                     </div>
