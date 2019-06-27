@@ -1,5 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .container {
   color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .5fr 1fr 1fr 1fr;
+      grid-template-rows: .5fr 1fr 1fr 1fr;
+}
+
+.container .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.container .titleContainer h1 {
+  margin: 0;
+  margin-top: 2%;
+  font-size: 4em;
+  font-family: 'Muli', sans-serif;
+  text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+.container .titleContainer h2 {
+  text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 4%;
+}
+
+.container .brPosts {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .1fr 1fr;
+      grid-template-rows: .1fr 1fr;
+  margin: 1%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .brPosts .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.container .brPosts .titleContainer .title {
+  color: black;
+  margin: 0;
+  margin: 2% 0;
+}
+
+.container .brPosts .postsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.container .enPosts {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .1fr 1fr;
+      grid-template-rows: .1fr 1fr;
+  margin: 1%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .enPosts .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.container .enPosts .titleContainer .title {
+  color: black;
+  margin: 0;
+  margin: 2% 0;
+}
+
+.container .enPosts .postsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.container .frPosts {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .1fr 1fr;
+      grid-template-rows: .1fr 1fr;
+  margin: 1%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.container .frPosts .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.container .frPosts .titleContainer .title {
+  color: black;
+  margin: 0;
+  margin: 2% 0;
+}
+
+.container .frPosts .postsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .container h1 {

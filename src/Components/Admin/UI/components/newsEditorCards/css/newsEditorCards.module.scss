@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    cursor: pointer;
+    color: black;
+    margin: 5%;
+    padding: 5%;
+    transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+
+    .titleContainer {
+        grid-row: 1/2;
+
+        h1 {
+            margin: 0;
+            margin-bottom: 5%;
+        }
+    }
+
+    .contentContainer {
+        grid-row: 2/3;
+
+        h2 {
+            margin: 0;
+            font-size: 1em;
+            text-align: justify;
+            justify-self: center;
+        }
+    }
+}
+
+.container:hover {
+    transform: translateY(-10px)
+}
