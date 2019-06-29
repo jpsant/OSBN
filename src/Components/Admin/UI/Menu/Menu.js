@@ -3,6 +3,7 @@ import classes from './css/Menu.module.css';
 
 class Menu extends Component {
     render() {
+
         return (
             <>
                 <div className={classes.pageContainer}>

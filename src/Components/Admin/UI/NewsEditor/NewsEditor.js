@@ -31,7 +31,9 @@ class NewsEditor extends Component {
         modalResume: null,
         modalContent: null,
         modalDate: null,
+        modalId: null,
         language: '',
+        image: "https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545",
         modal: false
     }
 
@@ -43,6 +45,7 @@ class NewsEditor extends Component {
             modalResume: item.resumo,
             modalContent: item.noticia,
             modalDate: item.data,
+            modalId: item.id,
             language: language
         }));
     }
@@ -54,7 +57,9 @@ class NewsEditor extends Component {
             titulo: this.state.modalTitle,
             data: this.state.modalDate,
             resumo: this.state.modalResume,
-            noticia: this.state.modalContent
+            noticia: this.state.modalContent,
+            imagem: this.state.image,
+            id: this.state.modalId
         };
         let position = this.state.modalItemPosition;
         let language = this.state.language;
@@ -158,7 +163,7 @@ class NewsEditor extends Component {
                                             <textarea cols="45" rows="12" onChange={(event) => this.setState({ modalContent: event.target.value })} value={this.state.modalContent} type="text" id="body" placeholder="Conteúdo da notícia"></textarea>
                                         </div>
                                         <div className={classes.submit}>
-                                            <button className={classes.button} onClick={this.submitPost}>submit!!</button>
+                                            <button className={classes.button} onClick={this.submitPost}>Publicar!</button>
                                         </div>
                                     </form>
                                 </div>

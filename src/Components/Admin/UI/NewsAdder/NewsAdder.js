@@ -28,9 +28,10 @@ class NewsAdder extends Component {
         frDate: 'xx/xx/xxxx',
         frContent: 'Resumo',
         frBody: '',
-        image: 'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545',
+        image: null,
         showForm: true,
         modal: false,
+        teste: null,
     }
 
     postHandler = (event) => {
@@ -64,12 +65,19 @@ class NewsAdder extends Component {
             id: uniqid('fr-')
         }
 
-        if (this.state.enBody && this.state.frBody !== '') {
-            this.props.handlePost(brPost, enPost, frPost);
-        } else {
-            this.props.singlePost(brPost);
-        }
+        let image = this.state.teste;
 
+        if (this.state.enBody && this.state.frBody !== '') {
+            this.props.handlePost(brPost, enPost, frPost, image);
+        } else {
+            this.props.singlePost(brPost, image);
+        }
+    }
+
+    imgHandler = (event) => {
+        event.preventDefault();
+        let file = event.target.files[0]
+        this.setState({teste: file});
     }
 
 
@@ -102,6 +110,7 @@ class NewsAdder extends Component {
                                     <label htmlFor="body">Conteúdo da notícia</label>
                                     <input onChange={(event) => this.setState({ brBody: event.target.value })} type="text" id="body" placeholder="Conteúdo da notícia"></input>
                                 </div>
+                                <input onChange={this.imgHandler} type="file" id="file" name="file"></input>
                             </form>
                             <div className={classes.preview}>
                                 <NewsCard disabled={e => e.preventDefault()} title={this.state.brTitle} date={this.state.brDate} content={this.state.brContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
@@ -204,8 +213,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        handlePost: (brPost, enPost, frPost) => dispatch(actions.startPosting(brPost, enPost, frPost)),
-        singlePost: (brPost) => dispatch(actions.singlePost(brPost))
+        handlePost: (brPost, enPost, frPost, image) => dispatch(actions.startPosting(brPost, enPost, frPost, image)),
+        singlePost: (brPost, image) => dispatch(actions.singlePost(brPost, image))
     }
 }
 

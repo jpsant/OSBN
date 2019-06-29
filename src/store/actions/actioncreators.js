@@ -1,5 +1,19 @@
 import * as actionTypes from '../actions/actiontypes';
 import axios from 'axios';
+import firebase from 'firebase';
+
+var app = firebase.initializeApp({
+    apiKey: "AIzaSyC6V_xGTaJQ55Zd_cRqZjrGcL95k2jb5EM",
+    authDomain: "osbn-a36f9.firebaseapp.com",
+    databaseURL: "https://osbn-a36f9.firebaseio.com",
+    projectId: "osbn-a36f9",
+    storageBucket: "osbn-a36f9.appspot.com",
+    messagingSenderId: "878608303939",
+    appId: "1:878608303939:web:e5ea8fa9d84d6874"
+});
+
+
+var storageRef = firebase.storage().ref();
 
 export const changeLanguage = (language, flag) => {
     return {
@@ -100,6 +114,8 @@ export const changePostFail = () => {
 export const initChangePost = (newPost, position, language) => {
     return dispatch => {
         dispatch(changePost());
+        newPost.imagem = 'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545';
+
         axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
             .then(response => {
                 dispatch(changePostSuccess());
@@ -111,62 +127,96 @@ export const initChangePost = (newPost, position, language) => {
     }
 }
 
-export const singlePost = (brPost) => {
+export const singlePost = (brPost, image) => {
     return dispatch => {
         dispatch(initPosting());
-        axios.get('https://osbn-a36f9.firebaseio.com/noticias/portuguese.json')
-            .then(response => {
-                let position = response.data.length;
 
-                axios.put('https://osbn-a36f9.firebaseio.com/noticias/portuguese/' + position + '.json', brPost)
-                    .then(response => {
-                        dispatch(postingSuccess());
-                    })
-                    .catch(error => {
-                        dispatch(postingFail(error));
-                        console.log(error);
+        var metadata = {
+            contentType: 'image/jpeg'
+        };
+
+        storageRef.child('imagens/noticias/' + image.name).put(image, metadata)
+            .then(link => {
+                link.ref.getDownloadURL()
+                    .then(url => {
+                        // console.log('link: ' + url);
+
+                        axios.get('https://osbn-a36f9.firebaseio.com/noticias/portuguese.json')
+                            .then(response => {
+                                let position = response.data.length;
+                                brPost.imagem = url;
+
+                                axios.put('https://osbn-a36f9.firebaseio.com/noticias/portuguese/' + position + '.json', brPost)
+                                    .then(response => {
+                                        dispatch(postingSuccess());
+                                    })
+                                    .catch(error => {
+                                        dispatch(postingFail(error));
+                                        console.log(error);
+                                    })
+                            })
                     })
             })
+
+
     }
 }
 
-export const startPosting = (brPost, enPost, frPost) => {
+export const startPosting = (brPost, enPost, frPost, image) => {
     return dispatch => {
-
         dispatch(initPosting());
-        axios.get('https://osbn-a36f9.firebaseio.com/noticias/portuguese.json')
-            .then(response => {
-                let position = response.data.length;
 
-                axios.put('https://osbn-a36f9.firebaseio.com/noticias/portuguese/' + position + '.json', brPost)
-                    .catch(error => {
-                        dispatch(postingFail(error));
-                        console.log(error);
-                    })
-            })
 
-        axios.get('https://osbn-a36f9.firebaseio.com/noticias/english.json')
-            .then(response => {
-                let position = response.data.length;
+        var metadata = {
+            contentType: 'image/jpeg'
+        };
 
-                axios.put('https://osbn-a36f9.firebaseio.com/noticias/english/' + position + '.json', enPost)
-                    .catch(error => {
-                        dispatch(postingFail(error));
-                        console.log(error);
-                    })
-            })
+        storageRef.child('imagens/noticias/' + image.name).put(image, metadata)
+            .then(link => {
+                link.ref.getDownloadURL()
+                    .then(url => {
+                        // console.log('link: ' + url);
 
-        axios.get('https://osbn-a36f9.firebaseio.com/noticias/french.json')
-            .then(response => {
-                let position = response.data.length;
+                        axios.get('https://osbn-a36f9.firebaseio.com/noticias/portuguese.json')
+                            .then(response => {
+                                let position = response.data.length;
+                                brPost.imagem = url;
 
-                axios.put('https://osbn-a36f9.firebaseio.com/noticias/french/' + position + '.json', frPost)
-                    .then(response => {
-                        dispatch(postingSuccess());
-                    })
-                    .catch(error => {
-                        dispatch(postingFail(error));
-                        console.log(error);
+                                axios.put('https://osbn-a36f9.firebaseio.com/noticias/portuguese/' + position + '.json', brPost)
+                                    .catch(error => {
+                                        dispatch(postingFail(error));
+                                        console.log(error);
+                                    })
+                            })
+
+                        axios.get('https://osbn-a36f9.firebaseio.com/noticias/english.json')
+                            .then(response => {
+                                let position = response.data.length;
+                                enPost.imagem = url;
+
+                                axios.put('https://osbn-a36f9.firebaseio.com/noticias/english/' + position + '.json', enPost)
+                                    .catch(error => {
+                                        dispatch(postingFail(error));
+                                        console.log(error);
+                                    })
+                            })
+
+                        axios.get('https://osbn-a36f9.firebaseio.com/noticias/french.json')
+                            .then(response => {
+                                let position = response.data.length;
+                                frPost.imagem = url;
+
+                                axios.put('https://osbn-a36f9.firebaseio.com/noticias/french/' + position + '.json', frPost)
+                                    .then(response => {
+                                        dispatch(postingSuccess());
+                                    })
+                                    .catch(error => {
+                                        dispatch(postingFail(error));
+                                        console.log(error);
+                                    })
+                            })
+
+
                     })
             })
 
