@@ -1,5 +1,5 @@
 .container {
-  background-color: #AC7C44;
+  background-color: #9e8a0f;
 }
 
 .container .galleryContainer {
@@ -19,9 +19,10 @@
 }
 
 .container .galleryButton {
-  background-color: #ac6937;
+  background-color: #b6a121;
   cursor: pointer;
   text-shadow: 1px 1px 1px #000;
+  border-radius: 4px;
   border: none;
   color: white;
   padding: 25px 42px;
@@ -32,13 +33,13 @@
   margin: 2%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .container .galleryButton:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .imgContainer .img {

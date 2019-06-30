@@ -46,7 +46,8 @@
 }
 
 .technicalContainer .textContainer1 .button {
-  background-color: #ac6937;
+  border-radius: 4px;
+  background-color: #449376;
   cursor: pointer;
   text-shadow: 1px 1px 1px #000;
   border: none;
@@ -59,8 +60,6 @@
   margin: 2%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media screen and (max-width: 960px) {
@@ -73,6 +72,8 @@
 .technicalContainer .textContainer1 .button:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .technicalContainer .textContainer2 {
@@ -100,7 +101,8 @@
 }
 
 .technicalContainer .textContainer2 .button {
-  background-color: #ac6937;
+  border-radius: 4px;
+  background-color: #449376;
   cursor: pointer;
   text-shadow: 1px 1px 1px #000;
   border: none;
@@ -113,8 +115,6 @@
   margin: 2%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media screen and (max-width: 960px) {
@@ -127,6 +127,8 @@
 .technicalContainer .textContainer2 .button:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .musicContainer {
@@ -166,7 +168,7 @@
       justify-self: center;
   width: 100%;
   color: white;
-  background-color: #AC6837;
+  background-color: #449376;
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%;
 }

@@ -4,7 +4,7 @@ import classes from './css/historyDiv.module.css'
 const historyDiv = (props) => {
     return (
         <>
-            <div className={classes.container}>
+            <div className={classes.container} style={{backgroundColor: props.bgColor}}>
                 <img src={require('../../../../assets/OSBNBORDAS/full.png')} alt="" className={classes.leftBorder}></img>
                 <span className={classes.hat}>&</span>
                 <h1 className={classes.title}> {props.title}</h1>

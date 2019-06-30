@@ -17,8 +17,8 @@ class InfoSection extends Component {
             }
         };
         return (
-            <div style={{ backgroundColor: '#AC7C44' }}>
-                <TransitionDiv title={this.props.language === 'portuguese' ? 'A Orquestra' :
+            <div style={{ backgroundColor: '#b05f24' }}>
+                <TransitionDiv bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'A Orquestra' :
                     this.props.language === 'english' ? 'The Orchestra' :
                         this.props.language === 'french' ? 'L\'orchestre' : ''} />
                 <div className={classes.infoContainer}>
