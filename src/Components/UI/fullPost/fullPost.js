@@ -24,8 +24,8 @@ class FullPost extends Component {
 
     render() {
         return (
-            <div style={{backgroundColor: '#AC7C44'}}>
-                <Title title={this.props.title} />
+            <div style={{backgroundColor: '#b05f24'}}>
+                <Title bgColor="#c76d2b" title={this.props.title} />
                 <div className={classes.postContainer}>
                     <div className={classes.imageContainer}>
                         <Image image={this.props.image} clicked={() => this.openHandler(this.props.image)}/>

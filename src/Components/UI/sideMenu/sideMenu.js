@@ -33,7 +33,7 @@ class sideMenu extends Component {
                         <span className={classes.subTooltip}>{this.props.language === 'portuguese' ? 'Abrir Menu' :
                         this.props.language === 'english' ? 'Open Menu' : 
                         this.props.language === 'french' ? 'Ouvrir le menu' : ''}</span>
-                        <h1 className={classes.subText}>&</h1>
+                        <img className={classes.subText} alt="" src={require('../../../assets/logo6.png')}></img>
                     </div>
                     <div className={classes.languageContainer}>
                         <LanguageSelector />
@@ -49,7 +49,10 @@ class sideMenu extends Component {
                         <span className={classes.tooltipText}>{this.props.language === 'portuguese' ? 'Fechar Menu' : 
                         this.props.language === 'english' ? 'Close Menu' : 
                         this.props.language === 'french' ? 'Fermer le menu' : ''}</span>
-                        <h2 onClick={this.onCloseHandler} className={classes.title}>&</h2>
+                        <h2 onClick={this.onCloseHandler} style={{color: this.props.section === 'history' ? 
+                        '#449376' : this.props.section === 'gallery' ? '#b69c00' : this.props.section === 'schedule' ? 
+                        '#d35523' : this.props.section === 'news' ? '#c76d2b' : this.props.section === 'technical' ? 
+                        '#449376' : this.props.section === 'contact' ? '#b69c00' : '#449376'}} className={classes.title}>&</h2>
                     </div>
                     <div className={classes.historyButton}>
                         <span className={classes.historyTooltip}>{this.props.language === 'portuguese' ? 'Histórico' : 

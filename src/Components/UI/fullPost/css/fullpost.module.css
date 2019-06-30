@@ -62,7 +62,7 @@
 
 .postContainer .textContainer .Button {
   font-family: Xilosa;
-  background-color: #ac6937;
+  background-color: #c76d2b;
   cursor: pointer;
   text-shadow: 1px 1px 1px #000;
   border: none;
@@ -75,13 +75,14 @@
   margin: 2%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
 }
 
 .postContainer .textContainer .Button:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .imgContainer .img {

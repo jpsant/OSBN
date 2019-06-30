@@ -35,6 +35,8 @@
   font-size: 2em;
   color: #ac6937;
   cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .menu .closeButton .tooltipText {
@@ -260,7 +262,7 @@
   position: fixed;
   z-index: 500;
   border: 1px solid transparent;
-  padding: 10px;
+  padding: 5px 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-transition: .5s ease-in-out;
@@ -287,11 +289,7 @@
 
 .subMenu .closeDiv .subText {
   text-align: center;
-  font-family: xilosa;
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 15% 0;
-  font-size: 1.9em;
+  height: 4.5em;
   color: #ac6937;
   z-index: 1000;
 }
