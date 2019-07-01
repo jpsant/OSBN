@@ -5,7 +5,7 @@
 }
 
 .galleryContainer .button {
-  background-color: #ac6937;
+  background-color: #c76d2b;
   cursor: pointer;
   border: none;
   padding: 25px 42px;
@@ -13,11 +13,10 @@
   text-decoration: none;
   display: inline-block;
   font-size: 22px;
+  border-radius: 4px;
   margin: 2%;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-family: Xilosa;
   font-weight: 300;
   line-height: 1;
@@ -27,6 +26,8 @@
 }
 
 .galleryContainer .button:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
 }
@@ -91,7 +92,7 @@
 }
 
 .galleryContainer .clipping {
-  background-color: #AB7C44;
+  background-color: #b05f24;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr;

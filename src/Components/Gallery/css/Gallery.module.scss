@@ -13,7 +13,8 @@ $conditional: 100vh;
 .galleryContainer {
 
     .button {
-        background-color: #ac6937;
+        // background-color: #ac6937;
+        background-color: #c76d2b;
         cursor: pointer;
         border: none;
         padding: 25px 42px;
@@ -21,9 +22,9 @@ $conditional: 100vh;
         text-decoration: none;
         display: inline-block;
         font-size: 22px;
+        border-radius: 4px;
         margin: 2%;
         transition: .3s cubic-bezier(.175, .885, .32, 1.275);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         font-family: Xilosa;
         font-weight: 300;
         line-height: 1;
@@ -31,8 +32,9 @@ $conditional: 100vh;
         color: white;
         font-size: 2em;
     }
-
+    
     .button:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         transform: translateY(-12px);
     }
 
@@ -90,7 +92,8 @@ $conditional: 100vh;
     }
 
     .clipping {
-        background-color: #AB7C44;
+        // background-color: #AB7C44;
+        background-color: #b05f24;
         display: grid;
         grid-template-rows: auto 1fr;
 

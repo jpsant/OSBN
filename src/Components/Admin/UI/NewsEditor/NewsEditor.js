@@ -33,7 +33,8 @@ class NewsEditor extends Component {
         modalDate: null,
         modalId: null,
         language: '',
-        image: "https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545",
+        image: null,
+        modalImage: null,
         modal: false
     }
 
@@ -46,6 +47,7 @@ class NewsEditor extends Component {
             modalContent: item.noticia,
             modalDate: item.data,
             modalId: item.id,
+            modalImage: item.imagem,
             language: language
         }));
     }
@@ -57,14 +59,20 @@ class NewsEditor extends Component {
             titulo: this.state.modalTitle,
             data: this.state.modalDate,
             resumo: this.state.modalResume,
+            imagem: null,
             noticia: this.state.modalContent,
-            imagem: this.state.image,
             id: this.state.modalId
         };
         let position = this.state.modalItemPosition;
         let language = this.state.language;
+        let newImage = this.state.image;
 
-        this.props.changePost(post, position, language)
+        this.props.changePost(post, position, language, newImage)
+    }
+
+    imgHandler = (event) => {
+        event.preventDefault();
+        this.setState({image: event.target.files[0]});
     }
 
     render() {
@@ -73,15 +81,15 @@ class NewsEditor extends Component {
         let frPosts = null;
         if (this.state.brPosts && this.state.enPosts && this.state.frPosts) {
             brPosts = this.state.brPosts.map((item, index) => {
-                return <NewsEditorCard clicked={() => this.itemHandler(item, index, 'portuguese')} key={item.id} title={item.titulo} content={item.resumo} />
+                return <NewsEditorCard clicked={() => this.itemHandler(item, index, 'portuguese')} key={item.id} image={item.imagem} title={item.titulo} content={item.resumo} />
             })
 
             enPosts = this.state.enPosts.map((item, index) => {
-                return <NewsEditorCard clicked={() => this.itemHandler(item, index, 'english')} key={item.id} title={item.titulo} content={item.resumo} />
+                return <NewsEditorCard clicked={() => this.itemHandler(item, index, 'english')} key={item.id} image={item.imagem} title={item.titulo} content={item.resumo} />
             })
 
             frPosts = this.state.frPosts.map((item, index) => {
-                return <NewsEditorCard clicked={() => this.itemHandler(item, index, 'french')} key={item.id} title={item.titulo} content={item.resumo} />
+                return <NewsEditorCard clicked={() => this.itemHandler(item, index, 'french')} key={item.id} image={item.imagem} title={item.titulo} content={item.resumo} />
             })
         }
 
@@ -137,6 +145,7 @@ class NewsEditor extends Component {
                                 <div className={classes.previewContainer}>
                                     <div className={classes.titleContainer}>
                                         <h1 className={classes.title}>{this.state.modalTitle}</h1>
+                                        <img className={classes.image} src={this.state.modalImage}></img>
                                         <h4 className={classes.date}>{this.state.modalDate}</h4>
                                         <h3 className={classes.resume}>{this.state.modalResume}</h3>
                                     </div>
@@ -149,6 +158,7 @@ class NewsEditor extends Component {
                                         <div className={classes.title}>
                                             <label className={classes.label} htmlFor="title">Título</label>
                                             <input onChange={(event) => this.setState({ modalTitle: event.target.value })} value={this.state.modalTitle} type="text" id="title" placeholder="Título da notícia!"></input>
+                                            <input onChange={this.imgHandler} type="file" id="file" name="file"></input>
                                         </div>
                                         <div className={classes.date}>
                                             <label htmlFor="date">Data</label>
@@ -216,7 +226,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changePost: (newPost, position, language) => dispatch(actions.initChangePost(newPost, position, language))
+        changePost: (newPost, position, language, newImage) => dispatch(actions.initChangePost(newPost, position, language, newImage))
     }
 }
 

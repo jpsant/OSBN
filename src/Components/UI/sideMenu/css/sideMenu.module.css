@@ -288,16 +288,13 @@
 }
 
 .subMenu .closeDiv .subText {
-  text-align: center;
   height: 4.5em;
-  color: #ac6937;
   z-index: 1000;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
   .subMenu .closeDiv .subText {
-    font-size: 1.6em;
-    margin: 10% 0;
+    height: 3.8em;
   }
 }
 

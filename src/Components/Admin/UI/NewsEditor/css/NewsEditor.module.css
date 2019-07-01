@@ -184,6 +184,7 @@
 }
 
 .editorContainer .previewContainer {
+  overflow-y: scroll;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -191,7 +192,6 @@
   display: grid;
   -ms-grid-rows: .5fr 1fr;
       grid-template-rows: .5fr 1fr;
-  overflow-y: scroll;
 }
 
 .editorContainer .previewContainer .titleContainer {
@@ -204,6 +204,11 @@
 .editorContainer .previewContainer .titleContainer .title {
   margin: 1% 0;
   font-size: 2.5em;
+}
+
+.editorContainer .previewContainer .titleContainer .image {
+  width: 50%;
+  height: 50%;
 }
 
 .editorContainer .previewContainer .titleContainer .date {
@@ -221,7 +226,6 @@
   grid-row: 2/3;
   margin: 2%;
   word-break: normal;
-  overflow-x: hidden;
 }
 
 .editorContainer .previewContainer .contentContainer .content {

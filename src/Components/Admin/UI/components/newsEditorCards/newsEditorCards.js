@@ -7,6 +7,9 @@ const newsEditorCards = (props) => {
             <div className={classes.titleContainer}>
                 <h1>{props.title}</h1>
             </div>
+            <div className={classes.imageContainer}>
+                <img alt="" className={classes.image} src={props.image}></img>
+            </div>
             <div className={classes.contentContainer}>
                 <h2>{props.content}</h2>
             </div>

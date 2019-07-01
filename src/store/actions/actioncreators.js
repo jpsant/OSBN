@@ -111,19 +111,36 @@ export const changePostFail = () => {
     }
 }
 
-export const initChangePost = (newPost, position, language) => {
+//imagem: this.state.image,
+
+export const initChangePost = (newPost, position, language, image) => {
     return dispatch => {
         dispatch(changePost());
-        newPost.imagem = 'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545';
+        // newPost.imagem = 'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545';
 
-        axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
-            .then(response => {
-                dispatch(changePostSuccess());
-                console.log(response.data);
+        var metadata = {
+            contentType: 'image/jpeg'
+        };
+
+        storageRef.child('imagens/noticias/' + image.name).put(image, metadata)
+            .then(link => {
+                link.ref.getDownloadURL()
+                    .then(url => {
+                        newPost.imagem = url;
+
+                        axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
+                            .then(response => {
+                                dispatch(changePostSuccess());
+                                console.log(response.data);
+                            })
+                            .catch(error => {
+                                dispatch(changePostFail());
+                            })
+
+                    })
+
             })
-            .catch(error => {
-                dispatch(changePostFail());
-            })
+
     }
 }
 
