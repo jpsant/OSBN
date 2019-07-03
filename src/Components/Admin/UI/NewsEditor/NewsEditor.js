@@ -54,7 +54,7 @@ class NewsEditor extends Component {
 
     submitPost = (event) => {
         event.preventDefault();
-        this.setState({showModal: false});
+        this.setState({ showModal: false });
         let post = {
             titulo: this.state.modalTitle,
             data: this.state.modalDate,
@@ -72,7 +72,15 @@ class NewsEditor extends Component {
 
     imgHandler = (event) => {
         event.preventDefault();
-        this.setState({image: event.target.files[0]});
+        this.setState({ image: event.target.files[0] });
+    }
+
+    removePost = (event) => {
+        event.preventDefault();
+        let position = this.state.modalItemPosition;
+        let language = this.state.language;
+
+        this.props.removePost(position, language);
     }
 
     render() {
@@ -174,6 +182,7 @@ class NewsEditor extends Component {
                                         </div>
                                         <div className={classes.submit}>
                                             <button className={classes.button} onClick={this.submitPost}>Publicar!</button>
+                                            <button className={classes.removeButton} onClick={this.removePost}>Remover</button>
                                         </div>
                                     </form>
                                 </div>
@@ -226,7 +235,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changePost: (newPost, position, language, newImage) => dispatch(actions.initChangePost(newPost, position, language, newImage))
+        changePost: (newPost, position, language, newImage) => dispatch(actions.initChangePost(newPost, position, language, newImage)),
+        removePost: (position, language) => dispatch(actions.startRemovePost(position, language))
     }
 }
 

@@ -14,6 +14,7 @@ var app = firebase.initializeApp({
 
 
 var storageRef = firebase.storage().ref();
+var databaseRef = firebase.database().ref();
 
 export const changeLanguage = (language, flag) => {
     return {
@@ -111,7 +112,43 @@ export const changePostFail = () => {
     }
 }
 
+export const removePost = () => {
+    return {
+        type: actionTypes.REMOVE_POST
+    }
+}
+
+export const removePostSuccess = () => {
+    return {
+        type: actionTypes.REMOVE_POST_SUCCESS
+    }
+}
+
+export const removePostFail = () => {
+    return {
+        type: actionTypes.REMOVE_POST_FAIL
+    }
+}
+
+
 //imagem: this.state.image,
+
+export const startRemovePost = (position, language) => {
+    return dispatch => {
+        dispatch(removePost());
+
+        var postRef = databaseRef.child('noticias/' + language + '/' + position)
+        postRef.remove()
+            .then(response => {
+                dispatch(removePostSuccess());
+                console.log('resposta: ' + response);
+            })
+            .catch(error => {
+                dispatch(removePostFail());
+                console.log('error: ' + error);
+            })
+    }
+}
 
 export const initChangePost = (newPost, position, language, image) => {
     return dispatch => {

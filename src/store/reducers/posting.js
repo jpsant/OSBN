@@ -28,6 +28,15 @@ const reducer = (state = initialState, action) => {
         case actionTypes.CHANGE_POST_FAIL:
             return updateObject(state, { loading: false, error: true})
 
+        case actionTypes.REMOVE_POST:
+            return updateObject(state, { loading: true })
+        
+        case actionTypes.REMOVE_POST_SUCCESS:
+            return updateObject(state, { loading: false})
+
+        case actionTypes.REMOVE_POST_FAIL:
+            return updateObject(state, { loading: false})
+
         default:
             return state;
     }
