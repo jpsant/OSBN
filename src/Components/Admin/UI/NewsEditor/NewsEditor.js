@@ -77,6 +77,7 @@ class NewsEditor extends Component {
 
     removePost = (event) => {
         event.preventDefault();
+        this.setState({showModal: false});
         let position = this.state.modalItemPosition;
         let language = this.state.language;
 
@@ -115,7 +116,7 @@ class NewsEditor extends Component {
                             <h1 className={classes.title}>Português!</h1>
                         </div>
 
-                        <div className={classes.postsContainer}>
+                        <div className={classes.postsContainerBr}>
                             {brPosts}
                         </div>
                     </div>
@@ -124,7 +125,7 @@ class NewsEditor extends Component {
                             <h1 className={classes.title}>Inglês!</h1>
                         </div>
 
-                        <div className={classes.postsContainer}>
+                        <div className={classes.postsContainerEn}>
                             {enPosts}
                         </div>
                     </div>
@@ -133,7 +134,7 @@ class NewsEditor extends Component {
                             <h1 className={classes.title}>Francês!</h1>
                         </div>
 
-                        <div className={classes.postsContainer}>
+                        <div className={classes.postsContainerFr}>
                             {frPosts}
                         </div>
                     </div>
@@ -166,6 +167,7 @@ class NewsEditor extends Component {
                                         <div className={classes.title}>
                                             <label className={classes.label} htmlFor="title">Título</label>
                                             <input onChange={(event) => this.setState({ modalTitle: event.target.value })} value={this.state.modalTitle} type="text" id="title" placeholder="Título da notícia!"></input>
+                                            <p>{console.log(this.state.modalImage)}</p>
                                             <input onChange={this.imgHandler} type="file" id="file" name="file"></input>
                                         </div>
                                         <div className={classes.date}>

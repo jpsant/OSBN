@@ -186,7 +186,7 @@ export const singlePost = (brPost, image) => {
         dispatch(initPosting());
 
         var metadata = {
-            contentType: 'image/jpeg'
+            contentType: 'mime'
         };
 
         storageRef.child('imagens/noticias/' + image.name).put(image, metadata)

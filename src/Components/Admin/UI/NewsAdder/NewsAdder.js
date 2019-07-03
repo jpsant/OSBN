@@ -31,7 +31,7 @@ class NewsAdder extends Component {
         image: null,
         showForm: true,
         modal: false,
-        teste: null,
+        teste: null
     }
 
     postHandler = (event) => {
@@ -166,7 +166,7 @@ class NewsAdder extends Component {
                         </div>
                     </div>
                     <div className={classes.buttonContainer}>
-                        <button disabled={(this.state.brBody !== '') || (this.state.brBody && this.state.enBody && this.state.frBody !== '') ? false : true} onClick={this.postHandler} className={classes.button}>Publicar!</button>
+                        <button disabled={(this.state.brBody !== '' && this.state.teste !== null) || (this.state.brBody && this.state.enBody && this.state.frBody !== '' && this.state.teste !== null) ? false : true} onClick={this.postHandler} className={classes.button}>Publicar!</button>
                     </div>
                 </div>
 
