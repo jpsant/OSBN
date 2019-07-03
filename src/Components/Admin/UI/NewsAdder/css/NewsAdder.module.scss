@@ -1,13 +1,17 @@
-.container {
+.buttonsContainer {
+    z-index: 100;
+    width: 10%;
+    position: fixed;
+    top: 3%;
+    right: 3%;
     display: grid;
-    grid-template-rows: .1fr 1fr .1fr;
-    color: white;
+    grid-template-rows: 1fr;
 
     .returnButton {
         position: absolute;
         top: 2%;
         right: 3%;
-        padding: 1% 3%;
+        padding: 15% 25%;
         border-radius: 12px;
         background: #2C647C;
         text-decoration: none;
@@ -18,6 +22,14 @@
         font-size: 20px;
         transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     }
+}  
+
+
+.container {
+    display: grid;
+    grid-template-rows: .1fr 1fr .1fr;
+    color: white;  
+
 
     .titleContainer {
         grid-row: 1/2;

@@ -139,22 +139,21 @@
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
 
-.container .buttonContainer {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
-  grid-row: 5/6;
+.buttonContainer {
+  z-index: 100;
+  width: 10%;
+  position: fixed;
+  top: 3%;
+  right: 3%;
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
 
-.container .buttonContainer .button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  padding: 1.5% 7%;
-  border-radius: 3px;
+.buttonContainer .button {
+  padding: 15% 25%;
+  border-radius: 12px;
   background-color: #318647;
   text-decoration: none;
   color: white;
@@ -165,11 +164,6 @@
   font-size: 20px;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.container .buttonContainer .button:hover {
-  -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
 }
 
 .editorContainer {

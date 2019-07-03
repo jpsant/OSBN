@@ -1,9 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 .container {
-    // transition: all .3s ease-in-out;
     color: white;
-    padding-top: 20%;
-    
-    h1 {
-        margin: 0;
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+
+
+    .titleContainer {
+        grid-row: 1/2;
+
+        h1 {
+            margin: 0;
+            margin-top: 2%;
+            font-size: 4em;
+            font-family: 'Muli', sans-serif;
+            text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+        }
+
+        h2 {
+            text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+            font-size: 1.5em;
+            margin: 0;
+            margin-bottom: 4%;
+
+        }
     }
+
+    .contentContainer {
+        grid-row: 2/3;
+        display: grid;
+        grid-column-gap: 1%;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+.buttonsDiv {
+    z-index: 12;
+    position: fixed;
+    top: 5%;
+    right: 3%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .returnButton {
+        border-radius: 5px;
+        padding: 5% 5%;
+        margin-bottom: 5%;
+        border-radius: 12px;
+        background-color: #A61C3C;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+    }
+
+    .addButton {
+        border-radius: 5px;
+        padding: 5% 5%;
+        border-radius: 12px;
+        background-color: #318647;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+    }
+}
+
+.modalContainer {
+    display: grid;
+    grid-template-columns: 1fr .3fr;
+    // background-color: white;
+
+    .modalImage {
+        grid-column: 1/2;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .modalButtons {
+        grid-column: 2/3;
+        // padding: 0 5%;
+        display: grid;
+
+        .button {
+            align-self: center;
+            justify-self: center;
+            padding: 5% 5%;
+            border-radius: 3px;
+            background-color: #A61C3C;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+        }
+
+        .button:hover {
+            transform: translateY(-12px);
+        }
+    }
+
+}
+
+.formModalContainer {
+    color: white;
 }

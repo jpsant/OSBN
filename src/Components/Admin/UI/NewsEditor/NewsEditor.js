@@ -77,7 +77,7 @@ class NewsEditor extends Component {
 
     removePost = (event) => {
         event.preventDefault();
-        this.setState({showModal: false});
+        this.setState({ showModal: false });
         let position = this.state.modalItemPosition;
         let language = this.state.language;
 
@@ -104,6 +104,9 @@ class NewsEditor extends Component {
 
         return (
             <>
+                <div className={classes.buttonContainer}>
+                    <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                </div>
                 <div className={classes.container}>
 
                     <div className={classes.titleContainer}>
@@ -137,9 +140,6 @@ class NewsEditor extends Component {
                         <div className={classes.postsContainerFr}>
                             {frPosts}
                         </div>
-                    </div>
-                    <div className={classes.buttonContainer}>
-                        <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
                     </div>
                 </div>
 

@@ -102,31 +102,30 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         }
     }
+}
 
-    .buttonContainer {
-        grid-row: 5/6;
-        display: grid;
+.buttonContainer {
+    z-index: 100;
+    width: 10%;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    display: grid;
+    grid-template-rows: 1fr;
 
-        .button {
-            align-self: center;
-            justify-self: center;
-            padding: 1.5% 7%;
-            border-radius: 3px;
-            background-color: #318647;
-            text-decoration: none;
-            color: white;
-            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            transition: .3s cubic-bezier(.175, .885, .32, 1.275);
-        }
-
-        .button:hover {
-            transform: translateY(-12px);
-        }
-
+    .button {
+        padding: 15% 25%;
+        border-radius: 12px;;
+        background-color: #318647;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     }
+
 }
 
 .editorContainer {

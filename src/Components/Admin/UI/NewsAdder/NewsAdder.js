@@ -77,15 +77,17 @@ class NewsAdder extends Component {
     imgHandler = (event) => {
         event.preventDefault();
         let file = event.target.files[0]
-        this.setState({teste: file});
+        this.setState({ teste: file });
     }
 
 
     render() {
         return (
             <>
-                <div className={classes.container}>
+                <div className={classes.buttonsContainer}>
                     <button className={classes.returnButton} onClick={this.props.clicked}>Voltar</button>
+                </div>
+                <div className={classes.container}>
                     <div className={classes.titleContainer}>
                         <h1>Adicionar nova Notícia</h1>
                         <h2>Preencha os campos abaixo com as Informações:</h2>
