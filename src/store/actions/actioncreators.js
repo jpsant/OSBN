@@ -168,12 +168,12 @@ export const startAddImage = (image, imagePost) => {
                                 let position = response.data.length;
 
                                 axios.put('https://osbn-a36f9.firebaseio.com/galeria/' + position + '.json', imagePost)
-                                .then( response => {
-                                    dispatch(addImageSuccess());
-                                })
-                                .catch ( error => {
-                                    dispatch(addImageFail());
-                                })
+                                    .then(response => {
+                                        dispatch(addImageSuccess());
+                                    })
+                                    .catch(error => {
+                                        dispatch(addImageFail());
+                                    })
                             })
                     })
             })
@@ -200,11 +200,40 @@ export const removeImageFail = () => {
     }
 }
 
+export const startRemoveImage = (position) => {
+    return dispatch => {
+        dispatch(removeImage())
+
+        axios.get('https://osbn-a36f9.firebaseio.com/galeria/' + position + '.json')
+            .then(response => {
+
+                var image = response.data;
+
+                let imageRef = storageRef.child('galeria/' + image.nome);
+                imageRef.delete()
+                    .then(response => {
+                        console.log(response);
+
+                        let galleryPost = databaseRef.child('galeria/' + position);
+                        galleryPost.remove()
+                            .then(response => {
+                                dispatch(removeImageSuccess())
+                                console.log(response);
+                            })
+                            .catch( error => {
+                                dispatch(removeImageFail())
+                                console.log(error);
+                            })
+                    })
+            })
+    }
+}
+
 export const startRemovePost = (position, language) => {
     return dispatch => {
         dispatch(removePost());
 
-        var postRef = databaseRef.child('noticias/' + language + '/' + position)
+        var postRef = databaseRef.child('noticias/' + language + '/' + position);
         postRef.remove()
             .then(response => {
                 dispatch(removePostSuccess());

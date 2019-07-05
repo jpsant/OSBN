@@ -46,6 +46,8 @@ class GalleryEditor extends Component {
 
     removeImage = (event) => {
         event.preventDefault();
+        let position = this.state.imgPosition;
+        this.props.removeImage(position);
     }
 
     formHandler = (event) => {
@@ -61,7 +63,6 @@ class GalleryEditor extends Component {
             image: imagem,
             imgPosition: position
         }))
-        console.log(this.state.imgPosition);
     }
 
     render() {
@@ -153,7 +154,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        submitImage: (image, imagePost) => dispatch(actions.startAddImage(image, imagePost))
+        submitImage: (image, imagePost) => dispatch(actions.startAddImage(image, imagePost)),
+        removeImage: (position) => dispatch(actions.startRemoveImage(position))
     }
 }
 
