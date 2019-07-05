@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { connect } from 'react-redux';
 import axios from 'axios';
+import uniqid from 'uniqid';
+
+import * as actions from '../../../../store/actions/actioncreators';
 
 import classes from './css/GalleryEditor.module.css';
 import './css/galleryAnimations.css';
@@ -22,7 +26,26 @@ class GalleryEditor extends Component {
         gallery: null,
         image: null,
         showImageModal: false,
-        showFormModal: false
+        showFormModal: false,
+        selectedImage: null,
+        imgPosition: null
+    }
+
+    submitImage = (event) => {
+        event.preventDefault();
+
+        let imagePost = {
+            nome: null,
+            key: uniqid('img-'),
+            imagem: null
+        }
+
+        let image = this.state.selectedImage;
+        this.props.submitImage(image, imagePost);
+    }
+
+    removeImage = (event) => {
+        event.preventDefault();
     }
 
     formHandler = (event) => {
@@ -32,21 +55,24 @@ class GalleryEditor extends Component {
         }))
     }
 
-    imgHandler = (imagem) => {
+    imgHandler = (imagem, position) => {
         this.setState(prevState => ({
             showImageModal: !prevState.showImageModal,
-            image: imagem
+            image: imagem,
+            imgPosition: position
         }))
+        console.log(this.state.imgPosition);
     }
 
     render() {
         let images = null;
         if (this.state.gallery !== null) {
             let image = this.state.gallery;
-            images = image.map(item => {
-                return <ImageContainer clicked={() => this.imgHandler(item.imagem)} key={item.id} image={item.imagem} />
+            images = image.map((item, index) => {
+                return <ImageContainer clicked={() => this.imgHandler(item.imagem, index)} key={item.key} image={item.imagem} />
             })
         }
+
 
         return (
             <>
@@ -79,7 +105,7 @@ class GalleryEditor extends Component {
                                     <img className={classes.image} alt="" src={this.state.image}></img>
                                 </div>
                                 <div className={classes.modalButtons}>
-                                    <button className={classes.button}>Remover Imagem</button>
+                                    <button onClick={this.removeImage} className={classes.button}>Remover Imagem</button>
                                 </div>
                             </div>
                         </Modal>
@@ -96,7 +122,19 @@ class GalleryEditor extends Component {
                         <BackDrop clicked={this.formHandler} show={this.state.showFormModal} />
                         <Modal show={this.state.showFormModal}>
                             <div className={classes.formModalContainer}>
-                                <h1>formModal!</h1>
+                                <div className={classes.titleContainer}>
+                                    <h1>Adicionar Nova imagem</h1>
+                                    <h2>Selecione a imagem que você deseja adicionar:</h2>
+                                </div>
+                                <div className={classes.buttonsContainer}>
+                                    <div className={classes.selector}>
+                                        <label htmlFor='file'>Selecionar Imagem</label>
+                                        <input onChange={(e) => this.setState({ selectedImage: e.target.files[0] })} type="file" id="file" name="file"></input>
+                                    </div>
+                                    <div className={classes.submit}>
+                                        <button onClick={this.submitImage} className={classes.button}>Enviar!</button>
+                                    </div>
+                                </div>
                             </div>
                         </Modal>
                     </div>
@@ -106,4 +144,18 @@ class GalleryEditor extends Component {
     }
 }
 
-export default GalleryEditor;
+const mapStateToProps = state => {
+    return {
+        loading: state.postReducer.loading,
+        success: state.postReducer.success
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        submitImage: (image, imagePost) => dispatch(actions.startAddImage(image, imagePost))
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(GalleryEditor);

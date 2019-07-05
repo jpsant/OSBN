@@ -130,8 +130,75 @@ export const removePostFail = () => {
     }
 }
 
+export const addImage = () => {
+    return {
+        type: actionTypes.ADD_IMAGE
+    }
+}
 
-//imagem: this.state.image,
+export const addImageSuccess = () => {
+    return {
+        type: actionTypes.ADD_IMAGE_SUCCESS
+    }
+}
+
+export const addImageFail = () => {
+    return {
+        type: actionTypes.ADD_IMAGE_FAIL
+    }
+}
+
+export const startAddImage = (image, imagePost) => {
+    return dispatch => {
+        dispatch(addImage());
+
+        let metadata = {
+            contentType: 'image/jpg'
+        }
+
+        storageRef.child('galeria/' + image.name).put(image, metadata)
+            .then(link => {
+                link.ref.getDownloadURL()
+                    .then(url => {
+                        imagePost.imagem = url;
+                        imagePost.nome = image.name
+
+                        axios.get('https://osbn-a36f9.firebaseio.com/galeria.json')
+                            .then(response => {
+                                let position = response.data.length;
+
+                                axios.put('https://osbn-a36f9.firebaseio.com/galeria/' + position + '.json', imagePost)
+                                .then( response => {
+                                    dispatch(addImageSuccess());
+                                })
+                                .catch ( error => {
+                                    dispatch(addImageFail());
+                                })
+                            })
+                    })
+            })
+    }
+}
+
+
+
+export const removeImage = () => {
+    return {
+        type: actionTypes.REMOVE_IMAGE
+    }
+}
+
+export const removeImageSuccess = () => {
+    return {
+        type: actionTypes.REMOVE_IMAGE_SUCCESS
+    }
+}
+
+export const removeImageFail = () => {
+    return {
+        type: actionTypes.REMOVE_IMAGE_FAIL
+    }
+}
 
 export const startRemovePost = (position, language) => {
     return dispatch => {
@@ -186,7 +253,7 @@ export const singlePost = (brPost, image) => {
         dispatch(initPosting());
 
         var metadata = {
-            contentType: 'mime'
+            contentType: 'image/jpg'
         };
 
         storageRef.child('imagens/noticias/' + image.name).put(image, metadata)

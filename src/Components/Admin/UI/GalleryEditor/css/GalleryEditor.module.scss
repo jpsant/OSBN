@@ -22,7 +22,6 @@
             font-size: 1.5em;
             margin: 0;
             margin-bottom: 4%;
-
         }
     }
 
@@ -115,5 +114,89 @@
 }
 
 .formModalContainer {
-    color: white;
+    background-color: white;
+    border-radius: 5px;
+    // height: 200px;
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+
+    .titleContainer {
+        grid-row: 1/2;
+        color: #2a2a2b;
+
+        h1 {
+            margin: 0;
+            margin-top: 2%;
+            font-size: 4em;
+            font-family: 'Muli', sans-serif;
+            // text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+        }
+
+        h2 {
+            text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+            font-size: 1.5em;
+            margin: 0;
+            margin-bottom: 4%;
+        }
+    }
+
+    .buttonsContainer {
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .selector {
+            grid-column: 1/2;
+            display: grid;
+
+            input[type='file'] {
+                display: none;
+            }
+    
+            label {
+                align-self: center;
+                justify-self: center;
+                padding: 15px 15px;
+                border-radius: 12px;
+                background-color: #318647;
+                text-decoration: none;
+                color: white;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+                border: none;
+                cursor: pointer;
+                font-size: 20px;
+                transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+            }
+
+            label:hover {
+                transform: translateY(-12px);
+            }
+        }
+
+        .submit {
+            grid-column: 2/3;
+            display: grid;
+            
+            .button {
+                align-self: center;
+                justify-self: center;
+                padding: 15px 25px;
+                border-radius: 12px;
+                background-color: #318647;
+                text-decoration: none;
+                color: white;
+                box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+                border: none;
+                cursor: pointer;
+                font-size: 20px;
+                transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+            }
+
+            .button:hover {
+                transform: translateY(-12px);
+            }
+        }
+    }
+
+
 }
