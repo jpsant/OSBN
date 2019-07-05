@@ -244,4 +244,42 @@
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
 }
+
+.Modal {
+  background-color: white;
+  border-radius: 3px;
+  font-family: 'Muli', sans-serif;
+  padding: 10% 0;
+}
+
+.Modal h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.Modal h2 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 4%;
+}
+
+.Modal .button {
+  padding: 2% 6%;
+  border-radius: 3px;
+  background: #318647;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Modal .button:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
 /*# sourceMappingURL=GalleryEditor.module.css.map */

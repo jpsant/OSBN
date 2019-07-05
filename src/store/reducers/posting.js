@@ -23,19 +23,37 @@ const reducer = (state = initialState, action) => {
             return updateObject(state, { loading: true })
 
         case actionTypes.CHANGE_POST_SUCCESS:
-            return updateObject(state, { loading: false, success: true})
+            return updateObject(state, { loading: false, success: true })
 
         case actionTypes.CHANGE_POST_FAIL:
-            return updateObject(state, { loading: false, error: true})
+            return updateObject(state, { loading: false, error: true })
 
         case actionTypes.REMOVE_POST:
             return updateObject(state, { loading: true })
-        
+
         case actionTypes.REMOVE_POST_SUCCESS:
-            return updateObject(state, { loading: false})
+            return updateObject(state, { loading: false })
 
         case actionTypes.REMOVE_POST_FAIL:
-            return updateObject(state, { loading: false})
+            return updateObject(state, { loading: false })
+
+        case actionTypes.ADD_IMAGE:
+            return updateObject(state, { loading: true })
+
+        case actionTypes.ADD_IMAGE_SUCCESS:
+            return updateObject(state, { loading: false, success: true })
+
+        case actionTypes.ADD_IMAGE_FAIL:
+            return updateObject(state, { loading: false, error: true })
+
+        case actionTypes.REMOVE_IMAGE:
+            return updateObject(state, { loading: true})
+
+        case actionTypes.REMOVE_IMAGE_SUCCESS:
+            return updateObject(state, { loading: false, success: true})
+
+        case actionTypes.REMOVE_IMAGE_FAIL:
+            return updateObject(state, { loading: false, error: true})
 
         default:
             return state;

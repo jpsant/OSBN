@@ -12,6 +12,7 @@ import './css/galleryAnimations.css';
 import ImageContainer from '../components/imageEditorCards/imageEditorCards';
 import Modal from '../../../UI/modal/modal';
 import BackDrop from '../../../UI/backDrop/backDrop';
+import Spinner from '../../../UI/spinner/spinner';
 
 class GalleryEditor extends Component {
 
@@ -28,7 +29,9 @@ class GalleryEditor extends Component {
         showImageModal: false,
         showFormModal: false,
         selectedImage: null,
-        imgPosition: null
+        imgPosition: null,
+        successModal: false,
+        sucessRemoveImage: false,
     }
 
     submitImage = (event) => {
@@ -42,12 +45,16 @@ class GalleryEditor extends Component {
 
         let image = this.state.selectedImage;
         this.props.submitImage(image, imagePost);
+        this.setState(prevState => ({
+            showFormModal: !prevState.showFormModal
+        }))
     }
 
     removeImage = (event) => {
         event.preventDefault();
         let position = this.state.imgPosition;
         this.props.removeImage(position);
+        this.setState({showImageModal: false, sucessRemoveImage: true});
     }
 
     formHandler = (event) => {
@@ -133,9 +140,39 @@ class GalleryEditor extends Component {
                                         <input onChange={(e) => this.setState({ selectedImage: e.target.files[0] })} type="file" id="file" name="file"></input>
                                     </div>
                                     <div className={classes.submit}>
-                                        <button onClick={this.submitImage} className={classes.button}>Enviar!</button>
+                                        <button disabled={this.state.selectedImage !== null ? false : true} onClick={this.submitImage} className={classes.button}>Enviar!</button>
                                     </div>
                                 </div>
+                            </div>
+                        </Modal>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={this.props.loading}
+                    classNames="news"
+                    unmountOnExit
+                    timeout={500}
+                    onExit={() => this.props.success ? this.setState({ successModal: true }) : this.setState({successModal: false})} 
+                >
+                    <div>
+                        <BackDrop show={this.props.loading} clicked={() => this.setState({showFormModal: false})} />
+                        <Spinner />
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={this.props.success && this.state.successModal}
+                    classNames="news"
+                    unmountOnExit
+                    onExit={() => this.setState({ successModal: false })}
+                    timeout={500}
+                >
+                    <div>
+                        <BackDrop clicked={() => this.setState({successModal: false})} show={this.props.success && this.state.successModal} />
+                        <Modal show={this.props.success && this.state.successModal}>
+                            <div className={classes.Modal}>
+                                <h1>{this.state.sucessRemoveImage ? 'Imagem Removida com Sucesso!' : 'Imagem Adicionada com Sucesso!'}</h1>
+                                <h2>Voltar para o menu principal:</h2>
+                                <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
                             </div>
                         </Modal>
                     </div>
