@@ -1,0 +1,17 @@
+.news-enter {
+    opacity: 0;
+}
+
+.news-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.news-exit {
+    opacity: 1;
+}
+
+.news-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}

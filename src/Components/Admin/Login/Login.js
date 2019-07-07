@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import * as actions from '../../../store/actions/actioncreators';
-import CSSTransition from 'react-transition-group/CSSTransition';
 
+import './css/loginAnimations.css';
 
 import classes from './css/Login.module.css';
 import Spinner from '../../UI/spinner/spinner';
+import Backdrop from '../../UI/backDrop/backDrop';
 
 class Login extends Component {
 
@@ -30,50 +32,55 @@ class Login extends Component {
 
     render() {
 
-        let body = (
-            <CSSTransition>
-                <div className={classes.container}>
-                    <div className={classes.titleContainer}>
-                        <h2>Orquestra Sanfônica Balaio Nordeste</h2>
-                        <h1 className={classes.title}>Gerenciador de Página</h1>
-                    </div>
-                    <div className={classes.formContainer}>
-                        <div>
-                            <form className={classes.form} onSubmit={this.loginHandler}>
-                                <h1 className={classes.title}>Login</h1>
-                                <div className={classes.email}>
-                                    <label className={classes.label} htmlFor="email">E-mail</label>
-                                    <input onChange={this.emailHandler} type="text" id="email" placeholder="Seu Email"></input>
-                                </div>
-                                <div className={classes.password}>
-                                    <label className={classes.label} htmlFor="password">Senha</label>
-                                    <input onChange={this.passwordHandler} type="password" id="password" placeholder="Sua Senha"></input>
-                                </div>
-                                <button className={classes.button}>Submit</button>
-                            </form>
-                        </div>
-                        <div style={{ backgroundColor: '#508CA4' }}>
-                            <h3 className={classes.subTitle}>Não sabe como veio parar nessa página?</h3>
-                            <NavLink className={classes.returnButton} to="/">Voltar</NavLink>
-                        </div>
-                    </div>
-                </div>
-            </CSSTransition>
-        );
-
-        if (this.props.loading) {
-            body = <Spinner />
-        }
-
-        if (this.props.token) {
-            body = <Redirect to="/admin/pageManagement" />
-        }
+        let redirect = this.props.token ? <Redirect to="/admin/pageManagement" /> : null;
 
         return (
             <>
+                {redirect}
                 <div className={classes.container}>
-                    {body}
+                    <CSSTransition in={this.props.loading !== true}
+                        classNames="news"
+                        unmountOnExit
+                        onExit={() => this.setState({ showImageModal: false })}
+                        timeout={500}>
+                        <div className={classes.container}>
+                            <div className={classes.titleContainer}>
+                                <h2>Orquestra Sanfônica Balaio Nordeste</h2>
+                                <h1 className={classes.title}>Gerenciador de Página</h1>
+                            </div>
+                            <div className={classes.formContainer}>
+                                <div>
+                                    <form className={classes.form} onSubmit={this.loginHandler}>
+                                        <h1 className={classes.title}>Login</h1>
+                                        <div className={classes.email}>
+                                            <label className={classes.label} htmlFor="email">E-mail</label>
+                                            <input onChange={this.emailHandler} type="text" id="email" placeholder="Seu Email"></input>
+                                        </div>
+                                        <div className={classes.password}>
+                                            <label className={classes.label} htmlFor="password">Senha</label>
+                                            <input onChange={this.passwordHandler} type="password" id="password" placeholder="Sua Senha"></input>
+                                        </div>
+                                        <button className={classes.button}>Submit</button>
+                                    </form>
+                                </div>
+                                <div style={{ backgroundColor: '#508CA4' }}>
+                                    <h3 className={classes.subTitle}>Não sabe como veio parar nessa página?</h3>
+                                    <NavLink className={classes.returnButton} to="/">Voltar</NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </CSSTransition>
                 </div>
+
+                <CSSTransition in={this.props.loading}
+                    classNames="news"
+                    unmountOnExit
+                    timeout={500}>
+                    <div>
+                        {/* <Backdrop show={this.props.loading} /> */}
+                        <Spinner />
+                    </div>
+                </CSSTransition>
             </>
         )
     }

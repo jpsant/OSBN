@@ -76,7 +76,7 @@ class PageManager extends Component {
         return (
 
             <div className={classes.container}>
-                {/* {redirect} */}
+                {redirect}
                 <CSSTransition in={this.state.newsAdd}
                     timeout={300}
                     classNames="slide"
