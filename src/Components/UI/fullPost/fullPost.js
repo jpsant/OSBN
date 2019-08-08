@@ -34,7 +34,7 @@ class FullPost extends Component {
                         <h2>{this.props.text}</h2>
                         <NavLink to="/" className={classes.Button}>{this.props.language === 'portuguese' ? '& Voltar' : 
                         this.props.language === 'english' ? '& Home' : 
-                        this.props.language === 'french' ? '& Les vols' : null}</NavLink>
+                        this.props.language === 'french' ? '& Retour' : null}</NavLink>
                     </div>
                 </div>
                 <Backdrop show={this.state.showModal} clicked={this.closeHandler} />

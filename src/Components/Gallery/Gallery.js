@@ -76,7 +76,7 @@ class Gallery extends Component {
                             </div>
                         </div>
                         <NavLink className={classes.button} to="/">{this.props.language === 'portuguese' ? '& Início' :
-                        this.props.language === 'english' ? '& Home' : this.props.langyage === 'french' ? '& Les vols' : ''}</NavLink>
+                        this.props.language === 'english' ? '& Home' : this.props.language === 'french' ? '& Début' : ''}</NavLink>
                     </div>
                 </div>
                 <Backdrop show={this.state.showModal} clicked={this.closeHandler} />
