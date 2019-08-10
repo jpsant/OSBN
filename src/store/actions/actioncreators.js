@@ -1,6 +1,7 @@
 import * as actionTypes from '../actions/actiontypes';
 import axios from 'axios';
 import firebase from 'firebase';
+import Cookies from 'js-cookie';
 
 var app = firebase.initializeApp({
     apiKey: "AIzaSyC6V_xGTaJQ55Zd_cRqZjrGcL95k2jb5EM",
@@ -67,6 +68,7 @@ export const initLogin = (email, password) => {
         axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyC6V_xGTaJQ55Zd_cRqZjrGcL95k2jb5EM', authData)
             .then(response => {
                 dispatch(loginSuccess(response.data.idToken, response.data.localId));
+                Cookies.set('acess_token', response.data.idToken, { expires: 1, path: '/login'});
             })
             .catch(error => {
                 console.log(error);
@@ -220,7 +222,7 @@ export const startRemoveImage = (position) => {
                                 dispatch(removeImageSuccess())
                                 console.log(response);
                             })
-                            .catch( error => {
+                            .catch(error => {
                                 dispatch(removeImageFail())
                                 console.log(error);
                             })

@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import * as actions from '../../../store/actions/actioncreators';
+import Cookies from 'js-cookie';
 
 import './css/loginAnimations.css';
 
 import classes from './css/Login.module.css';
 import Spinner from '../../UI/spinner/spinner';
-import Backdrop from '../../UI/backDrop/backDrop';
 
 class Login extends Component {
 
@@ -32,7 +32,18 @@ class Login extends Component {
 
     render() {
 
-        let redirect = this.props.token ? <Redirect to="/admin/pageManagement" /> : null;
+        let cookie = Cookies.get('acess_token');
+        let redirect = null;
+
+        if (this.props.token === null) {
+            if (cookie !== undefined) {
+                redirect = <Redirect to="/admin/pageManagement" />
+            } else {
+                redirect = <Redirect to="/" />
+            }
+        } else {
+            redirect = <Redirect to="/admin/pageManagement" />
+        }
 
         return (
             <>

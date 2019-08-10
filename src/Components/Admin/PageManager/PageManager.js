@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Cookies from 'js-cookie';
+
 import CSSTransition from 'react-transition-group/CSSTransition';
 
 import classes from './css/PageManager.module.css';
@@ -68,9 +70,15 @@ class PageManager extends Component {
 
     render() {
 
+        let cookie = Cookies.get('acess_token');
         let redirect = null;
+
         if (this.props.token === null) {
-            redirect = <Redirect to="/" />
+            if (cookie !== undefined) {
+                redirect = null
+            } else {
+                redirect = <Redirect to="/" />
+            }
         }
 
         return (
