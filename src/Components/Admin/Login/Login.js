@@ -35,11 +35,14 @@ class Login extends Component {
         let cookie = Cookies.get('acess_token');
         let redirect = null;
 
-        if (this.props.token === null) {
-            if (cookie !== undefined) {
-                redirect = <Redirect to="/admin/pageManagement" />
+        console.log(this.props.token);
+        console.log(cookie);
+
+        if (this.props.token === false) {
+            if (cookie === undefined) {
+                redirect = null;
             } else {
-                redirect = <Redirect to="/" />
+                redirect = <Redirect to="/admin/pageManagement" />
             }
         } else {
             redirect = <Redirect to="/admin/pageManagement" />

@@ -1,10 +1,10 @@
 .pageContainer {
-  background-color: #508CA4;
+  background-color: #508ca4;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .1fr .5fr;
-      grid-template-rows: .1fr .5fr;
-  font-family: 'Muli', sans-serif;
+  -ms-grid-rows: 0.1fr 0.5fr 0.2fr;
+      grid-template-rows: 0.1fr 0.5fr 0.2fr;
+  font-family: "Muli", sans-serif;
   overflow: hidden !important;
 }
 
@@ -91,7 +91,7 @@
       align-self: center;
   padding: 6% 15%;
   border-radius: 3px;
-  background-color: #487D93;
+  background-color: #487d93;
   text-decoration: none;
   color: white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -172,7 +172,7 @@
       align-self: center;
   padding: 3% 10%;
   border-radius: 3px;
-  background-color: #A61C3C;
+  background-color: #a61c3c;
   text-decoration: none;
   color: white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -185,5 +185,24 @@
 .pageContainer .cardsContainer .card2:hover {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
+}
+
+.pageContainer .logoutContainer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.pageContainer .logoutContainer .logoutButton {
+  padding: 1% 5%;
+  border-radius: 3px;
+  background-color: #a61c3c;
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
 }
 /*# sourceMappingURL=Menu.module.css.map */

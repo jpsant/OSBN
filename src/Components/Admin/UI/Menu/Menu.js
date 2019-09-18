@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
 import classes from './css/Menu.module.css';
+import * as actions from '../../../../store/actions/actioncreators';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class Menu extends Component {
+
+    state = {
+        redirect: false
+    }
+
+    logoutHandler = () => {
+        this.props.logoutHandler();
+        this.setState(prevState => ({
+            redirect: !prevState.redirect
+        }))
+    }
+
     render() {
+        let redirect = null
+        if (this.state.redirect) {
+            redirect = <Redirect to="/login" />
+        }
 
         return (
             <>
+            {redirect}
                 <div className={classes.pageContainer}>
                     <div className={classes.titleContainer}>
                         <h1 className={classes.title}>Gerenciamento de Páginas</h1>
@@ -36,10 +56,19 @@ class Menu extends Component {
                             </div>
                         </div>
                     </div>
+                    <div className={classes.logoutContainer}>
+                        <button className={classes.logoutButton} onClick={this.logoutHandler}>Logout!</button>
+                    </div>
                 </div>
             </>
         );
     }
 }
 
-export default Menu;
+const mapDispatchToProps = dispatch => {
+    return {
+        logoutHandler: () => dispatch(actions.initLogout())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Menu);

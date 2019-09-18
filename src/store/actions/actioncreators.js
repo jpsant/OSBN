@@ -58,6 +58,15 @@ export const logout = () => {
     }
 }
 
+export const initLogout = () => {
+    return dispatch => {
+        dispatch(logout());
+        Cookies.remove('acess_token', { path: '/login'});
+        console.log(Cookies.get())
+        console.log('dentro')
+    }
+}
+
 export const initLogin = (email, password) => {
     return dispatch => {
         dispatch(startLogin());

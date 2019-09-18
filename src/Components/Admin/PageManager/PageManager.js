@@ -73,11 +73,14 @@ class PageManager extends Component {
         let cookie = Cookies.get('acess_token');
         let redirect = null;
 
-        if (this.props.token === null) {
-            if (cookie !== undefined) {
-                redirect = null
-            } else {
+        // console.log(cookie); //undefined
+        // console.log(this.props.token); //false
+
+        if (this.props.token === false) {
+            if (cookie === undefined) {
                 redirect = <Redirect to="/" />
+            } else {
+                redirect = null
             }
         }
 
@@ -126,7 +129,7 @@ class PageManager extends Component {
 
 const mapStateToProps = state => {
     return {
-        token: state.authReducer.idToken
+        token: state.authReducer.idToken !== null
     }
 }
 
