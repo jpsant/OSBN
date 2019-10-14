@@ -61,7 +61,7 @@ export const logout = () => {
 export const initLogout = () => {
     return dispatch => {
         dispatch(logout());
-        Cookies.remove('acess_token', { path: '/login'});
+        Cookies.remove('acess_token', { path: '/login' });
         console.log(Cookies.get())
         console.log('dentro')
     }
@@ -77,7 +77,7 @@ export const initLogin = (email, password) => {
         axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyC6V_xGTaJQ55Zd_cRqZjrGcL95k2jb5EM', authData)
             .then(response => {
                 dispatch(loginSuccess(response.data.idToken, response.data.localId));
-                Cookies.set('acess_token', response.data.idToken, { expires: 1, path: '/login'});
+                Cookies.set('acess_token', response.data.idToken, { expires: 1, path: '/login' });
             })
             .catch(error => {
                 console.log(error);
@@ -266,24 +266,37 @@ export const initChangePost = (newPost, position, language, image) => {
             contentType: 'image/jpeg'
         };
 
-        storageRef.child('imagens/noticias/' + image.name).put(image, metadata)
-            .then(link => {
-                link.ref.getDownloadURL()
-                    .then(url => {
-                        newPost.imagem = url;
+        if (image === null) {
+            axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
+                .then(response => {
+                    dispatch(changePostSuccess());
+                })
+                .catch(error => {
+                    dispatch(changePostFail());
+                })
 
-                        axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
-                            .then(response => {
-                                dispatch(changePostSuccess());
-                                console.log(response.data);
-                            })
-                            .catch(error => {
-                                dispatch(changePostFail());
-                            })
+        } else {
 
-                    })
+            storageRef.child('imagens/noticias/' + image.name).put(image, metadata)
+                .then(link => {
+                    link.ref.getDownloadURL()
+                        .then(url => {
+                            newPost.imagem = url;
 
-            })
+                            axios.put('https://osbn-a36f9.firebaseio.com/noticias/' + language + '/' + position + '.json', newPost)
+                                .then(response => {
+                                    dispatch(changePostSuccess());
+                                    console.log(response.data);
+                                })
+                                .catch(error => {
+                                    dispatch(changePostFail());
+                                })
+
+                        })
+
+                })
+
+        }
 
     }
 }

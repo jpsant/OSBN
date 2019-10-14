@@ -18,6 +18,7 @@ class NewsEditor extends Component {
         axios.get('https://osbn-a36f9.firebaseio.com/noticias.json')
             .then(response => {
                 this.setState({ brPosts: response.data.portuguese, enPosts: response.data.english, frPosts: response.data.french })
+                console.log(response.data.portuguese);
             })
     }
 
@@ -59,7 +60,7 @@ class NewsEditor extends Component {
             titulo: this.state.modalTitle,
             data: this.state.modalDate,
             resumo: this.state.modalResume,
-            imagem: null,
+            imagem: this.state.modalImage,
             noticia: this.state.modalContent,
             id: this.state.modalId
         };
@@ -167,7 +168,6 @@ class NewsEditor extends Component {
                                         <div className={classes.title}>
                                             <label className={classes.label} htmlFor="title">Título</label>
                                             <input onChange={(event) => this.setState({ modalTitle: event.target.value })} value={this.state.modalTitle} type="text" id="title" placeholder="Título da notícia!"></input>
-                                            <p>{console.log(this.state.modalImage)}</p>
                                             <input onChange={this.imgHandler} type="file" id="file" name="file"></input>
                                         </div>
                                         <div className={classes.date}>

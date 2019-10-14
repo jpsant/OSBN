@@ -35,9 +35,6 @@ class Login extends Component {
         let cookie = Cookies.get('acess_token');
         let redirect = null;
 
-        console.log(this.props.token);
-        console.log(cookie);
-
         if (this.props.token === false) {
             if (cookie === undefined) {
                 redirect = null;
