@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .container {
+    text-decoration: none;
+    color: black;
     justify-self: center !important;
     display: grid;
     grid-template-columns: .1fr .8fr .1fr;

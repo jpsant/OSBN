@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .container {
+  text-decoration: none;
+  color: black;
   -ms-grid-column-align: center !important;
       justify-self: center !important;
   display: -ms-grid;

@@ -1,10 +1,11 @@
 import React from 'react';
 
 import classes from './css/scheduleDiv.module.css';
+import { Link } from 'react-router-dom';
 
 const scheduleDiv = (props) => {
     return (
-        <div className={classes.container}>
+        <a href={props.link} className={classes.container}>
             <div className={classes.date}>
                 <h1>{props.date}</h1>
             </div>
@@ -14,7 +15,7 @@ const scheduleDiv = (props) => {
             <div className={classes.local}>
                 <h2>{props.local}</h2>
             </div>
-        </div>
+        </a>
     );
 }
 

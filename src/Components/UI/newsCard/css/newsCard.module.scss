@@ -3,7 +3,7 @@
 .container {
     background-color: white;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto .1fr;
     grid-template-columns: 1fr 1fr;
     justify-self: center;
     align-content: center;
@@ -17,17 +17,15 @@
     text-align: left;
     font-family: 'Muli', sans-serif;
     min-width: 92%;
-    // min-height: 85%;
+    // transition: all .2s ease-in-out;
     
     @media screen and (max-width: 960px) {
-        transition: height .1s ease-in-out;
+        transition: all .5s ease-in-out;
         height: 80%
     }
 
     @media screen and (min-width: 675px) {
         grid-template-rows: auto .1fr;
-        // min-width: 90%;
-        // min-height: 85%;
     }
 
 
@@ -36,11 +34,11 @@
         grid-column: 2/3;
         align-self: center;
         justify-self: center;
-        transition: height .2s ease-in-out;
+        transition: all .5s ease-out;
 
         .image {
             height: 140px;
-            transition: height .2s ease-in-out;
+            transition: all .5s ease-in-out;
             border-radius: 8px;
 
             @media screen and (max-width: 381px) {
@@ -81,42 +79,23 @@
         }
     }
 
-    // .subTitleContainer {
-    //     grid-row: 2/3;
-    //     grid-column: 1/2;
-
-    //     h1 {
-    //         margin: 0%;
-    //         font-size: 1em;
-    //         opacity: .7;
-    //     }
-
-    //     .date {
-    //         font-size: .8em;
-    //     }
-    // }
-
     .content {
         grid-row: 2/3;
         grid-column: 1/2;
         display: grid;
         grid-template-rows: auto auto;
         height: 0px;
-        transition: height .2s ease-out;
+        transition: all .3s ease-in-out;
         visibility: hidden;
 
         .contentText {
             opacity: 0;
-            transition: .2s;
+            transition: all .2s ease-in-out;
             grid-row: 1/2;
 
             @media screen and (max-width: 1022px) {
                 font-size: 1.2em;
             }
-
-            // @media screen and (max-width: 630px) {
-            //     font-size: 1.2em;
-            // }
 
             @media screen and (max-width: 510px) {
                 font-size: 1em;
@@ -127,7 +106,6 @@
             grid-row: 2/3;
 
             .redirect {
-                // background-color: #AC6837;
                 background-color: #c76d2b;
                 box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
                 border-radius: 3px;
@@ -139,30 +117,20 @@
                 text-decoration: none;
                 position: relative;
                 bottom: 0;
+                opacity: 0;
+                transition: all .1s;
 
                 @media screen and (max-width: 600px) {
                     font-size: 11px;
                     padding: 10px 10px;
                 }
 
-                // @media screen and (max-width: 630px) {
-                //     font-size: 15px;
-                //     padding: 15px 15px;;
-                // }
             }
         }
     }
 }
 
 .container:hover {
-
-    @media screen and (max-width: 600px) {
-        min-height: 88%;
-    }
-
-    .titleContainer {
-        margin: 5% 0;
-    }
 
     .imageContainer {
         grid-row: 1/4;
@@ -179,9 +147,10 @@
     .content {
         height: calc(150px - 10px);
         visibility: visible;
-        transition-duration: .2s !important;
         margin: 5% 0;
         align-self: top;
+        // transition: all .5s ease-out;
+        
 
         @media screen and (max-width: 960px) {
             height: calc(200px - 15px);
@@ -194,15 +163,17 @@
 
         .contentText {
             opacity: 1;
-            transition-duration: .4s;
             margin: 0;
+            transition: all .5s ease-out;
         }
 
-        .redirect {
-            opacity: 1;
-            transition-duration: .8s;
-            position: relative;
-            bottom: 0
+        .contentButton {
+            .redirect {
+                opacity: 1;
+                position: relative;
+                bottom: 0;
+                transition: all .5s ease-out;
+            }
         }
     }
 }

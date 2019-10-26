@@ -40,7 +40,7 @@ class ScheduleSection extends Component {
         if (this.state.agenda !== null) {
             let items = this.state.agenda;
             cards = items.map(item => {
-                return <ScheduleDiv key={item.id} date={item.data} event={item.evento} local={item.local} />
+                return <ScheduleDiv link={item.link} key={item.id} date={item.data} event={item.evento} local={item.local} />
             })
         }
 
