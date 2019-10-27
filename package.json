@@ -11,6 +11,7 @@
     "react-dom": "^16.8.6",
     "react-intersection-visible": "^2.1.0",
     "react-redux": "^7.0.3",
+    "react-reveal": "^1.2.2",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",

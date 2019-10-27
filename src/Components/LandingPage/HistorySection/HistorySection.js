@@ -21,6 +21,7 @@ class HistorySection extends Component {
                     <div ref={this.props.forwardRef} className={classes.historyContainer}>
                         <TransitionDiv bgColor="#449376" title={this.props.language === 'portuguese' ? 'Histórico' :
                             this.props.language === 'english' ? 'History' : this.props.language === 'french' ? 'Historique' : ''} />
+                        <HistoryDiv year="2018" />
                         <HistoryDiv year="2017" />
                         <HistoryDiv year="2016" />
                         <HistoryDiv year="2015" />

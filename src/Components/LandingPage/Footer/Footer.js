@@ -7,16 +7,16 @@ class Footer extends Component {
         return (
             <div className={classes.footerContainer}>
                 <div className={classes.footerImage}>
-                    <img className={classes.logo} src={require('../../../assets/logo6.png')}></img>
+                    <img alt="" className={classes.logo} src={require('../../../assets/logo6.png')}></img>
                 </div>
                 <div className={classes.footerText}>
                     <div className={classes.textContainer}>
-                        <h1 className={classes.text}>Orquestra Sanfônica Balaio Nordeste!</h1>
+                        <h1 className={classes.text}>Orquestra Sanfônica Balaio Nordeste</h1>
                         <h1 className={classes.text}>&</h1>
                         <h2>Copyright © OSBN 2018</h2>
                     </div>
                 </div>
-                <div className={classes.contactText}>
+                {/* <div className={classes.contactText}>
                     <div className={classes.container}>
                         <h2>{this.props.language === 'portuguese' ? 'Desenvolvido e mantido por' :
                             this.props.language === 'english' ? 'Developed and maintained by' : 
@@ -28,7 +28,7 @@ class Footer extends Component {
                         <a href="https://github.com/jpsant"><img className={classes.svg} alt="" src={require('../../../assets/svgs/github.svg')}></img></a>
                         <a href="https://www.instagram.com/jampalo_/"><img className={classes.svg} alt="" src={require('../../../assets/svgs/instagram.svg')}></img></a>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }

@@ -9,15 +9,15 @@
   color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: .7fr 1fr 1fr;
-      grid-template-columns: .7fr 1fr 1fr;
+  -ms-grid-columns: .5fr 1fr;
+      grid-template-columns: .5fr 1fr;
   padding: 2% 0;
 }
 
 @media screen and (max-width: 960px) {
   .footerContainer {
-    -ms-grid-rows: 1fr .8fr;
-        grid-template-rows: 1fr .8fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 381px) {
   .footerContainer .footerImage .logo {
-    height: 150px;
+    height: 130px;
   }
 }
 
@@ -86,19 +86,25 @@
 }
 
 .footerContainer .footerText .textContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footerContainer .footerText .textContainer .text {
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.footerContainer .footerText .textContainer .text {
   font-family: Xilosa;
   font-weight: 300;
   text-shadow: 1px 1px 1px #000;
   color: white;
-  font-size: 3em;
+  font-size: 4em;
   margin: 2% 0;
   text-align: center;
 }
@@ -111,7 +117,8 @@
 
 @media screen and (max-width: 381px) {
   .footerContainer .footerText .textContainer .text {
-    font-size: 1.7em;
+    font-size: 1.9em;
+    margin: 0 1%;
   }
 }
 
@@ -128,7 +135,7 @@
 
 @media screen and (max-width: 381px) {
   .footerContainer .footerText .textContainer h2 {
-    font-size: 1.7em;
+    font-size: 1em;
   }
 }
 

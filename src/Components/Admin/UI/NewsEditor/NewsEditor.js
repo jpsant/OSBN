@@ -155,7 +155,7 @@ class NewsEditor extends Component {
                                 <div className={classes.previewContainer}>
                                     <div className={classes.titleContainer}>
                                         <h1 className={classes.title}>{this.state.modalTitle}</h1>
-                                        <img className={classes.image} src={this.state.modalImage}></img>
+                                        <img alt="" className={classes.image} src={this.state.modalImage}></img>
                                         <h4 className={classes.date}>{this.state.modalDate}</h4>
                                         <h3 className={classes.resume}>{this.state.modalResume}</h3>
                                     </div>

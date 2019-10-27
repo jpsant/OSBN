@@ -1,7 +1,6 @@
 import React from 'react';
 
 import classes from './css/scheduleDiv.module.css';
-import { Link } from 'react-router-dom';
 
 const scheduleDiv = (props) => {
     return (

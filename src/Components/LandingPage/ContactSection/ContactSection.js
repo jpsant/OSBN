@@ -41,7 +41,7 @@ class ContactSection extends Component {
                             <div className={classes.contactMedia}>
                                 <div className={classes.wppDiv}>
                                     <img className={classes.svg} src={require('../../../assets/svgs/whatsappFooter.svg')} alt="" />
-                                    <h2>(83) 98872-2278</h2>
+                                    <h2>Contato para Produção: (83) 99922-3749</h2>
                                 </div>
                                 <div className={classes.emailDiv}>
                                     <img className={classes.svg} src={require('../../../assets/svgs/emailFooter.svg')} alt="" />

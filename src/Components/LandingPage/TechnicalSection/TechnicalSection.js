@@ -39,7 +39,7 @@ class TechnicalSection extends Component {
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div ref={this.props.forwardRef} style={{ backgroundColor: '#2b765a', display: 'grid' }}>
-                    <TransitionDiv bgColor="#449376" title={this.props.language === 'portuguese' ? 'Técnica' :
+                    {/* <TransitionDiv bgColor="#449376" title={this.props.language === 'portuguese' ? 'Técnica' :
                         this.props.language === 'english' ? 'Technical' :
                             this.props.language === 'french' ? 'Technique' : ''} />
                     <div className={classes.technicalContainer}>
@@ -61,7 +61,7 @@ class TechnicalSection extends Component {
                                 this.props.language === 'english' ? 'Download' :
                                     this.props.language === 'french' ? 'Télécharger' : ''}</button>
                         </div>
-                    </div>
+                    </div> */}
                     <TransitionDiv bgColor="#449376" title={this.props.language === 'portuguese' ? 'Repertório' :
                         this.props.language === 'english' ? 'Repertoire' :
                             this.props.language === 'french' ? 'Répertoire' : ''} />

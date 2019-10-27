@@ -70,7 +70,7 @@
 
 @media screen and (max-width: 960px) {
   .container .imageContainer .image {
-    height: 120px;
+    height: 100px;
   }
 }
 
@@ -190,7 +190,7 @@
 
 @media screen and (max-width: 960px) {
   .container:hover .imageContainer .image {
-    height: 150px;
+    height: 100px;
   }
 }
 

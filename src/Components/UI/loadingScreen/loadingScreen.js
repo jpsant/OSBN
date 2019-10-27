@@ -12,10 +12,10 @@ const loadingScreen = (props) => {
                 <img src={require('../../../assets/logo6.png')} alt="" className={classes.logo}></img>
                 <h1  style={{ opacity: props.show ? '1' : '0', visibility: props.show ? 'visible' : 'hidden'}}>&</h1>
                 {/* <h1  style={{ opacity: props.show ? '1' : '0', visibility: props.show ? 'visible' : 'hidden'}}> Loading...</h1> */}
-                <img className={classes.topLeft} src={require('../../../assets/OSBNBORDAS/border.png')}></img>
-                <img className={classes.topRight} src={require('../../../assets/OSBNBORDAS/border.png')}></img>
-                <img className={classes.bottomLeft} src={require('../../../assets/OSBNBORDAS/border.png')}></img>
-                <img className={classes.bottomRight} src={require('../../../assets/OSBNBORDAS/border.png')}></img>
+                <img alt="" className={classes.topLeft} src={require('../../../assets/OSBNBORDAS/half.png')}></img>
+                <img alt="" className={classes.topRight} src={require('../../../assets/OSBNBORDAS/half.png')}></img>
+                <img alt="" className={classes.bottomLeft} src={require('../../../assets/OSBNBORDAS/half.png')}></img>
+                <img alt="" className={classes.bottomRight} src={require('../../../assets/OSBNBORDAS/half.png')}></img>
             </div>
         </div>
     );

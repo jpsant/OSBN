@@ -78,6 +78,9 @@ class FullPage extends Component {
             case 6:
                 this.contactSection.current.scrollIntoView({ behavior: 'smooth' });
                 this.props.changeSection('contact');
+                break;
+            default:
+                return
         }
     }
 
