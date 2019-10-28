@@ -19,7 +19,7 @@
   font-family: Xilosa;
   font-weight: 500;
   line-height: 1.2;
-  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #000, .5px .5px .5px #000;
   color: white;
 }
 
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 381px) {
   .container .hat {
-    font-size: 2.5em;
+    font-size: 2.8em;
   }
 }
 
@@ -42,7 +42,6 @@
   font-size: 5.5em;
   font-family: Xilosa;
   font-weight: 500;
-  line-height: 1.2;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   color: white;
 }

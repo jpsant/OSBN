@@ -31,7 +31,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 581px) {
   .container .yearDiv h1 {
     font-size: 1.5em;
   }

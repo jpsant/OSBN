@@ -13,14 +13,14 @@
   width: 100%;
   height: auto;
   font-family: 'Muli', sans-serif;
-  cursor: pointer;
   margin: 1% 10%;
 }
 
 @media screen and (max-width: 960px) {
   .container {
-    -ms-grid-columns: .2fr .8fr .3fr;
-        grid-template-columns: .2fr .8fr .3fr;
+    -ms-grid-rows: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    margin: 5% 0;
   }
 }
 
@@ -42,9 +42,20 @@
 }
 
 @media screen and (max-width: 960px) {
+  .container .date h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .container .date {
     font-size: .6em;
-    padding: 0 15%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
   }
 }
 
@@ -57,21 +68,49 @@
   display: grid;
 }
 
-.container .event h2 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
 @media screen and (max-width: 960px) {
   .container .event {
-    font-size: .9em;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
   }
 }
 
-@media screen and (max-width: 381px) {
-  .container .event {
-    font-size: .8em;
+.container .event h2 {
+  font-size: 2.5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .container .event h2 {
+    font-size: 2em;
+  }
+}
+
+.container .event .button {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background-color: #E55812;
+  padding: 15px 25px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 2% 0;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 960px) {
+  .container .event .button {
+    margin: 4% 0;
   }
 }
 
@@ -82,17 +121,30 @@
   grid-column: 3/5;
   background-color: #E55812;
   color: white;
+  display: -ms-grid;
+  display: grid;
 }
 
 @media screen and (max-width: 960px) {
   .container .local {
-    font-size: .9em;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
   }
 }
 
-@media screen and (max-width: 381px) {
-  .container .local {
-    font-size: .7em;
+.container .local h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (max-width: 960px) {
+  .container .local h2 {
+    font-size: 1.5em;
   }
 }
 /*# sourceMappingURL=scheduleDiv.module.css.map */
