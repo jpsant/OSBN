@@ -69,6 +69,12 @@
       align-self: center;
 }
 
+@media screen and (max-width: 960px) {
+  .container .date h1 {
+    margin: 0 4%;
+  }
+}
+
 .container .event {
   display: -ms-grid;
   display: grid;
