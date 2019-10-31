@@ -23,7 +23,7 @@
   display: grid;
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
-  background-color: #ac6937;
+  background-color: #C76D2B;
 }
 
 .container .titleContainer {
@@ -34,11 +34,11 @@
 
 .container .titleContainer h1 {
   font-family: Xilosa;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
   text-shadow: 1px 1px 1px #000;
   color: white;
-  margin: 1% 0;
+  margin: 1%;
 }
 
 .container .buttonsContainer {
@@ -50,19 +50,20 @@
   -ms-grid-rows: (1fr)[6];
       grid-template-rows: repeat(6, 1fr);
   border-radius: 8px;
-  background-color: #AB7C44;
+  background-color: #914E1E;
   margin: 3%;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.46), 0 3px 6px rgba(0, 0, 0, 0.46);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.46), 0 3px 6px rgba(0, 0, 0, 0.46);
 }
 
 .container .buttonsContainer h1 {
   font-family: Xilosa;
-  font-weight: 300;
-  line-height: 1;
+  font-weight: 500;
   text-shadow: 1px 1px 1px #000;
   color: white;
   margin: 1% 0;
@@ -85,15 +86,10 @@
       align-self: center;
 }
 
-.container .buttonsContainer .history:hover img {
-  height: 40px;
-}
-
-.container .buttonsContainer .history:hover button {
-  opacity: 1;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.container .buttonsContainer .history button {
+  background-color: #449376;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 .container .buttonsContainer .gallery {
@@ -109,15 +105,10 @@
       align-self: center;
 }
 
-.container .buttonsContainer .gallery:hover img {
-  height: 40px;
-}
-
-.container .buttonsContainer .gallery:hover button {
-  opacity: 1;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.container .buttonsContainer .gallery button {
+  background-color: #B69C00;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 .container .buttonsContainer .schedule {
@@ -133,15 +124,10 @@
       align-self: center;
 }
 
-.container .buttonsContainer .schedule:hover img {
-  height: 40px;
-}
-
-.container .buttonsContainer .schedule:hover button {
-  opacity: 1;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.container .buttonsContainer .schedule button {
+  background-color: #D35523;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 .container .buttonsContainer .news {
@@ -157,15 +143,10 @@
       align-self: center;
 }
 
-.container .buttonsContainer .news:hover img {
-  height: 40px;
-}
-
-.container .buttonsContainer .news:hover button {
-  opacity: 1;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.container .buttonsContainer .news button {
+  background-color: #C76D2B;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 .container .buttonsContainer .technical {
@@ -181,15 +162,10 @@
       align-self: center;
 }
 
-.container .buttonsContainer .technical:hover img {
-  height: 40px;
-}
-
-.container .buttonsContainer .technical:hover button {
-  opacity: 1;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.container .buttonsContainer .technical button {
+  background-color: #449376;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 .container .buttonsContainer .social {
@@ -205,15 +181,10 @@
       align-self: center;
 }
 
-.container .buttonsContainer .social:hover img {
-  height: 40px;
-}
-
-.container .buttonsContainer .social:hover button {
-  opacity: 1;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+.container .buttonsContainer .social button {
+  background-color: #B69C00;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 .container .buttonsContainer:hover {
@@ -232,7 +203,6 @@
   display: inline-block;
   margin: 0 12%;
   padding: 5px 0;
-  opacity: 0.6;
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 8px;

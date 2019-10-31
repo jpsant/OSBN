@@ -18,12 +18,17 @@ class sideMenu extends Component {
         }))
     }
 
+    sectionChanger = (section) => {
+        this.props.clicked(section);
+        this.setState({show: false});
+    }
+
     render() {
 
         return (
             <>
                 <MenuBackDrop show={this.state.show} clicked={this.onCloseHandler} />
-                <MobileMenu language={this.props.language} buttonClicked={(section) => this.props.clicked(section)} clicked={this.onCloseHandler} show={this.state.show} />
+                <MobileMenu language={this.props.language} buttonClicked={(section) => this.sectionChanger(section)} clicked={this.onCloseHandler} show={this.state.show} />
                 <div className={classes.subMenu} style={{
                     transform: this.state.show ? 'translateX(100vh)' : 'translateX(0)',
                     visibility: this.state.show ? 'hidden' : 'visible',
@@ -58,37 +63,37 @@ class sideMenu extends Component {
                         <span className={classes.historyTooltip}>{this.props.language === 'portuguese' ? 'Histórico' : 
                         this.props.language === 'english' ? 'History' : 
                         this.props.language === 'french' ? 'Histoire' : ''}</span>
-                        <button onClick={() => this.props.clicked(1)} className={this.props.section === 'history' ? classes.greenButton + ' ' + classes.active : classes.greenButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/book.svg')}></img></button>
+                        <button onClick={() => this.sectionChanger(1)} className={this.props.section === 'history' ? classes.greenButton + ' ' + classes.active : classes.greenButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/book.svg')}></img></button>
                     </div>
                     <div className={classes.galleryButton}>
                         <span className={classes.galleryTooltip}>{this.props.language === 'portuguese' ? 'Galeria' : 
                         this.props.language === 'english' ? 'Gallery' : 
                         this.props.language === 'french' ? 'Galerie' : ''}</span>
-                        <button onClick={() => this.props.clicked(2)} className={this.props.section === 'gallery' ? classes.yellowButton + ' ' + classes.active : classes.yellowButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/portrait.svg')}></img></button>
+                        <button onClick={() => this.sectionChanger(2)} className={this.props.section === 'gallery' ? classes.yellowButton + ' ' + classes.active : classes.yellowButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/portrait.svg')}></img></button>
                     </div>
                     <div className={classes.scheduleButton}>
                         <span className={classes.scheduleTooltip}>{this.props.language === 'portuguese' ? 'Agenda' : 
                         this.props.language === 'english' ? 'Schedule' : 
                         this.props.language === 'french' ? 'Agenda' : ''}</span>
-                        <button onClick={() => this.props.clicked(3)} className={this.props.section === 'schedule' ? classes.redButton + ' ' + classes.active : classes.redButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/calendar.svg')}></img></button>
+                        <button onClick={() => this.sectionChanger(3)} className={this.props.section === 'schedule' ? classes.redButton + ' ' + classes.active : classes.redButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/calendar.svg')}></img></button>
                     </div>
                     <div className={classes.newsButton}>
                         <span className={classes.newsTooltip}>{this.props.language === 'portuguese' ? 'Notícias' : 
                         this.props.language === 'english' ? 'News' : 
                         this.props.language === 'french' ? 'Nouvelles' : ''}</span>
-                        <button onClick={() => this.props.clicked(4)} className={this.props.section === 'news' ? classes.brownButton + ' ' + classes.active : classes.brownButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
+                        <button onClick={() => this.sectionChanger(4)} className={this.props.section === 'news' ? classes.brownButton + ' ' + classes.active : classes.brownButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
                     </div>
                     <div className={classes.techButton}>
                         <span className={classes.techTooltip}>{this.props.language === 'portuguese' ? 'Técnica' : 
                         this.props.language === 'english' ? 'Technique' : 
                         this.props.language === 'french' ? 'Technique' : ''}</span>
-                        <button onClick={() => this.props.clicked(5)} className={this.props.section === 'technical' ? classes.greenButton + ' ' + classes.active : classes.greenButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
+                        <button onClick={() => this.sectionChanger(5)} className={this.props.section === 'technical' ? classes.greenButton + ' ' + classes.active : classes.greenButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
                     </div>
                     <div className={classes.socialButton}>
                         <span className={classes.socialTooltip}>{this.props.language === 'portuguese' ? 'Social' : 
                         this.props.language === 'english' ? 'Social' : 
                         this.props.language === 'french' ? 'Social' : ''}</span>
-                        <button onClick={() => this.props.clicked(6)} className={this.props.section === 'contact' ? classes.yellowButton + ' ' + classes.active : classes.yellowButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/facebook.svg')}></img></button>
+                        <button onClick={() => this.sectionChanger(6)} className={this.props.section === 'contact' ? classes.yellowButton + ' ' + classes.active : classes.yellowButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/facebook.svg')}></img></button>
                     </div>
                 </div>
             </>
