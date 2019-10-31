@@ -9,6 +9,7 @@ class Footer extends Component {
                 <div className={classes.footerImage}>
                     <img alt="" className={classes.logo} src={require('../../../assets/logo6.png')}></img>
                 </div>
+                    <div className={classes.verticalLine}></div>
                 <div className={classes.footerText}>
                     <div className={classes.textContainer}>
                         <h1 className={classes.text}>Orquestra Sanfônica Balaio Nordeste</h1>

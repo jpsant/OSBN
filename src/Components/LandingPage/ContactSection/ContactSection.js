@@ -22,12 +22,12 @@ class ContactSection extends Component {
                             this.props.language === 'french' ? 'Nous contacter' : ''} />
                     <div className={classes.contactContainer}>
                         <div className={classes.titleContainer}>
-                            <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste! <span>&</span></h1>
+                            <h1 className={classes.title}>Orquestra Sanfônica Balaio Nordeste <span>&</span></h1>
                         </div>
                         <div className={classes.social}>
-                            <h1>{this.props.language === 'portuguese' ? 'Nos siga nas Redes Sociais!' :
-                                this.props.language === 'english' ? 'Follow us on Social Media!' :
-                                    this.props.language === 'french' ? 'Suivez nous sur les réseaux sociaux!' : ''}</h1>
+                            <h1>{this.props.language === 'portuguese' ? 'Nos siga nas Redes Sociais !' :
+                                this.props.language === 'english' ? 'Follow us on Social Media !' :
+                                    this.props.language === 'french' ? 'Suivez nous sur les réseaux sociaux !' : ''}</h1>
                             <div className={classes.socialMedia}>
                                 <a href="https://www.youtube.com/channel/UCM6Z3B0OVdpLU8b7Qxe0hEA"><img className={classes.svg} src={require('../../../assets/svgs/youtubeFooter.svg')} alt=""></img></a>
                                 <a href="https://www.facebook.com/orquestrasanfonicabn/"><img className={classes.svg} src={require('../../../assets/svgs/facebookFooter.svg')} alt=""></img></a>
@@ -35,9 +35,9 @@ class ContactSection extends Component {
                             </div>
                         </div>
                         <div className={classes.contact}>
-                            <h1>{this.props.language === 'portuguese' ? 'Entre em Contato!' :
-                                this.props.language === 'english' ? 'Contact us!' :
-                                    this.props.language === 'french' ? 'Contactez nous!' : ''}</h1>
+                            <h1>{this.props.language === 'portuguese' ? 'Entre em Contato' :
+                                this.props.language === 'english' ? 'Contact us' :
+                                    this.props.language === 'french' ? 'Contactez nous' : ''}</h1>
                             <div className={classes.contactMedia}>
                                 <div className={classes.wppDiv}>
                                     <img className={classes.svg} src={require('../../../assets/svgs/whatsappFooter.svg')} alt="" />

@@ -100,18 +100,19 @@
 
 
                 .svg {
-                    height: 65px;
+                    height: 75px;
                     transition: .3s cubic-bezier(.175, .885, .32, 1.275);
 
                     @media screen and (max-width: 960px) {
                         height: 55px;
                     }
                 }
+                
             }
 
             a:hover {
                 .svg {
-                    height: 75px;
+                    height: 95px;
                 }
             }
 
