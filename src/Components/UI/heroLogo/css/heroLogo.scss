@@ -4,7 +4,7 @@
 
 .loguinho {
   position: absolute;
-  height: 55vh;
+  height: 65vh;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -24,23 +24,6 @@
     height: 25vh;
   }
 }
-
-// .st0{fill:#F8D8A2;stroke:#F8D8A2;}
-// .st1 {
-//     fill: #59351b;
-//     opacity: 0;
-//     animation: colorsOpacity 1s forwards 2.7s;
-//   }
-// .st2{fill:#59351B;}
-// .st3{fill:#0BA583;stroke:#0BA583;stroke-miterlimit:10;}
-// .st4{fill:#BFA931;}
-// .st5{fill:#EF9928;}
-// .st6{fill:#EB9B20;}
-// .st7{fill:#EB621C;}
-// .st8{fill:#AF8C56;stroke:#AF8C56;stroke-miterlimit:10;}
-// .st9{enable-background:new    ;}
-// .st10{fill:#AF8C56;}
-// .st11{fill:#FFFFFF;}
 
 .st1 {
   fill: #59351b;
@@ -88,7 +71,7 @@
   font-family: "Corbel";
 }
 .st11 {
-  font-size: 16.4835px;
+  fill: white;
 }
 
 #fundo {
@@ -130,6 +113,13 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
+}
+
+.arcos {
+fill: transparent;
+  stroke-dasharray: 2420;
+  stroke-dashoffset: 2600;
+  animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
 }
 
 @keyframes dash {
@@ -189,5 +179,11 @@
 @keyframes subtitleColor {
     to {
         fill: #59351B;
+    }
+}
+
+@keyframes archColors {
+    to {
+        fill: #ffffff
     }
 }

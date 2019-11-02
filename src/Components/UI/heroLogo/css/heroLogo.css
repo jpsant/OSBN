@@ -5,7 +5,7 @@
 
 .loguinho {
   position: absolute;
-  height: 55vh;
+  height: 65vh;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -96,7 +96,7 @@
 }
 
 .st11 {
-  font-size: 16.4835px;
+  fill: white;
 }
 
 #fundo {
@@ -143,6 +143,14 @@
   stroke-dashoffset: 500;
   -webkit-animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
           animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
+}
+
+.arcos {
+  fill: transparent;
+  stroke-dasharray: 2420;
+  stroke-dashoffset: 2600;
+  -webkit-animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
+          animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
 }
 
 @-webkit-keyframes dash {
@@ -262,6 +270,18 @@
 @keyframes subtitleColor {
   to {
     fill: #59351B;
+  }
+}
+
+@-webkit-keyframes archColors {
+  to {
+    fill: #ffffff;
+  }
+}
+
+@keyframes archColors {
+  to {
+    fill: #ffffff;
   }
 }
 /*# sourceMappingURL=heroLogo.css.map */
