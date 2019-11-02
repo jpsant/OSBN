@@ -1,0 +1,193 @@
+.container {
+  display: grid;
+}
+
+.loguinho {
+  position: absolute;
+  height: 55vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 35%;
+  z-index: 9999;
+
+  @media screen and (max-width: 960px) {
+    top: 30%;
+  }
+
+  @media screen and (max-width: 525px) {
+    font-size: 3.1em;
+  }
+
+  @media screen and (max-width: 459px) {
+    top: 72%;
+    height: 25vh;
+  }
+}
+
+// .st0{fill:#F8D8A2;stroke:#F8D8A2;}
+// .st1 {
+//     fill: #59351b;
+//     opacity: 0;
+//     animation: colorsOpacity 1s forwards 2.7s;
+//   }
+// .st2{fill:#59351B;}
+// .st3{fill:#0BA583;stroke:#0BA583;stroke-miterlimit:10;}
+// .st4{fill:#BFA931;}
+// .st5{fill:#EF9928;}
+// .st6{fill:#EB9B20;}
+// .st7{fill:#EB621C;}
+// .st8{fill:#AF8C56;stroke:#AF8C56;stroke-miterlimit:10;}
+// .st9{enable-background:new    ;}
+// .st10{fill:#AF8C56;}
+// .st11{fill:#FFFFFF;}
+
+.st1 {
+  fill: #59351b;
+  opacity: 0;
+  animation: colorsOpacity 1s forwards 2.7s;
+}
+.st2 {
+  fill: #0ba583;
+  animation: colorsOpacity 1s forwards 2.5s;
+  opacity: 0;
+}
+.st3 {
+  fill: #bfa931;
+  animation: colorsOpacity 1s forwards 2.8s;
+  opacity: 0;
+}
+.st4 {
+  fill: #ef9928;
+  animation: colorsOpacity 1s forwards 2.9s;
+  opacity: 0;
+}
+.st5 {
+  fill: #eb9b20;
+  animation: colorsOpacity 1s forwards 2.5s;
+  opacity: 0;
+}
+.st6 {
+  fill: #eb621c;
+  animation: colorsOpacity 1s forwards 2.7s;
+  opacity: 0;
+}
+.st7 {
+  fill: #af8c56;
+  animation: colorsOpacity 1s forwards 2.8s;
+  opacity: 0;
+}
+.st8 {
+  opacity: 0;
+  animation: colorsOpacity 1s forwards 2.5s;
+}
+.st9 {
+  font-size: 17.564px;
+}
+.st10 {
+  font-family: "Corbel";
+}
+.st11 {
+  font-size: 16.4835px;
+}
+
+#fundo {
+  fill: transparent;    
+  stroke-dasharray: 1320;
+  stroke-dashoffset: 1320;
+}
+
+.triggered {
+  fill: transparent;
+  stroke-dasharray: 1320;
+  stroke-dashoffset: 2000;
+  animation: dash 2s linear forwards, fille 2s forwards 2s;
+}
+
+.arabescos {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: arabescos 4s linear forwards 3s, arabescoColors 2s forwards 3.5s;
+}
+
+.titulo {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: title 4s linear forwards 3s, titleColor 2s forwards 3.5s;
+}
+
+.linhas {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: rectangles 4s linear forwards 3s, rectanglesColor 2s forwards 3.5s;
+}
+
+.legenda { 
+    fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fille {
+  to {
+    fill: #f8d8a2;
+  }
+}
+
+@keyframes colorsOpacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arabescos {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes arabescoColors {
+  to {
+    fill: #af8c56;
+  }
+}
+
+@keyframes title {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes titleColor {
+  to {
+    fill: #59351b;
+  }
+}
+
+@keyframes rectangles {
+    to {
+        stroke-dashoffset: 0;
+      }
+}
+
+@keyframes rectanglesColor {
+    to {
+        fill: #AF8C56;
+      }
+}
+
+@keyframes subtitleColor {
+    to {
+        fill: #59351B;
+    }
+}

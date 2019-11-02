@@ -16,7 +16,7 @@
   left: 0;
   right: 0;
   margin: 1%;
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 500;
   line-height: 1.2;
   z-index: 9999;
@@ -42,7 +42,7 @@
 
 .heroContainer .logo {
   position: absolute;
-  height: 40vh;
+  height: 5vh;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -74,7 +74,7 @@
   left: 0;
   right: 0;
   margin: 1% auto;
-  font-size: 6em;
+  font-size: 4.5em;
   top: 20%;
   font-weight: 500;
   line-height: 1.2;

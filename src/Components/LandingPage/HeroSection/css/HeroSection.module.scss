@@ -1,108 +1,106 @@
 @mixin font-face($font-name) {
-    @font-face {
-        font-family: $font-name;
-        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
-    }
+  @font-face {
+    font-family: $font-name;
+    src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+  }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 @include font-face(Xilosa);
 
 .heroContainer {
-    // color:#fccb79; //PRINCIPAL!
-    // background-color: #C3AB74 //BG PRINCIPAL!!
-    font-family: Xilosa;
-    color: white;
-    line-height: 1;
-    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  // color:#fccb79; //PRINCIPAL!
+  // background-color: #C3AB74 //BG PRINCIPAL!!
+  font-family: Xilosa;
+  color: white;
+  line-height: 1;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
 
+  .firstTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1%;
+    font-size: 5em;
+    font-weight: 500;
+    line-height: 1.2;
+    z-index: 9999;
 
-    .firstTitle {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 1%;
-        font-size: 6em;
-        font-weight: 500;
-        line-height: 1.2;
-        z-index: 9999;
-
-        @media screen and (max-width: 960px) {
-            font-size: 3.8em;
-        }
-        
-        @media screen and (max-width: 525px) {
-            font-size: 3.1em
-        }
-
-        @media screen and (max-width: 459px) {
-            font-size: 3.2em;
-        }
-
+    @media screen and (max-width: 960px) {
+      font-size: 3.8em;
     }
 
-    .logo {
-        position: absolute;
-        height: 40vh;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 45%;
-        z-index: 9999;
-
-        @media screen and (max-width: 960px) {
-            top: 30%
-        }
-
-        @media screen and (max-width: 525px) {
-            font-size: 3.1em
-        }
-
-        @media screen and (max-width: 459px) {
-            top: 72%;
-            height: 25vh;
-        }
+    @media screen and (max-width: 525px) {
+      font-size: 3.1em;
     }
 
-    .secondTitle {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 1% auto;
-        font-size: 6em;
-        top: 20%;
-        font-weight: 500;
-        line-height: 1.2;
-        z-index: 9999;
+    @media screen and (max-width: 459px) {
+      font-size: 3.2em;
+    }
+  }
 
-        @media screen and (max-width: 960px) {
-            font-size: 3.8em;
-            top: 15%;
-        }
+  .logo {
+    position: absolute;
+    height: 5vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 45%;
+    z-index: 9999;
 
-        @media screen and (max-width: 525px) {
-            font-size: 3.1em
-        }
-
-        @media screen and (max-width: 459px) {
-            font-size: 3em;
-            top: 22%;
-        }
+    @media screen and (max-width: 960px) {
+      top: 30%;
     }
 
-    .container {
-        background-color: black;
-
-        .video {
-            height: 100%;
-            width: 100%;
-            filter: brightness(50%);
-            background-color: black;
-
-            @media screen and (max-width: 960px) {
-                height: 100vh;
-            }
-        }
+    @media screen and (max-width: 525px) {
+      font-size: 3.1em;
     }
+
+    @media screen and (max-width: 459px) {
+      top: 72%;
+      height: 25vh;
+    }
+  }
+
+  .secondTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1% auto;
+    font-size: 4.5em;
+    top: 20%;
+    font-weight: 500;
+    line-height: 1.2;
+    z-index: 9999;
+
+    @media screen and (max-width: 960px) {
+      font-size: 3.8em;
+      top: 15%;
+    }
+
+    @media screen and (max-width: 525px) {
+      font-size: 3.1em;
+    }
+
+    @media screen and (max-width: 459px) {
+      font-size: 3em;
+      top: 22%;
+    }
+  }
+
+  .container {
+    background-color: black;
+
+    .video {
+      height: 100%;
+      width: 100%;
+      filter: brightness(50%);
+      background-color: black;
+
+      @media screen and (max-width: 960px) {
+        height: 100vh;
+      }
+    }
+  }
 }

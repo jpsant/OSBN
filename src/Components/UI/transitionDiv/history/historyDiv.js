@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './css/historyDiv.module.css'
 
+import { Fade } from 'react-reveal';
+
 const historyDiv = (props) => {
     return (
         <>

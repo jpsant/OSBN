@@ -1,0 +1,267 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.loguinho {
+  position: absolute;
+  height: 55vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 35%;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 960px) {
+  .loguinho {
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .loguinho {
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (max-width: 459px) {
+  .loguinho {
+    top: 72%;
+    height: 25vh;
+  }
+}
+
+.st1 {
+  fill: #59351b;
+  opacity: 0;
+  -webkit-animation: colorsOpacity 1s forwards 2.7s;
+          animation: colorsOpacity 1s forwards 2.7s;
+}
+
+.st2 {
+  fill: #0ba583;
+  -webkit-animation: colorsOpacity 1s forwards 2.5s;
+          animation: colorsOpacity 1s forwards 2.5s;
+  opacity: 0;
+}
+
+.st3 {
+  fill: #bfa931;
+  -webkit-animation: colorsOpacity 1s forwards 2.8s;
+          animation: colorsOpacity 1s forwards 2.8s;
+  opacity: 0;
+}
+
+.st4 {
+  fill: #ef9928;
+  -webkit-animation: colorsOpacity 1s forwards 2.9s;
+          animation: colorsOpacity 1s forwards 2.9s;
+  opacity: 0;
+}
+
+.st5 {
+  fill: #eb9b20;
+  -webkit-animation: colorsOpacity 1s forwards 2.5s;
+          animation: colorsOpacity 1s forwards 2.5s;
+  opacity: 0;
+}
+
+.st6 {
+  fill: #eb621c;
+  -webkit-animation: colorsOpacity 1s forwards 2.7s;
+          animation: colorsOpacity 1s forwards 2.7s;
+  opacity: 0;
+}
+
+.st7 {
+  fill: #af8c56;
+  -webkit-animation: colorsOpacity 1s forwards 2.8s;
+          animation: colorsOpacity 1s forwards 2.8s;
+  opacity: 0;
+}
+
+.st8 {
+  opacity: 0;
+  -webkit-animation: colorsOpacity 1s forwards 2.5s;
+          animation: colorsOpacity 1s forwards 2.5s;
+}
+
+.st9 {
+  font-size: 17.564px;
+}
+
+.st10 {
+  font-family: "Corbel";
+}
+
+.st11 {
+  font-size: 16.4835px;
+}
+
+#fundo {
+  fill: transparent;
+  stroke-dasharray: 1320;
+  stroke-dashoffset: 1320;
+}
+
+.triggered {
+  fill: transparent;
+  stroke-dasharray: 1320;
+  stroke-dashoffset: 2000;
+  -webkit-animation: dash 2s linear forwards, fille 2s forwards 2s;
+          animation: dash 2s linear forwards, fille 2s forwards 2s;
+}
+
+.arabescos {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: arabescos 4s linear forwards 3s, arabescoColors 2s forwards 3.5s;
+          animation: arabescos 4s linear forwards 3s, arabescoColors 2s forwards 3.5s;
+}
+
+.titulo {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: title 4s linear forwards 3s, titleColor 2s forwards 3.5s;
+          animation: title 4s linear forwards 3s, titleColor 2s forwards 3.5s;
+}
+
+.linhas {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: rectangles 4s linear forwards 3s, rectanglesColor 2s forwards 3.5s;
+          animation: rectangles 4s linear forwards 3s, rectanglesColor 2s forwards 3.5s;
+}
+
+.legenda {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  -webkit-animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
+          animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fille {
+  to {
+    fill: #f8d8a2;
+  }
+}
+
+@keyframes fille {
+  to {
+    fill: #f8d8a2;
+  }
+}
+
+@-webkit-keyframes colorsOpacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes colorsOpacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes arabescos {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes arabescos {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes arabescoColors {
+  to {
+    fill: #af8c56;
+  }
+}
+
+@keyframes arabescoColors {
+  to {
+    fill: #af8c56;
+  }
+}
+
+@-webkit-keyframes title {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes title {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes titleColor {
+  to {
+    fill: #59351b;
+  }
+}
+
+@keyframes titleColor {
+  to {
+    fill: #59351b;
+  }
+}
+
+@-webkit-keyframes rectangles {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rectangles {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes rectanglesColor {
+  to {
+    fill: #AF8C56;
+  }
+}
+
+@keyframes rectanglesColor {
+  to {
+    fill: #AF8C56;
+  }
+}
+
+@-webkit-keyframes subtitleColor {
+  to {
+    fill: #59351B;
+  }
+}
+
+@keyframes subtitleColor {
+  to {
+    fill: #59351B;
+  }
+}
+/*# sourceMappingURL=heroLogo.css.map */
