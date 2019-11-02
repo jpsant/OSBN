@@ -108,6 +108,13 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .container .titleContainer h1 {
+    margin: 3% 0;
+    font-size: 1.3em;
+  }
+}
+
 .container .titleContainer h2 {
   font-size: 0.8em;
   margin: 0%;
@@ -235,6 +242,13 @@
 @media screen and (max-width: 960px) {
   .container:hover .content {
     height: calc(160px - 15px);
+    margin-top: 5%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container:hover .content {
+    height: calc(190px - 15px);
     margin-top: 5%;
   }
 }
