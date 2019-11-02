@@ -87,6 +87,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .infoContainer .videoContainer .video1 .videoPlayer1 {
+    width: 300px;
+  }
+}
+
 .infoContainer .videoContainer .video2 .videoPlayer2 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -124,6 +130,12 @@
 @media screen and (max-width: 381px) {
   .infoContainer .videoContainer .video2 .videoPlayer2 {
     width: 350px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .infoContainer .videoContainer .video2 .videoPlayer2 {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=InfoSection.module.css.map */

@@ -18,6 +18,13 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .container .galleryContainer {
+    -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  }
+}
+
 .container .galleryButton {
   background-color: #b6a121;
   cursor: pointer;
