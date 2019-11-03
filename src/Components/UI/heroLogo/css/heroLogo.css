@@ -32,6 +32,13 @@
   }
 }
 
+.st0 {
+  fill: #f8d8a2;
+  opacity: 0;
+  -webkit-animation: colorsOpacity 2s forwards 2.7s;
+          animation: colorsOpacity 2s forwards 2.7s;
+}
+
 .st1 {
   fill: #59351b;
   opacity: 0;
@@ -99,18 +106,12 @@
   fill: white;
 }
 
-#fundo {
-  fill: transparent;
-  stroke-dasharray: 1320;
-  stroke-dashoffset: 1320;
-}
-
 .triggered {
   fill: transparent;
-  stroke-dasharray: 1320;
-  stroke-dashoffset: 2000;
-  -webkit-animation: dash 2s linear forwards, fille 2s forwards 2s;
-          animation: dash 2s linear forwards, fille 2s forwards 2s;
+  stroke-dasharray: 1520;
+  stroke-dashoffset: 1500;
+  -webkit-animation: dash 3s linear forwards, fille 1s forwards 2.5s;
+          animation: dash 3s linear forwards, fille 1s forwards 2.5s;
 }
 
 .arabescos {
@@ -151,6 +152,15 @@
   stroke-dashoffset: 2600;
   -webkit-animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
           animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
+}
+
+@media screen and (max-width: 500px) {
+  .arcos {
+    stroke-dasharray: auto;
+    stroke-dashoffset: auto;
+    -webkit-animation: archColors 2s linear forwards 3s;
+            animation: archColors 2s linear forwards 3s;
+  }
 }
 
 @-webkit-keyframes dash {
