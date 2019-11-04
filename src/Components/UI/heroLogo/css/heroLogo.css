@@ -4,13 +4,18 @@
 }
 
 .loguinho {
-  position: absolute;
-  height: 65vh;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  top: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  height: 65vh;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 9999;
+  -webkit-animation: levitate 2s forwards 9s;
+          animation: levitate 2s forwards 9s;
 }
 
 @media screen and (max-width: 960px) {
@@ -22,6 +27,8 @@
 @media screen and (max-width: 525px) {
   .loguinho {
     font-size: 3.1em;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
@@ -103,7 +110,7 @@
 }
 
 .st11 {
-  fill: white;
+  fill: #F8D8A2;
 }
 
 .triggered {
@@ -285,13 +292,27 @@
 
 @-webkit-keyframes archColors {
   to {
-    fill: #ffffff;
+    fill: white;
   }
 }
 
 @keyframes archColors {
   to {
-    fill: #ffffff;
+    fill: white;
+  }
+}
+
+@-webkit-keyframes levitate {
+  to {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+
+@keyframes levitate {
+  to {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
 }
 /*# sourceMappingURL=heroLogo.css.map */

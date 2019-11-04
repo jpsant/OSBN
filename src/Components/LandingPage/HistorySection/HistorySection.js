@@ -10,8 +10,14 @@ import HistoryDiv from '../../UI/historyDiv/historyDiv';
 
 class HistorySection extends Component {
 
+
     onShow(entries) {
-        this.props.changeSection('history')
+        this.props.changeSection('history');
+        this.setState({show: true});
+    }
+
+    state = {
+        show: false
     }
 
     render() {
@@ -19,7 +25,7 @@ class HistorySection extends Component {
             <>
                 <IntersectionVisible onShow={(e) => this.onShow(e)}>
                     <div ref={this.props.forwardRef} className={classes.historyContainer}>
-                        <TransitionDiv bgColor="#449376" title={this.props.language === 'portuguese' ? 'Histórico' :
+                        <TransitionDiv show={this.state.show} bgColor="#449376" title={this.props.language === 'portuguese' ? 'Histórico' :
                             this.props.language === 'english' ? 'History' : this.props.language === 'french' ? 'Historique' : ''} />
                         <HistoryDiv year="2018" />
                         <HistoryDiv year="2017" />

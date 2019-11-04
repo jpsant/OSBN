@@ -3,13 +3,16 @@
 }
 
 .loguinho {
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
   position: absolute;
   height: 65vh;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 35%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 9999;
+  animation: levitate 2s forwards 9s;
 
   @media screen and (max-width: 960px) {
     top: 30%;
@@ -17,6 +20,7 @@
 
   @media screen and (max-width: 525px) {
     font-size: 3.1em;
+    animation: none;
   }
 
   @media screen and (max-width: 459px) {
@@ -77,14 +81,9 @@
   font-family: "Corbel";
 }
 .st11 {
-  fill: white;
+  fill: #F8D8A2;
 }
 
-// #fundo {
-//   fill: transparent;    
-//   stroke-dasharray: 1320;
-//   stroke-dashoffset: 1320;
-// }
 
 .triggered {
   fill: transparent;
@@ -196,6 +195,12 @@ fill: transparent;
 
 @keyframes archColors {
     to {
-        fill: #ffffff
+        fill: white;
     }
+}
+
+@keyframes levitate {
+  to {
+   transform: translateY(-25%);
+  }
 }

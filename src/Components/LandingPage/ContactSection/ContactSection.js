@@ -9,15 +9,20 @@ import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
 class ContactSection extends Component {
 
+    state = {
+        show: false
+    }
+
     onShow(entries) {
         this.props.changeSection('contact');
+        this.setState({show: true})
     }
 
     render() {
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div ref={this.props.forwardRef} style={{ backgroundColor: '#9e8a0f' }}>
-                    <TransitionDiv bgColor="#b69c00" title={this.props.language === 'portuguese' ? 'Contato' :
+                    <TransitionDiv show={this.state.show} bgColor="#b69c00" title={this.props.language === 'portuguese' ? 'Contato' :
                         this.props.language === 'english' ? 'Contact' :
                             this.props.language === 'french' ? 'Nous contacter' : ''} />
                     <div className={classes.contactContainer}>

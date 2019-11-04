@@ -1,0 +1,27 @@
+.bordaEsquerda {
+  height: inherit;
+  position: absolute;
+  left: 0;
+  stroke-opacity: 0;
+}
+
+.arcos2 {
+  fill: transparent;
+  stroke-dasharray: 2510;
+  stroke-dashoffset: 2510;
+  animation: litteArch 2s linear forwards, littleFill 1s forwards 1.5s;
+}
+
+@keyframes litteArch {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes littleFill {
+  to {
+    fill: #fff;
+  }
+}

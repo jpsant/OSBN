@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,MAAM,EAAE,OAAO;EACf,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;CACT",
+    "sources": [
+        "rightArch.scss"
+    ],
+    "names": [],
+    "file": "rightArch.css"
+}

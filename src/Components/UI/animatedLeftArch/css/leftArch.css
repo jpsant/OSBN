@@ -1,0 +1,43 @@
+.bordaEsquerda {
+  height: inherit;
+  position: absolute;
+  left: 0;
+  stroke-opacity: 0;
+}
+
+.arcos2 {
+  fill: transparent;
+  stroke-dasharray: 2510;
+  stroke-dashoffset: 2510;
+  -webkit-animation: litteArch 2s linear forwards, littleFill 1s forwards 1.5s;
+          animation: litteArch 2s linear forwards, littleFill 1s forwards 1.5s;
+}
+
+@-webkit-keyframes litteArch {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes litteArch {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+  }
+}
+
+@-webkit-keyframes littleFill {
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes littleFill {
+  to {
+    fill: #fff;
+  }
+}
+/*# sourceMappingURL=leftArch.css.map */

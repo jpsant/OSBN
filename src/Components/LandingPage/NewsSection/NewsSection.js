@@ -33,7 +33,8 @@ class NewsSection extends Component {
 
     state = {
         noticias: null,
-        language: this.props.language
+        language: this.props.language,
+        show: false
     }
 
     clear = () => {
@@ -42,6 +43,7 @@ class NewsSection extends Component {
 
     onShow(entries) {
         this.props.changeSection('news');
+        this.setState({show: true});
     }
 
     render() {
@@ -57,7 +59,7 @@ class NewsSection extends Component {
         return (
             <IntersectionVisible onShow={e => this.onShow(e)}>
                 <div ref={this.props.forwardRef} className={classes.newsDiv}>
-                    <TransitionDiv bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'Notícias' :
+                    <TransitionDiv show={this.state.show} bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'Notícias' :
                         this.props.language === 'english' ? 'News' : this.props.language === 'french' ? 'Nouvelles' : ''} />
                     <div className={classes.container}>
                         {cards}

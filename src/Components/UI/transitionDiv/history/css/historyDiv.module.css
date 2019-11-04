@@ -64,22 +64,4 @@
     font-size: 2.5em;
   }
 }
-
-.container .leftBorder {
-  position: absolute;
-  height: inherit;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  left: 0;
-  -webkit-filter: invert(-100%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(115%) contrast(101%);
-          filter: invert(-100%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(115%) contrast(101%);
-}
-
-.container .rightBorder {
-  position: absolute;
-  right: 0;
-  height: inherit;
-  -webkit-filter: invert(-100%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(115%) contrast(101%);
-          filter: invert(-100%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(115%) contrast(101%);
-}
 /*# sourceMappingURL=historyDiv.module.css.map */

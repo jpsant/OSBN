@@ -26,6 +26,9 @@
     font-weight: 500;
     line-height: 1.2;
     z-index: 9999;
+    margin-bottom: 0;
+    opacity: 0;
+    animation: show 2s forwards 9s;
 
     @media screen and (max-width: 960px) {
       font-size: 3.8em;
@@ -40,29 +43,6 @@
     }
   }
 
-  .logo {
-    position: absolute;
-    height: 5vh;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 45%;
-    z-index: 9999;
-
-    @media screen and (max-width: 960px) {
-      top: 30%;
-    }
-
-    @media screen and (max-width: 525px) {
-      font-size: 3.1em;
-    }
-
-    @media screen and (max-width: 459px) {
-      top: 72%;
-      height: 25vh;
-    }
-  }
-
   .secondTitle {
     position: absolute;
     left: 0;
@@ -73,6 +53,9 @@
     font-weight: 500;
     line-height: 1.2;
     z-index: 9999;
+    margin-top: 0;
+    opacity: 0;
+    animation: show 2s forwards 9.5s;
 
     @media screen and (max-width: 960px) {
       font-size: 3.8em;
@@ -102,5 +85,11 @@
         height: 100vh;
       }
     }
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
   }
 }

@@ -19,11 +19,13 @@ class TechnicalSection extends Component {
     }
 
     state = {
-        list: null
+        list: null,
+        show: false
     }
 
     onShow(entries) {
         this.props.changeSection('technical');
+        this.setState({show: true})
     }
 
     render() {
@@ -62,7 +64,7 @@ class TechnicalSection extends Component {
                                     this.props.language === 'french' ? 'Télécharger' : ''}</button>
                         </div>
                     </div> */}
-                    <TransitionDiv bgColor="#449376" title={this.props.language === 'portuguese' ? 'Repertório' :
+                    <TransitionDiv show={this.state.show} bgColor="#449376" title={this.props.language === 'portuguese' ? 'Repertório' :
                         this.props.language === 'english' ? 'Repertoire' :
                             this.props.language === 'french' ? 'Répertoire' : ''} />
                     <div className={classes.musicContainer}>
