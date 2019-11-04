@@ -36,6 +36,8 @@
 
     @media screen and (max-width: 525px) {
       font-size: 3.1em;
+      animation: none;
+      opacity: 1;
     }
 
     @media screen and (max-width: 459px) {
@@ -64,6 +66,8 @@
 
     @media screen and (max-width: 525px) {
       font-size: 3.1em;
+      animation: none;
+      opacity: 1;
     }
 
     @media screen and (max-width: 459px) {
@@ -81,7 +85,7 @@
       filter: brightness(50%);
       background-color: black;
 
-      @media screen and (max-width: 960px) {
+      @media screen and (max-width: 1160px) {
         height: 100vh;
       }
     }

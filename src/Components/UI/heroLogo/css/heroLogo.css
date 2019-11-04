@@ -18,24 +18,19 @@
           animation: levitate 2s forwards 9s;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1181px) {
   .loguinho {
-    top: 30%;
+    top: 60%;
+    height: 50vh;
   }
 }
 
 @media screen and (max-width: 525px) {
   .loguinho {
-    font-size: 3.1em;
+    top: 85%;
+    height: 25vh;
     -webkit-animation: none;
             animation: none;
-  }
-}
-
-@media screen and (max-width: 459px) {
-  .loguinho {
-    top: 72%;
-    height: 25vh;
   }
 }
 

@@ -35,6 +35,9 @@
 @media screen and (max-width: 525px) {
   .heroContainer .firstTitle {
     font-size: 3.1em;
+    -webkit-animation: none;
+            animation: none;
+    opacity: 1;
   }
 }
 
@@ -70,6 +73,9 @@
 @media screen and (max-width: 525px) {
   .heroContainer .secondTitle {
     font-size: 3.1em;
+    -webkit-animation: none;
+            animation: none;
+    opacity: 1;
   }
 }
 
@@ -92,7 +98,7 @@
   background-color: black;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1160px) {
   .heroContainer .container .video {
     height: 100vh;
   }

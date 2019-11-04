@@ -14,18 +14,15 @@
   z-index: 9999;
   animation: levitate 2s forwards 9s;
 
-  @media screen and (max-width: 960px) {
-    top: 30%;
+  @media screen and (max-width: 1181px) {
+    top: 60%;
+    height: 50vh;
   }
 
   @media screen and (max-width: 525px) {
-    font-size: 3.1em;
-    animation: none;
-  }
-
-  @media screen and (max-width: 459px) {
-    top: 72%;
+    top: 85%;
     height: 25vh;
+    animation: none;
   }
 }
 

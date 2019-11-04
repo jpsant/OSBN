@@ -3,6 +3,7 @@
   position: absolute;
   left: 0;
   stroke-opacity: 0;
+  stroke: #fff;
 }
 
 .arcos2 {
@@ -32,12 +33,14 @@
 @-webkit-keyframes littleFill {
   to {
     fill: #fff;
+    stroke: #000;
   }
 }
 
 @keyframes littleFill {
   to {
     fill: #fff;
+    stroke: #000;
   }
 }
 /*# sourceMappingURL=leftArch.css.map */
