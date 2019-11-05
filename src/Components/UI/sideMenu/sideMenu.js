@@ -38,7 +38,7 @@ class sideMenu extends Component {
                         <span className={classes.subTooltip}>{this.props.language === 'portuguese' ? 'Abrir Menu' :
                         this.props.language === 'english' ? 'Open Menu' : 
                         this.props.language === 'french' ? 'Ouvrir le menu' : ''}</span>
-                        <img className={classes.subText} alt="" src={require('../../../assets/logo6.png')}></img>
+                        <img className={classes.subText} alt="" src={require('../../../assets/logo2.svg')}></img>
                     </div>
                     <div className={classes.languageContainer}>
                         <LanguageSelector />

@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './css/loadingScreen.module.css';
 import { Fade } from 'react-reveal';
 
+import AnimatedLogo from '../heroLogo/heroLogo';
+
 const loadingScreen = (props) => {
     return (
         <div style={{
@@ -12,7 +14,7 @@ const loadingScreen = (props) => {
                 <Fade bottom duration={1700} delay={200}>
                     <h1 className={classes.title} style={{ opacity: props.show ? '1' : '0', visibility: props.show ? 'visible' : 'hidden' }} >Orquestra Sanfônica Balaio Nordeste</h1>
                 </Fade>
-                <img src={require('../../../assets/logo6.png')} alt="" className={classes.logo}></img>
+                <img src={require('../../../assets/logo2.svg')} alt="" className={classes.logo}></img>
                 <Fade top duration={1400} delay={400}>
                     <h1 style={{ opacity: props.show ? '1' : '0', visibility: props.show ? 'visible' : 'hidden' }}>&</h1>
                 </Fade>

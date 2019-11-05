@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
             <div className={classes.footerContainer}>
                 <div className={classes.footerImage}>
-                    <img alt="" className={classes.logo} src={require('../../../assets/logo6.png')}></img>
+                    <img alt="" className={classes.logo} src={require('../../../assets/logo.svg')}></img>
                 </div>
                     <div className={classes.verticalLine}></div>
                 <div className={classes.footerText}>
