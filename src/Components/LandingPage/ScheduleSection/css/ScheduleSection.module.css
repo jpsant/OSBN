@@ -1,5 +1,6 @@
 .scheduleContainer {
   background-color: #ba4e23;
+  overflow-x: hidden;
 }
 
 .scheduleContainer .container {

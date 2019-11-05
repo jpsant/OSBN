@@ -4,6 +4,7 @@ import classes from './css/historyDiv.module.css';
 import { connect } from 'react-redux';
 
 import EventDiv from '../eventSelector/eventSelector';
+import { Fade } from 'react-reveal';
 
 class historyDiv extends Component {
 
@@ -21,22 +22,22 @@ class historyDiv extends Component {
 
     //SE OS PROPS RECEBIDOS FOREM DIFERENTES DO ATUAL ELE FAZ UMA NOVA REQUEST.
     componentWillReceiveProps(nextProps) {
-        this.setState({history: []})
-        if(nextProps.language !== this.state.language) {
+        this.setState({ history: [] })
+        if (nextProps.language !== this.state.language) {
             axios.get('https://osbn-a36f9.firebaseio.com/historico/' + nextProps.language + '/' + this.props.year + '.json')
-            .then(response => {
-                this.setState({ history: response.data, language: nextProps.language });
-            });
-            
+                .then(response => {
+                    this.setState({ history: response.data, language: nextProps.language });
+                });
+
         }
     }
 
-    componentWillUnmount() { 
+    componentWillUnmount() {
         this.clear();
     }
 
     clear = () => {
-        this.setState({history: null})
+        this.setState({ history: null })
     }
 
     render() {
@@ -52,11 +53,17 @@ class historyDiv extends Component {
         return (
             <>
                 <div className={classes.container} id="historia">
-                    <div className={classes.yearDiv}> <h1>{this.props.year}</h1> </div>
-                    <div className={classes.eventDiv}
-                    style={{minHeight: this.state.history !== null && this.state.history.length === 1 ? '6.5em' : '17em'}}>
-                        {cards}
-                    </div>
+                    <Fade top>
+                        <div className={classes.yearDiv}>
+                            <h1>{this.props.year}</h1>
+                        </div>
+                    </Fade>
+                    <Fade>
+                        <div className={classes.eventDiv}
+                            style={{ minHeight: this.state.history !== null && this.state.history.length === 1 ? '6.5em' : '17em' }}>
+                            {cards}
+                        </div>
+                    </Fade>
                 </div>
             </>
         );

@@ -5,6 +5,7 @@ import * as actions from '../../../store/actions/actioncreators';
 
 import classes from './css/NewsSection.module.css'
 import IntersectionVisible from 'react-intersection-visible';
+import { Fade } from 'react-reveal';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import NewsCard from '../../UI/newsCard/newsCard';
@@ -38,12 +39,12 @@ class NewsSection extends Component {
     }
 
     clear = () => {
-        this.setState({noticias: null, language: null})
+        this.setState({ noticias: null, language: null })
     }
 
     onShow(entries) {
         this.props.changeSection('news');
-        this.setState({show: true});
+        this.setState({ show: true });
     }
 
     render() {
@@ -61,9 +62,20 @@ class NewsSection extends Component {
                 <div ref={this.props.forwardRef} className={classes.newsDiv}>
                     <TransitionDiv show={this.state.show} bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'Notícias' :
                         this.props.language === 'english' ? 'News' : this.props.language === 'french' ? 'Nouvelles' : ''} />
-                    <div className={classes.container}>
-                        {cards}
-                    </div>
+                    <Fade>
+                        <div className={classes.container}>
+                            <div className={classes.newsAlert}>
+                                <div className={classes.hatContainer}>
+                                    <Fade bottom>
+                                        <h1 className={classes.hat}>&</h1>
+                                    </Fade>
+                                </div>
+                                <div className={classes.textContainer}>
+                                    <h2 className={classes.text}>No momento não há notícias disponíveis</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </Fade>
                 </div>
             </IntersectionVisible>
         );

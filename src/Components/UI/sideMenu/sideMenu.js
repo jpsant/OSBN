@@ -84,9 +84,9 @@ class sideMenu extends Component {
                         <button onClick={() => this.sectionChanger(4)} className={this.props.section === 'news' ? classes.brownButton + ' ' + classes.active : classes.brownButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
                     </div>
                     <div className={classes.techButton}>
-                        <span className={classes.techTooltip}>{this.props.language === 'portuguese' ? 'Técnica' : 
-                        this.props.language === 'english' ? 'Technique' : 
-                        this.props.language === 'french' ? 'Technique' : ''}</span>
+                        <span className={classes.techTooltip}>{this.props.language === 'portuguese' ? 'Repertório' : 
+                        this.props.language === 'english' ? 'Repertoire' : 
+                        this.props.language === 'french' ? 'Répertoire' : ''}</span>
                         <button onClick={() => this.sectionChanger(5)} className={this.props.section === 'technical' ? classes.greenButton + ' ' + classes.active : classes.greenButton}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
                     </div>
                     <div className={classes.socialButton}>

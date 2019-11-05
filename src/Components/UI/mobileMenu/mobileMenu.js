@@ -36,9 +36,9 @@ const mobileMenu = (props) => {
                 <button className={classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/news.svg')}></img></button>
             </div>
             <div className={classes.technical} onClick={() => props.buttonClicked(5)}>
-            <h1>{props.language === 'portuguese' ? 'Técnica' : 
-                props.language === 'english' ? 'Technique' : 
-                props.language === 'french' ? 'Technique' : ''}</h1>
+            <h1>{props.language === 'portuguese' ? 'Repertório' : 
+                props.language === 'english' ? 'Repertoire' : 
+                props.language === 'french' ? 'Répertoire' : ''}</h1>
                 <button className={classes.Button}><img alt="" className={classes.svg} src={require('../../../assets/svgs/accordion.svg')}></img></button>
             </div>
             <div className={classes.social} onClick={() => props.buttonClicked(6)}>

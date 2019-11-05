@@ -1,8 +1,4 @@
 .container {
-    // #df9226
-    // background-color: #AC7C44;
-    // background-color: #e59a33;
-    // background-color: #c87c13;
     background-color: #9e8a0f;
 
     .galleryContainer {
@@ -11,17 +7,20 @@
         grid-column-gap: 1%;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-        @media screen and (max-width: 381px) {
+        @media screen and (max-width: 1366px) {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
+
+        @media screen and (max-width: 450px) {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 350px) {
             grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
         }
     }
 
     .galleryButton {
-        // background-color: #ac6937;
         background-color: #b6a121;
         cursor: pointer;
         text-shadow: 1px 1px 1px #000;
@@ -45,7 +44,6 @@
 
 .imgContainer {
 
-    // background-color: transparent;
     .img {
         border-radius: 8px;
         width: 100%;

@@ -78,7 +78,6 @@
 .container .event {
   display: -ms-grid;
   display: grid;
-  cursor: pointer;
   height: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;

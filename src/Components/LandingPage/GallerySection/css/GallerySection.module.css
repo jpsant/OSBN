@@ -11,14 +11,21 @@
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-@media screen and (max-width: 381px) {
+@media screen and (max-width: 1366px) {
+  .container .galleryContainer {
+    -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}
+
+@media screen and (max-width: 450px) {
   .container .galleryContainer {
     -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .container .galleryContainer {
     -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));

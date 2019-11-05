@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import classes from './css/InfoSection.module.css';
 import YouTube from 'react-youtube';
 import IntersectionVisible from 'react-intersection-visible';
+import { Fade } from 'react-reveal';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 
@@ -23,7 +24,7 @@ class InfoSection extends Component {
         };
         return (
             <>
-                <IntersectionVisible onShow={() => this.setState({show: true})}>
+                <IntersectionVisible onShow={() => this.setState({ show: true })}>
                     <div style={{ backgroundColor: '#b05f24' }}>
                         <TransitionDiv show={this.state.show} bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'A Orquestra' :
                             this.props.language === 'english' ? 'The Orchestra' :
@@ -75,22 +76,27 @@ class InfoSection extends Component {
                                 </h2>
                             </div>
                             <div className={classes.videoContainer}>
-                                <div className={classes.video1}>
-                                    <YouTube
-                                        videoId="gcLEq0KySI4"
-                                        opts={opts}
-                                        onReady={this._onReady}
-                                        className={classes.videoPlayer1}
-                                    />
-                                </div>
-                                <div className={classes.video2}>
-                                    <YouTube
-                                        videoId="Ib7lBJd7Av8"
-                                        opts={opts}
-                                        onReady={this._onReady}
-                                        className={classes.videoPlayer2}
-                                    />
-                                </div>
+
+                                <Fade bottom>
+                                    <div className={classes.video1}>
+                                        <YouTube
+                                            videoId="gcLEq0KySI4"
+                                            opts={opts}
+                                            onReady={this._onReady}
+                                            className={classes.videoPlayer1}
+                                        />
+                                    </div>
+                                </Fade>
+                                <Fade bottom>
+                                    <div className={classes.video2}>
+                                        <YouTube
+                                            videoId="Ib7lBJd7Av8"
+                                            opts={opts}
+                                            onReady={this._onReady}
+                                            className={classes.videoPlayer2}
+                                        />
+                                    </div>
+                                </Fade>
                             </div>
                         </div>
                     </div>

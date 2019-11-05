@@ -288,12 +288,14 @@
 @-webkit-keyframes archColors {
   to {
     fill: white;
+    stroke: #000;
   }
 }
 
 @keyframes archColors {
   to {
     fill: white;
+    stroke: #000;
   }
 }
 

@@ -87,7 +87,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 370px) {
   .infoContainer .videoContainer .video1 .videoPlayer1 {
     width: 300px;
   }
@@ -133,7 +133,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 370px) {
   .infoContainer .videoContainer .video2 .videoPlayer2 {
     width: 300px;
   }
