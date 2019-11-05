@@ -7,6 +7,7 @@ import IntersectionVisible from 'react-intersection-visible';
 import { Fade } from 'react-reveal';
 
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
+import LazyLoad from 'react-lazy-load';
 
 class InfoSection extends Component {
 
@@ -79,22 +80,26 @@ class InfoSection extends Component {
 
                                 <Fade bottom>
                                     <div className={classes.video1}>
-                                        <YouTube
-                                            videoId="gcLEq0KySI4"
-                                            opts={opts}
-                                            onReady={this._onReady}
-                                            className={classes.videoPlayer1}
-                                        />
+                                        <LazyLoad offsetVertical={500} debounce={false} throttle={250}>
+                                            <YouTube
+                                                videoId="gcLEq0KySI4"
+                                                opts={opts}
+                                                onReady={this._onReady}
+                                                className={classes.videoPlayer1}
+                                            />
+                                        </LazyLoad>
                                     </div>
                                 </Fade>
                                 <Fade bottom>
                                     <div className={classes.video2}>
-                                        <YouTube
-                                            videoId="Ib7lBJd7Av8"
-                                            opts={opts}
-                                            onReady={this._onReady}
-                                            className={classes.videoPlayer2}
-                                        />
+                                        <LazyLoad offsetVertical={500} debounce={false} throttle={250}>
+                                            <YouTube
+                                                videoId="Ib7lBJd7Av8"
+                                                opts={opts}
+                                                onReady={this._onReady}
+                                                className={classes.videoPlayer2}
+                                            />
+                                        </LazyLoad>
                                     </div>
                                 </Fade>
                             </div>
