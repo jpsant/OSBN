@@ -3,11 +3,29 @@ import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 
-import LandingPage from './Components/LandingPage/FullPage/FullPage';
-import Gallery from './Components/Gallery/Gallery';
-import FullPost from './Components/Posts//NewsPost';
-import Login from './Components/Admin/Login/Login';
-import PageManager from './Components/Admin/PageManager/PageManager';
+import LazyImport from './lazyLoading/lazyImport';
+
+// utilizando esse componente auxiliar para 'lazy load' os containers.
+
+const LandingPage = LazyImport(() => {
+  return import ('./Components/LandingPage/FullPage/FullPage');
+})
+
+const Gallery = LazyImport(() => {
+  return import ('./Components/Gallery/Gallery');
+})
+
+const FullPost = LazyImport(() => {
+  return import ('./Components/Posts/NewsPost');
+})
+
+const Login = LazyImport(() => {
+  return import ('./Components/Admin/Login/Login');
+})
+
+const PageManager = LazyImport(() => {
+  return import ('./Components/Admin/PageManager/PageManager');
+})
 
 class App extends Component {
   render() {

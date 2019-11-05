@@ -2,8 +2,6 @@ import React from 'react';
 import classes from './css/loadingScreen.module.css';
 import { Fade } from 'react-reveal';
 
-import AnimatedLogo from '../heroLogo/heroLogo';
-
 const loadingScreen = (props) => {
     return (
         <div style={{

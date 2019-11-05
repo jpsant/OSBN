@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './css/historyDiv.module.css'
 
 import Right from '../../animatedRightArch/rightArch';
