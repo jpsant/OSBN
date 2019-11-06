@@ -73,9 +73,6 @@ class PageManager extends Component {
         let cookie = Cookies.get('acess_token');
         let redirect = null;
 
-        // console.log(cookie); //undefined
-        // console.log(this.props.token); //false
-
         if (this.props.token === false) {
             if (cookie === undefined) {
                 redirect = <Redirect to="/" />

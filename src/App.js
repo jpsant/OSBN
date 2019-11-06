@@ -45,9 +45,9 @@ class App extends Component {
       routes = (
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/admin/pageManagement" component={PageManager} />
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/news/:id" exact component={FullPost} />
+          <Route path="/admin/pageManagement" component={PageManager} />
           <Route path="/login" exact component={Login} />
         </Switch>
       );
