@@ -27,6 +27,10 @@ const PageManager = LazyImport(() => {
   return import ('./Components/Admin/PageManager/PageManager');
 })
 
+const DvdSection = LazyImport(() => {
+  return import ('./Components/LandingPage/DvdSection/DvdSection');
+})
+
 class App extends Component {
   render() {
     // SE LIGAR NA SEQUENCIA DAS ROUTES!
@@ -35,8 +39,9 @@ class App extends Component {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/gallery" exact component={Gallery} />
-        <Route path="/news/:id" exact component={FullPost} />
+        {/* <Route path="/news/:id" exact component={FullPost} /> */}
         <Route path="/login" exact component={Login} />
+        <Route path="/dvd" exact component={DvdSection} />
         <Redirect to="/" />
       </Switch>
     );
@@ -46,9 +51,10 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/gallery" exact component={Gallery} />
-          <Route path="/news/:id" exact component={FullPost} />
+          {/* <Route path="/news/:id" exact component={FullPost} /> */}
           <Route path="/admin/pageManagement" component={PageManager} />
           <Route path="/login" exact component={Login} />
+          <Route path="/dvd" exact component={DvdSection} />
         </Switch>
       );
     }

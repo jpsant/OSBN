@@ -11,6 +11,11 @@
   stroke-dasharray: 2510;
   stroke-dashoffset: 2510;
   animation: litteArch 2s linear forwards, littleFill 1s forwards 1.5s;
+
+  @media screen and (max-width: 750px) {
+    stroke-dasharray: 2510;
+    stroke-dashoffset: 2510;
+  }
 }
 
 @keyframes litteArch {

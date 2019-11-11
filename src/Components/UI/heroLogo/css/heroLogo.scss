@@ -66,6 +66,7 @@
   fill: #af8c56;
   animation: colorsOpacity 1s forwards 2.8s;
   opacity: 0;
+
 }
 .st8 {
   opacity: 0;
@@ -94,6 +95,7 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: arabescos 4s linear forwards 3s, arabescoColors 2s forwards 3.5s;
+
 }
 
 .titulo {
@@ -123,10 +125,12 @@ fill: transparent;
   stroke-dashoffset: 2600;
   animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
     stroke-dasharray: auto;
     stroke-dashoffset: auto;
-    animation: archColors 2s linear forwards 3s;
+    animation: archColors 3s linear forwards 5s;
+    // stroke-dasharray: 1000;
+    // stroke-dashoffset: 1000;
   }
 }
 

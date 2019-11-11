@@ -1,0 +1,35 @@
+.section1 {
+  grid-row: 1/2;
+  height: 100vh;
+  background-color: #5db7de;
+  display: grid;
+  color: white;
+
+  h1 {
+    align-self: center;
+  }
+}
+
+.section2 {
+  grid-row: 2/3;
+  height: 100vh;
+  background-color: #bcd979;
+  display: grid;
+  color: white;
+
+  h1 {
+    align-self: center;
+  }
+}
+
+.section3 {
+  grid-row: 3/4;
+  height: 100vh;
+  background-color: #665687;
+  display: grid;
+  color: white;
+
+  h1 {
+    align-self: center;
+  }
+}

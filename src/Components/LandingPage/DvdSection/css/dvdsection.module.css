@@ -1,0 +1,51 @@
+.section1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  height: 100vh;
+  background-color: #5db7de;
+  display: -ms-grid;
+  display: grid;
+  color: white;
+}
+
+.section1 h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.section2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  height: 100vh;
+  background-color: #bcd979;
+  display: -ms-grid;
+  display: grid;
+  color: white;
+}
+
+.section2 h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.section3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  height: 100vh;
+  background-color: #665687;
+  display: -ms-grid;
+  display: grid;
+  color: white;
+}
+
+.section3 h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=dvdsection.module.css.map */

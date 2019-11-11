@@ -156,12 +156,12 @@
           animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
   .arcos {
     stroke-dasharray: auto;
     stroke-dashoffset: auto;
-    -webkit-animation: archColors 2s linear forwards 3s;
-            animation: archColors 2s linear forwards 3s;
+    -webkit-animation: archColors 3s linear forwards 5s;
+            animation: archColors 3s linear forwards 5s;
   }
 }
 
