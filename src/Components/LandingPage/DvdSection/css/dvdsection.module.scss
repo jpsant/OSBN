@@ -1,35 +1,162 @@
+@mixin font-face($font-name) {
+  @font-face {
+    font-family: $font-name;
+    src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+  }
+}
+
+@include font-face(Xilosa);
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .section1 {
-  grid-row: 1/2;
-  height: 100vh;
-  background-color: #5db7de;
   display: grid;
+  grid-template-rows: .5fr 1fr;
+  height: 100vh;
   color: white;
 
-  h1 {
-    align-self: center;
+  //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
+
+  .container {
+    background-color: black;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+
+    .video {
+      height: 100%;
+      width: 100%;
+      filter: brightness(50%);
+      background-color: black;
+
+      @media screen and (max-width: 1160px) {
+        height: 100vh;
+      }
+    }
+  }
+  .titleContainer {
+    grid-row: 1/2;
+
+    .hat {
+      margin: 1% 0;
+    }
+
+    h1 {
+      font-family: "xilosa";
+      line-height: 1;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      margin: 1% 0;
+    }
+  }
+
+  .bodyContainer {
+    grid-row: 2/3;
+    align-self: flex-end;
   }
 }
 
 .section2 {
-  grid-row: 2/3;
-  height: 100vh;
-  background-color: #bcd979;
   display: grid;
+  grid-template-rows: .5fr 1fr;
+  height: 100vh;
   color: white;
 
-  h1 {
-    align-self: center;
+  //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
+
+  .container {
+    background-color: black;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+
+    .video {
+      height: 100%;
+      width: 100%;
+      filter: brightness(50%);
+      background-color: black;
+
+      @media screen and (max-width: 1160px) {
+        height: 100vh;
+      }
+    }
+  }
+  .titleContainer {
+    grid-row: 1/2;
+
+    .hat {
+      margin: 1% 0;
+    }
+
+    h1 {
+      font-family: "xilosa";
+      line-height: 1;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      margin: 1% 0;
+    }
+  }
+
+  .bodyContainer {
+    grid-row: 2/3;
+    align-self: flex-end;
   }
 }
 
 .section3 {
-  grid-row: 3/4;
-  height: 100vh;
-  background-color: #665687;
   display: grid;
+  grid-template-rows: .5fr 1fr;
+  height: 100vh;
   color: white;
 
-  h1 {
-    align-self: center;
+  //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
+
+  .container {
+    background-color: black;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+
+    .video {
+      height: 100%;
+      width: 100%;
+      filter: brightness(50%);
+      background-color: black;
+
+      @media screen and (max-width: 1160px) {
+        height: 100vh;
+      }
+    }
+  }
+  .titleContainer {
+    grid-row: 1/2;
+
+    .hat {
+      margin: 1% 0;
+    }
+
+    h1 {
+      font-family: "xilosa";
+      line-height: 1;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      margin: 1% 0;
+    }
+  }
+
+  .bodyContainer {
+    grid-row: 2/3;
+    align-self: flex-end;
   }
 }

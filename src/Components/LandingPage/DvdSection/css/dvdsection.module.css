@@ -1,51 +1,183 @@
+@font-face {
+  font-family: Xilosa;
+  src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .section1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .5fr 1fr;
+      grid-template-rows: .5fr 1fr;
+  height: 100vh;
+  color: white;
+}
+
+.section1 .container {
+  background-color: black;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.section1 .container .video {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  background-color: black;
+}
+
+@media screen and (max-width: 1160px) {
+  .section1 .container .video {
+    height: 100vh;
+  }
+}
+
+.section1 .titleContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  height: 100vh;
-  background-color: #5db7de;
-  display: -ms-grid;
-  display: grid;
-  color: white;
 }
 
-.section1 h1 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.section1 .titleContainer .hat {
+  margin: 1% 0;
 }
 
-.section2 {
+.section1 .titleContainer h1 {
+  font-family: "xilosa";
+  line-height: 1;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  margin: 1% 0;
+}
+
+.section1 .bodyContainer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  height: 100vh;
-  background-color: #bcd979;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.section2 {
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: .5fr 1fr;
+      grid-template-rows: .5fr 1fr;
+  height: 100vh;
   color: white;
 }
 
-.section2 h1 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.section2 .container {
+  background-color: black;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.section2 .container .video {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  background-color: black;
+}
+
+@media screen and (max-width: 1160px) {
+  .section2 .container .video {
+    height: 100vh;
+  }
+}
+
+.section2 .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.section2 .titleContainer .hat {
+  margin: 1% 0;
+}
+
+.section2 .titleContainer h1 {
+  font-family: "xilosa";
+  line-height: 1;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  margin: 1% 0;
+}
+
+.section2 .bodyContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .section3 {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
-  height: 100vh;
-  background-color: #665687;
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: .5fr 1fr;
+      grid-template-rows: .5fr 1fr;
+  height: 100vh;
   color: white;
 }
 
-.section3 h1 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.section3 .container {
+  background-color: black;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.section3 .container .video {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  background-color: black;
+}
+
+@media screen and (max-width: 1160px) {
+  .section3 .container .video {
+    height: 100vh;
+  }
+}
+
+.section3 .titleContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.section3 .titleContainer .hat {
+  margin: 1% 0;
+}
+
+.section3 .titleContainer h1 {
+  font-family: "xilosa";
+  line-height: 1;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  margin: 1% 0;
+}
+
+.section3 .bodyContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 /*# sourceMappingURL=dvdsection.module.css.map */
