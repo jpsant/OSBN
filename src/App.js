@@ -15,9 +15,9 @@ const Gallery = LazyImport(() => {
   return import ('./Components/Gallery/Gallery');
 })
 
-const FullPost = LazyImport(() => {
-  return import ('./Components/Posts/NewsPost');
-})
+// const FullPost = LazyImport(() => {
+//   return import ('./Components/Posts/NewsPost');
+// })
 
 const Login = LazyImport(() => {
   return import ('./Components/Admin/Login/Login');
@@ -55,6 +55,7 @@ class App extends Component {
           <Route path="/admin/pageManagement" component={PageManager} />
           <Route path="/login" exact component={Login} />
           <Route path="/dvd" exact component={DvdSection} />
+          <Redirect to="/" />
         </Switch>
       );
     }

@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import classes from './css/dvdsection.module.css';
-import video1 from './video/video1.mp4';
 
-import ReactPageScroller from 'react-page-scroller';
 import { Fade } from 'react-reveal';
+import ReactPageScroller from 'react-page-scroller';
+
+import LeftUp from '../../UI/animated-left-up/LeftUp';
+import RightUp from '../../UI/animated-right-up/RightUp';
+import LeftDown from '../../UI/animated-left-down/LeftDown';
+import RightDown from '../../UI/animated-right-down/RightDown';
+
 
 class DvdSection extends Component {
 
@@ -16,9 +21,12 @@ class DvdSection extends Component {
     };
 
     render() {
-        console.log(this.state.currentPage)
         return (
             <>
+                <LeftUp show={this.state.currentPage === 1 ? true : false} />
+                <RightUp show={this.state.currentPage === 1 ? true : false} />
+                <LeftDown show={this.state.currentPage === 1 ? true : false} />
+                <RightDown show={this.state.currentPage === 1 ? true : false} />
                 <ReactPageScroller pageOnChange={this.handlePageChange}>
                     <div className={classes.section1}>
                         <div className={classes.container}>
@@ -26,7 +34,7 @@ class DvdSection extends Component {
                                 <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
                             </video>
                         </div>
-                        <Fade top duration={3500}>
+                        {/* <Fade top duration={3500}>
                             <div className={classes.titleContainer}>
                                 <h1 className={classes.hat}>&</h1>
                                 <h1>Orquestra Sanfônica Balaio Nordeste</h1>
@@ -36,7 +44,7 @@ class DvdSection extends Component {
                             <div className={classes.bodyContainer}>
                                 <h1>DVD Promocional.</h1>
                             </div>
-                        </Fade>
+                        </Fade> */}
                     </div>
                     <div className={classes.section2}>
                         <div className={classes.container}>
@@ -44,7 +52,11 @@ class DvdSection extends Component {
                                 <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
                             </video>
                         </div>
-                        <Fade top duration={3500}>
+                        {/* <LeftUp show={this.state.currentPage === 2 ? true : false} top="100%" />
+                        <RightUp show={this.state.currentPage === 2 ? true : false} top="100%"/>
+                        <LeftDown show={this.state.currentPage === 2 ? true : false} bottom="-100%" />
+                        <RightDown show={this.state.currentPage === 2 ? true : false} bottom="-100%"/> */}
+                        {/* <Fade top duration={3500}>
                             <div className={classes.titleContainer}>
                                 <h1 className={classes.hat}>&</h1>
                                 <h1>Orquestra Sanfônica Balaio Nordeste</h1>
@@ -54,7 +66,7 @@ class DvdSection extends Component {
                             <div className={classes.bodyContainer}>
                                 <h1>DVD Promocional da Orquestra.</h1>
                             </div>
-                        </Fade>
+                        </Fade> */}
                     </div>
                     <div className={classes.section3}>
                         <div className={classes.container}>
@@ -62,7 +74,11 @@ class DvdSection extends Component {
                                 <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
                             </video>
                         </div>
-                        <Fade top duration={3500}>
+                        {/* <LeftUp show={this.state.currentPage === 3 ? true : false} top="200%" />
+                        <RightUp show={this.state.currentPage === 3 ? true : false} top="200%"/>
+                        <LeftDown show={this.state.currentPage === 3 ? true : false} bottom="-200%" />
+                        <RightDown show={this.state.currentPage === 3 ? true : false} bottom="-200%"/> */}
+                        {/* <Fade top duration={3500}>
                             <div className={classes.titleContainer}>
                                 <h1 className={classes.hat}>&</h1>
                                 <h1>Orquestra Sanfônica Balaio Nordeste</h1>
@@ -72,7 +88,7 @@ class DvdSection extends Component {
                             <div className={classes.bodyContainer}>
                                 <h1>DVD Promocional da Orquestra.</h1>
                             </div>
-                        </Fade>
+                        </Fade> */}
                     </div>
                 </ReactPageScroller>
             </>

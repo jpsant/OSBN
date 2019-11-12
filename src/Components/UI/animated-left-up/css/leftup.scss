@@ -1,0 +1,146 @@
+.leftUp1 {
+  fill: transparent;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 3399;
+  animation: leftUpLineAnimation 3s ease-in-out forwards 1s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+}
+
+.leftUp0 {
+  fill: #fff;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 0;
+  animation: outAnimationColors ease-in-out forwards 0.5s, outAnimation 2s ease-in-out forwards;
+}
+
+.leftDown1 {
+  fill: transparent;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 3399;
+  animation: leftUpLineAnimation 3s ease-in-out forwards 1s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+}
+
+.leftDown0 {
+  fill: #fff;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 0;
+  animation: outAnimationColors ease-in-out forwards 0.5s, outAnimation 2s ease-in-out forwards;
+}
+
+.rightUp1 {
+  fill: transparent;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  top: 0;
+  right: 0;
+  left: auto;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 3399;
+  animation: leftUpLineAnimation 3s ease-in-out forwards 1s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+}
+
+.rightUp0 {
+  fill: #fff;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 0;
+  animation: outAnimationColors ease-in-out forwards 0.5s, outAnimation 2s ease-in-out forwards;
+}
+
+.rightDown1 {
+  fill: transparent;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 3399;
+  animation: leftUpLineAnimation 3s ease-in-out forwards 1s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+}
+
+.rightDown0 {
+  fill: #fff;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 35vh;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 3399;
+  stroke-dashoffset: 0;
+  animation: outAnimationColors 0.5s ease-in-out forwards, outAnimation 2s ease-in-out forwards;
+}
+
+@keyframes leftUpLineAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes leftUpColorAnimation {
+  to {
+    fill: #fff;
+    stroke: #000;
+  }
+}
+
+@keyframes outAnimation {
+  to {
+    stroke-dashoffset: 3399;
+  }
+}
+
+@keyframes outAnimationColors {
+  to {
+    fill: transparent;
+  }
+}
