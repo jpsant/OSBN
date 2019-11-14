@@ -11,6 +11,10 @@
   display: none;
 }
 
+.animationsContainer {
+  animation: initialAnimation 2s ease-in-out;
+}
+
 .section1 {
   display: grid;
   grid-template-rows: .5fr 1fr;
@@ -158,5 +162,15 @@
   .bodyContainer {
     grid-row: 2/3;
     align-self: flex-end;
+  }
+}
+
+@keyframes initialAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

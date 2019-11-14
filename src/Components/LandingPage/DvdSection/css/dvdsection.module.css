@@ -7,6 +7,11 @@
   display: none;
 }
 
+.animationsContainer {
+  -webkit-animation: initialAnimation 2s ease-in-out;
+          animation: initialAnimation 2s ease-in-out;
+}
+
 .section1 {
   display: -ms-grid;
   display: grid;
@@ -179,5 +184,23 @@
   grid-row: 2/3;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@-webkit-keyframes initialAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes initialAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=dvdsection.module.css.map */
