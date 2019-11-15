@@ -16,6 +16,7 @@
 }
 
 .section1 {
+  // z-index: 9999;
   display: grid;
   grid-template-rows: .5fr 1fr;
   height: 100vh;
@@ -44,24 +45,67 @@
   }
   .titleContainer {
     grid-row: 1/2;
+    z-index: 9999;
+    font-family: "xilosa";
+    
+    
 
     .hat {
       margin: 1% 0;
+      opacity: 0;
+      animation: section1Hat 2s ease-in-out forwards 1s;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
     }
 
-    h1 {
-      font-family: "xilosa";
+    .hatOut {
+      margin: 1% 0;
+      opacity: 1;
+      animation: section1HatOut .3s ease-in-out forwards;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      transform: translateY(20px);
+      
+    }
+
+    .title {
       line-height: 1;
       text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
       font-size: 4em;
       font-weight: 500;
-      margin: 1% 0;
+      margin: 3% 0;
+      animation: section1Title 2s ease-in-out forwards 1s;
+      opacity: 0;
+    }
+
+    .titleOut {
+      line-height: 1;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      margin: 3% 0;
+      opacity: 1;
+      animation: section1TitleOut .3s ease-in-out forwards;
+      transform: translateY(-15px);
     }
   }
 
   .bodyContainer {
+    z-index: 9999;
     grid-row: 2/3;
     align-self: flex-end;
+
+    .subtitle {
+      animation: section1Subtitle 1s ease-in-out forwards 2s;
+      opacity: 0;
+    }
+
+    .subtitleOut {
+      animation: section1SubtitleOut .3s ease-in-out forwards;
+      transform: translateY(-20px);
+    }
   }
 }
 
@@ -172,5 +216,51 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+// ANIMATIONS KEYFRAMES!
+
+// SECTION 1:
+
+@keyframes section1Hat {
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes section1HatOut {
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes section1Title {
+  to {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes section1TitleOut {
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes section1Subtitle {
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes section1SubtitleOut {
+  to {
+    opacity: 0;
   }
 }

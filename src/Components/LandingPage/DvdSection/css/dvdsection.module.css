@@ -47,27 +47,76 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  z-index: 9999;
+  font-family: "xilosa";
 }
 
 .section1 .titleContainer .hat {
   margin: 1% 0;
+  opacity: 0;
+  -webkit-animation: section1Hat 2s ease-in-out forwards 1s;
+          animation: section1Hat 2s ease-in-out forwards 1s;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
 }
 
-.section1 .titleContainer h1 {
-  font-family: "xilosa";
+.section1 .titleContainer .hatOut {
+  margin: 1% 0;
+  opacity: 1;
+  -webkit-animation: section1HatOut .3s ease-in-out forwards;
+          animation: section1HatOut .3s ease-in-out forwards;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.section1 .titleContainer .title {
   line-height: 1;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   font-size: 4em;
   font-weight: 500;
-  margin: 1% 0;
+  margin: 3% 0;
+  -webkit-animation: section1Title 2s ease-in-out forwards 1s;
+          animation: section1Title 2s ease-in-out forwards 1s;
+  opacity: 0;
+}
+
+.section1 .titleContainer .titleOut {
+  line-height: 1;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  margin: 3% 0;
+  opacity: 1;
+  -webkit-animation: section1TitleOut .3s ease-in-out forwards;
+          animation: section1TitleOut .3s ease-in-out forwards;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .section1 .bodyContainer {
+  z-index: 9999;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.section1 .bodyContainer .subtitle {
+  -webkit-animation: section1Subtitle 1s ease-in-out forwards 2s;
+          animation: section1Subtitle 1s ease-in-out forwards 2s;
+  opacity: 0;
+}
+
+.section1 .bodyContainer .subtitleOut {
+  -webkit-animation: section1SubtitleOut .3s ease-in-out forwards;
+          animation: section1SubtitleOut .3s ease-in-out forwards;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .section2 {
@@ -201,6 +250,90 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes section1Hat {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes section1Hat {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@-webkit-keyframes section1HatOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes section1HatOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes section1Title {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes section1Title {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes section1TitleOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes section1TitleOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes section1Subtitle {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes section1Subtitle {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes section1SubtitleOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes section1SubtitleOut {
+  to {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=dvdsection.module.css.map */
