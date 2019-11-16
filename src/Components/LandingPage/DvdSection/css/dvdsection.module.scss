@@ -12,7 +12,7 @@
 }
 
 .animationsContainer {
-  animation: initialAnimation 2s ease-in-out;
+  animation: initialAnimation 4s ease-in-out;
 }
 
 .section1 {
@@ -212,10 +212,12 @@
 @keyframes initialAnimation {
   0% {
     opacity: 0;
+    stroke-opacity: 0;
   }
 
   100% {
     opacity: 1;
+    stroke-opacity: 1;
   }
 }
 

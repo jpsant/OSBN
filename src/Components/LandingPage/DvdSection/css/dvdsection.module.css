@@ -8,8 +8,8 @@
 }
 
 .animationsContainer {
-  -webkit-animation: initialAnimation 2s ease-in-out;
-          animation: initialAnimation 2s ease-in-out;
+  -webkit-animation: initialAnimation 4s ease-in-out;
+          animation: initialAnimation 4s ease-in-out;
 }
 
 .section1 {
@@ -238,18 +238,22 @@
 @-webkit-keyframes initialAnimation {
   0% {
     opacity: 0;
+    stroke-opacity: 0;
   }
   100% {
     opacity: 1;
+    stroke-opacity: 1;
   }
 }
 
 @keyframes initialAnimation {
   0% {
     opacity: 0;
+    stroke-opacity: 0;
   }
   100% {
     opacity: 1;
+    stroke-opacity: 1;
   }
 }
 

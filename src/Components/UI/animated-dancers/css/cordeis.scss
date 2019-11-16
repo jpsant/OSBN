@@ -1,18 +1,21 @@
 .st0In {
   fill: #fff;
   fill-opacity: 0;
+  stroke-width: 0.3;
   animation: opacidade 2s ease-in-out forwards 3s;
 }
 
 .st0Out {
-  animation: opacidadeOut 2s ease-in-out forwards 3s;
+  fill: #fff;
+  stroke-width: 0.3;
+  animation: opacidadeOut .5s ease-in-out forwards;
 }
 
-.st1 {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 0.7;
-}
+// .st1 {
+//   fill: transparent;
+//   stroke: transparent;
+//   stroke-width: 0.7;
+// }
 
 .dancersIn {
   position: absolute;
@@ -42,6 +45,7 @@
 .decoOut {
   fill: #fff;
   stroke: #fff;
+  stroke-width: 0.7;
   stroke-dasharray: 170;
   stroke-dashoffset: 0;
   animation: fillAnimationOut 1s ease-in-out forwards, drawAnimationOut 2s ease-in-out forwards;
@@ -51,13 +55,18 @@
   fill: transparent;
   stroke: #fff;
   stroke-width: 0.3;
-  stroke-dasharray: 750;
-  stroke-dashoffset: 750;
+  stroke-dasharray: 850;
+  stroke-dashoffset: 850;
   animation: drawAnimation 2s ease-in-out forwards 2s, fillAnimationBlack2 1s ease-in-out forwards 3s , fillAnimationBlack 2s ease-in-out forwards 3s;
 }
 
 .blackFillOut {
-  animation: drawAnimationOut2 2s ease-in-out forwards 2s, fillAnimationBlackOut 2s ease-in-out forwards 3s;
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 0.3;
+  stroke-dasharray: 850;
+  stroke-dashoffset: 0;
+  animation: fillAnimationBlackOut 1s ease-in-out forwards, drawAnimationOut2 3s ease-in-out forwards;
 }
 
 @keyframes drawAnimation {
@@ -74,7 +83,7 @@
 
 @keyframes drawAnimationOut2 {
   to {
-    stroke-dashoffset: 750;
+    stroke-dashoffset: 850;
   }
 }
 
@@ -91,13 +100,6 @@
   }
 }
 
-@keyframes fillAnimationBlackOut {
-  to {
-    stroke-opacity: 0;
-    fill-opacity: 0;
-  }
-}
-
 @keyframes fillAnimationBlack2 {
   to {
     stroke: #000;
@@ -105,6 +107,11 @@
   }
 }
 
+@keyframes fillAnimationBlackOut {
+  to {
+    fill: transparent;
+  }
+}
 
 @keyframes fillAnimationOut {
   to {
