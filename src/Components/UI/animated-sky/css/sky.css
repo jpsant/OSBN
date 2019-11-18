@@ -1,0 +1,117 @@
+.skyIn {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 29vh;
+  stroke: #fff;
+  z-index: 999;
+  stroke-dashoffset: 750;
+  stroke-dasharray: 750;
+  -webkit-animation: drawAnimation 2s ease-in-out forwards 2s;
+          animation: drawAnimation 2s ease-in-out forwards 2s;
+}
+
+.skyOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 29vh;
+  z-index: 999;
+  stroke: #fff;
+  stroke-dasharray: 750;
+  stroke-dashoffset: 0;
+  -webkit-animation: skyDrawingOut 2s ease-in-out forwards 1s;
+          animation: skyDrawingOut 2s ease-in-out forwards 1s;
+}
+
+.luaIn {
+  fill: transparent;
+  -webkit-animation: skyOpacity 1s ease-in-out forwards 3.5s;
+          animation: skyOpacity 1s ease-in-out forwards 3.5s;
+}
+
+.luaOut {
+  fill: #fff;
+  -webkit-animation: skyOpacityOut 1s ease-in-out forwards;
+          animation: skyOpacityOut 1s ease-in-out forwards;
+}
+
+.strokeIn {
+  fill: transparent;
+  -webkit-animation: strokesFillIn 1s ease-in-out forwards 3.5s;
+          animation: strokesFillIn 1s ease-in-out forwards 3.5s;
+}
+
+.strokeOut {
+  fill: #000;
+  -webkit-animation: strokesFillOut 1s ease-in-out forwards;
+          animation: strokesFillOut 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes skyDrawingOut {
+  to {
+    stroke-dashoffset: 750;
+  }
+}
+
+@keyframes skyDrawingOut {
+  to {
+    stroke-dashoffset: 750;
+  }
+}
+
+@-webkit-keyframes skyOpacity {
+  to {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2;
+  }
+}
+
+@keyframes skyOpacity {
+  to {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2;
+  }
+}
+
+@-webkit-keyframes skyOpacityOut {
+  to {
+    fill: transparent;
+  }
+}
+
+@keyframes skyOpacityOut {
+  to {
+    fill: transparent;
+  }
+}
+
+@-webkit-keyframes strokesFillIn {
+  to {
+    fill: #000;
+    stroke: transparent;
+  }
+}
+
+@keyframes strokesFillIn {
+  to {
+    fill: #000;
+    stroke: transparent;
+  }
+}
+
+@-webkit-keyframes strokesFillOut {
+  to {
+    fill: transparent;
+  }
+}
+
+@keyframes strokesFillOut {
+  to {
+    fill: transparent;
+  }
+}
+/*# sourceMappingURL=sky.css.map */

@@ -1,24 +1,129 @@
-.st0 {
-  fill: white;
+.wFillIn {
+  fill: transparent;
+  stroke: #fff;
+  stroke-dasharray: 610;
+  stroke-dashoffset: 610;
+  -webkit-animation: drawAnimationIn 2.5s ease-in-out forwards 2s, whiteFill 2s ease-in-out forwards 4s;
+          animation: drawAnimationIn 2.5s ease-in-out forwards 2s, whiteFill 2s ease-in-out forwards 4s;
+}
+
+.wFillOut {
+  fill: #fff;
+  stroke: #fff;
+  stroke-dasharray: 610;
+  stroke-dashoffset: 0;
+  -webkit-animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut 2s ease-in-out forwards 1s;
+          animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut 2s ease-in-out forwards 1s;
+}
+
+.bFillIn {
+  fill: transparent;
+  stroke: #fff;
+  stroke-dasharray: 2210;
+  stroke-dashoffset: 2210;
+  -webkit-animation: drawAnimationIn 2.5s ease-in-out forwards 2s, blackFill 2s ease-in-out forwards 4s;
+          animation: drawAnimationIn 2.5s ease-in-out forwards 2s, blackFill 2s ease-in-out forwards 4s;
+}
+
+.bFillOut {
+  fill: #000;
+  stroke: #fff;
+  stroke-dasharray: 2210;
+  stroke-dashoffset: 0;
+  -webkit-animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut2 2s ease-in-out forwards 1s;
+          animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut2 2s ease-in-out forwards 1s;
 }
 
 .birdsIn {
   position: absolute;
-  height: 20vh;
+  height: 25vh;
   bottom: 0;
   top: 0;
-  left: 0;
-  margin: auto 0;
+  left: -.5%;
   opacity: 1;
   z-index: 999;
+  margin: auto 0;
 }
 
 .birdsOut {
   position: absolute;
-  height: 20vh;
+  height: 25vh;
+  top: 0;
   bottom: 0;
-  left: 0;
-  opacity: 0;
+  left: -.5%;
+  margin: auto 0;
   z-index: 999;
+}
+
+@-webkit-keyframes drawAnimationIn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawAnimationIn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes birdDrawAnimationOut {
+  to {
+    stroke-dashoffset: 610;
+  }
+}
+
+@keyframes birdDrawAnimationOut {
+  to {
+    stroke-dashoffset: 610;
+  }
+}
+
+@-webkit-keyframes birdDrawAnimationOut2 {
+  to {
+    stroke-dashoffset: 2210;
+  }
+}
+
+@keyframes birdDrawAnimationOut2 {
+  to {
+    stroke-dashoffset: 2210;
+  }
+}
+
+@-webkit-keyframes whiteFill {
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes whiteFill {
+  to {
+    fill: #fff;
+  }
+}
+
+@-webkit-keyframes blackFill {
+  to {
+    fill: #000;
+  }
+}
+
+@keyframes blackFill {
+  to {
+    fill: #000;
+  }
+}
+
+@-webkit-keyframes fillAnimationOut {
+  to {
+    fill: transparent;
+  }
+}
+
+@keyframes fillAnimationOut {
+  to {
+    fill: transparent;
+  }
 }
 /*# sourceMappingURL=birds.css.map */

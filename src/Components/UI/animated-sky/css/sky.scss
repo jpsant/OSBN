@@ -1,0 +1,89 @@
+
+// .st1 {
+//   fill: #fbfbfb;
+// }
+// .st2 {
+//   fill: #ffffff;
+// }
+// .st3 {
+//   fill: #0e0e0e;
+// }
+
+.skyIn {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 29vh;
+    stroke: #fff;
+    z-index: 999;
+    stroke-dashoffset: 750;
+    stroke-dasharray: 750;
+    animation: drawAnimation 2s ease-in-out forwards 2s;
+}
+
+.skyOut {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 29vh;
+    z-index: 999;
+    stroke: #fff;
+    stroke-dasharray: 750;
+    stroke-dashoffset: 0;
+    animation: skyDrawingOut 2s ease-in-out forwards 1s;
+}
+
+.luaIn {
+    fill: transparent;
+    animation: skyOpacity 1s ease-in-out forwards 3.5s;
+}
+
+.luaOut {
+    fill: #fff;
+    animation: skyOpacityOut 1s ease-in-out forwards;
+}
+
+.strokeIn {
+    fill: transparent;
+    animation: strokesFillIn 1s ease-in-out forwards 3.5s;
+}
+
+.strokeOut {
+    fill: #000;
+    animation: strokesFillOut 1s ease-in-out forwards;
+}
+
+@keyframes skyDrawingOut {
+    to {
+        stroke-dashoffset: 750;
+    }
+}
+
+@keyframes skyOpacity {
+    to {
+        fill: #fff;
+        stroke: #000;
+        stroke-width: 2;
+    }
+}
+
+@keyframes skyOpacityOut {
+    to {
+        fill: transparent;
+    }
+}
+
+@keyframes strokesFillIn {
+    to {
+        fill: #000;
+        stroke: transparent;
+    }
+}
+
+@keyframes strokesFillOut {
+    to {
+        fill: transparent;
+    }
+}
+
