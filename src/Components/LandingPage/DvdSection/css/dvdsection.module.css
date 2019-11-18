@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 @font-face {
   font-family: Xilosa;
   src: url("../../../../assets/font/xilosa_.ttf") format("truetype");
@@ -15,8 +16,8 @@
 .section1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .5fr 1fr;
-      grid-template-rows: .5fr 1fr;
+  -ms-grid-rows: 0.5fr 1fr;
+      grid-template-rows: 0.5fr 1fr;
   height: 100vh;
   color: white;
 }
@@ -64,8 +65,8 @@
 .section1 .titleContainer .hatOut {
   margin: 1% 0;
   opacity: 1;
-  -webkit-animation: section1HatOut .3s ease-in-out forwards;
-          animation: section1HatOut .3s ease-in-out forwards;
+  -webkit-animation: section1HatOut 0.3s ease-in-out forwards;
+          animation: section1HatOut 0.3s ease-in-out forwards;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   font-size: 4em;
   font-weight: 500;
@@ -91,8 +92,8 @@
   font-weight: 500;
   margin: 3% 0;
   opacity: 1;
-  -webkit-animation: section1TitleOut .3s ease-in-out forwards;
-          animation: section1TitleOut .3s ease-in-out forwards;
+  -webkit-animation: section1TitleOut 0.3s ease-in-out forwards;
+          animation: section1TitleOut 0.3s ease-in-out forwards;
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
 }
@@ -113,8 +114,8 @@
 }
 
 .section1 .bodyContainer .subtitleOut {
-  -webkit-animation: section1SubtitleOut .3s ease-in-out forwards;
-          animation: section1SubtitleOut .3s ease-in-out forwards;
+  -webkit-animation: section1SubtitleOut 0.3s ease-in-out forwards;
+          animation: section1SubtitleOut 0.3s ease-in-out forwards;
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
 }
@@ -122,8 +123,8 @@
 .section2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .5fr 1fr;
-      grid-template-rows: .5fr 1fr;
+  -ms-grid-rows: .9fr;
+      grid-template-rows: .9fr;
   height: 100vh;
   color: white;
 }
@@ -150,38 +151,68 @@
   }
 }
 
-.section2 .titleContainer {
+.section2 .textContainer {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  z-index: 10;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 25%;
 }
 
-.section2 .titleContainer .hat {
-  margin: 1% 0;
-}
-
-.section2 .titleContainer h1 {
-  font-family: "xilosa";
-  line-height: 1;
+.section2 .textContainer .hat {
+  font-family: xilosa;
+  padding: 1% 0;
+  opacity: 0;
+  -webkit-animation: section1Hat 2s ease-in-out forwards 2s;
+          animation: section1Hat 2s ease-in-out forwards 2s;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   font-size: 4em;
   font-weight: 500;
-  margin: 1% 0;
 }
 
-.section2 .bodyContainer {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+.section2 .textContainer .hatOut {
+  font-family: xilosa;
+  padding: 1% 0;
+  -webkit-animation: section1HatOut 0.3s ease-in-out forwards;
+          animation: section1HatOut 0.3s ease-in-out forwards;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.section2 .textContainer .text {
+  font-size: 2em;
+  font-family: "Muli", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #000;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-animation: section1Title 2s ease-in-out forwards 2s;
+          animation: section1Title 2s ease-in-out forwards 2s;
+  opacity: 0;
+}
+
+.section2 .textContainer .textOut {
+  font-size: 2em;
+  font-family: "Muli", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-animation: section1TitleOut 0.3s ease-in-out forwards;
+          animation: section1TitleOut 0.3s ease-in-out forwards;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .section3 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .5fr 1fr;
-      grid-template-rows: .5fr 1fr;
+  -ms-grid-rows: 0.5fr 1fr;
+      grid-template-rows: 0.5fr 1fr;
   height: 100vh;
   color: white;
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
 @mixin font-face($font-name) {
   @font-face {
     font-family: $font-name;
@@ -18,7 +20,7 @@
 .section1 {
   // z-index: 9999;
   display: grid;
-  grid-template-rows: .5fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
   height: 100vh;
   color: white;
 
@@ -30,7 +32,6 @@
     left: 0;
     right: 0;
     position: absolute;
-
 
     .video {
       height: 100%;
@@ -47,8 +48,6 @@
     grid-row: 1/2;
     z-index: 9999;
     font-family: "xilosa";
-    
-    
 
     .hat {
       margin: 1% 0;
@@ -62,12 +61,11 @@
     .hatOut {
       margin: 1% 0;
       opacity: 1;
-      animation: section1HatOut .3s ease-in-out forwards;
+      animation: section1HatOut 0.3s ease-in-out forwards;
       text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
       font-size: 4em;
       font-weight: 500;
       transform: translateY(20px);
-      
     }
 
     .title {
@@ -87,7 +85,7 @@
       font-weight: 500;
       margin: 3% 0;
       opacity: 1;
-      animation: section1TitleOut .3s ease-in-out forwards;
+      animation: section1TitleOut 0.3s ease-in-out forwards;
       transform: translateY(-15px);
     }
   }
@@ -103,7 +101,7 @@
     }
 
     .subtitleOut {
-      animation: section1SubtitleOut .3s ease-in-out forwards;
+      animation: section1SubtitleOut 0.3s ease-in-out forwards;
       transform: translateY(-20px);
     }
   }
@@ -111,7 +109,7 @@
 
 .section2 {
   display: grid;
-  grid-template-rows: .5fr 1fr;
+  grid-template-rows: .9fr;
   height: 100vh;
   color: white;
 
@@ -123,7 +121,6 @@
     left: 0;
     right: 0;
     position: absolute;
-
 
     .video {
       height: 100%;
@@ -136,32 +133,55 @@
       }
     }
   }
-  .titleContainer {
+  .textContainer {
     grid-row: 1/2;
+    z-index: 10;
+    align-self: center;
+    margin: 0 25%;
 
     .hat {
-      margin: 1% 0;
-    }
-
-    h1 {
-      font-family: "xilosa";
-      line-height: 1;
+      font-family: xilosa;
+      padding: 1% 0;
+      opacity: 0;
+      animation: section1Hat 2s ease-in-out forwards 2s;
       text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
       font-size: 4em;
       font-weight: 500;
-      margin: 1% 0;
     }
-  }
 
-  .bodyContainer {
-    grid-row: 2/3;
-    align-self: flex-end;
+    .hatOut {
+      font-family: xilosa;
+      padding: 1% 0;
+      animation: section1HatOut 0.3s ease-in-out forwards;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      transform: translateY(20px);
+    }
+
+    .text {
+      font-size: 2em;
+      font-family: "Muli", sans-serif;
+      text-shadow: 0.5px 0.5px 0.5px #000;
+      align-self: flex-end;
+      animation: section1Title 2s ease-in-out forwards 2s;
+      opacity: 0;
+    }
+
+    .textOut {
+      font-size: 2em;
+      font-family: "Muli", sans-serif;
+      text-shadow: 0.5px 0.5px 0.5px #000;
+      align-self: flex-end;
+      animation: section1TitleOut 0.3s ease-in-out forwards;
+      transform: translateY(-15px);
+    }
   }
 }
 
 .section3 {
   display: grid;
-  grid-template-rows: .5fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
   height: 100vh;
   color: white;
 
@@ -173,7 +193,6 @@
     left: 0;
     right: 0;
     position: absolute;
-
 
     .video {
       height: 100%;
@@ -238,8 +257,6 @@
   }
 }
 
-
-
 @keyframes section1Title {
   to {
     opacity: 1;
@@ -252,7 +269,6 @@
     opacity: 0;
   }
 }
-
 
 @keyframes section1Subtitle {
   to {

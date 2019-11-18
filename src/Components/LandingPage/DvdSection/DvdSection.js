@@ -69,6 +69,11 @@ class DvdSection extends Component {
                                 <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
                             </video>
                         </div>
+                        <div className={classes.textContainer}>
+                            <h1 className={this.state.currentPage === 2 ? classes.hat : classes.hatOut}>&</h1>
+                            <h2 className={this.state.currentPage === 2 ? classes.text : classes.textOut}>A Orquestra Sanfônica Balaio Nordeste difunde a Cultura Nordestina, apresentando
+                            seus valores e mantendo viva a sua tradição e de seus personagens.</h2>
+                        </div>
 
                     </div>
                     <div className={classes.section3}>
