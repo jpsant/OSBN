@@ -14,6 +14,7 @@ import DownArabesco from '../../UI/animated-down-arabesco/down-arabeso';
 import Dancers from '../../UI/animated-dancers/Dancers';
 import Bird from '../../UI/animated-Bird/Birds';
 import Sky from '../../UI/animated-sky/sky';
+import Cactus from '../../UI/animated-cactus/cactus';
 
 import FullUp from '../../UI/animated-full-up/full-up';
 import FullDown from '../../UI/animated-full-down/full-down';
@@ -39,10 +40,11 @@ class DvdSection extends Component {
                 <div className={classes.animationsContainer}>
                     <DownArabesco show={this.state.currentPage === 2 ? true : false} />
                     <UpArabesco show={this.state.currentPage === 2 ? true : false} />
+
                     <Dancers show={this.state.currentPage === 2 ? true : false} />
                     <Bird show={this.state.currentPage === 2 ? true : false} />
                     <Sky show={this.state.currentPage === 2 ? true : false} />
-
+                    <Cactus show={this.state.currentPage === 2 ? true : false} />
 
                     <FullUp show={this.state.currentPage === 3 ? true : false} />
                     <FullDown show={this.state.currentPage === 3 ? true : false} />

@@ -1,0 +1,83 @@
+.cactusWhiteIn {
+    fill-opacity: 0;
+    animation: whiteIn 2s ease-in-out forwards 2s;
+}
+
+.cactusWhiteOut {
+    fill: #fff;
+    fill-opacity: 1;
+    animation: whiteOut 2s ease-in-out forwards;
+}
+
+.cactusBlackIn {
+    fill-opacity: 0;
+    animation: blackIn 1.5s ease-in-out forwards 2s;
+}
+
+.cactusBlackOut {
+    fill: #000;
+    fill-opacity: 1;
+    animation: blackOut 2s ease-in-out forwards .7s;
+}
+
+.cactusIn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 1;
+    height: 35vh;
+    stroke: #fff;
+    // fill: transparent;
+    stroke-dasharray: 720;
+    stroke-dashoffset: 720;
+    animation: drawAnimation 2s ease-in-out forwards 2s;
+}
+
+.cactusOut {
+    stroke: #fff;
+    // fill: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 1;
+    height: 35vh;
+    stroke-dasharray: 720;
+    stroke-dashoffset: 0;
+    animation: cactusAnimationOut 2s ease-in-out forwards;
+}
+
+@keyframes cactusAnimationOut {
+    to {
+        stroke-dashoffset: 720;
+    }
+}
+
+@keyframes whiteIn {
+    to {
+        fill-opacity: 1;
+        fill: #fff;
+    }
+}
+
+@keyframes whiteOut {
+    to {
+        fill: #fff;
+        fill-opacity: 0;
+    }
+}
+
+@keyframes blackIn {
+    to {
+        fill-opacity: 1;
+        fill: #000;
+    }
+}
+
+@keyframes blackOut {
+    to {
+        fill: #000;
+        fill-opacity: 0;
+    }
+}

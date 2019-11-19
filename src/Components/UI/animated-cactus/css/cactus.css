@@ -1,0 +1,122 @@
+.cactusWhiteIn {
+  fill-opacity: 0;
+  -webkit-animation: whiteIn 2s ease-in-out forwards 2s;
+          animation: whiteIn 2s ease-in-out forwards 2s;
+}
+
+.cactusWhiteOut {
+  fill: #fff;
+  fill-opacity: 1;
+  -webkit-animation: whiteOut 2s ease-in-out forwards;
+          animation: whiteOut 2s ease-in-out forwards;
+}
+
+.cactusBlackIn {
+  fill-opacity: 0;
+  -webkit-animation: blackIn 1.5s ease-in-out forwards 2s;
+          animation: blackIn 1.5s ease-in-out forwards 2s;
+}
+
+.cactusBlackOut {
+  fill: #000;
+  fill-opacity: 1;
+  -webkit-animation: blackOut 2s ease-in-out forwards .7s;
+          animation: blackOut 2s ease-in-out forwards .7s;
+}
+
+.cactusIn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 1;
+  height: 35vh;
+  stroke: #fff;
+  stroke-dasharray: 720;
+  stroke-dashoffset: 720;
+  -webkit-animation: drawAnimation 2s ease-in-out forwards 2s;
+          animation: drawAnimation 2s ease-in-out forwards 2s;
+}
+
+.cactusOut {
+  stroke: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 1;
+  height: 35vh;
+  stroke-dasharray: 720;
+  stroke-dashoffset: 0;
+  -webkit-animation: cactusAnimationOut 2s ease-in-out forwards;
+          animation: cactusAnimationOut 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes cactusAnimationOut {
+  to {
+    stroke-dashoffset: 720;
+  }
+}
+
+@keyframes cactusAnimationOut {
+  to {
+    stroke-dashoffset: 720;
+  }
+}
+
+@-webkit-keyframes whiteIn {
+  to {
+    fill-opacity: 1;
+    fill: #fff;
+  }
+}
+
+@keyframes whiteIn {
+  to {
+    fill-opacity: 1;
+    fill: #fff;
+  }
+}
+
+@-webkit-keyframes whiteOut {
+  to {
+    fill: #fff;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes whiteOut {
+  to {
+    fill: #fff;
+    fill-opacity: 0;
+  }
+}
+
+@-webkit-keyframes blackIn {
+  to {
+    fill-opacity: 1;
+    fill: #000;
+  }
+}
+
+@keyframes blackIn {
+  to {
+    fill-opacity: 1;
+    fill: #000;
+  }
+}
+
+@-webkit-keyframes blackOut {
+  to {
+    fill: #000;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes blackOut {
+  to {
+    fill: #000;
+    fill-opacity: 0;
+  }
+}
+/*# sourceMappingURL=cactus.css.map */
