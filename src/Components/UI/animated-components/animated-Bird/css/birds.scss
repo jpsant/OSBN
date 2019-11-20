@@ -3,7 +3,7 @@
   stroke: #fff;
   stroke-dasharray: 610;
   stroke-dashoffset: 610;
-  animation: drawAnimationIn 2.5s ease-in-out forwards 2s, whiteFill 2s ease-in-out forwards 4s;
+  animation: drawAnimationIn 2.5s ease-in-out forwards 2s, whiteFill 2s ease-in-out forwards 3s;
 }
 
 .wFillOut {
@@ -11,7 +11,7 @@
   stroke: #fff;
   stroke-dasharray: 610;
   stroke-dashoffset: 0;
-  animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut 2s ease-in-out forwards 1s;
+  animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut 2s ease-in-out forwards;
 }
 
 .bFillIn {
@@ -19,7 +19,7 @@
   stroke: #fff;
   stroke-dasharray: 2210;
   stroke-dashoffset: 2210;
-  animation: drawAnimationIn 2.5s ease-in-out forwards 2s, blackFill 2s ease-in-out forwards 4s;
+  animation: drawAnimationIn 2.5s ease-in-out forwards 2s, blackFill 2s ease-in-out forwards 3s;
 }
 
 .bFillOut {
@@ -27,7 +27,7 @@
   stroke: #fff;
   stroke-dasharray: 2210;
   stroke-dashoffset: 0;
-  animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut2 2s ease-in-out forwards 1s;
+  animation: fillAnimationOut 1s ease-in-out forwards, birdDrawAnimationOut2 2s ease-in-out forwards;
 }
 
 .birdsIn {

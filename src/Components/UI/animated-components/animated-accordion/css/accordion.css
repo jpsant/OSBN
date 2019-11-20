@@ -1,0 +1,157 @@
+.fillAccordionIn {
+  fill-opacity: 0;
+  -webkit-animation: accordionFillIn ease-in-out 1s forwards 3s;
+          animation: accordionFillIn ease-in-out 1s forwards 3s;
+}
+
+.fillAccordionOut {
+  fill-opacity: 1;
+  -webkit-animation: accordionFillOut ease-in-out 1s forwards;
+          animation: accordionFillOut ease-in-out 1s forwards;
+}
+
+.strokeNotesIn {
+  stroke: #fff;
+  fill-opacity: 0;
+  stroke-dashoffset: 330;
+  stroke-dasharray: 330;
+  -webkit-animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+          animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.strokeNotesOut {
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-dasharray: 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: notesDrawAnimationOut 2s ease-in-out forwards .5s;
+          animation: notesDrawAnimationOut 2s ease-in-out forwards .5s;
+}
+
+.strokeAccordionIn {
+  stroke: #fff;
+  fill-opacity: 0;
+  stroke-dashoffset: 1230;
+  stroke-dasharray: 1230;
+  -webkit-animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+          animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.strokeAccordionOut {
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-dasharray: 1230;
+  stroke-dashoffset: 0;
+  -webkit-animation: accordionDrawAnimationOut 2s ease-in-out forwards .5s;
+          animation: accordionDrawAnimationOut 2s ease-in-out forwards .5s;
+}
+
+.accordionIn {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 25vh;
+}
+
+.accordionOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 25vh;
+}
+
+@-webkit-keyframes accordionDrawAnimationIn {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes accordionDrawAnimationIn {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+@-webkit-keyframes accordionDrawAnimationOut {
+  to {
+    stroke-dashoffset: 1230;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes accordionDrawAnimationOut {
+  to {
+    stroke-dashoffset: 1230;
+    fill-opacity: 0;
+  }
+}
+
+@-webkit-keyframes notesDrawAnimationOut {
+  to {
+    stroke-dashoffset: 330;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes notesDrawAnimationOut {
+  to {
+    stroke-dashoffset: 330;
+    fill-opacity: 0;
+  }
+}
+
+@-webkit-keyframes accordionFillIn {
+  to {
+    fill-opacity: 1;
+    stroke: transparent;
+  }
+}
+
+@keyframes accordionFillIn {
+  to {
+    fill-opacity: 1;
+    stroke: transparent;
+  }
+}
+
+@-webkit-keyframes accordionFillOut {
+  to {
+    fill-opacity: 0;
+  }
+}
+
+@keyframes accordionFillOut {
+  to {
+    fill-opacity: 0;
+  }
+}
+
+@-webkit-keyframes strokeOpacityIn {
+  to {
+    stroke-opacity: 0;
+  }
+}
+
+@keyframes strokeOpacityIn {
+  to {
+    stroke-opacity: 0;
+  }
+}
+
+@-webkit-keyframes strokeOpacityOut {
+  to {
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes strokeOpacityOut {
+  to {
+    stroke-opacity: 1;
+  }
+}
+/*# sourceMappingURL=accordion.css.map */

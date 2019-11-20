@@ -1,0 +1,105 @@
+.fillAccordionIn {
+  fill-opacity: 0;
+  animation: accordionFillIn ease-in-out 1s forwards 3s;
+}
+
+.fillAccordionOut {
+  fill-opacity: 1;
+  animation: accordionFillOut ease-in-out 1s forwards;
+}
+
+.strokeNotesIn {
+    stroke: #fff;
+    fill-opacity: 0;
+    stroke-dashoffset: 330;
+    stroke-dasharray: 330;
+    animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.strokeNotesOut {
+    stroke: #fff;
+    fill-opacity: 1;
+    stroke-dasharray: 330;
+    stroke-dashoffset: 0;
+    animation: notesDrawAnimationOut 2s ease-in-out forwards .5s;
+}
+
+.strokeAccordionIn {
+    stroke: #fff;
+    fill-opacity: 0;
+    stroke-dashoffset: 1230;
+    stroke-dasharray: 1230;
+    animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.strokeAccordionOut {
+    stroke: #fff;
+    fill-opacity: 1;
+    stroke-dasharray: 1230;
+    stroke-dashoffset: 0;
+    animation: accordionDrawAnimationOut 2s ease-in-out forwards .5s;
+}
+
+.accordionIn {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 25vh;
+}
+
+.accordionOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 25vh;
+}
+
+@keyframes accordionDrawAnimationIn {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes accordionDrawAnimationOut {
+  to {
+    stroke-dashoffset: 1230;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes notesDrawAnimationOut {
+    to {
+        stroke-dashoffset: 330;
+        fill-opacity: 0;
+    }
+}
+
+@keyframes accordionFillIn {
+  to {
+    fill-opacity: 1;
+    stroke: transparent;
+  }
+}
+
+@keyframes accordionFillOut {
+  to {
+    fill-opacity: 0;
+  }
+}
+
+@keyframes strokeOpacityIn { 
+    to {
+        stroke-opacity: 0;
+    }
+}
+
+@keyframes strokeOpacityOut { 
+    to {
+        stroke-opacity: 1;
+    }
+}
+

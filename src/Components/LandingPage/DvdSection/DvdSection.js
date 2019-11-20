@@ -4,20 +4,24 @@ import classes from './css/dvdsection.module.css';
 import { Fade } from 'react-reveal';
 import ReactPageScroller from 'react-page-scroller';
 
-import LeftUp from '../../UI/animated-left-up/LeftUp';
-import RightUp from '../../UI/animated-right-up/RightUp';
-import LeftDown from '../../UI/animated-left-down/LeftDown';
-import RightDown from '../../UI/animated-right-down/RightDown';
+import LeftUp from '../../UI/animated-components/animated-left-up/LeftUp';
+import RightUp from '../../UI/animated-components/animated-right-up/RightUp';
+import LeftDown from '../../UI/animated-components/animated-left-down/LeftDown';
+import RightDown from '../../UI/animated-components/animated-right-down/RightDown';
 
-import UpArabesco from '../../UI/animated-up-arabesco/up-arabesco';
-import DownArabesco from '../../UI/animated-down-arabesco/down-arabeso';
-import Dancers from '../../UI/animated-dancers/Dancers';
-import Bird from '../../UI/animated-Bird/Birds';
-import Sky from '../../UI/animated-sky/sky';
-import Cactus from '../../UI/animated-cactus/cactus';
+import UpArabesco from '../../UI/animated-components/animated-up-arabesco/up-arabesco';
+import DownArabesco from '../../UI/animated-components/animated-down-arabesco/down-arabeso';
+import Dancers from '../../UI/animated-components/animated-dancers/Dancers';
+import Bird from '../../UI/animated-components/animated-Bird/Birds';
+import Sky from '../../UI/animated-components/animated-sky/sky';
+import Cactus from '../../UI/animated-components/animated-cactus/cactus';
 
-import FullUp from '../../UI/animated-full-up/full-up';
-import FullDown from '../../UI/animated-full-down/full-down';
+import FullUp from '../../UI/animated-components/animated-full-up/full-up';
+import FullDown from '../../UI/animated-components/animated-full-down/full-down';
+import Accordion from '../../UI/animated-components/animated-accordion/accordion';
+import Drum from '../../UI/animated-components/animated-drum/drum';
+import Triangle from '../../UI/animated-components/animated-triangle/triangle';
+import Flute from '../../UI/animated-components/animated-flute/flute';
 
 class DvdSection extends Component {
 
@@ -48,6 +52,12 @@ class DvdSection extends Component {
 
                     <FullUp show={this.state.currentPage === 3 ? true : false} />
                     <FullDown show={this.state.currentPage === 3 ? true : false} />
+
+                    <Accordion show={this.state.currentPage === 3 ? true : false}  />
+                    <Drum show={this.state.currentPage === 3 ? true : false} />
+                    <Flute show={this.state.currentPage === 3 ? true : false}  />
+                    {/* <Triangle show={this.state.currentPage === 3 ? true : false}  /> */}
+                    
                 </div>
 
                 <ReactPageScroller pageOnChange={this.handlePageChange}>
@@ -83,6 +93,11 @@ class DvdSection extends Component {
                             <video className={classes.video} autoPlay="autoplay" loop="loop" muted playsInline poster={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.png?alt=media&token=38d4a012-ac89-4d9d-bdad-160ced9e022b'}>
                                 <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
                             </video>
+                        </div>
+                        <div className={classes.textContainer}>
+                            <h1 className={this.state.currentPage === 3 ? classes.hat : classes.hatOut}>&</h1>
+                            <h2 className={this.state.currentPage === 3 ? classes.text : classes.textOut}>Ao som de Cirandas, Côco de Roda, Baião, Xote e muito Forró
+                            A Orquestra Sanfônica Balaio Nordeste divide o palco com grandes mestres da Música Brasileira, como Luiz Gonzaga, Jackson do Pandeiro, Chico César, Sivuca, dentre outros.</h2>
                         </div>
 
                     </div>

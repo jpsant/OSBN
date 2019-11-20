@@ -1,0 +1,40 @@
+.drumIn {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  height: 28vh;
+}
+
+.drumOut {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  height: 28vh;
+}
+
+.drumStrokeIn {
+    stroke: #fff;
+    fill-opacity: 0;
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.drumStrokeOut {
+    stroke: #fff;
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 600;
+    animation: drumDrawAnimationOut 2s ease-in-out forwards;
+}
+
+@keyframes drumDrawAnimationOut {
+    to {
+        stroke-dashoffset: 600;
+        fill-opacity: 0;
+    }
+}

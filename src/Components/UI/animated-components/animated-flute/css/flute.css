@@ -1,0 +1,18 @@
+.fluteIn {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  height: 25vh;
+}
+
+.fluteOut {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  height: 25vh;
+}
+/*# sourceMappingURL=flute.css.map */
