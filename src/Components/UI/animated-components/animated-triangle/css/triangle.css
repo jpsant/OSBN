@@ -8,11 +8,43 @@
 }
 
 .triangleOut {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 999;
   height: 25vh;
+}
+
+.triangleStrokeIn {
+  fill-opacity: 0;
+  stroke: #fff;
+  stroke-dashoffset: 580;
+  stroke-dasharray: 580;
+  -webkit-animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+          animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.triangleStrokeOut {
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-dasharray: 580;
+  stroke-dashoffset: 0;
+  -webkit-animation: triangleDrawAnimationOut 2s ease-in-out forwards;
+          animation: triangleDrawAnimationOut 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes triangleDrawAnimationOut {
+  to {
+    stroke-dashoffset: 580;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes triangleDrawAnimationOut {
+  to {
+    stroke-dashoffset: 580;
+    fill-opacity: 0;
+  }
 }
 /*# sourceMappingURL=triangle.css.map */

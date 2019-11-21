@@ -123,8 +123,8 @@
 .section2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .9fr;
-      grid-template-rows: .9fr;
+  -ms-grid-rows: 0.9fr;
+      grid-template-rows: 0.9fr;
   height: 100vh;
   color: white;
 }
@@ -211,8 +211,8 @@
 .section3 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .9fr;
-      grid-template-rows: .9fr;
+  -ms-grid-rows: 0.9fr;
+      grid-template-rows: 0.9fr;
   height: 100vh;
   color: white;
 }
@@ -294,6 +294,37 @@
           animation: section1TitleOut 0.3s ease-in-out forwards;
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
+}
+
+.section4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.9fr;
+      grid-template-rows: 0.9fr;
+  height: 100vh;
+  color: white;
+}
+
+.section4 .container {
+  background-color: black;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.section4 .container .video {
+  height: 100%;
+  width: 100%;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  background-color: black;
+}
+
+@media screen and (max-width: 1160px) {
+  .section4 .container .video {
+    height: 100vh;
+  }
 }
 
 @-webkit-keyframes initialAnimation {

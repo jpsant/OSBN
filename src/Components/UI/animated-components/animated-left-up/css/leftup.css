@@ -272,6 +272,78 @@
           animation: outAnimationColors 0.5s ease-in-out forwards, outAnimation3 2s ease-in-out forwards;
 }
 
+.lateralLeft1 {
+  fill: transparent;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 95vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 1930;
+  stroke-dashoffset: 1930;
+  -webkit-animation: leftUpLineAnimation 2s ease-in-out forwards 2s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+          animation: leftUpLineAnimation 2s ease-in-out forwards 2s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+}
+
+.lateralLeft0 {
+  fill: #fff;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 95vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 1930;
+  stroke-dashoffset: 0;
+  -webkit-animation: outAnimationColors 0.5s ease-in-out forwards, outAnimation3 2s ease-in-out forwards;
+          animation: outAnimationColors 0.5s ease-in-out forwards, outAnimation3 2s ease-in-out forwards;
+}
+
+.lateralRight1 {
+  fill: transparent;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 95vh;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 1930;
+  stroke-dashoffset: 1930;
+  -webkit-animation: leftUpLineAnimation 2s ease-in-out forwards 2s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+          animation: leftUpLineAnimation 2s ease-in-out forwards 2s, leftUpColorAnimation 2s ease-in-out forwards 3s;
+}
+
+.lateralRight0 {
+  fill: #fff;
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-opacity: 1;
+  height: 95vh;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  position: absolute;
+  z-index: 1;
+  stroke-dasharray: 1930;
+  stroke-dashoffset: 0;
+  -webkit-animation: outAnimationColors 0.5s ease-in-out forwards, outAnimation3 2s ease-in-out forwards;
+          animation: outAnimationColors 0.5s ease-in-out forwards, outAnimation3 2s ease-in-out forwards;
+}
+
 @-webkit-keyframes leftUpLineAnimation {
   to {
     stroke-dashoffset: 0;

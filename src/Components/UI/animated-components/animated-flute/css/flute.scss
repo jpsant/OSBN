@@ -5,13 +5,36 @@
   right: 0;
   z-index: 999;
   height: 25vh;
+  fill-opacity: 0;
 }
 
 .fluteOut {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 999;
   height: 25vh;
+}
+
+.fluteStrokeIn {
+  stroke: #fff;
+  stroke-dashoffset: 320;
+  stroke-dasharray: 320;
+  animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.fluteStrokeOut {
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  animation: fluteDrawAnimationOut 2s ease-in-out forwards;
+}
+
+@keyframes fluteDrawAnimationOut {
+  to {
+    stroke-dashoffset: 320;
+    fill-opacity: 0;
+  }
 }
