@@ -88,7 +88,7 @@ class DvdSection extends Component {
                     <div className={classes.section2}>
                         <div className={classes.container}>
                             <video className={classes.video} autoPlay="autoplay" loop="loop" muted playsInline poster={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.png?alt=media&token=38d4a012-ac89-4d9d-bdad-160ced9e022b'}>
-                                <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
+                                <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Ffinal_5dd8229506e13f0014424e08_673406.mp4?alt=media&token=fafc2cdf-b14d-40be-a987-913dfc26ae38'} type='video/mp4' />
                             </video>
                         </div>
                         <div className={classes.textContainer}>
@@ -101,7 +101,7 @@ class DvdSection extends Component {
                     <div className={classes.section3}>
                         <div className={classes.container}>
                             <video className={classes.video} autoPlay="autoplay" loop="loop" muted playsInline poster={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.png?alt=media&token=38d4a012-ac89-4d9d-bdad-160ced9e022b'}>
-                                <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2Forquestra2.mp4?alt=media&token=bf248dca-0c2b-4738-99d6-0aee3e27d860'} type='video/mp4' />
+                                <source src={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/videos%2FARTISTAS1.mp4?alt=media&token=31c31b98-ca11-4860-95ca-7ab6c9114a14'} type='video/mp4' />
                             </video>
                         </div>
                         <div className={classes.textContainer}>
