@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import Helmet from 'react-helmet';
 
 import classes from './css/Gallery.module.css';
 
@@ -59,6 +60,10 @@ class Gallery extends Component {
 
         return (
             <>
+                <Helmet>
+                    <title>Orquestra Sanfônica Balaio Nordeste Galeria</title>
+                    <meta name="description" content="Galeria de Imagens da Orquestra Sanfônica Balaio Nordeste"></meta>
+                </Helmet>
                 <div style={{ backgroundColor: '#b05f24' }}>
                     <TransitionDiv show={true} bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'Galeria' :
                         this.props.language === 'english' ? 'Gallery' :

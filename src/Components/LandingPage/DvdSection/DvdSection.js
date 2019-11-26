@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './css/dvdsection.module.css';
 
 import { Fade } from 'react-reveal';
+import Helmet from 'react-helmet';
 import ReactPageScroller from 'react-page-scroller';
 
 import LeftUp from '../../UI/animated-components/animated-left-up/LeftUp';
@@ -41,6 +42,10 @@ class DvdSection extends Component {
     render() {
         return (
             <>
+                <Helmet>
+                    <title>Orquestra Sanfônica Balaio Nordeste DVD</title>
+                    <meta name="description" content="Página Promocional do DVD da Orquestra Sanfônica Balaio Nordeste"></meta>
+                </Helmet>
                 <LeftUp show={this.state.currentPage === 1 ? true : false} />
                 <RightUp show={this.state.currentPage === 1 ? true : false} />
                 <LeftDown show={this.state.currentPage === 1 ? true : false} />
@@ -62,16 +67,16 @@ class DvdSection extends Component {
                     <FullUp show={this.state.currentPage === 3 ? true : false} />
                     <FullDown show={this.state.currentPage === 3 ? true : false} />
 
-                    <Accordion show={this.state.currentPage === 3 ? true : false}  />
+                    <Accordion show={this.state.currentPage === 3 ? true : false} />
                     <Drum show={this.state.currentPage === 3 ? true : false} />
-                    <Flute show={this.state.currentPage === 3 ? true : false}  />
-                    <Triangle show={this.state.currentPage === 3 ? true : false}  />
+                    <Flute show={this.state.currentPage === 3 ? true : false} />
+                    <Triangle show={this.state.currentPage === 3 ? true : false} />
 
                     <LateralLeft show={this.state.currentPage === 4 ? true : false} />
                     <LateralRight show={this.state.currentPage === 4 ? true : false} />
 
                     <Pagination page={this.state.currentPage} />
-                    
+
                 </div>
 
                 <ReactPageScroller pageOnChange={this.handlePageChange}>
@@ -121,7 +126,7 @@ class DvdSection extends Component {
                             </video>
                         </div>
                         <div className={classes.textContainer}>
-                            
+
                         </div>
                     </div>
                 </ReactPageScroller>
