@@ -1,0 +1,44 @@
+.pagination {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  right: 30px;
+  list-style: none;
+  z-index: 9999;
+}
+
+.pagination li {
+  position: relative;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: .6;
+}
+
+.pagination li:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+}
+
+.pagination a {
+  position: absolute;
+  text-decoration: none;
+  left: 0;
+  top: 0;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.selectedPage {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 1 !important;
+}
+/*# sourceMappingURL=pagination.module.css.map */

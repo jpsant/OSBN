@@ -26,6 +26,8 @@ import Flute from '../../UI/animated-components/animated-flute/flute';
 import LateralLeft from '../../UI/animated-components/animated-lateral-left/lateralLeft';
 import LateralRight from '../../UI/animated-components/animated-lateral-right/lateralRight';
 
+import Pagination from '../../UI/dvdPagination/pagination';
+
 class DvdSection extends Component {
 
     state = {
@@ -67,6 +69,8 @@ class DvdSection extends Component {
 
                     <LateralLeft show={this.state.currentPage === 4 ? true : false} />
                     <LateralRight show={this.state.currentPage === 4 ? true : false} />
+
+                    <Pagination page={this.state.currentPage} />
                     
                 </div>
 
