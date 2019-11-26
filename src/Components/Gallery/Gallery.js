@@ -63,6 +63,8 @@ class Gallery extends Component {
                 <Helmet>
                     <title>Orquestra Sanfônica Balaio Nordeste Galeria</title>
                     <meta name="description" content="Galeria de Imagens da Orquestra Sanfônica Balaio Nordeste"></meta>
+                    <meta name="robots" content="all" />
+                    <meta name="googlebot" content="all" />
                 </Helmet>
                 <div style={{ backgroundColor: '#b05f24' }}>
                     <TransitionDiv show={true} bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'Galeria' :
@@ -81,7 +83,7 @@ class Gallery extends Component {
                             </div>
                         </div>
                         <NavLink className={classes.button} to="/">{this.props.language === 'portuguese' ? '& Início' :
-                        this.props.language === 'english' ? '& Home' : this.props.language === 'french' ? '& Début' : ''}</NavLink>
+                            this.props.language === 'english' ? '& Home' : this.props.language === 'french' ? '& Début' : ''}</NavLink>
                     </div>
                 </div>
                 <Backdrop show={this.state.showModal} clicked={this.closeHandler} />

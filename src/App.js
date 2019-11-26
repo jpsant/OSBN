@@ -4,15 +4,16 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import LazyImport from './lazyLoading/lazyImport';
+import Helmet from 'react-helmet';
 
 // utilizando esse componente auxiliar para 'lazy load' os containers.
 
 const LandingPage = LazyImport(() => {
-  return import ('./Components/LandingPage/FullPage/FullPage');
+  return import('./Components/LandingPage/FullPage/FullPage');
 })
 
 const Gallery = LazyImport(() => {
-  return import ('./Components/Gallery/Gallery');
+  return import('./Components/Gallery/Gallery');
 })
 
 // const FullPost = LazyImport(() => {
@@ -20,15 +21,15 @@ const Gallery = LazyImport(() => {
 // })
 
 const Login = LazyImport(() => {
-  return import ('./Components/Admin/Login/Login');
+  return import('./Components/Admin/Login/Login');
 })
 
 const PageManager = LazyImport(() => {
-  return import ('./Components/Admin/PageManager/PageManager');
+  return import('./Components/Admin/PageManager/PageManager');
 })
 
 const DvdSection = LazyImport(() => {
-  return import ('./Components/LandingPage/DvdSection/DvdSection');
+  return import('./Components/LandingPage/DvdSection/DvdSection');
 })
 
 class App extends Component {
@@ -63,6 +64,12 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Helmet>
+          <title>Orquestra Sanfônica Balaio Nordeste</title>
+          <meta name="description" content="Website da Orquestra Sanfônica Balaio Nordeste"></meta>
+          <meta name="robots" content="all" />
+          <meta name="googlebot" content="all" />
+        </Helmet>
         {routes}
       </div>
     );
