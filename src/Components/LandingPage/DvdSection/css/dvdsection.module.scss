@@ -17,12 +17,37 @@
   animation: initialAnimation 4s ease-in-out;
 }
 
+.blockerDiv {
+  height: 100vh;
+  color: white;
+  background-color: black;
+  z-index: 99999;
+  position: fixed;
+  opacity: 1;
+  display: grid;
+
+  .blockerTitle {
+    align-self: center;
+  }
+
+  @media screen and (min-width: 870px) {
+    opacity: 0;
+    height: 0vh;
+  }
+
+}
+
 .section1 {
   // z-index: 9999;
   display: grid;
   grid-template-rows: 0.5fr 1fr;
   height: 100vh;
   color: white;
+  opacity: 1;
+
+  @media screen and (max-width: 870px) {
+    opacity: 0;
+  }
 
   //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
 
@@ -232,7 +257,7 @@
     }
 
     .text {
-      font-size: 2em;
+      font-size: 1.8em;
       font-family: "Muli", sans-serif;
       text-shadow: 0.5px 0.5px 0.5px #000;
       align-self: flex-end;
@@ -274,6 +299,10 @@
         height: 100vh;
       }
     }
+  }
+
+  .textContainer {
+    grid-row: 1/2;
   }
 }
 

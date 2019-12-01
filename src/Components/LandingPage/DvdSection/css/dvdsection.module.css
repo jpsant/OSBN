@@ -13,6 +13,30 @@
           animation: initialAnimation 4s ease-in-out;
 }
 
+.blockerDiv {
+  height: 100vh;
+  color: white;
+  background-color: black;
+  z-index: 99999;
+  position: fixed;
+  opacity: 1;
+  display: -ms-grid;
+  display: grid;
+}
+
+.blockerDiv .blockerTitle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 870px) {
+  .blockerDiv {
+    opacity: 0;
+    height: 0vh;
+  }
+}
+
 .section1 {
   display: -ms-grid;
   display: grid;
@@ -20,6 +44,13 @@
       grid-template-rows: 0.5fr 1fr;
   height: 100vh;
   color: white;
+  opacity: 1;
+}
+
+@media screen and (max-width: 870px) {
+  .section1 {
+    opacity: 0;
+  }
 }
 
 .section1 .container {
@@ -274,7 +305,7 @@
 }
 
 .section3 .textContainer .text {
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: "Muli", sans-serif;
   text-shadow: 0.5px 0.5px 0.5px #000;
   -ms-flex-item-align: end;
@@ -325,6 +356,12 @@
   .section4 .container .video {
     height: 100vh;
   }
+}
+
+.section4 .textContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 
 @-webkit-keyframes initialAnimation {

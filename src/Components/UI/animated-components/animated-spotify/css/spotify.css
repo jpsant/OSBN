@@ -1,0 +1,58 @@
+.spotIn {
+  opacity: 1;
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  z-index: 999;
+  height: 18vh;
+}
+
+.spotOut {
+  opacity: 1;
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  z-index: 999;
+  height: 18vh;
+}
+
+.spotifyStrokeIn {
+  stroke: #fff;
+  fill-opacity: 0;
+  stroke-width: 2;
+  stroke-dashoffset: 2990;
+  stroke-dasharray: 2990;
+  -webkit-animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+          animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.spotifyStrokeOut {
+  stroke: #fff;
+  fill-opacity: 1;
+  stroke-width: 2;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 2990;
+  -webkit-animation: spotAnimationOut 2s ease-in-out forwards;
+          animation: spotAnimationOut 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes spotAnimationOut {
+  to {
+    stroke-dashoffset: 2990;
+    stroke-width: 2;
+    fill-opacity: 0;
+  }
+}
+
+@keyframes spotAnimationOut {
+  to {
+    stroke-dashoffset: 2990;
+    stroke-width: 2;
+    fill-opacity: 0;
+  }
+}
+/*# sourceMappingURL=spotify.css.map */

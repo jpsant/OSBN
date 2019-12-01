@@ -26,17 +26,26 @@ import Flute from '../../UI/animated-components/animated-flute/flute';
 
 import LateralLeft from '../../UI/animated-components/animated-lateral-left/lateralLeft';
 import LateralRight from '../../UI/animated-components/animated-lateral-right/lateralRight';
+import Spotify from '../../UI/animated-components/animated-spotify/spotify';
 
 import Pagination from '../../UI/dvdPagination/pagination';
 
 class DvdSection extends Component {
 
+    // componentDidMount() {
+    //     window.addEventListener("keydown", function(e) {
+    //         if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+    //             e.preventDefault();
+    //         }
+    //     }, false);
+    // }
+
     state = {
-        currentPage: 0
+        currentPage: null,
     }
 
     handlePageChange = (number) => {
-        this.setState({ currentPage: number}); // set currentPage number, to reset it from the previous selected.
+        this.setState({ currentPage: number }); // set currentPage number, to reset it from the previous selected.
     };
 
     render() {
@@ -54,6 +63,10 @@ class DvdSection extends Component {
                 {/* Como os arquivos CSS sem o .module afetam a aplicação inteira tomei o cuidado de utilizar nomes únicos para as classes
                     E as classes e animações dos Arabescos estão no arquivo CSS do componente 'Arabesco-left-up'.
                 */}
+
+                <div className={classes.blockerDiv}>
+                    <h1 className={classes.blockerTitle}>Página disponível apenas para desktop!</h1>
+                </div>
 
                 <div className={classes.animationsContainer}>
                     <DownArabesco show={this.state.currentPage === 1 ? true : false} />
@@ -74,12 +87,12 @@ class DvdSection extends Component {
 
                     <LateralLeft show={this.state.currentPage === 3 ? true : false} />
                     <LateralRight show={this.state.currentPage === 3 ? true : false} />
+                    <Spotify show={this.state.currentPage === 3 ? true : false} />
 
                     <Pagination changePage={this.handlePageChange} page={this.state.currentPage} />
-
                 </div>
 
-                <ReactPageScroller pageOnChange={this.handlePageChange} customPageNumber={this.state.currentPage} >
+                <ReactPageScroller pageOnChange={this.handlePageChange} customPageNumber={this.state.currentPage}>
                     <div className={classes.section1}>
                         <div className={classes.container}>
                             <video className={classes.video} autoPlay="autoplay" loop="loop" muted playsInline poster={'https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.png?alt=media&token=38d4a012-ac89-4d9d-bdad-160ced9e022b'}>
@@ -116,7 +129,7 @@ class DvdSection extends Component {
                         <div className={classes.textContainer}>
                             <h1 className={this.state.currentPage === 2 ? classes.hat : classes.hatOut}>&</h1>
                             <h2 className={this.state.currentPage === 2 ? classes.text : classes.textOut}>Ao som de Cirandas, Côco de Roda, Baião, Xote e muito Forró
-                            A Orquestra Sanfônica Balaio Nordeste divide o palco com grandes mestres da Música Brasileira, como Luiz Gonzaga, Jackson do Pandeiro, Chico César, Sivuca, dentre outros.</h2>
+                            a Orquestra Sanfônica Balaio Nordeste divide o palco com Irah Caldeira, Yure Carvalho, Pinto do Acordeon, Cezzinha e Silverio Pessoa ao som dos clássicos dos grandes mestres da Música Brasileira, como Luiz Gonzaga, Jackson do Pandeiro, Chico César, Sivuca, dentre outros.</h2>
                         </div>
                     </div>
                     <div className={classes.section4}>
@@ -126,7 +139,11 @@ class DvdSection extends Component {
                             </video>
                         </div>
                         <div className={classes.textContainer}>
-
+                            <h1 className={this.state.currentPage === 3 ? classes.hat : classes.hatOut}>&</h1>
+                            <h2 className={this.state.currentPage === 3 ? classes.text : classes.textOut}>
+                                já disponível em formato Digital nas plataformas de Streaming , venha conferir e prestigiar a
+                                verdadeira Cultura Nordestina!
+                            </h2>
                         </div>
                     </div>
                 </ReactPageScroller>
