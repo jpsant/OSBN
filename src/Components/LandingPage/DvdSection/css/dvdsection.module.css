@@ -330,8 +330,8 @@
 .section4 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 0.9fr;
-      grid-template-rows: 0.9fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   height: 100vh;
   color: white;
 }
@@ -362,6 +362,101 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 25%;
+}
+
+.section4 .textContainer .hat {
+  font-family: xilosa;
+  padding: 1% 0;
+  opacity: 0;
+  -webkit-animation: section1Hat 2s ease-in-out forwards 2s;
+          animation: section1Hat 2s ease-in-out forwards 2s;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+}
+
+.section4 .textContainer .hatOut {
+  font-family: xilosa;
+  padding: 1% 0;
+  -webkit-animation: section1HatOut 0.3s ease-in-out forwards;
+          animation: section1HatOut 0.3s ease-in-out forwards;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  font-size: 4em;
+  font-weight: 500;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.section4 .textContainer .text {
+  font-size: 2em;
+  font-family: "Muli", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-animation: section1Title 2s ease-in-out forwards 2s;
+          animation: section1Title 2s ease-in-out forwards 2s;
+  opacity: 0;
+}
+
+.section4 .textContainer .textOut {
+  font-size: 2em;
+  font-family: "Muli", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-animation: section1TitleOut 0.3s ease-in-out forwards;
+          animation: section1TitleOut 0.3s ease-in-out forwards;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.section4 .buttonLink {
+  -webkit-animation: section4ButtonIn 2s ease-in-out forwards 2s;
+          animation: section4ButtonIn 2s ease-in-out forwards 2s;
+  opacity: 0;
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  background-color: #c76d2b;
+  border-radius: 5px;
+  font-size: 1.6em;
+  font-family: "Muli", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.section4 .buttonLinkOut {
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  background-color: #c76d2b;
+  border-radius: 5px;
+  font-size: 1.6em;
+  font-family: "Muli", sans-serif;
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  -webkit-animation: section1TitleOut 0.3s ease-in-out forwards;
+          animation: section1TitleOut 0.3s ease-in-out forwards;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 100%;
+}
+
+.section4 .buttonLink:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 @-webkit-keyframes initialAnimation {
@@ -467,6 +562,18 @@
 @keyframes section1SubtitleOut {
   to {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes section4ButtonIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes section4ButtonIn {
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=dvdsection.module.css.map */

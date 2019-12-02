@@ -27,18 +27,12 @@ import Flute from '../../UI/animated-components/animated-flute/flute';
 import LateralLeft from '../../UI/animated-components/animated-lateral-left/lateralLeft';
 import LateralRight from '../../UI/animated-components/animated-lateral-right/lateralRight';
 import Spotify from '../../UI/animated-components/animated-spotify/spotify';
+import Youtube from '../../UI/animated-components/animated-yt/youtube';
 
 import Pagination from '../../UI/dvdPagination/pagination';
 
 class DvdSection extends Component {
 
-    // componentDidMount() {
-    //     window.addEventListener("keydown", function(e) {
-    //         if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-    //             e.preventDefault();
-    //         }
-    //     }, false);
-    // }
 
     state = {
         currentPage: null,
@@ -51,10 +45,13 @@ class DvdSection extends Component {
     render() {
         return (
             <>
+                {/* Component Helmet responsável por passar as informações da página para o google searchBot */}
                 <Helmet>
                     <title>Orquestra Sanfônica Balaio Nordeste DVD</title>
                     <meta name="description" content="Página Promocional do DVD da Orquestra Sanfônica Balaio Nordeste"></meta>
                 </Helmet>
+
+
                 <LeftUp show={this.state.currentPage === 0 ? true : false} />
                 <RightUp show={this.state.currentPage === 0 ? true : false} />
                 <LeftDown show={this.state.currentPage === 0 ? true : false} />
@@ -88,6 +85,7 @@ class DvdSection extends Component {
                     <LateralLeft show={this.state.currentPage === 3 ? true : false} />
                     <LateralRight show={this.state.currentPage === 3 ? true : false} />
                     <Spotify show={this.state.currentPage === 3 ? true : false} />
+                    <Youtube show={this.state.currentPage === 3 ? true : false} />
 
                     <Pagination changePage={this.handlePageChange} page={this.state.currentPage} />
                 </div>
@@ -141,9 +139,12 @@ class DvdSection extends Component {
                         <div className={classes.textContainer}>
                             <h1 className={this.state.currentPage === 3 ? classes.hat : classes.hatOut}>&</h1>
                             <h2 className={this.state.currentPage === 3 ? classes.text : classes.textOut}>
-                                já disponível em formato Digital nas plataformas de Streaming , venha conferir e prestigiar a
+                                já disponível em formato Digital nas plataformas de Streaming. Venha conferir e prestigiar a
                                 verdadeira Cultura Nordestina!
                             </h2>
+                        </div>
+                        <div>
+                            <a href="https://www.orquestrasanfonicabn.com.br" className={this.state.currentPage === 3 ? classes.buttonLink : classes.buttonLinkOut}>Conheça A Orquestra!</a>
                         </div>
                     </div>
                 </ReactPageScroller>

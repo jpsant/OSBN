@@ -5,9 +5,10 @@ const Spotify = (props) => {
     return (
         <>
             <svg version="1.1"  id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-223 25 512 512" className={props.show ? 'spotIn' : 'spotOut'} style={{enableBackground:'new -223 25 512 512'}} space="preserve">
+	 viewBox="-223 25 512 512" className={props.show ? 'spotIn' : 'spotOut'} space="preserve">
 
          
+		<a href={props.show ? "https://www.google.com/" : null}> 
 <circle id="green" className={props.show ? 'fillAccordionIn' : 'fillAccordionOut'} fill="#7DD787" cx="33" cy="281" r="246"/>
 <g id="white-fill" className={props.show ? 'fillAccordionIn' : 'fillAccordionOut'}>
 	<path fill="#FFFFFF" d="M159.8,319c-3.4,5.8-9.6,9.1-15.9,9.1c-3.1,0-6.3-0.8-9.2-2.5C86.5,297.4,30.8,292.9-7.5,294
@@ -47,6 +48,7 @@ const Spotify = (props) => {
 <path className={props.show ? 'spotifyStrokeIn' : 'spotifyStrokeOut'} id="path_1_" d="M33,492.2c-5.5,0-10-4.5-10-10s4.5-10,10-10h0.5c0,0,0,0,0,0c5.5,0,10,4.5,10,10c0,5.5-4.4,10-10,10H33z"/>
 <path className={props.show ? 'spotifyStrokeIn' : 'spotifyStrokeOut'} id="path" d="M70.2,488.7c-4.7,0-8.9-3.4-9.8-8.2c-1-5.4,2.6-10.7,8-11.7c28.3-5.3,55.5-17.2,78.7-34.5c4.4-3.3,10.7-2.4,14,2
 	c3.3,4.4,2.4,10.7-2,14c-25.6,19.1-55.7,32.3-87,38.1C71.4,488.7,70.8,488.7,70.2,488.7z"/>
+	</a>
 </svg>
 
         </>

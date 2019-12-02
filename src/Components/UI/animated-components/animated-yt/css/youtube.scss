@@ -1,0 +1,53 @@
+.ytIn {
+  opacity: 1;
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  z-index: 999;
+  height: 18vh;
+  transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ytIn:hover {
+    transform: rotate(-15deg);
+}
+
+.ytOut {
+  opacity: 1;
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  z-index: 999;
+  height: 18vh;
+}
+
+.youtubeStrokeIn {
+    stroke: #fff;
+    fill-opacity: 0;
+    stroke-width: 8;
+    stroke-dashoffset: 2990;
+    stroke-dasharray: 2990;
+    animation: accordionDrawAnimationIn 2s ease-in-out forwards 2s, strokeOpacityIn 1s ease-in-out forwards 3.5s;
+}
+
+.youtubeStrokeOut {
+    stroke: #fff;
+    fill-opacity: 1;
+    stroke-width: 8;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2990;
+    animation: ytAnimationOut 2s ease-in-out forwards;
+}
+
+
+@keyframes ytAnimationOut {
+    to {
+        stroke-dashoffset: 2990;
+        stroke-width: 2;
+        fill-opacity: 0;
+    }
+}

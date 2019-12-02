@@ -34,7 +34,6 @@
     opacity: 0;
     height: 0vh;
   }
-
 }
 
 .section1 {
@@ -278,10 +277,10 @@
 
 .section4 {
   display: grid;
-  grid-template-rows: 0.9fr;
+  grid-template-rows: auto;
   height: 100vh;
   color: white;
-  
+
   .container {
     background-color: black;
     z-index: 0;
@@ -303,6 +302,82 @@
 
   .textContainer {
     grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    margin: 0 25%;
+
+    .hat {
+      font-family: xilosa;
+      padding: 1% 0;
+      opacity: 0;
+      animation: section1Hat 2s ease-in-out forwards 2s;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+    }
+
+    .hatOut {
+      font-family: xilosa;
+      padding: 1% 0;
+      animation: section1HatOut 0.3s ease-in-out forwards;
+      text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+      font-size: 4em;
+      font-weight: 500;
+      transform: translateY(20px);
+    }
+
+    .text {
+      font-size: 2em;
+      font-family: "Muli", sans-serif;
+      text-shadow: 0.5px 0.5px 0.5px #000;
+      align-self: flex-end;
+      animation: section1Title 2s ease-in-out forwards 2s;
+      opacity: 0;
+    }
+
+    .textOut {
+      font-size: 2em;
+      font-family: "Muli", sans-serif;
+      text-shadow: 0.5px 0.5px 0.5px #000;
+      align-self: flex-end;
+      animation: section1TitleOut 0.3s ease-in-out forwards;
+      transform: translateY(-15px);
+    }
+  }
+
+  
+  .buttonLink {
+    animation: section4ButtonIn 2s ease-in-out forwards 2s;
+    opacity: 0;
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    background-color: #c76d2b;
+    border-radius: 5px;
+    font-size: 1.6em;
+    font-family: "Muli", sans-serif;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .buttonLinkOut {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    background-color: #c76d2b;
+    border-radius: 5px;
+    font-size: 1.6em;
+    font-family: "Muli", sans-serif;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    animation: section1TitleOut 0.3s ease-in-out forwards;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+  }
+
+  .buttonLink:hover {
+    transform: translateY(-15px);
   }
 }
 
@@ -361,3 +436,8 @@
   }
 }
 
+@keyframes section4ButtonIn {
+  to {
+    opacity: 1;
+  }
+}
