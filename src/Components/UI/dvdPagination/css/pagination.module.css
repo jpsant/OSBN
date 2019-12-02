@@ -1,8 +1,8 @@
 .pagination {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
   right: 30px;
   list-style: none;
   z-index: 9999;

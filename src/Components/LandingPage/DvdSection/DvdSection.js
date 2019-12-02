@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './css/dvdsection.module.css';
+import { connect } from 'react-redux';
 
 import { Fade } from 'react-reveal';
 import Helmet from 'react-helmet';
@@ -30,6 +31,7 @@ import Spotify from '../../UI/animated-components/animated-spotify/spotify';
 import Youtube from '../../UI/animated-components/animated-yt/youtube';
 
 import Pagination from '../../UI/dvdPagination/pagination';
+import LanguageSelector from '../../UI/languageSelector/languageSelector';
 
 class DvdSection extends Component {
 
@@ -50,7 +52,6 @@ class DvdSection extends Component {
                     <title>Orquestra Sanfônica Balaio Nordeste DVD</title>
                     <meta name="description" content="Página Promocional do DVD da Orquestra Sanfônica Balaio Nordeste"></meta>
                 </Helmet>
-
 
                 <LeftUp show={this.state.currentPage === 0 ? true : false} />
                 <RightUp show={this.state.currentPage === 0 ? true : false} />
@@ -88,6 +89,9 @@ class DvdSection extends Component {
                     <Youtube show={this.state.currentPage === 3 ? true : false} />
 
                     <Pagination changePage={this.handlePageChange} page={this.state.currentPage} />
+
+                    <LanguageSelector show={this.state.currentPage} position='center' />
+
                 </div>
 
                 <ReactPageScroller pageOnChange={this.handlePageChange} customPageNumber={this.state.currentPage}>
@@ -102,7 +106,8 @@ class DvdSection extends Component {
                             <h1 className={this.state.currentPage === 0 ? classes.title : classes.titleOut}>Orquestra Sanfônica Balaio Nordeste</h1>
                         </div>
                         <div className={classes.bodyContainer}>
-                            <h1 className={this.state.currentPage === 0 ? classes.subtitle : classes.subtitleOut}>DVD Promocional.</h1>
+                            <h1 className={this.state.currentPage === 0 ? classes.subtitle : classes.subtitleOut}>{this.props.language === 'portuguese' ? 'DVD Promocional.' :
+                                this.props.language === 'english' ? 'Promotional DVD.' : this.props.language === 'french' ? 'DVD promotionnel.' : ''}</h1>
                         </div>
                     </div>
                     <div className={classes.section2}>
@@ -113,10 +118,10 @@ class DvdSection extends Component {
                         </div>
                         <div className={classes.textContainer}>
                             <h1 className={this.state.currentPage === 1 ? classes.hat : classes.hatOut}>&</h1>
-                            <h2 className={this.state.currentPage === 1 ? classes.text : classes.textOut}>A Orquestra Sanfônica Balaio Nordeste difunde a Cultura Nordestina, apresentando
-                            seus valores e mantendo viva a sua tradição e de seus personagens.</h2>
+                            <h2 className={this.state.currentPage === 1 ? classes.text : classes.textOut}>{this.props.language === 'portuguese' ? 'A Orquestra Sanfônica Balaio Nordeste difunde a Cultura Nordestina, apresentando seus valores e mantendo viva a sua tradição e de seus personagens.' :
+                                this.props.language === 'english' ? 'The Orchestra Sanfônica Balaio Nordeste spreads the Brazilian Northeastern Culture, presenting its values ​​and keeping alive its tradition and its characters.' : this.props.language === 'french' ? `
+            Le Orchestra Sanfônica Balaio Nordeste propage la culture brésilien du Nord-Est, en présentant ses valeurs et en maintenant sa tradition et ses personnages.` : ''}</h2>
                         </div>
-
                     </div>
                     <div className={classes.section3}>
                         <div className={classes.container}>
@@ -126,8 +131,9 @@ class DvdSection extends Component {
                         </div>
                         <div className={classes.textContainer}>
                             <h1 className={this.state.currentPage === 2 ? classes.hat : classes.hatOut}>&</h1>
-                            <h2 className={this.state.currentPage === 2 ? classes.text : classes.textOut}>Ao som de Cirandas, Côco de Roda, Baião, Xote e muito Forró
-                            a Orquestra Sanfônica Balaio Nordeste divide o palco com Irah Caldeira, Yure Carvalho, Pinto do Acordeon, Cezzinha e Silverio Pessoa ao som dos clássicos dos grandes mestres da Música Brasileira, como Luiz Gonzaga, Jackson do Pandeiro, Chico César, Sivuca, dentre outros.</h2>
+                            <h2 className={this.state.currentPage === 2 ? classes.text : classes.textOut}>{this.props.language === 'portuguese' ? 'Ao som de Cirandas, Côco de Roda, Baião, Xote e muito Forró a Orquestra Sanfônica Balaio Nordeste divide o palco com Irah Caldeira, Yure Carvalho, Pinto do Acordeon, Cezzinha e Silverio Pessoa ao som dos clássicos dos grandes mestres da Música Brasileira, como Luiz Gonzaga, Jackson do Pandeiro, Chico César, Sivuca, dentre outros.': 
+                            this.props.language === 'english' ? 'To the sound of Cirandas, Côco de Roda, Baião, Xote and much Forró the Balaio Nordeste Accordion Orchestra shares the stage with Irah Caldeira, Yure Carvalho, Pinto do Acordeon, Cezzinha and Silverio Pessoa to the classics of the great masters of Brazilian Music, as Luiz Gonzaga, Jackson Pandeiro, Chico Cesar, Sivuca, among others.' : 
+                            this.props.language === 'french' ? 'Au son de Cirandas, Côco de roda, Baião, Xote et beaucoup Forró, l\'Orchestre symphonique Balaio Nordeste partage la scène avec Irah Caldeira, Yure Carvalho, Pinto do Acordeon, Cezzinha et Silverio Pessoa avec les classiques des grands maîtres de la musique brésilienne, comme Luiz Gonzaga, Jackson Pandeiro, Chico César, Sivuca, entre autres.' : ''}</h2>
                         </div>
                     </div>
                     <div className={classes.section4}>
@@ -139,12 +145,14 @@ class DvdSection extends Component {
                         <div className={classes.textContainer}>
                             <h1 className={this.state.currentPage === 3 ? classes.hat : classes.hatOut}>&</h1>
                             <h2 className={this.state.currentPage === 3 ? classes.text : classes.textOut}>
-                                já disponível em formato Digital nas plataformas de Streaming. Venha conferir e prestigiar a
-                                verdadeira Cultura Nordestina!
+                                {this.props.language === 'portuguese' ? 'Já disponível em formato Digital nas plataformas de Streaming. Venha conferir e prestigiar a verdadeira Cultura Nordestina!' :
+                                this.props.language === 'english' ? 'Already available in Digital format on Streaming platforms. Come check out and honor the true Brazilian Northeastern Culture!' : 
+                                this.props.language === 'french' ? 'Déjà disponible au format numérique sur les plateformes de streaming. Venez jeter un coup d\'œil et honorer la véritable culture du Nord-Est brésilien!' : ''}
                             </h2>
                         </div>
-                        <div>
-                            <a href="https://www.orquestrasanfonicabn.com.br" className={this.state.currentPage === 3 ? classes.buttonLink : classes.buttonLinkOut}>Conheça A Orquestra!</a>
+                        <div style={{ boxShadow: '0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)' }}>
+            <a href="https://www.orquestrasanfonicabn.com.br" className={this.state.currentPage === 3 ? classes.buttonLink : classes.buttonLinkOut}>{this.props.language === 'portuguese' ? 'Conheça A Orquestra!': 
+            this.props.language === 'english' ? 'Meet The Orchestra!' : this.props.language === 'french' ? 'Rencontrez l\'orchestre!' : ''}</a>
                         </div>
                     </div>
                 </ReactPageScroller>
@@ -153,5 +161,11 @@ class DvdSection extends Component {
     }
 }
 
-export default DvdSection;
+const mapStateToProps = state => {
+    return {
+        language: state.languageReducer.language
+    }
+}
+
+export default connect(mapStateToProps)(DvdSection);
 

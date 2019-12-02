@@ -35,7 +35,7 @@ class LanguageSelector extends Component {
 
     render() {
         return (
-            <div className={classes.dropdown}>
+            <div style={{visibility: this.props.show === 0 ? 'visible' : 'hidden', opacity: this.props.show === 0 ? '1' : '0'}} className={this.props.position === 'center' ? classes.dropdownCenter : classes.dropdown}>
                 <button className={classes.dropbtn}><img className={classes.svg} src={this.props.flag === 'brazil' ? brazil : 
                 this.props.flag === 'usa' ? usa : this.props.flag === 'france' ? france : brazil} alt=""></img></button>
                 <div className={classes.dropdownContent}>
