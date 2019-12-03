@@ -28,7 +28,7 @@ class HeroSection extends Component {
         return (
             <>
                 <LoadingScreen show={document.readyState === 'loading' ? true : false} />
-                <LanguageSelector />
+                <LanguageSelector show={0} />
                 <div className={classes.heroContainer} id="container">
                     <h1 className={classes.firstTitle}>Orquestra Sanfônica</h1>
                     <h1 className={classes.secondTitle}>Balaio Nordeste</h1>

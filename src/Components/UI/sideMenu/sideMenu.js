@@ -41,7 +41,7 @@ class sideMenu extends Component {
                         <img className={classes.subText} alt="" src={require('../../../assets/logo2.svg')}></img>
                     </div>
                     <div className={classes.languageContainer}>
-                        <LanguageSelector />
+                        <LanguageSelector show={0} />
                     </div>
                 </div>
                 <div className={classes.menu}
