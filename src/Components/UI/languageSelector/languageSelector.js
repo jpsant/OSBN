@@ -33,6 +33,10 @@ class LanguageSelector extends Component {
         this.props.changeLanguage(language, flag);
     }
 
+    // O language Selector é o componente responsável por modificar a língua utilizada no website.
+    // Necessitando passar como prop o 'show' que deve ser igual a '0' para ele aparecer
+    // Se fez necessário o uso disto devido a página do DVD, no qual ele deveria apenas aparecer na section '0' 
+
     render() {
         return (
             <div style={{visibility: this.props.show === 0 ? 'visible' : 'hidden', opacity: this.props.show === 0 ? '1' : '0'}} className={this.props.position === 'center' ? classes.dropdownCenter : classes.dropdown}>
