@@ -7,7 +7,7 @@ const Youtube = (props) => {
         <svg version="1.1" className={props.show ? 'ytIn' : 'ytOut'} id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-223 25 512 512" style={{enableBackground:'new -223 25 512 512'}} space="preserve">
 
-<a href={props.show ? "https://www.google.com/" : null}> 
+<a href={props.show ? null : null}> 
 <path id="red-fill" className={props.show ? 'fillAccordionIn' : 'fillAccordionOut'} fill="#FF5A5A" d="M268.7,160.7c-5.7-21.5-22.3-38.5-43.5-44.2C186.9,106,72.3,106,33,106s-153.9,0-192.2,10.4
 	c-21.2,5.8-37.8,22.7-43.5,44.2C-213,199.6-213,281-213,281s0,81.4,10.3,120.3c5.7,21.5,22.3,38.5,43.5,44.2
 	C-120.9,456-25,456,33,456s153.9,0,192.2-10.4c21.2-5.8,37.8-22.7,43.5-44.2C279,362.4,279,281,279,281S279,199.6,268.7,160.7z"/>

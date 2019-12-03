@@ -280,7 +280,6 @@
 
 .section4 {
   display: grid;
-  grid-template-rows: auto;
   height: 100vh;
   color: white;
 
@@ -304,9 +303,8 @@
   }
 
   .textContainer {
-    grid-row: 1/2;
     align-self: center;
-    justify-self: center;
+    // justify-self: center;
     margin: 0 25%;
 
     .hat {
@@ -348,36 +346,40 @@
     }
   }
 
-  .buttonLink {
-    animation: section4ButtonIn 2s ease-in-out forwards 2s;
-    opacity: 0;
-    text-decoration: none;
-    color: white;
-    padding: 20px 30px;
-    background-color: #c76d2b;
-    border-radius: 5px;
-    font-size: 1.6em;
-    font-family: "Muli", sans-serif;
-    text-shadow: 0.5px 0.5px 0.5px #000;
-    align-self: center;
-    justify-self: center;
-    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  .linkContainer {
+    z-index: 99999;
+
+    .link {
+      opacity: 0;
+      color: white;
+      padding: 20px 35px;
+      background-color: #C76D2B;
+      transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+      text-decoration: none;
+      font-size: 1.5em;
+      font-family: "Muli", sans-serif;
+      text-shadow: 0.5px 0.5px 0.5px #000;
+      transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: section1Title 2s ease-in-out forwards 2.5s;
+    }
+
+    .linkOut {
+      color: white;
+      padding: 20px 35px;
+      background-color: #C76D2B;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+      text-decoration: none;
+      font-size: 1.5em;
+      font-family: "Muli", sans-serif;
+      text-shadow: 0.5px 0.5px 0.5px #000;
+      animation: section1TitleOut 0.3s ease-in-out forwards;
+      transform: translateY(-15px);
+    }
   }
 
-  .buttonLinkOut {
-    text-decoration: none;
-    color: white;
-    padding: 20px 30px;
-    background-color: #c76d2b;
-    border-radius: 5px;
-    font-size: 1.6em;
-    font-family: "Muli", sans-serif;
-    text-shadow: 0.5px 0.5px 0.5px #000;
-    animation: section1TitleOut 0.3s ease-in-out forwards;
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-  }
 }
 
 @keyframes initialAnimation {

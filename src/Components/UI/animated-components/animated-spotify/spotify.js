@@ -8,7 +8,7 @@ const Spotify = (props) => {
 	 viewBox="-223 25 512 512" className={props.show ? 'spotIn' : 'spotOut'} space="preserve">
 
          
-		<a href={props.show ? "https://www.google.com/" : null}> 
+		<a href={props.show ? null : null}> 
 <circle id="green" className={props.show ? 'fillAccordionIn' : 'fillAccordionOut'} fill="#7DD787" cx="33" cy="281" r="246"/>
 <g id="white-fill" className={props.show ? 'fillAccordionIn' : 'fillAccordionOut'}>
 	<path fill="#FFFFFF" d="M159.8,319c-3.4,5.8-9.6,9.1-15.9,9.1c-3.1,0-6.3-0.8-9.2-2.5C86.5,297.4,30.8,292.9-7.5,294
