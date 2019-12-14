@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import classes from './css/dvdsection.module.css';
 import { connect } from 'react-redux';
 
-import { Fade } from 'react-reveal';
+// import { Fade } from 'react-reveal';
 import Helmet from 'react-helmet';
 import ReactPageScroller from 'react-page-scroller';
+
+// import HeroLogo from '../../../assets/heroLogo/heroLogo.svg';
 
 import LeftUp from '../../UI/animated-components/animated-left-up/LeftUp';
 import RightUp from '../../UI/animated-components/animated-right-up/RightUp';
@@ -63,7 +65,10 @@ class DvdSection extends Component {
                 */}
 
                 <div className={classes.blockerDiv}>
-                    <h1 className={classes.blockerTitle}>Página disponível apenas para desktop!</h1>
+                    <img alt="" className={classes.heroLogo} src={require('../../../assets/heroLogo/heroLogo.svg')}></img>
+                    <h1 className={classes.blockerTitle}>Página disponível apenas para desktop.</h1>
+                    <a href="https://www.orquestrasanfonicabn.com.br" className={classes.link}>{this.props.language === 'portuguese' ? 'Conheça A Orquestra!' :
+                                this.props.language === 'english' ? 'Meet The Orchestra!' : this.props.language === 'french' ? 'Rencontrez l\'orchestre!' : ''}</a>
                 </div>
 
                 <div className={classes.animationsContainer}>

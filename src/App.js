@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, withRouter, Switch, Redirect, BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -16,9 +16,6 @@ const Gallery = LazyImport(() => {
   return import('./Components/Gallery/Gallery');
 })
 
-// const FullPost = LazyImport(() => {
-//   return import ('./Components/Posts/NewsPost');
-// })
 
 const Login = LazyImport(() => {
   return import('./Components/Admin/Login/Login');

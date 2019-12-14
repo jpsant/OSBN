@@ -8,7 +8,7 @@ import IntersectionVisible from 'react-intersection-visible';
 import TransitionDiv from '../../UI/transitionDiv/history/historyDiv';
 import HistoryDiv from '../../UI/historyDiv/historyDiv';
 
-class HistorySection extends Component {
+export class HistorySection extends Component {
 
 
     onShow(entries) {

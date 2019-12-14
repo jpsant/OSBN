@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import EventDiv from '../eventSelector/eventSelector';
 import { Fade } from 'react-reveal';
 
-class historyDiv extends Component {
+class HistoryDiv extends Component {
 
     state = {
         history: [],
@@ -76,4 +76,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(historyDiv);
+export default connect(mapStateToProps)(HistoryDiv);

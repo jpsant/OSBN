@@ -18,7 +18,7 @@
 }
 
 .blockerDiv {
-  height: 100vh;
+  height: 150vh;
   color: white;
   background-color: black;
   z-index: 99999;
@@ -27,8 +27,35 @@
   display: grid;
   visibility: visible;
 
+  .heroLogo {
+    position: absolute;
+    z-index: 99999;
+    height: 20em;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
   .blockerTitle {
     align-self: center;
+  }
+
+  .link {
+    opacity: 1;
+    color: white;
+    padding: 20px 35px;
+    background-color: #C76D2B;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    text-decoration: none;
+    z-index: 99999;
+    font-size: 1.5em;
+    font-family: "Muli", sans-serif;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   @media screen and (min-width: 870px) {
@@ -49,6 +76,7 @@
 
   @media screen and (max-width: 870px) {
     opacity: 0;
+    height: 0;
   }
 
   //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
@@ -140,6 +168,11 @@
   height: 100vh;
   color: white;
 
+  @media screen and (max-width: 870px) {
+    opacity: 0;
+    height: 0;
+  }
+
   //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
 
   .container {
@@ -212,6 +245,11 @@
   height: 100vh;
   color: white;
 
+  @media screen and (max-width: 870px) {
+    opacity: 0;
+    height: 0;
+  }
+
   //O VÍDEO PRECISA ESTAR DENTRO DE UMA DIV 'CONTAINER' PARA QUE SÓ ASSIM ELE OCUPE 100% DO DISPLAY (SEM BORDAS PRETAS NAS LATERAIS)
 
   .container {
@@ -282,6 +320,11 @@
   display: grid;
   height: 100vh;
   color: white;
+
+  @media screen and (max-width: 870px) {
+    opacity: 0;
+    height: 0;
+  }
 
   .container {
     background-color: black;

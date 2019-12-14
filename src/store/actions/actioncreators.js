@@ -1,6 +1,9 @@
 import * as actionTypes from '../actions/actiontypes';
 import axios from 'axios';
 import firebase from 'firebase';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/storage';
 import Cookies from 'js-cookie';
 
 var app = firebase.initializeApp({

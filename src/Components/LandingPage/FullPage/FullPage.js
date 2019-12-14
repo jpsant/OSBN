@@ -17,7 +17,7 @@ import Footer from '../Footer/Footer';
 import SideMenu from '../../UI/sideMenu/sideMenu';
 
 
-class FullPage extends Component {
+export class FullPage extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
