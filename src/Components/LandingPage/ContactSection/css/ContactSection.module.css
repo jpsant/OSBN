@@ -245,7 +245,7 @@
   grid-column: 1/2;
   -ms-grid-column-align: center;
       justify-self: center;
-  height: 3em;
+  height: 4.3em;
 }
 
 @media screen and (max-width: 375px) {
@@ -337,8 +337,8 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-column-align: left;
+      justify-self: left;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;

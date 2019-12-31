@@ -176,7 +176,7 @@
                 img {
                     grid-column: 1/2;
                     justify-self: center;
-                    height: 3em;
+                    height: 4.3em;
 
                     @media screen and (max-width: 375px) {
                         grid-column: 1/4;
@@ -231,7 +231,7 @@
                 font-size: 1.4em;
                 margin: 0%;
                 align-self: center;
-                justify-self: center;
+                justify-self: left;
                 grid-column: 2/3;
                 text-shadow: 1px 1px 1px #000;
 
