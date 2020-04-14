@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './App.css';
+import './global.scss';
 
 import LazyImport from './lazyLoading/lazyImport';
 import Helmet from 'react-helmet';

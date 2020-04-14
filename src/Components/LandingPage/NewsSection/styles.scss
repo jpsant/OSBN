@@ -1,0 +1,60 @@
+@import '../../../mixins/mixins.scss';
+
+.newsDiv {
+  background-color: #b05f24;
+
+  &__container {
+    // template provisório, enquanto não existem notícias.
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+
+    @media screen and (max-width: 960px) {
+      grid-template-columns: 0.2fr 1fr 0.2fr;
+    }
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: .1fr 1fr .1fr;
+    }
+
+    &__newsAlert {
+      display: grid;
+      grid-template-rows: 0.5fr 1fr;
+      background-color: white;
+      grid-column: 2/3;
+      margin: 5%;
+      border-radius: 8px;
+      min-height: 250px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+      &-hatContainer {
+        grid-row: 1/2;
+        display: grid;
+        color: white;
+        background-color: #c76d2b;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        &-hat {
+          align-self: center;
+          font-family: xilosa;
+          font-weight: 300;
+          text-shadow: 1px 1px 1px #000;
+          font-size: 3em;
+          margin: 4% 0;
+        }
+      }
+
+      &-textContainer {
+        grid-row: 2/3;
+        display: grid;
+
+        &-text {
+          margin: 0;
+          align-self: center;
+          font-size: 1.7em;
+          font-family: 'Muli';
+        }
+      }
+    }
+  }
+}

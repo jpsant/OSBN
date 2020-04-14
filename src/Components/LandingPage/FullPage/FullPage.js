@@ -4,17 +4,17 @@ import * as actions from '../../../store/actions/actioncreators';
 import classes from './css/FullPage.module.css';
 import Helmet from 'react-helmet';
 
-import HeroSection from '../HeroSection/HeroSection';
-import InfoSection from '../InfoSection/InfoSection';
-import HistorySection from '../HistorySection/HistorySection';
-import GallerySection from '../GallerySection/GallerySection';
-import ScheduleSection from '../ScheduleSection/ScheduleSection';
-import NewsSection from '../NewsSection/NewsSection';
-import TechnicalSection from '../TechnicalSection/TechnicalSection';
-import ContactSection from '../ContactSection/ContactSection';
-import Footer from '../Footer/Footer';
+import HeroSection from '../HeroSection';
+import InfoSection from '../InfoSection';
+import HistorySection from '../HistorySection';
+import GallerySection from '../GallerySection';
+import ScheduleSection from '../ScheduleSection';
+import NewsSection from '../NewsSection';
+import TechnicalSection from '../TechnicalSection';
+import ContactSection from '../ContactSection';
+import Footer from '../Footer';
 
-import SideMenu from '../../UI/sideMenu/sideMenu';
+import SideMenu from '../../UI/sideMenu';
 
 
 export class FullPage extends Component {

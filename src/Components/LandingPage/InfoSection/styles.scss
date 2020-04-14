@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import '../../../mixins/mixins.scss';
+
+.info-container {
+    display: grid;
+    grid-template-rows: .6fr .2fr;
+
+    &__text-container {
+        height: auto;
+        padding: 1%;
+        text-align: justify;
+        color: white;
+        grid-row: 1/2;
+
+        h2 {
+            font-size: 1.5em;
+            font-family: 'Muli', sans-serif;
+            text-shadow: .5px .5px .5px #000;
+            grid-row: 1/2;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    &__video-container {
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+        @media screen and (max-width: 395px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+
+        &-video1 {
+
+            &-videoPlayer1 {
+                grid-column: 1/2;
+                margin: 5% 0;
+                width: 550px;
+                mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                transform: rotate(0.000001deg);
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+
+                -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                /*ios 7 border-radius-bug */
+                -webkit-transform: rotate(0.000001deg);
+                /*mac os 10.6 safari 5 border-radius-bug */
+
+                @media screen and (max-width: 1140px) {
+                    width: 370px;
+                }
+
+                @media screen and (max-width: 565px) {
+                    width: 420px;
+                }
+
+                @media screen and (max-width: 445px) {
+                    width: 350px;
+                }
+
+                @media screen and (max-width: 381px) {
+                    width: 350px;
+                }
+
+                @media screen and (max-width: 370px) {
+                    width: 300px;
+                }
+
+            }
+        }
+
+        &-video2 {
+
+            &-videoPlayer2 {
+                grid-column: 2/3;
+                margin: 5% 0;
+                width: 550px;
+                mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                transform: rotate(0.000001deg);
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+                /*ios 7 border-radius-bug */
+                -webkit-transform: rotate(0.000001deg);
+                /*mac os 10.6 safari 5 border-radius-bug */
+
+                @media screen and (max-width: 1140px) {
+                    width: 370px;
+                }
+
+                @media screen and (max-width: 565px) {
+                    width: 420px;
+                }
+
+                @media screen and (max-width: 445px) {
+                    width: 350px;
+                }
+
+                @media screen and (max-width: 381px) {
+                    width: 350px;
+                }
+
+                @media screen and (max-width: 370px) {
+                    width: 300px;
+                }
+            }
+
+        }
+    }
+
+}

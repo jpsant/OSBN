@@ -1,0 +1,243 @@
+@import "../../../mixins/mixins.scss";
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    color: white;
+    padding-bottom: 3%;
+
+    @media screen and (max-width: 960px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.5fr 0.5fr;
+    }
+
+    &__titleContainer {
+        background-color: #b69c00;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        margin: 3%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 8px;
+
+        span {
+            font-family: Xilosa;
+            font-weight: 300;
+            line-height: 1;
+            text-shadow: 1px 1px 1px #000;
+            color: white;
+        }
+
+        &-title {
+            font-family: "Muli", sans-serif;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 1px #000;
+
+            @media screen and (max-width: 381px) {
+                font-size: 2em;
+            }
+
+            @media screen and (max-width: 375px) {
+                font-size: 1.3em;
+                margin: 2%;
+            }
+        }
+    }
+
+    &__social {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: grid;
+        grid-template-rows: 0.5fr 0.8fr;
+        background-color: #b69c00;
+        margin: 2% 6%;
+        border-radius: 8px;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-family: "Muli", sans-serif;
+
+        @media screen and (max-width: 960px) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        h1 {
+            grid-row: 1/2;
+            text-shadow: 1px 1px 1px #000;
+            font-size: 2.2em;
+            margin: 2%;
+            align-self: center;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.6em;
+                padding: 3px;
+            }
+        }
+
+        &-socialMedia {
+            grid-row: 2/3;
+            align-self: center;
+
+            &-a {
+                cursor: pointer;
+                margin: 0 2%;
+
+                @media screen and (max-width: 960px) {
+                    padding: 5% 0;
+                }
+
+                &-svg {
+                    height: 75px;
+                    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                    @media screen and (max-width: 960px) {
+                        height: 55px;
+                    }
+                }
+            }
+
+            &-a:hover {
+                .contact-container__contact__contactMedia-img {
+                    height: 95px;
+                }
+            }
+        }
+    }
+
+    &__social:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-10px);
+    }
+
+    &__contact {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-rows: 0.5fr 1fr;
+        background-color: #b69c00;
+        margin: 2% 6%;
+        border-radius: 8px;
+        transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-family: "Muli", sans-serif;
+
+        @media screen and (max-width: 960px) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            grid-template-rows: 0.2fr 1fr;
+        }
+
+        h1 {
+            text-shadow: 1px 1px 1px #000;
+            grid-row: 1/2;
+            font-size: 2.4em;
+            margin: 1%;
+            align-self: center;
+
+            @media screen and (max-width: 960px) {
+                font-size: 2em;
+            }
+
+            @media screen and (max-width: 375px) {
+                font-size: 1.7em;
+            }
+        }
+
+        &__contactMedia {
+            grid-row: 2/3;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 2ch;
+
+            &-wppDiv {
+                display: grid;
+                grid-template-columns: 0.2fr 1fr;
+
+                @media screen and (max-width: 375px) {
+                    grid-template-columns: auto;
+                    grid-template-rows: 0.2fr 0.2fr;
+                }
+
+                &-img {
+                    grid-column: 1/2;
+                    justify-self: center;
+                    height: 4.3em;
+
+                    @media screen and (max-width: 375px) {
+                        grid-column: 1/4;
+                        grid-row: 1/2;
+                        align-self: center;
+                    }
+                }
+
+                h2 {
+                    margin: 0%;
+                    align-self: center;
+                    justify-self: left;
+                    grid-column: 2/3;
+                    text-shadow: 1px 1px 1px #000;
+
+                    @media screen and (max-width: 960px) {
+                        font-size: 1.3em;
+                    }
+
+                    @media screen and (max-width: 375px) {
+                        font-size: 1.1em;
+                        grid-column: 1/3;
+                        grid-row: 2/3;
+                    }
+                }
+            }
+
+            &-emailDiv {
+                display: grid;
+                grid-template-columns: 0.2fr 1fr;
+
+                @media screen and (max-width: 375px) {
+                    grid-template-columns: auto;
+                    grid-template-rows: 0.2fr 0.2fr;
+                }
+            }
+
+            &-img {
+                grid-column: 1/2;
+                justify-self: center;
+                height: 4.3em;
+                margin-bottom: 8px;
+
+                @media screen and (max-width: 375px) {
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                    align-self: center;
+                }
+            }
+
+            h2 {
+                font-size: 1.4em;
+                margin: 0%;
+                align-self: center;
+                justify-self: left;
+                grid-column: 2/3;
+                text-shadow: 1px 1px 1px #000;
+
+                @media screen and (max-width: 960px) {
+                    font-size: 1.3em;
+                }
+
+                @media screen and (max-width: 459px) {
+                    font-size: 1em;
+                }
+
+                @media screen and (max-width: 375px) {
+                    font-size: 1em;
+                    grid-column: 1/4;
+                    grid-row: 2/3;
+                    margin: 0% 1%;
+                }
+            }
+        }
+    }
+
+    &__contact:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-10px);
+    }
+}

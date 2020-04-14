@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 
 import classes from './css/Gallery.module.css';
 
-import TransitionDiv from '../UI/transitionDiv/history/historyDiv';
+import TransitionDiv from '../UI/transitionDiv'
 import GalleryContent from '../UI/galleryContent/galleryContent';
 import GalleryPanel from '../UI/galleryPanel/galleryPanel';
 import Modal from '../UI/modal/modal';
