@@ -6,12 +6,12 @@ import uniqid from 'uniqid';
 
 import * as actions from '../../../../store/actions/actioncreators';
 
-import classes from './css/GalleryEditor.module.css';
-import './css/galleryAnimations.css';
+import './styles.scss';
+import './galleryAnimations.css';
 
-import ImageContainer from '../components/imageEditorCards/imageEditorCards';
+import ImageContainer from '../components/imageEditorCards';
 import Modal from '../../../UI/modal/modal';
-import BackDrop from '../../../UI/backDrop/backDrop';
+import BackDrop from '../../../UI/backDrop';
 import Spinner from '../../../UI/spinner/spinner';
 
 class GalleryEditor extends Component {
@@ -84,16 +84,16 @@ class GalleryEditor extends Component {
 
         return (
             <>
-                <div className={classes.buttonsDiv}>
-                    <button className={classes.returnButton} onClick={this.props.clicked}>Voltar</button>
-                    <button className={classes.addButton} onClick={this.formHandler}>Adicionar Imagem</button>
+                <div className="gallery-editor-buttons-div">
+                    <button className="gallery-editor-buttons-div-return-button" onClick={this.props.clicked}>Voltar</button>
+                    <button className="gallery-editor-buttons-div-add-button" onClick={this.formHandler}>Adicionar Imagem</button>
                 </div>
-                <div className={classes.container}>
-                    <div className={classes.titleContainer}>
+                <div className="gallery-button-container">
+                    <div className="gallery-button-container__title-container">
                         <h1>Editor da Galeria!</h1>
                         <h2>Adicione imagens para a galeria ou Remova alguma imagem:</h2>
                     </div>
-                    <div className={classes.contentContainer}>
+                    <div className="gallery-button-container-contentContainer">
                         {images}
                     </div>
                 </div>
@@ -108,12 +108,12 @@ class GalleryEditor extends Component {
                     <div>
                         <BackDrop clicked={this.imgHandler} show={this.state.showImageModal} />
                         <Modal show={this.state.showImageModal}>
-                            <div className={classes.modalContainer}>
-                                <div className={classes.modalImage}>
-                                    <img className={classes.image} alt="" src={this.state.image}></img>
+                            <div className="modal-container">
+                                <div className="modal-container__modalImage">
+                                    <img className="modal-container__modalImage-image" alt="" src={this.state.image}></img>
                                 </div>
-                                <div className={classes.modalButtons}>
-                                    <button onClick={this.removeImage} className={classes.button}>Remover Imagem</button>
+                                <div className="modal-container__modal-buttons">
+                                    <button onClick={this.removeImage} className="modal-container__modal-buttons-button">Remover Imagem</button>
                                 </div>
                             </div>
                         </Modal>
@@ -129,18 +129,18 @@ class GalleryEditor extends Component {
                     <div>
                         <BackDrop clicked={this.formHandler} show={this.state.showFormModal} />
                         <Modal show={this.state.showFormModal}>
-                            <div className={classes.formModalContainer}>
-                                <div className={classes.titleContainer}>
+                            <div className="form-modal-container">
+                                <div className="form-modal-container__titleContainer">
                                     <h1>Adicionar Nova imagem</h1>
                                     <h2>Selecione a imagem que você deseja adicionar:</h2>
                                 </div>
-                                <div className={classes.buttonsContainer}>
-                                    <div className={classes.selector}>
+                                <div className="form-modal-container__buttonsContainer">
+                                    <div className="form-modal-container__buttonsContainer-selector">
                                         <label htmlFor='file'>Selecionar Imagem</label>
                                         <input onChange={(e) => this.setState({ selectedImage: e.target.files[0] })} type="file" id="file" name="file"></input>
                                     </div>
-                                    <div className={classes.submit}>
-                                        <button disabled={this.state.selectedImage !== null ? false : true} onClick={this.submitImage} className={classes.button}>Enviar!</button>
+                                    <div className="form-modal-container__buttonsContainer-submit">
+                                        <button disabled={this.state.selectedImage !== null ? false : true} onClick={this.submitImage} className="form-modal-container__buttonsContainer-submit-button">Enviar!</button>
                                     </div>
                                 </div>
                             </div>
@@ -169,10 +169,10 @@ class GalleryEditor extends Component {
                     <div>
                         <BackDrop clicked={() => this.setState({successModal: false})} show={this.props.success && this.state.successModal} />
                         <Modal show={this.props.success && this.state.successModal}>
-                            <div className={classes.Modal}>
+                            <div className="gallery-editor-modal">
                                 <h1>{this.state.sucessRemoveImage ? 'Imagem Removida com Sucesso!' : 'Imagem Adicionada com Sucesso!'}</h1>
                                 <h2>Voltar para o menu principal:</h2>
-                                <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                                <button className="gallery-editor-modal-button" onClick={this.props.clicked}>Voltar</button>
                             </div>
                         </Modal>
                     </div>

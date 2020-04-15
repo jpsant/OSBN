@@ -1,4 +1,4 @@
-.container {
+.news-editor-container {
     display: grid;
     grid-template-rows: .5fr 1fr .5fr;
     background-color: white;
@@ -10,7 +10,7 @@
     padding: 5%;
     transition: .3s cubic-bezier(.175, .885, .32, 1.275);
 
-    .titleContainer {
+    &-titleContainer {
         grid-row: 1/2;
         display: grid;
 
@@ -21,17 +21,17 @@
         }
     }
 
-    .imageContainer {
+    &__imageContainer {
         grid-row: 2/3;
         margin-bottom: 5%;
 
-        .image {
+        &-image {
             height: 90%;
             width: 40%;
         }
     }
 
-    .contentContainer {
+    &-contentContainer {
         grid-row: 3/4;
 
         h2 {
@@ -43,6 +43,6 @@
     }
 }
 
-.container:hover {
+.news-editor-container:hover {
     transform: translateY(-10px)
 }

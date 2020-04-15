@@ -9,7 +9,7 @@ import LazyLoad from 'react-lazy-load';
 
 import TransitionDiv from '../../UI/transitionDiv';
 import GalleryImage from '../../UI/galleryImage';
-import Backdrop from '../../UI/backDrop/backDrop';
+import Backdrop from '../../UI/backDrop';
 import Modal from '../../UI/modal/modal';
 
 class GallerySection extends Component {

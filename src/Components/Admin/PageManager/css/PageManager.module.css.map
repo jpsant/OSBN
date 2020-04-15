@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,OAAO,CAAC,gEAAI;AAEZ,AAAA,UAAU,CAAC;EACP,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,iBAAiB;CAChC;;AAGD,AAAA,mBAAmB,CAAC;EAChB,KAAK,EAAE,gBAAgB;EACvB,eAAe,EAAE,iBAAiB;CACrC;;AAED,AAAA,yBAAyB,CAAC;EACtB,aAAa,EAAE,GAAG;EAClB,gBAAgB,EAAE,IACtB;CAAC",
-    "sources": [
-        "PageManager.module.scss"
-    ],
-    "names": [],
-    "file": "PageManager.module.css"
-}

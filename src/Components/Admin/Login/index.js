@@ -5,9 +5,9 @@ import { CSSTransition } from 'react-transition-group';
 import * as actions from '../../../store/actions/actioncreators';
 import Cookies from 'js-cookie';
 
-import './css/loginAnimations.css';
+import './loginAnimations.css';
 
-import classes from './css/Login.module.css';
+import './styles.scss';
 import Spinner from '../../UI/spinner/spinner';
 
 class Login extends Component {
@@ -48,35 +48,35 @@ class Login extends Component {
         return (
             <>
                 {redirect}
-                <div className={classes.container}>
+                <div className="login-container">
                     <CSSTransition in={this.props.loading !== true}
                         classNames="news"
                         unmountOnExit
                         onExit={() => this.setState({ showImageModal: false })}
                         timeout={500}>
-                        <div className={classes.container}>
-                            <div className={classes.titleContainer}>
+                        <div className="login-container">
+                            <div className="login-container__titleContainer">
                                 <h2>Orquestra Sanfônica Balaio Nordeste</h2>
-                                <h1 className={classes.title}>Gerenciador de Página</h1>
+                                <h1 className="login-container__titleContainer-title">Gerenciador de Página</h1>
                             </div>
-                            <div className={classes.formContainer}>
+                            <div className="login-container__formContainer">
                                 <div>
-                                    <form className={classes.form} onSubmit={this.loginHandler}>
-                                        <h1 className={classes.title}>Login</h1>
-                                        <div className={classes.email}>
-                                            <label className={classes.label} htmlFor="email">E-mail</label>
+                                    <form className="login-container__formContainer-form" onSubmit={this.loginHandler}>
+                                        <h1 className="login-container__formContainer-title">Login</h1>
+                                        <div className="login-container__formContainer-form-email">
+                                            <label htmlFor="email">E-mail</label>
                                             <input onChange={this.emailHandler} type="text" id="email" placeholder="Seu Email"></input>
                                         </div>
-                                        <div className={classes.password}>
-                                            <label className={classes.label} htmlFor="password">Senha</label>
+                                        <div className="login-container__formContainer-form-password">
+                                            <label htmlFor="password">Senha</label>
                                             <input onChange={this.passwordHandler} type="password" id="password" placeholder="Sua Senha"></input>
                                         </div>
-                                        <button className={classes.button}>Submit</button>
+                                        <button className="login-container__formContainer-form-button">Submit</button>
                                     </form>
                                 </div>
                                 <div style={{ backgroundColor: '#508CA4' }}>
-                                    <h3 className={classes.subTitle}>Não sabe como veio parar nessa página?</h3>
-                                    <NavLink className={classes.returnButton} to="/">Voltar</NavLink>
+                                    <h3 className="login-container__formContainer__subTitle">Não sabe como veio parar nessa página?</h3>
+                                    <NavLink className="login-container__formContainer__returnButton" to="/">Voltar</NavLink>
                                 </div>
                             </div>
                         </div>

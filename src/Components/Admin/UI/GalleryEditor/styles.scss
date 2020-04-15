@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import '../../../../mixins/mixins.scss';
 
-.container {
+.gallery-button-container {
     color: white;
     display: grid;
     grid-template-rows: .1fr 1fr;
 
 
-    .titleContainer {
+    &__title-container {
         grid-row: 1/2;
 
         h1 {
@@ -25,7 +25,7 @@
         }
     }
 
-    .contentContainer {
+    &-contentContainer {
         grid-row: 2/3;
         display: grid;
         grid-column-gap: 1%;
@@ -33,7 +33,7 @@
     }
 }
 
-.buttonsDiv {
+.gallery-editor-buttons-div {
     z-index: 12;
     position: fixed;
     top: 5%;
@@ -41,7 +41,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
 
-    .returnButton {
+    &-return-button {
         border-radius: 5px;
         padding: 5% 5%;
         margin-bottom: 5%;
@@ -56,7 +56,7 @@
         transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     }
 
-    .addButton {
+    &-add-button {
         border-radius: 5px;
         padding: 5% 5%;
         border-radius: 12px;
@@ -71,27 +71,25 @@
     }
 }
 
-.modalContainer {
+.modal-container {
     display: grid;
     grid-template-columns: 1fr .3fr;
-    // background-color: white;
 
-    .modalImage {
+    &__modalImage {
         grid-column: 1/2;
 
-        .image {
+        &-image {
             width: 100%;
             height: 100%;
             border-radius: 5px;
         }
     }
 
-    .modalButtons {
+    &__modal-buttons {
         grid-column: 2/3;
-        // padding: 0 5%;
         display: grid;
 
-        .button {
+        &-button {
             align-self: center;
             justify-self: center;
             padding: 5% 5%;
@@ -106,21 +104,20 @@
             transition: .3s cubic-bezier(.175, .885, .32, 1.275);
         }
 
-        .button:hover {
+        &-button:hover {
             transform: translateY(-12px);
         }
     }
 
 }
 
-.formModalContainer {
+.form-modal-container {
     background-color: white;
     border-radius: 5px;
-    // height: 200px;
     display: grid;
     grid-template-rows: .5fr 1fr;
 
-    .titleContainer {
+    &__titleContainer {
         grid-row: 1/2;
         color: #2a2a2b;
 
@@ -129,7 +126,6 @@
             margin-top: 2%;
             font-size: 4em;
             font-family: 'Muli', sans-serif;
-            // text-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
         }
 
         h2 {
@@ -140,12 +136,12 @@
         }
     }
 
-    .buttonsContainer {
+    &__buttonsContainer {
         grid-row: 2/3;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        .selector {
+        &-selector {
             grid-column: 1/2;
             display: grid;
 
@@ -173,11 +169,11 @@
             }
         }
 
-        .submit {
+        &-submit {
             grid-column: 2/3;
             display: grid;
             
-            .button {
+            &-button {
                 align-self: center;
                 justify-self: center;
                 padding: 15px 25px;
@@ -192,14 +188,14 @@
                 transition: .3s cubic-bezier(.175, .885, .32, 1.275);
             }
 
-            .button:hover {
+            &-button:hover {
                 transform: translateY(-12px);
             }
         }
     }
 }
 
-.Modal {
+.gallery-editor-modal {
     background-color: white;
     border-radius: 3px;
     font-family: 'Muli', sans-serif;
@@ -216,7 +212,7 @@
         margin-bottom: 4%;
     }
 
-    .button {
+    &-button {
         padding: 2% 6%;
         border-radius: 3px;
         background: #318647;
@@ -229,7 +225,7 @@
         transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     }
 
-    .button:hover {
+    &-button:hover {
         transform: translateY(-6px);
     }
 }

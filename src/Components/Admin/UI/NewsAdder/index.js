@@ -4,12 +4,12 @@ import uniqid from 'uniqid';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import * as actions from '../../../../store/actions/actioncreators';
 
-import './css/newsAnimation.css';
-import classes from './css/NewsAdder.module.css';
+import './newsAnimation.css';
+import './styles.scss';
 
 import NewsCard from '../../../UI/newsCard/newsCard';
 import Spinner from '../../../UI/spinner/spinner';
-import Backdrop from '../../../UI/backDrop/backDrop';
+import Backdrop from '../../../UI/backDrop';
 import Modal from '../../../UI/modal/modal';
 
 class NewsAdder extends Component {
@@ -84,91 +84,93 @@ class NewsAdder extends Component {
     render() {
         return (
             <>
-                <div className={classes.buttonsContainer}>
-                    <button className={classes.returnButton} onClick={this.props.clicked}>Voltar</button>
+                <div className="newsAdder-buttonsContainer">
+                    <button className="newsAdder-buttonsContainer-returnButton" onClick={this.props.clicked}>Voltar</button>
                 </div>
-                <div className={classes.container}>
-                    <div className={classes.titleContainer}>
+                <div className="newsAdder-container">
+                    <div className="newsAdder-container__titleContainer">
                         <h1>Adicionar nova Notícia</h1>
                         <h2>Preencha os campos abaixo com as Informações:</h2>
                     </div>
-                    <div className={classes.formContainer}>
-                        <div className={classes.form1}>
+                    <div className="newsAdder-container__formContainer">
+                        <div className="newsAdder-container__formContainer__form1">
                             <h1>Português</h1>
-                            <form>
-                                <div className={classes.title}>
-                                    <label className={classes.label} htmlFor="title">Título</label>
+                            <form className="newsAdder-container__formContainer__form1-form">
+                                <div className="newsAdder-container__formContainer__form1-form-title">
+                                    <label htmlFor="title">Título</label>
                                     <input onChange={(event) => this.setState({ brTitle: event.target.value })} value={this.state.brTitle} type="text" id="title" placeholder="Título da notícia!"></input>
                                 </div>
-                                <div className={classes.date}>
+                                <div className="newsAdder-container__formContainer__form1-form-date">
                                     <label htmlFor="date">Data</label>
                                     <input onChange={(event) => this.setState({ brDate: event.target.value })} value={this.state.brDate} type="text" id="date" placeholder="xx/xx/xxxx"></input>
                                 </div>
-                                <div className={classes.content}>
+                                <div className="newsAdder-container__formContainer__form1-form-content">
                                     <label htmlFor="content">Resumo</label>
                                     <input onChange={(event) => this.setState({ brContent: event.target.value })} value={this.state.brContent} type="text" id="content" placeholder="Resumo da notícia"></input>
                                 </div>
-                                <div className={classes.body}>
+                                <div className="newsAdder-container__formContainer__form1-form-body">
                                     <label htmlFor="body">Conteúdo da notícia</label>
                                     <input onChange={(event) => this.setState({ brBody: event.target.value })} type="text" id="body" placeholder="Conteúdo da notícia"></input>
                                 </div>
                                 <input onChange={this.imgHandler} type="file" id="file" name="file"></input>
                             </form>
-                            <div className={classes.preview}>
+                            <div className="newsAdder-container__formContainer__form1-preview">
                                 <NewsCard disabled={e => e.preventDefault()} title={this.state.brTitle} date={this.state.brDate} content={this.state.brContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
                             </div>
                         </div>
-                        <div className={classes.form2}>
+                        <div className="newsAdder-container__formContainer__form2">
                             <h1>Inglês</h1>
-                            <form>
-                                <div className={classes.title}>
-                                    <label className={classes.label} htmlFor="title">Título</label>
+                            <form className="newsAdder-container__formContainer__form2__form">
+                                <div className="newsAdder-container__formContainer__form2__form-title">
+                                    <label htmlFor="title">Título</label>
                                     <input onChange={(event) => this.setState({ enTitle: event.target.value })} value={this.state.enTitle} type="text" id="title" placeholder="Título da notícia!"></input>
                                 </div>
-                                <div className={classes.date}>
+                                <div className="newsAdder-container__formContainer__form2__form-date">
                                     <label htmlFor="date">Data</label>
                                     <input onChange={(event) => this.setState({ enDate: event.target.value })} value={this.state.enDate} type="text" id="date" placeholder="xx/xx/xxxx"></input>
                                 </div>
-                                <div className={classes.content}>
+                                <div className="newsAdder-container__formContainer__form2__form-content">
                                     <label htmlFor="content">Resumo</label>
                                     <input onChange={(event) => this.setState({ enContent: event.target.value })} value={this.state.enContent} type="text" id="content" placeholder="Resumo da notícia"></input>
                                 </div>
-                                <div className={classes.body}>
+                                <div className="newsAdder-container__formContainer__form2__form-body">
                                     <label htmlFor="body">Conteúdo da notícia</label>
                                     <input onChange={(event) => this.setState({ enBody: event.target.value })} type="text" id="body" placeholder="Conteúdo da notícia"></input>
                                 </div>
                             </form>
-                            <div className={classes.preview}>
+                            <div className="newsAdder-container__formContainer__form2-preview">
                                 <NewsCard disabled={e => e.preventDefault()} title={this.state.enTitle} date={this.state.enDate} content={this.state.enContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
                             </div>
                         </div>
-                        <div className={classes.form3}>
+                        <div className="newsAdder-container__formContainer__form3">
                             <h1>Francês</h1>
-                            <form>
-                                <div className={classes.title}>
-                                    <label className={classes.label} htmlFor="title">Título</label>
+                            <form className="newsAdder-container__formContainer__form3__form">
+                                <div className="newsAdder-container__formContainer__form3__form-title">
+                                    <label htmlFor="title">Título</label>
                                     <input onChange={(event) => this.setState({ frTitle: event.target.value })} value={this.state.frTitle} type="text" id="title" placeholder="Título da notícia!"></input>
                                 </div>
-                                <div className={classes.date}>
+                                <div className="newsAdder-container__formContainer__form3__form-date">
                                     <label htmlFor="date">Data</label>
                                     <input onChange={(event) => this.setState({ frDate: event.target.value })} value={this.state.frDate} type="text" id="date" placeholder="xx/xx/xxxx"></input>
                                 </div>
-                                <div className={classes.content}>
+                                <div className="newsAdder-container__formContainer__form3__form-content">
                                     <label htmlFor="content">Resumo</label>
                                     <input onChange={(event) => this.setState({ frContent: event.target.value })} value={this.state.frContent} type="text" id="content" placeholder="Resumo da notícia"></input>
                                 </div>
-                                <div className={classes.body}>
+                                <div className="newsAdder-container__formContainer__form3__form-body">
                                     <label htmlFor="body">Conteúdo da notícia</label>
                                     <input onChange={(event) => this.setState({ frBody: event.target.value })} type="text" id="body" placeholder="Conteúdo da notícia"></input>
                                 </div>
                             </form>
-                            <div className={classes.preview}>
+                            <div className="newsAdder-container__formContainer__form3-preview">
                                 <NewsCard disabled={e => e.preventDefault()} title={this.state.frTitle} date={this.state.frDate} content={this.state.frContent} img="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Fnoticias%2Flogo6.png?alt=media&token=c267ce49-95c2-4aa6-a971-f66ff4f41545" />
                             </div>
                         </div>
                     </div>
-                    <div className={classes.buttonContainer}>
-                        <button disabled={(this.state.brBody !== '' && this.state.teste !== null) || (this.state.brBody && this.state.enBody && this.state.frBody !== '' && this.state.teste !== null) ? false : true} onClick={this.postHandler} className={classes.button}>Publicar!</button>
+                    <div className="newsAdder-container__buttonContainer">
+                        <button disabled={(this.state.brBody !== '' && this.state.teste !== null) || (this.state.brBody && this.state.enBody && this.state.frBody !== '' && this.state.teste !== null) ? false : true} onClick={this.postHandler} className="newsAdder-container__buttonContainer-button">
+                            Publicar
+                        </button>
                     </div>
                 </div>
 
@@ -193,10 +195,12 @@ class NewsAdder extends Component {
                     <div>
                         <Backdrop clicked={this.props.clicked} show={this.props.success && this.state.modal} />
                         <Modal show={this.props.success && this.state.modal}>
-                            <div className={classes.Modal}>
+                            <div className="Modal">
                                 <h1>Notícia adicionada com sucesso!</h1>
                                 <h2>Voltar para o menu principal:</h2>
-                                <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                                <button className="Modal-button" onClick={this.props.clicked}>
+                                    Voltar
+                                </button>
                             </div>
                         </Modal>
                     </div>

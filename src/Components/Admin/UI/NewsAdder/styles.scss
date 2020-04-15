@@ -1,4 +1,4 @@
-.buttonsContainer {
+.newsAdder-buttonsContainer {
     z-index: 100;
     width: 10%;
     position: fixed;
@@ -7,7 +7,7 @@
     display: grid;
     grid-template-rows: 1fr;
 
-    .returnButton {
+    &-returnButton {
         position: absolute;
         top: 2%;
         right: 3%;
@@ -25,13 +25,13 @@
 }  
 
 
-.container {
+.newsAdder-container {
     display: grid;
     grid-template-rows: .1fr 1fr .1fr;
     color: white;  
 
 
-    .titleContainer {
+    &__titleContainer {
         grid-row: 1/2;
 
         h1 {
@@ -51,16 +51,15 @@
         }
     }
 
-    .formContainer {
+    &__formContainer {
         grid-row: 2/3;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
-        // grid-row-gap: 2%;
         color: black;
         justify-self: center;
 
         
-        .form1 {
+        &__form1 {
             grid-row: 1/2;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -74,7 +73,7 @@
             }
 
 
-            form {
+            &-form {
                 grid-column: 1/2;
                 display: grid;
                 grid-template-rows: auto auto auto auto;
@@ -82,25 +81,22 @@
                 padding: 4% 0;
 
 
-                .title {
+                &-title {
                     grid-row: 1/2;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .date {
+                &-date {
                     grid-row: 2/3;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .content {
+                &-content {
                     grid-row: 3/4;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .body {
+                &-body {
                     grid-row: 4/5;
                     padding-bottom: 9%;
                 }
@@ -126,16 +122,15 @@
                 }
             }
 
-            .preview {
+            &-preview {
                 grid-column: 2/3;
                 align-self: center;
                 min-height: 100%;
-                // min-width: 100%;
             }
 
         }
 
-        .form2 {
+        &__form2 {
             grid-row: 2/3;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -149,7 +144,7 @@
             }
 
 
-            form {
+            &__form {
                 grid-column: 1/2;
                 display: grid;
                 grid-template-rows: auto auto auto auto;
@@ -157,25 +152,22 @@
                 padding: 4% 0;
 
 
-                .title {
+                &-title {
                     grid-row: 1/2;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .date {
+                &-date {
                     grid-row: 2/3;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .content {
+                &-content {
                     grid-row: 3/4;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .body {
+                &-body {
                     grid-row: 4/5;
                     padding-bottom: 6%;
                 }
@@ -201,16 +193,15 @@
                 }
             }
 
-            .preview {
+            &-preview {
                 grid-column: 2/3;
                 align-self: center;
                 min-height: 100%;
-                // min-width: 100%;
             }
 
         }
 
-        .form3 {
+        &__form3 {
             grid-row: 3/4;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -224,7 +215,7 @@
             }
 
 
-            form {
+            &__form {
                 grid-column: 1/2;
                 display: grid;
                 grid-template-rows: auto auto auto auto;
@@ -232,25 +223,22 @@
                 padding: 4% 0;
 
 
-                .title {
+                &-title {
                     grid-row: 1/2;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .date {
+                &-date {
                     grid-row: 2/3;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .content {
+                &-content {
                     grid-row: 3/4;
                     text-align: left;
-                    // padding-bottom: 3%;
                 }
 
-                .body {
+                &-body {
                     grid-row: 4/5;
                     padding-bottom: 6%;
                 }
@@ -276,21 +264,21 @@
                 }
             }
 
-            .preview {
+            &-preview {
                 grid-column: 2/3;
                 align-self: center;
                 min-height: 100%;
-                // min-width: 100%;
             }
 
         }
     
     }
 
-    .buttonContainer {
+    &__buttonContainer {
         grid-row: 3/4;
         display: grid;
-        .button {
+        
+        &-button {
             align-self: center;
             justify-self: center;
             padding: 1% 6%;
@@ -328,7 +316,7 @@
         margin-bottom: 4%;
     }
 
-    .button {
+    &-button {
         padding: 2% 6%;
         border-radius: 3px;
         background: #2C647C;
@@ -341,7 +329,7 @@
         transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     }
 
-    .button:hover {
+    &-button:hover {
         transform: translateY(-6px);
     }
 }

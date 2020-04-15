@@ -8,8 +8,8 @@ import classes from './css/NewsEditor.module.css';
 import './css/cardAnimations.module.css';
 
 import Modal from '../../../UI/modal/modal';
-import Backdrop from '../../../UI/backDrop/backDrop';
-import NewsEditorCard from '../components/newsEditorCards/newsEditorCards';
+import Backdrop from '../../../UI/backDrop';
+import NewsEditorCard from '../components/newsEditorCards';
 import Spinner from '../../../UI/spinner/spinner';
 
 class NewsEditor extends Component {

@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import Helmet from 'react-helmet';
 
-import classes from './css/Gallery.module.css';
+import './styles.scss';
 
 import TransitionDiv from '../UI/transitionDiv'
 import GalleryContent from '../UI/galleryContent/galleryContent';
 import GalleryPanel from '../UI/galleryPanel/galleryPanel';
 import Modal from '../UI/modal/modal';
-import Backdrop from '../UI/backDrop/backDrop';
+import Backdrop from '../UI/backDrop';
 
 class Gallery extends Component {
 
@@ -70,26 +70,26 @@ class Gallery extends Component {
                     <TransitionDiv show={true} bgColor="#c76d2b" title={this.props.language === 'portuguese' ? 'Galeria' :
                         this.props.language === 'english' ? 'Gallery' :
                             this.props.language === 'french' ? 'Galerie' : ''} />
-                    <div className={classes.galleryContainer}>
-                        <div className={classes.galleryContent}>
+                    <div className="gallery-container">
+                        <div className="gallery-container-galleryContent">
                             {images}
                         </div>
-                        <div className={classes.clipping}>
-                            <div className={classes.title}>
+                        <div className="gallery-container__clipping">
+                            <div className="gallery-container__clipping-title">
                                 <TransitionDiv show={true} bgColor="#c76d2b" title="Clipping" />
                             </div>
-                            <div className={classes.image}>
+                            <div className="gallery-container__clipping-image">
                                 {clipping}
                             </div>
                         </div>
-                        <NavLink className={classes.button} to="/">{this.props.language === 'portuguese' ? '& Início' :
+                        <NavLink className="gallery-container-button" to="/">{this.props.language === 'portuguese' ? '& Início' :
                             this.props.language === 'english' ? '& Home' : this.props.language === 'french' ? '& Début' : ''}</NavLink>
                     </div>
                 </div>
                 <Backdrop show={this.state.showModal} clicked={this.closeHandler} />
                 <Modal show={this.state.showModal}>
-                    <div className={classes.imgContainer}>
-                        <img className={classes.img} alt="" src={this.state.image}></img>
+                    <div className="gallery-image-container">
+                        <img className="gallery-image-container-img" alt="" src={this.state.image}></img>
                     </div>
                 </Modal>
             </>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../../store/actions/actioncreators';
-import classes from './css/FullPage.module.css';
+import './styles.scss';
 import Helmet from 'react-helmet';
 
 import HeroSection from '../HeroSection';
@@ -93,7 +93,7 @@ export class FullPage extends Component {
                     <title>Orquestra Sanfônica Balaio Nordeste</title>
                     <meta name="description" content="Website da Orquestra Sanfônica Balaio Nordeste"></meta>
                 </Helmet>
-                <div className={classes.pageContainer}>
+                <div className="pageContainer">
                     <SideMenu clicked={this.scrollToSection} show={this.state.menu} />
                     <HeroSection />
                     <InfoSection />

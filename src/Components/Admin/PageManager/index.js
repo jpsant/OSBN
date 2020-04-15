@@ -5,13 +5,13 @@ import Cookies from 'js-cookie';
 
 import CSSTransition from 'react-transition-group/CSSTransition';
 
-import classes from './css/PageManager.module.css';
-import './css/animations.css';
+import './styles.scss';
+import './animations.css';
 
 import NewsEditor from '../UI/NewsEditor/NewsEditor';
-import NewsAdder from '../UI/NewsAdder/NewsAdder';
-import GalleryEditor from '../UI/GalleryEditor/GalleryEditor';
-import Menu from '../UI/Menu/Menu';
+import NewsAdder from '../UI/NewsAdder';
+import GalleryEditor from '../UI/GalleryEditor';
+import Menu from '../UI/Menu';
 
 class PageManager extends Component {
 
@@ -83,7 +83,7 @@ class PageManager extends Component {
 
         return (
 
-            <div className={classes.container}>
+            <div className="page-manager-container">
                 {redirect}
                 <CSSTransition in={this.state.newsAdd}
                     timeout={300}
