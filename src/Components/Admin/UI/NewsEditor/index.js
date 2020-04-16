@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import * as actions from '../../../../store/actions/actioncreators';
 
-import classes from './css/NewsEditor.module.css';
-import './css/cardAnimations.module.css';
+import './styles.scss';
+import './cardAnimations.css';
 
 import Modal from '../../../UI/modal/modal';
 import Backdrop from '../../../UI/backDrop';
@@ -105,40 +105,40 @@ class NewsEditor extends Component {
 
         return (
             <>
-                <div className={classes.buttonContainer}>
-                    <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                <div className="news-editor-button-container">
+                    <button className="news-editor-button-container-button" onClick={this.props.clicked}>Voltar</button>
                 </div>
-                <div className={classes.container}>
+                <div className="news-editor-container">
 
-                    <div className={classes.titleContainer}>
+                    <div className="news-editor-container__titleContainer">
                         <h1>Editor de Notícias!</h1>
                         <h2>Selecione a notícia que você deseja editar:</h2>
                     </div>
 
-                    <div className={classes.brPosts}>
-                        <div className={classes.titleContainer}>
-                            <h1 className={classes.title}>Português!</h1>
+                    <div className="news-editor-container__brPosts">
+                        <div className="news-editor-container__brPosts-titleContainer">
+                            <h1 className="news-editor-container__brPosts-titleContainer-title">Português!</h1>
                         </div>
 
-                        <div className={classes.postsContainerBr}>
+                        <div className="news-editor-container__brPosts-postsContainerBr">
                             {brPosts}
                         </div>
                     </div>
-                    <div className={classes.enPosts}>
-                        <div className={classes.titleContainer}>
-                            <h1 className={classes.title}>Inglês!</h1>
+                    <div className="news-editor-container__enPosts">
+                        <div className="news-editor-container__enPosts-titleContainer">
+                            <h1 className="news-editor-container__enPosts-titleContainer-title">Inglês!</h1>
                         </div>
 
-                        <div className={classes.postsContainerEn}>
+                        <div className="news-editor-container__enPosts-postsContainerEn">
                             {enPosts}
                         </div>
                     </div>
-                    <div className={classes.frPosts}>
-                        <div className={classes.titleContainer}>
-                            <h1 className={classes.title}>Francês!</h1>
+                    <div className="news-editor-container__frPosts">
+                        <div className="news-editor-container__frPosts-titleContainer">
+                            <h1 className="news-editor-container__frPosts-titleContainer-title">Francês!</h1>
                         </div>
 
-                        <div className={classes.postsContainerFr}>
+                        <div className="news-editor-container__frPosts-postsContainerFr">
                             {frPosts}
                         </div>
                     </div>
@@ -151,40 +151,40 @@ class NewsEditor extends Component {
                     <div>
                         <Backdrop clicked={() => this.setState({ showModal: false, modalItem: null, modalItemPosition: null })} show={this.state.showModal} />
                         <Modal show={this.state.showModal}>
-                            <div className={classes.editorContainer}>
-                                <div className={classes.previewContainer}>
-                                    <div className={classes.titleContainer}>
-                                        <h1 className={classes.title}>{this.state.modalTitle}</h1>
-                                        <img alt="" className={classes.image} src={this.state.modalImage}></img>
-                                        <h4 className={classes.date}>{this.state.modalDate}</h4>
-                                        <h3 className={classes.resume}>{this.state.modalResume}</h3>
+                            <div className="editor-modal-container">
+                                <div className="editor-modal-container__previewContainer">
+                                    <div className="editor-modal-container__previewContainer__titleContainer">
+                                        <h1 className="editor-modal-container__previewContainer__titleContainer-title">{this.state.modalTitle}</h1>
+                                        <img alt="" className="editor-modal-container__previewContainer__titleContainer-image" src={this.state.modalImage}></img>
+                                        <h4 className="editor-modal-container__previewContainer__titleContainer-date">{this.state.modalDate}</h4>
+                                        <h3 className="editor-modal-container__previewContainer__titleContainer-resume">{this.state.modalResume}</h3>
                                     </div>
-                                    <div className={classes.contentContainer}>
-                                        <h3 className={classes.content}>{this.state.modalContent}</h3>
+                                    <div className="editor-modal-container__previewContainer__contentContainer">
+                                        <h3 className="editor-modal-container__previewContainer__contentContainer-content">{this.state.modalContent}</h3>
                                     </div>
                                 </div>
-                                <div className={classes.editorContainer}>
-                                    <form>
-                                        <div className={classes.title}>
-                                            <label className={classes.label} htmlFor="title">Título</label>
+                                <div className="editor-modal-container__editorContainer">
+                                    <form className="editor-modal-container__editorContainer__form">
+                                        <div className="editor-modal-container__editorContainer__form-title">
+                                            <label htmlFor="title">Título</label>
                                             <input onChange={(event) => this.setState({ modalTitle: event.target.value })} value={this.state.modalTitle} type="text" id="title" placeholder="Título da notícia!"></input>
                                             <input onChange={this.imgHandler} type="file" id="file" name="file"></input>
                                         </div>
-                                        <div className={classes.date}>
+                                        <div className="editor-modal-container__editorContainer__form-date">
                                             <label htmlFor="date">Data</label>
                                             <input onChange={(event) => this.setState({ modalDate: event.target.value })} value={this.state.modalDate} type="text" id="date" placeholder="xx/xx/xxxx"></input>
                                         </div>
-                                        <div className={classes.content}>
+                                        <div className="editor-modal-container__editorContainer__form-content">
                                             <label htmlFor="content">Resumo</label>
                                             <input onChange={(event) => this.setState({ modalResume: event.target.value })} value={this.state.modalResume} type="text" id="content" placeholder="Resumo da notícia"></input>
                                         </div>
-                                        <div className={classes.body}>
+                                        <div className="editor-modal-container__editorContainer__form-body">
                                             <label htmlFor="body">Conteúdo da notícia</label>
                                             <textarea cols="45" rows="12" onChange={(event) => this.setState({ modalContent: event.target.value })} value={this.state.modalContent} type="text" id="body" placeholder="Conteúdo da notícia"></textarea>
                                         </div>
-                                        <div className={classes.submit}>
-                                            <button className={classes.button} onClick={this.submitPost}>Publicar!</button>
-                                            <button className={classes.removeButton} onClick={this.removePost}>Remover</button>
+                                        <div className="editor-modal-container__editorContainer__form__submit">
+                                            <button className="editor-modal-container__editorContainer__form__submit-button" onClick={this.submitPost}>Publicar!</button>
+                                            <button className="editor-modal-container__editorContainer__form__submit-removeButton" onClick={this.removePost}>Remover</button>
                                         </div>
                                     </form>
                                 </div>
@@ -215,10 +215,10 @@ class NewsEditor extends Component {
                     <div>
                         <Backdrop clicked={this.props.clicked} show={this.props.success && this.state.modal} />
                         <Modal show={this.props.success && this.state.modal}>
-                            <div className={classes.Modal}>
+                            <div className="news-editor-modal">
                                 <h1>Notícia Modificada com sucesso!</h1>
                                 <h2>Voltar para o menu principal:</h2>
-                                <button className={classes.button} onClick={this.props.clicked}>Voltar</button>
+                                <button className="news-editor-modal-button" onClick={this.props.clicked}>Voltar</button>
                             </div>
                         </Modal>
                     </div>

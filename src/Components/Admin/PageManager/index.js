@@ -8,7 +8,7 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import './styles.scss';
 import './animations.css';
 
-import NewsEditor from '../UI/NewsEditor/NewsEditor';
+import NewsEditor from '../UI/NewsEditor';
 import NewsAdder from '../UI/NewsAdder';
 import GalleryEditor from '../UI/GalleryEditor';
 import Menu from '../UI/Menu';

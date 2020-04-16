@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-.container {
+.news-editor-container {
     color: white;
     display: grid;
     grid-template-rows: .3fr auto auto auto .5fr;
 
-    .titleContainer {
+    &__titleContainer {
         grid-row: 1/2;
 
         h1 {
@@ -25,7 +25,7 @@
         }
     }
 
-    .brPosts {
+    &__brPosts {
         grid-row: 2/3;
         background-color: white;
         display: grid;
@@ -34,24 +34,24 @@
         border-radius: 5px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 
-        .titleContainer {
+        &-titleContainer {
             grid-row: 1/2;
 
-            .title {
+            &-title {
                 color: black;
                 margin: 0;
                 margin: 2% 0;
             }
         }
 
-        .postsContainerBr {
+        &-postsContainerBr {
             grid-row: 2/3;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, .5fr));
         }
     }
 
-    .enPosts {
+    &__enPosts {
         grid-row: 3/4;
         background-color: white;
         display: grid;
@@ -60,24 +60,24 @@
         border-radius: 5px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 
-        .titleContainer {
+        &-titleContainer {
             grid-row: 1/2;
 
-            .title {
+            &-title {
                 color: black;
                 margin: 0;
                 margin: 2% 0;
             }
         }
 
-        .postsContainerEn {
+        &-postsContainerEn {
             grid-row: 2/3;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         }
     }
 
-    .frPosts {
+    &__frPosts {
         grid-row: 4/5;
         background-color: white;
         display: grid;
@@ -86,17 +86,17 @@
         border-radius: 5px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 
-        .titleContainer {
+        &-titleContainer {
             grid-row: 1/2;
 
-            .title {
+            &-title {
                 color: black;
                 margin: 0;
                 margin: 2% 0;
             }
         }
 
-        .postsContainerFr {
+        &-postsContainerFr {
             grid-row: 2/3;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -104,7 +104,8 @@
     }
 }
 
-.buttonContainer {
+
+.news-editor-button-container {
     z-index: 100;
     width: 10%;
     position: fixed;
@@ -113,7 +114,7 @@
     display: grid;
     grid-template-rows: 1fr;
 
-    .button {
+    &-button {
         padding: 15% 25%;
         border-radius: 12px;;
         background-color: #318647;
@@ -128,88 +129,85 @@
 
 }
 
-.editorContainer {
+.editor-modal-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: white;
     border-radius: 5px;
-    // padding: 10%;
     height: 550px;
     font-family: 'Muli', sans-serif;
 
-    .previewContainer {
+    &__previewContainer {
         overflow-y: scroll;
         grid-column: 1/2;
         display: grid;
         grid-template-rows: .5fr 1fr;
-        // height: 100px;
 
-        .titleContainer {
+        &__titleContainer {
             grid-row: 1/2;
             margin: 5%;
 
-            .title {
+            &-title {
                 margin: 1% 0;
                 font-size: 2.5em;
             }
 
-            .image {
+            &-image {
                 width: 50%;
                 height: 50%;
             }
 
-            .date {
+            &-date {
                 margin: 1% 0;
             }
 
-            .resume {
+            &-resume {
                 margin: 5% 0;
                 text-align: center;
             }
         }
 
-        .contentContainer {
+        &__contentContainer {
             grid-row: 2/3;
             margin: 2%;
             word-break: normal;
-            // overflow-x: hidden;
 
-            .content {
+            &-content {
                 margin: 0;
                 text-align: justify;
             }
         }
     }
 
-    .editorContainer {
+    &__editorContainer {
         grid-column: 2/3;
         margin: 0 5%;
 
-        form {
+        &__form {
             grid-column: 1/3;
             display: grid;
             grid-template-rows: .2fr .2fr .2fr .9fr fr;
 
 
-            .title {
+            &-title {
                 grid-row: 1/2;
                 text-align: left;
                 // padding-bottom: 3%;
             }
 
-            .date {
+            &-date {
                 grid-row: 2/3;
                 text-align: left;
                 // padding-bottom: 3%;
             }
 
-            .content {
+            &-content {
                 grid-row: 3/4;
                 text-align: left;
                 // padding-bottom: 3%;
             }
 
-            .body {
+            &-body {
                 grid-row: 4/5;
                 // padding-bottom: 6%;
 
@@ -242,13 +240,13 @@
                 border: 1px solid #A7A7A7;
             }
 
-            .submit {
+            &__submit {
                 grid-row: 5/6;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 margin: 1%;
 
-                .button {
+                &-button {
                     padding: 3% 15%;
                     margin: 0% 5%;
                     border-radius: 3px;
@@ -261,7 +259,7 @@
                     font-size: 20px;
                 }
 
-                .removeButton {
+                &-removeButton {
                     padding: 3% 15%;
                     margin: 0% 5%;
                     border-radius: 3px;
@@ -278,7 +276,7 @@
     }
 }
 
-.Modal {
+.news-editor-modal {
     background-color: white;
     border-radius: 3px;
     font-family: 'Muli', sans-serif;
@@ -295,7 +293,7 @@
         margin-bottom: 4%;
     }
 
-    .button {
+    &-button {
         padding: 2% 6%;
         border-radius: 3px;
         background: #318647;
@@ -308,7 +306,7 @@
         transition: .3s cubic-bezier(.175, .885, .32, 1.275);
     }
 
-    .button:hover {
+    &-button:hover {
         transform: translateY(-6px);
     }
 }

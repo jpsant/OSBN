@@ -1,4 +1,4 @@
-.news-editor-container {
+.news-editor-container-card {
     display: grid;
     grid-template-rows: .5fr 1fr .5fr;
     background-color: white;
@@ -43,6 +43,6 @@
     }
 }
 
-.news-editor-container:hover {
+.news-editor-container-card:hover {
     transform: translateY(-10px)
 }
