@@ -1,18 +1,9 @@
-@mixin font-face($font-name) {
-    @font-face {
-        font-family: $font-name;
-        src: url('../../../../assets/font/xilosa_.ttf') format("truetype");
-    }
-}
-
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@include font-face(Xilosa);
+@import '../../../../mixins/mixins.scss';
 
 
 .container {
-    font-family: Xilosa;
+    font-family: 'Xilosa';
     z-index: 999999;
-    // background-color: #AC6837;
     background-color: #c76d2b;
     position: fixed;
     height: 100vh;

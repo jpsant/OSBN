@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import * as actions from '../../../store/actions/actioncreators';
 
@@ -9,68 +9,47 @@ import IntersectionVisible from 'react-intersection-visible';
 import TransitionDiv from '../../UI/transitionDiv';
 import ScheduleDiv from '../../UI/scheduleDiv';
 
-class ScheduleSection extends Component {
+export default function ScheduleSection({ forwardRef }) {
 
-    onShow() {
-        this.props.changeSection('schedule');
-        this.setState({show: true})
-    }
+  useEffect(() => {
+    axios.get('https://osbn-a36f9.firebaseio.com/agenda.json')
+      .then(response => {
+        setAgenda(response.data)
+      });
+  }, [])
 
-    componentDidMount() {
-        axios.get('https://osbn-a36f9.firebaseio.com/agenda.json')
-            .then(response => {
-                this.setState({ agenda: response.data })
-            });
-    }
+  const [show, setShow] = useState(false);
+  const [agenda, setAgenda] = useState([]);
 
-    componentWillUnmount() {
-        this.clear();
-    }
+  const language = useSelector(state => state.languageReducer.language);
+  const dispatch = useDispatch();
 
-    state = {
-        agenda: null,
-        show: false
-    }
+  function onShow() {
+    dispatch(actions.changeSection('schedule'));
+    setShow(true);
+  }
 
-    clear = () => {
-        this.setState({agenda: null});
-    }
-
-    render() {
-
-        let cards = null;
-        if (this.state.agenda !== null) {
-            let items = this.state.agenda;
-            cards = items.map(item => {
-                return <ScheduleDiv language={this.props.language} link={item.link} key={item.id} date={item.data} event={item.evento} local={item.local} maps={item.maps}/>
+  return (
+    <IntersectionVisible onShow={onShow}>
+      <div ref={forwardRef} className="scheduleContainer">
+        <TransitionDiv show={show} bgColor="#d35523" title={language === 'portuguese' ? 'Agenda' :
+          language === 'english' ? 'Schedule' :
+            language === 'french' ? ' Agenda' : ''} />
+        <div className="scheduleContainer__container">
+          {
+            agenda.map(item => {
+              return <ScheduleDiv
+                language={language}
+                link={item.link}
+                key={item.id}
+                date={item.data}
+                event={item.evento}
+                local={item.local}
+                maps={item.maps} />
             })
-        }
-
-        return (
-            <IntersectionVisible onShow={e => this.onShow(e)}>
-                <div ref={this.props.forwardRef} className="scheduleContainer">
-                    <TransitionDiv show={this.state.show} bgColor="#d35523" title={this.props.language === 'portuguese' ? 'Agenda' :
-                        this.props.language === 'english' ? 'Schedule' :
-                            this.props.language === 'french' ? ' Agenda' : ''} />
-                    <div className="scheduleContainer__container">
-                        {cards}
-                    </div>
-                </div>
-            </IntersectionVisible>
-        );
-    }
+          }
+        </div>
+      </div>
+    </IntersectionVisible>
+  );
 }
-
-const mapStateToProps = state => {
-    return {
-        language: state.languageReducer.language
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        changeSection: (section) => dispatch(actions.changeSection(section))
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ScheduleSection);

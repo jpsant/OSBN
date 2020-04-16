@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../../../store/actions/actioncreators';
 
 import './styles.scss';
@@ -8,49 +8,32 @@ import IntersectionVisible from 'react-intersection-visible';
 import TransitionDiv from '../../UI/transitionDiv';
 import HistoryDiv from '../../UI/historyDiv';
 
-export class HistorySection extends Component {
+export default function HistorySection({ forwardRef }) {
 
+  const [show, setShow] = useState(false);
+  const language = useSelector(state => state.languageReducer.language);
+  const dispatch = useDispatch();
 
-    onShow() {
-        this.props.changeSection('history');
-        this.setState({show: true});
-    }
+  function onShow() {
+    dispatch(actions.changeSection('history'));
+    setShow(true);
+  }
 
-    state = {
-        show: false
-    }
-
-    render() {
-        return (
-            <>
-                <IntersectionVisible onShow={(e) => this.onShow(e)}>
-                    <div ref={this.props.forwardRef} className="historyContainer">
-                        <TransitionDiv show={this.state.show} bgColor="#449376" title={this.props.language === 'portuguese' ? 'Histórico' :
-                            this.props.language === 'english' ? 'History' : this.props.language === 'french' ? 'Historique' : ''} />
-                        <HistoryDiv year="2018" />
-                        <HistoryDiv year="2017" />
-                        <HistoryDiv year="2016" />
-                        <HistoryDiv year="2015" />
-                        <HistoryDiv year="2014" />
-                        <HistoryDiv year="2013" />
-                        <HistoryDiv year="2012" />
-                    </div>
-                </IntersectionVisible>
-            </>
-        );
-    }
+  return (
+    <>
+      <IntersectionVisible onShow={(e) => onShow(e)}>
+        <div ref={forwardRef} className="historyContainer">
+          <TransitionDiv show={show} bgColor="#449376" title={language === 'portuguese' ? 'Histórico' :
+            language === 'english' ? 'History' : language === 'french' ? 'Historique' : ''} />
+          <HistoryDiv year="2018" />
+          <HistoryDiv year="2017" />
+          <HistoryDiv year="2016" />
+          <HistoryDiv year="2015" />
+          <HistoryDiv year="2014" />
+          <HistoryDiv year="2013" />
+          <HistoryDiv year="2012" />
+        </div>
+      </IntersectionVisible>
+    </>
+  );
 }
-
-const mapStateToProps = state => {
-    return {
-        language: state.languageReducer.language
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        changeSection: (section) => dispatch(actions.changeSection(section))
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(HistorySection);
