@@ -1,0 +1,21 @@
+.gallery-image-container {
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 3%;
+    background-color: white;
+    transition: .2s cubic-bezier(.175, .885, .32, 1.275);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: 20px solid transparent;
+    border-image: url('../../../assets/OSBNBORDAS/bordi.png') 42 round;
+    border-image-width: 23px;
+
+    &-image {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,MAAM;CAMrB;;AARD,AAII,kBAJc,CAId,UAAU,CAAC;EACP,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,IAAI;CAChB",
-    "sources": [
-        "ScheduleSection.module.scss"
-    ],
-    "names": [],
-    "file": "ScheduleSection.module.css"
-}

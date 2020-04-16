@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './App.css';
+import './global.scss';
 
 import LazyImport from './lazyLoading/lazyImport';
 import Helmet from 'react-helmet';
@@ -9,20 +9,20 @@ import Helmet from 'react-helmet';
 // utilizando esse componente auxiliar para 'lazy load' os containers.
 
 const LandingPage = LazyImport(() => {
-  return import('./Components/LandingPage/FullPage/FullPage');
+  return import('./Components/LandingPage/FullPage');
 })
 
 const Gallery = LazyImport(() => {
-  return import('./Components/Gallery/Gallery');
+  return import('./Components/Gallery');
 })
 
 
 const Login = LazyImport(() => {
-  return import('./Components/Admin/Login/Login');
+  return import('./Components/Admin/Login');
 })
 
 const PageManager = LazyImport(() => {
-  return import('./Components/Admin/PageManager/PageManager');
+  return import('./Components/Admin/PageManager');
 })
 
 const DvdSection = LazyImport(() => {

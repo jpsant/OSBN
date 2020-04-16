@@ -1,0 +1,10 @@
+@import './mixins/mixins.scss';
+@include font("Xilosa", './assets/font/xilosa_');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+html, body {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Muli';
+}

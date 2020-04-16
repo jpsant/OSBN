@@ -1,0 +1,9 @@
+.scheduleContainer {
+    background-color: #ba4e23;
+    overflow-x: hidden;
+
+    &__container {
+        padding: 5%;
+        display: grid;
+    }
+}

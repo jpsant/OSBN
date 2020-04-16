@@ -1,0 +1,55 @@
+@import '../../../mixins/mixins.scss';
+
+.gallery-section {
+    background-color: #9e8a0f;
+
+    &-gallery-container {
+        padding: 1% 1%;
+        display: grid;
+        grid-column-gap: 1%;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+        @media screen and (max-width: 1366px) {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
+
+        @media screen and (max-width: 450px) {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        @media screen and (max-width: 350px) {
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        }
+    }
+
+    &-galleryButton {
+        font-family: 'Muli';
+        background-color: #b6a121;
+        cursor: pointer;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        padding: 25px 42px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 22px;
+        margin: 2%;
+        transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+    }
+
+    &-galleryButton:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+}
+
+.gallery-image-container {
+
+    &-img {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+    }
+}
