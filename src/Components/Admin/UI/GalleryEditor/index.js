@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import uniqid from 'uniqid';
 
@@ -14,187 +14,158 @@ import Modal from '../../../UI/modal/modal';
 import BackDrop from '../../../UI/backDrop';
 import Spinner from '../../../UI/spinner/spinner';
 
-class GalleryEditor extends Component {
+export default function GalleryEditor({ clicked }) {
+  const success = useSelector(state => state.postReducer.success);
+  const loading = useSelector(state => state.postReducer.loading);
+  const dispatch = useDispatch();
+  const [images, setImages] = useState([]);
 
-    componentDidMount() {
-        axios.get('https://osbn-a36f9.firebaseio.com/galeria.json')
-            .then(response => {
-                this.setState({ gallery: response.data });
+  useEffect(() => {
+    axios.get('https://osbn-a36f9.firebaseio.com/galeria.json')
+      .then(response => {
+        setImages(response.data);
+      })
+  }, [images]);
+
+  const [image, setImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [modalImage, setModalImage] = useState(false);
+  const [modalForm, setModalForm] = useState(false);
+  const [modalSuccess, setModalSucces] = useState(false);
+  const [sucessRemoveImage, setSucessRemoveImage] = useState(false);
+  const [imgPosition, setImgPosition] = useState(null);
+
+  function formHandler(e) {
+    e.preventDefault();
+    setModalForm(!modalForm);
+  }
+
+  function imgHandler(imagem, position) {
+    setImage(imagem);
+    setModalImage(!modalImage);
+    setImgPosition(position);
+  }
+
+  function removeImage(e) {
+    e.preventDefault();
+    let position = imgPosition;
+    dispatch(actions.removeImage(position));
+    setModalImage(false);
+    setSucessRemoveImage(true);
+  }
+
+  function submitImage(e) {
+    e.preventDefault();
+    let imagePost = {
+      nome: null,
+      key: uniqid('img-'),
+      imagem: null
+    };
+    let image = selectedImage;
+    dispatch(actions.startAddImage(image, imagePost));
+    setModalForm(!modalForm);
+  }
+
+  return (
+    <>
+      <div className="gallery-editor-buttons-div">
+        <button className="gallery-editor-buttons-div-return-button" onClick={clicked}>Voltar</button>
+        <button className="gallery-editor-buttons-div-add-button" onClick={formHandler}>Adicionar Imagem</button>
+      </div>
+      <div className="gallery-button-container">
+        <div className="gallery-button-container__title-container">
+          <h1>Editor da Galeria!</h1>
+          <h2>Adicione imagens para a galeria ou Remova alguma imagem:</h2>
+        </div>
+        <div className="gallery-button-container-contentContainer">
+          {
+            images.map((item, index) => {
+              return <ImageContainer clicked={() => imgHandler(item.imagem, index)} key={item.key} image={item.imagem} />
             })
-    }
+          }
+        </div>
+      </div>
 
-    state = {
-        gallery: null,
-        image: null,
-        showImageModal: false,
-        showFormModal: false,
-        selectedImage: null,
-        imgPosition: null,
-        successModal: false,
-        sucessRemoveImage: false,
-    }
+      <CSSTransition in={modalImage}
+        classNames="news"
+        unmountOnExit
+        onExit={() => setModalImage(false)}
+        timeout={500}
+      >
+        <div>
+          <BackDrop clicked={imgHandler} show={modalImage} />
+          <Modal show={modalImage}>
+            <div className="modal-container">
+              <div className="modal-container__modalImage">
+                <img className="modal-container__modalImage-image" alt="" src={image}></img>
+              </div>
+              <div className="modal-container__modal-buttons">
+                <button onClick={removeImage} className="modal-container__modal-buttons-button">Remover Imagem</button>
+              </div>
+            </div>
+          </Modal>
+        </div>
+      </CSSTransition>
 
-    submitImage = (event) => {
-        event.preventDefault();
-
-        let imagePost = {
-            nome: null,
-            key: uniqid('img-'),
-            imagem: null
-        }
-
-        let image = this.state.selectedImage;
-        this.props.submitImage(image, imagePost);
-        this.setState(prevState => ({
-            showFormModal: !prevState.showFormModal
-        }))
-    }
-
-    removeImage = (event) => {
-        event.preventDefault();
-        let position = this.state.imgPosition;
-        this.props.removeImage(position);
-        this.setState({showImageModal: false, sucessRemoveImage: true});
-    }
-
-    formHandler = (event) => {
-        event.preventDefault();
-        this.setState(prevState => ({
-            showFormModal: !prevState.showFormModal
-        }))
-    }
-
-    imgHandler = (imagem, position) => {
-        this.setState(prevState => ({
-            showImageModal: !prevState.showImageModal,
-            image: imagem,
-            imgPosition: position
-        }))
-    }
-
-    render() {
-        let images = null;
-        if (this.state.gallery !== null) {
-            let image = this.state.gallery;
-            images = image.map((item, index) => {
-                return <ImageContainer clicked={() => this.imgHandler(item.imagem, index)} key={item.key} image={item.imagem} />
-            })
-        }
-
-
-        return (
-            <>
-                <div className="gallery-editor-buttons-div">
-                    <button className="gallery-editor-buttons-div-return-button" onClick={this.props.clicked}>Voltar</button>
-                    <button className="gallery-editor-buttons-div-add-button" onClick={this.formHandler}>Adicionar Imagem</button>
+      <CSSTransition in={modalForm}
+        classNames="news"
+        unmountOnExit
+        onExit={() => setModalForm(false)}
+        timeout={500}
+      >
+        <div>
+          <BackDrop clicked={() => setModalForm(!modalForm)} show={modalForm} />
+          <Modal show={modalForm}>
+            <div className="form-modal-container">
+              <div className="form-modal-container__titleContainer">
+                <h1>Adicionar Nova imagem</h1>
+                <h2>Selecione a imagem que você deseja adicionar:</h2>
+              </div>
+              <div className="form-modal-container__buttonsContainer">
+                <div className="form-modal-container__buttonsContainer-selector">
+                  <label htmlFor='file'>Selecionar Imagem</label>
+                  <input onChange={e => setSelectedImage(e.target.files[0])} type="file" id="file" name="file"></input>
                 </div>
-                <div className="gallery-button-container">
-                    <div className="gallery-button-container__title-container">
-                        <h1>Editor da Galeria!</h1>
-                        <h2>Adicione imagens para a galeria ou Remova alguma imagem:</h2>
-                    </div>
-                    <div className="gallery-button-container-contentContainer">
-                        {images}
-                    </div>
+                <div className="form-modal-container__buttonsContainer-submit">
+                  <button disabled={selectedImage !== null ? false : true} onClick={submitImage} className="form-modal-container__buttonsContainer-submit-button">
+                    Enviar!
+                  </button>
                 </div>
+              </div>
+            </div>
+          </Modal>
+        </div>
+      </CSSTransition>
 
+      <CSSTransition in={loading}
+        classNames="news"
+        unmountOnExit
+        timeout={500}
+        onExit={() => success ? setModalSucces(true) : setModalSucces(false)}
+      >
+        <div>
+          <BackDrop show={loading} clicked={() => setModalForm(false)} />
+          <Spinner />
+        </div>
+      </CSSTransition>
 
-                <CSSTransition in={this.state.showImageModal}
-                    classNames="news"
-                    unmountOnExit
-                    onExit={() => this.setState({ showImageModal: false })}
-                    timeout={500}
-                >
-                    <div>
-                        <BackDrop clicked={this.imgHandler} show={this.state.showImageModal} />
-                        <Modal show={this.state.showImageModal}>
-                            <div className="modal-container">
-                                <div className="modal-container__modalImage">
-                                    <img className="modal-container__modalImage-image" alt="" src={this.state.image}></img>
-                                </div>
-                                <div className="modal-container__modal-buttons">
-                                    <button onClick={this.removeImage} className="modal-container__modal-buttons-button">Remover Imagem</button>
-                                </div>
-                            </div>
-                        </Modal>
-                    </div>
-                </CSSTransition>
-
-                <CSSTransition in={this.state.showFormModal}
-                    classNames="news"
-                    unmountOnExit
-                    onExit={() => this.setState({ showFormModal: false })}
-                    timeout={500}
-                >
-                    <div>
-                        <BackDrop clicked={this.formHandler} show={this.state.showFormModal} />
-                        <Modal show={this.state.showFormModal}>
-                            <div className="form-modal-container">
-                                <div className="form-modal-container__titleContainer">
-                                    <h1>Adicionar Nova imagem</h1>
-                                    <h2>Selecione a imagem que você deseja adicionar:</h2>
-                                </div>
-                                <div className="form-modal-container__buttonsContainer">
-                                    <div className="form-modal-container__buttonsContainer-selector">
-                                        <label htmlFor='file'>Selecionar Imagem</label>
-                                        <input onChange={(e) => this.setState({ selectedImage: e.target.files[0] })} type="file" id="file" name="file"></input>
-                                    </div>
-                                    <div className="form-modal-container__buttonsContainer-submit">
-                                        <button disabled={this.state.selectedImage !== null ? false : true} onClick={this.submitImage} className="form-modal-container__buttonsContainer-submit-button">Enviar!</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Modal>
-                    </div>
-                </CSSTransition>
-
-                <CSSTransition in={this.props.loading}
-                    classNames="news"
-                    unmountOnExit
-                    timeout={500}
-                    onExit={() => this.props.success ? this.setState({ successModal: true }) : this.setState({successModal: false})} 
-                >
-                    <div>
-                        <BackDrop show={this.props.loading} clicked={() => this.setState({showFormModal: false})} />
-                        <Spinner />
-                    </div>
-                </CSSTransition>
-
-                <CSSTransition in={this.props.success && this.state.successModal}
-                    classNames="news"
-                    unmountOnExit
-                    onExit={() => this.setState({ successModal: false })}
-                    timeout={500}
-                >
-                    <div>
-                        <BackDrop clicked={() => this.setState({successModal: false})} show={this.props.success && this.state.successModal} />
-                        <Modal show={this.props.success && this.state.successModal}>
-                            <div className="gallery-editor-modal">
-                                <h1>{this.state.sucessRemoveImage ? 'Imagem Removida com Sucesso!' : 'Imagem Adicionada com Sucesso!'}</h1>
-                                <h2>Voltar para o menu principal:</h2>
-                                <button className="gallery-editor-modal-button" onClick={this.props.clicked}>Voltar</button>
-                            </div>
-                        </Modal>
-                    </div>
-                </CSSTransition>
-            </>
-        )
-    }
+      <CSSTransition in={success && modalSuccess}
+        classNames="news"
+        unmountOnExit
+        onExit={() => setModalSucces(false)}
+        timeout={500}
+      >
+        <div>
+          <BackDrop clicked={() => setModalSucces(true)} show={success && modalSuccess} />
+          <Modal show={success && modalSuccess}>
+            <div className="gallery-editor-modal">
+              <h1>{sucessRemoveImage ? 'Imagem Removida com Sucesso!' : 'Imagem Adicionada com Sucesso!'}</h1>
+              <h2>Voltar para o menu principal:</h2>
+              <button className="gallery-editor-modal-button" onClick={clicked}>Voltar</button>
+            </div>
+          </Modal>
+        </div>
+      </CSSTransition>
+    </>
+  )
 }
-
-const mapStateToProps = state => {
-    return {
-        loading: state.postReducer.loading,
-        success: state.postReducer.success
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        submitImage: (image, imagePost) => dispatch(actions.startAddImage(image, imagePost)),
-        removeImage: (position) => dispatch(actions.startRemoveImage(position))
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(GalleryEditor);

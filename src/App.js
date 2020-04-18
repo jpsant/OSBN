@@ -16,7 +16,6 @@ const Gallery = LazyImport(() => {
   return import('./Components/Gallery');
 })
 
-
 const Login = LazyImport(() => {
   return import('./Components/Admin/Login');
 })

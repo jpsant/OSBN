@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.scss';
 
-const imageEditorCards = (props) => {
+const imageEditorCards = ({ clicked, image}) => {
     return (
-        <div className="image-editor-container" onClick={props.clicked}>
-            <img className="image-editor-container" alt="#" src={props.image}></img>
+        <div className="image-editor-container" onClick={clicked}>
+            <img className="image-editor-container" alt="#" src={image}></img>
         </div>
     );
 }
