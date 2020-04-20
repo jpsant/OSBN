@@ -26,7 +26,7 @@ export default function Login() {
 
   return (
     <>
-    {/* {isAuthenticated(token, '/admin/pageManagement')} */}
+    {isAuthenticated(token, '/admin/pageManagement')}
       <div className="login-container">
         <CSSTransition in={loading !== true}
           classNames="news"
