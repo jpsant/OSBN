@@ -6,11 +6,11 @@ let cookie = Cookies.get('acess_token');
 
 function isAuthenticated(token, use) {
   if (use === '/admin/pageManagement') {
-    if (token !== false && cookie !== undefined) {
+    if (token !== false) {
       return <Redirect to={use} />
     }
   } else {
-    if (token === false && cookie === undefined) {
+    if (token === false || cookie === undefined) {
       return <Redirect to={use} />
     }
   }

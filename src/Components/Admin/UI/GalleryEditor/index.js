@@ -17,15 +17,16 @@ import Spinner from '../../../UI/spinner/spinner';
 export default function GalleryEditor({ clicked }) {
   const success = useSelector(state => state.postReducer.success);
   const loading = useSelector(state => state.postReducer.loading);
+  const token = useSelector(state => state.authReducer.idToken);
   const dispatch = useDispatch();
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios.get('https://osbn-a36f9.firebaseio.com/galeria.json')
+    axios.get(`https://osbn-a36f9.firebaseio.com/galeria.json`)
       .then(response => {
         setImages(response.data);
       })
-  }, [images]);
+  }, []);
 
   const [image, setImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -62,7 +63,7 @@ export default function GalleryEditor({ clicked }) {
       imagem: null
     };
     let image = selectedImage;
-    dispatch(actions.startAddImage(image, imagePost));
+    dispatch(actions.startAddImage(image, imagePost, token));
     setModalForm(!modalForm);
   }
 
