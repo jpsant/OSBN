@@ -42,17 +42,16 @@
             width: 90%;
         }
     }
+}
 
-    .eventDiv::-webkit-scrollbar { 
-        display: none; 
-    }
-
-
+.history-div-container-eventDiv::-webkit-scrollbar {
+    display: none !important;
+    visibility: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 0.8em !important;
-    scroll-behavior: smooth !important;
+    width: 0.8em ;
+    scroll-behavior: smooth ;
 }
 
 ::-webkit-scrollbar-thumb {

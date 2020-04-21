@@ -1,12 +1,12 @@
 .container {
-  display: grid;
+  opacity: 1 !important;
 }
 
 .loguinho {
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   height: 65vh;
   top: 50%;
@@ -21,56 +21,101 @@
 
   @media screen and (max-width: 525px) {
     top: 85%;
-    height: 25vh;
+    height: 35vh;
     animation: none;
+    fill-opacity: 1;
   }
 }
 
 .st0 {
   fill: #f8d8a2;
-  opacity: 0;
+  opacity: 1;
   animation: colorsOpacity 2s forwards 2.7s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .st1 {
   fill: #59351b;
   opacity: 0;
   animation: colorsOpacity 1s forwards 2.7s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st2 {
   fill: #0ba583;
   animation: colorsOpacity 1s forwards 2.5s;
   opacity: 0;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st3 {
   fill: #bfa931;
   animation: colorsOpacity 1s forwards 2.8s;
   opacity: 0;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st4 {
   fill: #ef9928;
   animation: colorsOpacity 1s forwards 2.9s;
   opacity: 0;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st5 {
   fill: #eb9b20;
   animation: colorsOpacity 1s forwards 2.5s;
   opacity: 0;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st6 {
   fill: #eb621c;
   animation: colorsOpacity 1s forwards 2.7s;
   opacity: 0;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st7 {
   fill: #af8c56;
   animation: colorsOpacity 1s forwards 2.8s;
   opacity: 0;
 
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st8 {
   opacity: 0;
   animation: colorsOpacity 1s forwards 2.5s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+  }
 }
 .st9 {
   font-size: 17.564px;
@@ -79,15 +124,21 @@
   font-family: "Corbel";
 }
 .st11 {
-  fill: #F8D8A2;
+  fill: #f8d8a2;
 }
-
 
 .triggered {
   fill: transparent;
   stroke-dasharray: 1520;
   stroke-dashoffset: 1500;
   animation: dash 3s linear forwards, fille 1s forwards 2.5s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
+    fill: #f8d8a2;
+  }
 }
 
 .arabescos {
@@ -96,6 +147,12 @@
   stroke-dashoffset: 500;
   animation: arabescos 4s linear forwards 3s, arabescoColors 2s forwards 3.5s;
 
+  @media screen and (max-width: 525px) {
+    animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
+    fill: #af8c56;
+  }
 }
 
 .titulo {
@@ -103,6 +160,13 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: title 4s linear forwards 3s, titleColor 2s forwards 3.5s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    stroke-dasharray: 0;
+    fill: #59351b;
+    opacity: 1;
+  }
 }
 
 .linhas {
@@ -110,17 +174,31 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: rectangles 4s linear forwards 3s, rectanglesColor 2s forwards 3.5s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    stroke-dasharray: 0;
+    opacity: 1;
+    fill: #af8c56;
+  }
 }
 
-.legenda { 
-    fill: transparent;
+.legenda {
+  fill: transparent;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: title 4s linear forwards 3s, subtitleColor 2s forwards 3.5s;
+
+  @media screen and (max-width: 525px) {
+    animation: none;
+    stroke-dasharray: 0;
+    opacity: 1;
+    fill: #59351b;  
+  }
 }
 
 .arcos {
-fill: transparent;
+  fill: transparent;
   stroke-dasharray: 2420;
   stroke-dashoffset: 2600;
   animation: title 3.5s linear forwards 4s, archColors 2s forwards 6s;
@@ -129,8 +207,10 @@ fill: transparent;
     stroke-dasharray: auto;
     stroke-dashoffset: auto;
     animation: archColors 3s linear forwards 5s;
-    // stroke-dasharray: 1000;
-    // stroke-dashoffset: 1000;
+  }
+
+  @media screen and (max-width: 525px) {
+    animation: none;
   }
 }
 
@@ -177,32 +257,32 @@ fill: transparent;
 }
 
 @keyframes rectangles {
-    to {
-        stroke-dashoffset: 0;
-      }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes rectanglesColor {
-    to {
-        fill: #AF8C56;
-      }
+  to {
+    fill: #af8c56;
+  }
 }
 
 @keyframes subtitleColor {
-    to {
-        fill: #59351B;
-    }
+  to {
+    fill: #59351b;
+  }
 }
 
 @keyframes archColors {
-    to {
-        fill: white;
-        stroke: #000;
-    }
+  to {
+    fill: white;
+    stroke: #000;
+  }
 }
 
 @keyframes levitate {
   to {
-   transform: translateY(-25%);
+    transform: translateY(-25%);
   }
 }

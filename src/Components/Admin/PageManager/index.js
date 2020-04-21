@@ -29,7 +29,7 @@ export default function PageManager() {
 
   return (
     <div className="page-manager-container">
-      {/* {isAuthenticated(token, '/login')} */}
+      {isAuthenticated(token, '/login')}
       <SwitchTransition>
         <CSSTransition in={currentSection}
           key={currentSection}
