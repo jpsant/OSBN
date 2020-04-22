@@ -6,7 +6,7 @@ import './global.scss';
 import LazyImport from './lazyLoading/lazyImport';
 import Helmet from 'react-helmet';
 
-// utilizando esse componente auxiliar para 'lazy load' os containers.
+// utilizing 'lazy-loading' to load part of the web-site at the time.
 
 const LandingPage = LazyImport(() => {
   return import('./Components/LandingPage/FullPage');
@@ -30,13 +30,12 @@ const DvdSection = LazyImport(() => {
 
 class App extends Component {
   render() {
-    // SE LIGAR NA SEQUENCIA DAS ROUTES!
+    // OBS: the routes sequence.
 
     let routes = (
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/gallery" exact component={Gallery} />
-        {/* <Route path="/news/:id" exact component={FullPost} /> */}
         <Route path="/login" exact component={Login} />
         <Route path="/dvd" exact component={DvdSection} />
         <Redirect to="/" />
@@ -48,7 +47,6 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/gallery" exact component={Gallery} />
-          {/* <Route path="/news/:id" exact component={FullPost} /> */}
           <Route path="/admin/pageManagement" component={PageManager} />
           <Route path="/login" exact component={Login} />
           <Route path="/dvd" exact component={DvdSection} />
