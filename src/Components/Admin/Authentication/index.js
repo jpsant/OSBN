@@ -10,7 +10,7 @@ function isAuthenticated(token, use) {
       return <Redirect to={use} />
     }
   } else {
-    if (token === false || cookie === undefined) {
+    if (token === false && cookie === undefined) {
       return <Redirect to={use} />
     }
   }

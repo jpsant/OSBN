@@ -62,35 +62,5 @@ export default function ContactSection({ forwardRef }) {
         </div>
       </div>
     </IntersectionVisible>
-  )
-}
-
-
-/* 
-
-state = {
-    show: false
-  }
-
-  onShow() {
-    this.props.changeSection('contact');
-    this.setState({ show: true })
-  }
-
-  const mapStateToProps = state => {
-  return {
-    language: state.languageReducer.language,
-    section: state.languageReducer.section
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    changeSection: (section) => dispatch(actions.changeSection(section))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ContactSection);
-
-
-*/
+  );
+};

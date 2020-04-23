@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss';
 
-import LanguageSelector from '../../UI/languageSelector/languageSelector';
+import LanguageSelector from '../../UI/languageSelector/hooks'
 import AnimatedLogo from '../../UI/heroLogo/heroLogo';
 
 export default function HeroSection() {

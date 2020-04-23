@@ -9,7 +9,7 @@
     top: 35%;
   }
 
-  .dropbtn {
+  &-dropbtn {
     border-radius: 8px;
     background-color: white;
     color: white;
@@ -57,7 +57,7 @@
   }
 }
 
-.svg {
+.flag-svg {
   height: 50px;
   width: 50px;
 }

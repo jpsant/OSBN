@@ -38,6 +38,9 @@ export default function GallerySection({ forwardRef }) {
 
   return (
     <>
+            <ul>
+              <li>oie</li>
+            </ul>
       <IntersectionVisible onShow={onShow}>
         <div ref={forwardRef} className="gallery-section">
           <TransitionDiv show={show} bgColor="#b69c00" title={language === 'portuguese' ? 'Galeria' :

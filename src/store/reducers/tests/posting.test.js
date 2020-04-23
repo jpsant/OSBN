@@ -63,7 +63,6 @@ describe("Posting Reducer tests", () => {
     });
   });
 
-
   it("should return sucess when the remove-post succeed", () => {
     expect(reducer({
       loading: false,
@@ -93,7 +92,6 @@ describe("Posting Reducer tests", () => {
       error: true
     });
   });
-
 
   it("should return sucess when the add-image succeed", () => {
     expect(reducer({

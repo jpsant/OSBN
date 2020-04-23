@@ -22,13 +22,13 @@ export default function NewsEditor({ clicked, }) {
   const [frPosts, setFrPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://osbn-a36f9.firebaseio.com/noticias.json')
+    axios.get(`https://osbn-a36f9.firebaseio.com/noticias.json`)
       .then(response => {
         setBrPosts(response.data.portuguese);
         setEnPosts(response.data.english);
         setFrPosts(response.data.french);
       })
-  }, [brPosts, enPosts, frPosts]);
+  }, []);
 
   const [itemLanguage, setItemLanguage] = useState(null);
   const [modal, setModal] = useState(false);

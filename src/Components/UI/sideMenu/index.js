@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './styles.scss';
 
-import LanguageSelector from '../languageSelector/languageSelector';
+import LanguageSelector from '../languageSelector/hooks';
 import MobileMenu from '../mobileMenu/mobileMenu';
 import MenuBackDrop from '../menuBackDrop/menuBackDrop';
 

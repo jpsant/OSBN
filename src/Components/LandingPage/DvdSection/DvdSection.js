@@ -33,7 +33,7 @@ import Spotify from '../../UI/animated-components/animated-spotify/spotify';
 import Youtube from '../../UI/animated-components/animated-yt/youtube';
 
 import Pagination from '../../UI/dvdPagination/pagination';
-import LanguageSelector from '../../UI/languageSelector/languageSelector';
+import LanguageSelector from '../../UI/languageSelector/hooks';
 
 class DvdSection extends Component {
 
