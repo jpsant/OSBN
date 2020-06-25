@@ -9,6 +9,8 @@ import IntersectionVisible from 'react-intersection-visible';
 import TransitionDiv from '../../UI/transitionDiv';
 import Table from '../../UI/table/table';
 
+import Languages from '../../MultiLanguages/language';
+
 export default function TechnicalSection({ forwardRef }) {
   const language = useSelector(state => state.languageReducer.language);
   const dispatch = useDispatch();
@@ -32,20 +34,14 @@ export default function TechnicalSection({ forwardRef }) {
   return (
     <IntersectionVisible onShow={onShow}>
       <div ref={forwardRef} style={{ backgroundColor: '#2b765a', display: 'grid' }}>
-        <TransitionDiv show={show} bgColor="#449376" title={language === 'portuguese' ? 'Repertório' :
-          language === 'english' ? 'Repertoire' :
-            language === 'french' ? 'Répertoire' : ''} />
+        <TransitionDiv show={show} bgColor="#449376" title={Languages[language].landingPage.technicalSection.transitionDiv} />
         <div className="musicContainer">
           <div className="musicContainer__table">
             <div className="musicContainer__table-music">
-              <h2>{language === 'portuguese' ? 'Música' :
-                language === 'english' ? 'Music' :
-                  language === 'french' ? 'Musique' : ''} <span>&</span></h2>
+              <h2>{Languages[language].landingPage.technicalSection.musicContainer__table__music} <span>&</span></h2>
             </div>
             <div className="musicContainer__table-composer">
-              <h2>{language === 'portuguese' ? 'Compositor' :
-                language === 'english' ? 'Composer' :
-                  language === 'french' ? 'Compositeur' : ''}<span>&</span></h2>
+              <h2>{Languages[language].landingPage.technicalSection.musicContainer__table__composer}<span>&</span></h2>
             </div>
           </div>
           <div className="musicContainer__content">

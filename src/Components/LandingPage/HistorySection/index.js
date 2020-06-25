@@ -8,6 +8,8 @@ import IntersectionVisible from 'react-intersection-visible';
 import TransitionDiv from '../../UI/transitionDiv';
 import HistoryDiv from '../../UI/historyDiv';
 
+import Languages from '../../MultiLanguages/language';
+
 export default function HistorySection({ forwardRef }) {
 
   const [show, setShow] = useState(false);
@@ -23,8 +25,7 @@ export default function HistorySection({ forwardRef }) {
     <>
       <IntersectionVisible onShow={(e) => onShow(e)}>
         <div ref={forwardRef} className="historyContainer">
-          <TransitionDiv show={show} bgColor="#449376" title={language === 'portuguese' ? 'Histórico' :
-            language === 'english' ? 'History' : language === 'french' ? 'Historique' : ''} />
+          <TransitionDiv show={show} bgColor="#449376" title={Languages[language].landingPage.historySection.transitionDiv} />
           <HistoryDiv year="2018" />
           <HistoryDiv year="2017" />
           <HistoryDiv year="2016" />

@@ -10,6 +10,8 @@ import { Fade } from 'react-reveal';
 import TransitionDiv from '../../UI/transitionDiv';
 import NewsCard from '../../UI/newsCard/newsCard';
 
+import Languages from '../../MultiLanguages/language';
+
 export default function NewsSection({ forwardRef }) {
   const language = useSelector(state => state.languageReducer.language);
   const dispatch = useDispatch();
@@ -33,8 +35,7 @@ export default function NewsSection({ forwardRef }) {
   return (
     <IntersectionVisible onShow={onShow}>
       <div ref={forwardRef} className="newsDiv">
-        <TransitionDiv show={show} bgColor="#c76d2b" title={language === 'portuguese' ? 'Notícias' :
-          language === 'english' ? 'News' : language === 'french' ? 'Nouvelles' : ''} />
+        <TransitionDiv show={show} bgColor="#c76d2b" title={Languages[language].landingPage.newsSection.transitionDiv} />
         <Fade>
           <div className="newsDiv__container">
             <div className="newsDiv__container__newsAlert">
@@ -45,12 +46,7 @@ export default function NewsSection({ forwardRef }) {
               </div>
               <div className="newsDiv__container__newsAlert-textContainer">
                 <h2 className="newsDiv__container__newsAlert-textContainer-text">
-                  {
-                    language === 'english' ? 'There is no news avaliable'
-                      : language === 'portuguese' ? 'No momento não há notícias disponíveis'
-                        : language === 'french' ? 'Il n\'y a actuellement aucune nouvelle disponible'
-                          : ' '
-                  }
+                  {Languages[language].landingPage.newsSection.newsAlert}
                 </h2>
               </div>
             </div>
