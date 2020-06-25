@@ -12,6 +12,8 @@ import GalleryImage from '../../UI/galleryImage';
 import Backdrop from '../../UI/backDrop';
 import Modal from '../../UI/modal/modal';
 
+import Languages from '../../MultiLanguages/language';
+
 export default function GallerySection({ forwardRef }) {
 
   const language = useSelector(state => state.languageReducer.language);
@@ -38,13 +40,9 @@ export default function GallerySection({ forwardRef }) {
 
   return (
     <>
-            <ul>
-              <li>oie</li>
-            </ul>
       <IntersectionVisible onShow={onShow}>
         <div ref={forwardRef} className="gallery-section">
-          <TransitionDiv show={show} bgColor="#b69c00" title={language === 'portuguese' ? 'Galeria' :
-            language === 'english' ? 'Gallery' : language === 'french' ? 'Galerie' : ''} />
+          <TransitionDiv show={show} bgColor="#b69c00" title={Languages[language].landingPage.gallerySection.transitionDiv} />
           <div className="gallery-section-gallery-container">
             <LazyLoad debounce={false} throttle={250}>
               <GalleryImage clicked={() => openHandler('https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.webp?alt=media&token=63866687-25b3-4639-9388-c78328d734ee')} image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2FFoto%20-%20divulga%C3%A7%C3%A3o%206.webp?alt=media&token=63866687-25b3-4639-9388-c78328d734ee" />
@@ -59,9 +57,9 @@ export default function GallerySection({ forwardRef }) {
               <GalleryImage clicked={() => openHandler('https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Ffoto%20-%20divulga%C3%A7%C3%A3o%2010.webp?alt=media&token=8a867fc4-f8d3-4880-91dc-c8d83472b2bf')} image="https://firebasestorage.googleapis.com/v0/b/osbn-a36f9.appspot.com/o/imagens%2Ffoto%20-%20divulga%C3%A7%C3%A3o%2010.webp?alt=media&token=8a867fc4-f8d3-4880-91dc-c8d83472b2bf" />
             </LazyLoad>
           </div>
-          <NavLink to="/gallery" className="gallery-section-galleryButton">{language === 'portuguese' ? 'Ir para Galeria!' :
-            language === 'english' ? 'Visit the Gallery!' :
-              language === 'french' ? 'Aller à la galerie!' : ''}</NavLink>
+          <NavLink to="/gallery" className="gallery-section-galleryButton">
+            {Languages[language].landingPage.gallerySection.galleryButton}
+          </NavLink>
         </div>
         <Backdrop show={modal} clicked={closeHandler} />
         <Modal show={modal}>

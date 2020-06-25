@@ -12,6 +12,8 @@ import GalleryPanel from '../UI/galleryPanel/galleryPanel';
 import Modal from '../UI/modal/modal';
 import Backdrop from '../UI/backDrop';
 
+import Languages from '../MultiLanguages/language';
+
 export default function Gallery() {
   const language = useSelector(state => state.languageReducer.language)
   const [images, setImages] = useState([]);
@@ -35,14 +37,12 @@ export default function Gallery() {
     <>
       <Helmet>
         <title>Orquestra Sanfônica Balaio Nordeste Galeria</title>
-        <meta name="description" content="Galeria de Imagens da Orquestra Sanfônica Balaio Nordeste"></meta>
+        <meta name="description" content={Languages[language].gallery.helmet}></meta>
         <meta name="robots" content="all" />
         <meta name="googlebot" content="all" />
       </Helmet>
       <div style={{ backgroundColor: '#b05f24' }}>
-        <TransitionDiv show={true} bgColor="#c76d2b" title={language === 'portuguese' ? 'Galeria' :
-          language === 'english' ? 'Gallery' :
-            language === 'french' ? 'Galerie' : ''} />
+        <TransitionDiv show={true} bgColor="#c76d2b" title={Languages[language].gallery.transitionDiv} />
         <div className="gallery-container">
           <div className="gallery-container-galleryContent">
             {
@@ -63,8 +63,7 @@ export default function Gallery() {
               }
             </div>
           </div>
-          <NavLink className="gallery-container-button" to="/">{language === 'portuguese' ? '& Início' :
-            language === 'english' ? '& Home' : language === 'french' ? '& Début' : ''}</NavLink>
+          <NavLink className="gallery-container-button" to="/">{Languages[language].gallery.button}</NavLink>
         </div>
       </div>
       <Backdrop show={modal} clicked={() => { setModalImage(null); setModal(false); }} />

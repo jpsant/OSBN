@@ -9,6 +9,8 @@ import IntersectionVisible from 'react-intersection-visible';
 import TransitionDiv from '../../UI/transitionDiv';
 import ScheduleDiv from '../../UI/scheduleDiv';
 
+import Languages from '../../MultiLanguages/language';
+
 export default function ScheduleSection({ forwardRef }) {
 
   useEffect(() => {
@@ -32,9 +34,7 @@ export default function ScheduleSection({ forwardRef }) {
   return (
     <IntersectionVisible onShow={onShow}>
       <div ref={forwardRef} className="scheduleContainer">
-        <TransitionDiv show={show} bgColor="#d35523" title={language === 'portuguese' ? 'Agenda' :
-          language === 'english' ? 'Schedule' :
-            language === 'french' ? ' Agenda' : ''} />
+        <TransitionDiv show={show} bgColor="#d35523" title={Languages[language].landingPage.scheduleSection.transitionDiv} />
         <div className="scheduleContainer__container">
           {
             agenda.map(item => {
