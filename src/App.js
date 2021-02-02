@@ -63,6 +63,13 @@ class App extends Component {
           <meta name="description" content="Website da Orquestra Sanfônica Balaio Nordeste"></meta>
           <meta name="robots" content="all" />
           <meta name="googlebot" content="all" />
+          <meta name="twitter:title" content="Orquestra Sanfônica Balaio Nordeste" />
+          <meta name="twitter:description" content="Website da Orquestra Sanfônica Balaio Nordeste" />
+          <meta name="og:title" content="Orquestra Sanfônica Balaio Nordeste" />
+          <meta name="og:description" content="Website da Orquestra Sanfônica Balaio Nordeste" />
+          <meta name="keywords" content="Orquestra, Orquestra Sanfônica, Orquestra Sanfônica Balaio, Orquestra Sanfônica Balaio Nordeste, Balaio, Nordeste, Balaio Nordeste, Xaxado, Baião, Forró, Sanfona, Sinfônica, Sanfônica" />
+          <meta httpEquiv="content-language" content="pt-br, en-US" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Helmet>
         {routes}
       </div>
