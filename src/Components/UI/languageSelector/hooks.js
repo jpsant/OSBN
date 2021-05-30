@@ -30,7 +30,7 @@ export default function LanguageSelector({ show, position }) {
         <img className={'flag-svg'} src={flag === 'brazil' ? brazil :
           flag === 'usa' ? usa : flag === 'france' ? france : brazil} alt="" />
       </button>
-      <div className={'dropdownContent'}>
+      {/* <div className={'dropdownContent'}>
         <button onClick={portugueseHandler}>
           <img className={'flag-svg'} src={brazil} alt="Brazil Flag" />
         </button>
@@ -40,7 +40,7 @@ export default function LanguageSelector({ show, position }) {
         <button onClick={frenchHandler}>
           <img className={'flag-svg'} src={france} alt="France Flag" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

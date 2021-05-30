@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="footer-container__footer-text-text-container">
           <h1 className="footer-container__footer-text-text-container-text">Orquestra Sanfônica Balaio Nordeste</h1>
           <h1 className="footer-container__footer-text-text-container-text">&</h1>
-          <h2>Copyright © OSBN 2018</h2>
+          <h2>Copyright © OSBN 2021</h2>
         </div>
       </div>
       {/* <div className={classes.contactText}>

@@ -99,7 +99,7 @@ export class FullPage extends Component {
           <InfoSection />
           <HistorySection forwardRef={this.historySection} />
           <GallerySection forwardRef={this.gallerySection} />
-          <ScheduleSection forwardRef={this.scheduleSection} />
+          {/* <ScheduleSection forwardRef={this.scheduleSection} /> */}
           <NewsSection forwardRef={this.newsSection} />
           <TechnicalSection forwardRef={this.technicalSection} />
           <ContactSection forwardRef={this.contactSection} />

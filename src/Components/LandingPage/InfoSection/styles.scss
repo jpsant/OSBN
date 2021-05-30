@@ -6,14 +6,27 @@
     grid-template-rows: .6fr .2fr;
 
     &__text-container {
+        justify-self: center;
         height: auto;
         padding: 1%;
         text-align: justify;
         color: white;
         grid-row: 1/2;
+        max-width: 1470px;
+
+        h1 {
+            font-size: 2em;
+            font-family: 'Muli', sans-serif;
+            text-shadow: .5px .5px .5px #000;
+            grid-row: 1/2;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.2em;
+            }
+        }
 
         h2 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-family: 'Muli', sans-serif;
             text-shadow: .5px .5px .5px #000;
             grid-row: 1/2;

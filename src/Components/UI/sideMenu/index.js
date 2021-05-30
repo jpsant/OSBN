@@ -122,9 +122,11 @@ class sideMenu extends Component {
             </span>
             <button
               onClick={() => this.sectionChanger(3)}
+              disabled
+              style={{opacity: '0.5 !important'}}
               className={
                 this.props.section === "schedule"
-                  ? "redButton active"
+                  ? "redButton"
                   : "redButton"
               }
             >

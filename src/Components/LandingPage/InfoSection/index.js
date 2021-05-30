@@ -34,18 +34,48 @@ export default function InfoSection() {
           />
           <div className="info-container">
             <div className="info-container__text-container">
+              <h1>
+                {Languages[language].landingPage.infoSection.infoContainer__title1}
+              </h1>
               <h2>
-                {Languages[language].landingPage.infoSection.infoContainer__text1}
+                {Languages[language].landingPage.infoSection.infoContainer__text1_1}
               </h2>
               <h2>
-                {Languages[language].landingPage.infoSection.infoContainer__text2}
+                {Languages[language].landingPage.infoSection.infoContainer__text1_2}
+              </h2>
+              <h1>
+                {Languages[language].landingPage.infoSection.infoContainer__title2}
+              </h1>
+              <h2>
+                {Languages[language].landingPage.infoSection.infoContainer__text2_1}
               </h2>
               <h2>
-                {Languages[language].landingPage.infoSection.infoContainer__text3}
+                {Languages[language].landingPage.infoSection.infoContainer__text2_2}
               </h2>
+              <h2>
+                {Languages[language].landingPage.infoSection.infoContainer__text2_3}
+              </h2>
+              <h1>
+                {Languages[language].landingPage.infoSection.infoContainer__title3}
+              </h1>
+              <h2>
+                {Languages[language].landingPage.infoSection.infoContainer__text3_1}
+              </h2>
+              <h2>
+                {Languages[language].landingPage.infoSection.infoContainer__text3_2}
+              </h2>
+              <h2>
+                {Languages[language].landingPage.infoSection.infoContainer__text3_3}
+              </h2>
+              <h1>
+                {Languages[language].landingPage.infoSection.infoContainer__title4}
+              </h1>
               <h2>
                 {Languages[language].landingPage.infoSection.infoContainer__text4}
               </h2>
+              <h1>
+                {Languages[language].landingPage.infoSection.infoContainer__title5}
+              </h1>
               <h2>
                 {Languages[language].landingPage.infoSection.infoContainer__text5}
               </h2>
