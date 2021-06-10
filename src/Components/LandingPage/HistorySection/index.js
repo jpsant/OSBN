@@ -26,6 +26,8 @@ export default function HistorySection({ forwardRef }) {
       <IntersectionVisible onShow={(e) => onShow(e)}>
         <div ref={forwardRef} className="historyContainer">
           <TransitionDiv show={show} bgColor="#449376" title={Languages[language].landingPage.historySection.transitionDiv} />
+          <HistoryDiv year="2020" />
+          <HistoryDiv year="2019" />
           <HistoryDiv year="2018" />
           <HistoryDiv year="2017" />
           <HistoryDiv year="2016" />
