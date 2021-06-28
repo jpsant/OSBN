@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { connect } from "react-redux";
+import { UAParser } from 'ua-parser-js';
 import "./styles.scss";
 
 import LanguageSelector from "../languageSelector/hooks";
@@ -8,9 +9,10 @@ import MenuBackDrop from "../menuBackDrop/menuBackDrop";
 
 import Languages from '../../MultiLanguages/language';
 
+const system = new UAParser();
 class sideMenu extends Component {
   state = {
-    show: false,
+    show: system.getDevice().type !== 'mobile',
   };
 
   onCloseHandler = () => {
@@ -21,7 +23,7 @@ class sideMenu extends Component {
 
   sectionChanger = (section) => {
     this.props.clicked(section);
-    this.setState({ show: false });
+    // this.setState({ show: false });
   };
 
   render() {
@@ -67,11 +69,11 @@ class sideMenu extends Component {
           }}
         >
           <div className="menu__closeButton">
-            <span className="menu__closeButton-tooltipText">
+            {/* <span className="menu__closeButton-tooltipText">
               {Languages[this.props.language].sideMenu.closeMenu}
-            </span>
+            </span> */}
             <h2
-              onClick={this.onCloseHandler}
+              // onClick={this.onCloseHandler}
               style={{color: '#c76d2b'}}
               className="menu__closeButton-title"
             >
@@ -87,7 +89,7 @@ class sideMenu extends Component {
               className={
                 this.props.section === "history"
                   ? "greenButton active"
-                  : "greenButton"
+                  : "greenButton active"
               }
             >
               <img
@@ -106,7 +108,7 @@ class sideMenu extends Component {
               className={
                 this.props.section === "gallery"
                   ? "yellowButton active"
-                  : "yellowButton"
+                  : "yellowButton active"
               }
             >
               <img
@@ -146,7 +148,7 @@ class sideMenu extends Component {
               className={
                 this.props.section === "news"
                   ? "brownButton active"
-                  : "brownButton"
+                  : "brownButton active"
               }
             >
               <img
@@ -165,7 +167,7 @@ class sideMenu extends Component {
               className={
                 this.props.section === "technical"
                   ? "greenButton active"
-                  : "greenButton"
+                  : "greenButton active"
               }
             >
               <img
@@ -184,7 +186,7 @@ class sideMenu extends Component {
               className={
                 this.props.section === "contact"
                   ? "yellowButton active"
-                  : "yellowButton"
+                  : "yellowButton active"
               }
             >
               <img

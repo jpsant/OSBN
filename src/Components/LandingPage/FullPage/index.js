@@ -94,7 +94,7 @@ export class FullPage extends Component {
           <meta name="description" content="Website da Orquestra Sanfônica Balaio Nordeste"></meta>
         </Helmet>
         <div className="pageContainer">
-          <SideMenu clicked={this.scrollToSection} show={this.state.menu} />
+          <SideMenu clicked={this.scrollToSection} show={true} />
           <HeroSection />
           <InfoSection />
           <HistorySection forwardRef={this.historySection} />
