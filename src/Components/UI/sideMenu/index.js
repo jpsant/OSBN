@@ -73,7 +73,7 @@ class sideMenu extends Component {
               {Languages[this.props.language].sideMenu.closeMenu}
             </span> */}
             <h2
-              // onClick={this.onCloseHandler}
+              onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' })}}
               style={{color: '#c76d2b'}}
               className="menu__closeButton-title"
             >

@@ -3,7 +3,7 @@ import './styles.scss';
 
 import LanguageSelector from '../../UI/languageSelector/hooks'
 import AnimatedLogo from '../../UI/heroLogo/heroLogo';
-import img1 from '../../../assets/pngs/orquestra-5.jpg';
+import img1 from '../../../assets/pngs/orquestra-11.jpg';
 import img2 from '../../../assets/logo3.svg';
 
 export default function HeroSection() {
