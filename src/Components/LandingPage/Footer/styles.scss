@@ -8,8 +8,10 @@
     padding: 2% 0;
 
     @media screen and (max-width: 960px) {
-        grid-template-rows: 1fr;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
+        // grid-template-rows: 1fr;
+        // grid-template-columns: auto;
     }
 
     &__footer-image {
@@ -28,7 +30,8 @@
             align-self: center;
 
             @media screen and (max-width: 960px) {
-                height: 200px;
+                width: 200px;
+                margin: 32px 0;
             }
 
             @media screen and (max-width: 381px) {

@@ -3,12 +3,13 @@ import { useSelector } from 'react-redux';
 import './styles.scss';
 
 export default function Footer() {
-  const language = useSelector(state => state.languageReducer.language);
+  // const language = useSelector(state => state.languageReducer.language);
 
   return (
     <div className="footer-container">
       <div className="footer-container__footer-image">
-        <img alt="" className="footer-container__footer-image-logo" src={require('../../../assets/logo.svg')}></img>
+        <img alt="" className="footer-container__footer-image-logo" src={require('../../../assets/logo3.svg')}></img>
+        {/* <img alt="" className="footer-container__footer-image-logo" src={require('../../../assets/logo.svg')}></img> */}
       </div>
       <div className="footer-container__vertical-line"></div>
       <div className="footer-container__footer-text">

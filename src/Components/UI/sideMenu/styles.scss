@@ -29,7 +29,7 @@
             margin: 15% 0;
             font-size: 2em;
             color: #ac6937;
-            cursor: pointer;
+            cursor: default;
             transition: 0.3s ease-in-out;
         }
 
@@ -75,7 +75,7 @@
             position: absolute;
             z-index: 1;
             opacity: 0;
-            top: 18%;
+            top: 20%;
             // margin-top: 23%;
             left: -155%;
             transition: opacity 0.3s;
@@ -108,7 +108,7 @@
             position: absolute;
             z-index: 1;
             opacity: 0;
-            top: 32%;
+            top: 36%;
             left: -155%;
             transition: opacity 0.3s;
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -128,6 +128,7 @@
     }
 
     &__scheduleButton {
+        display: none;
 
         &-scheduleTooltip {
             visibility: hidden;
@@ -173,7 +174,7 @@
             position: absolute;
             z-index: 1;
             opacity: 0;
-            top: 59%;
+            top: 52%;
             left: -155%;
             transition: opacity 0.3s;
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -205,7 +206,7 @@
             position: absolute;
             z-index: 1;
             opacity: 0;
-            top: 73%;
+            top: 69%;
             left: -155%;
             transition: opacity 0.3s;
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -237,7 +238,7 @@
             position: absolute;
             z-index: 1;
             opacity: 0;
-            top: 87%;
+            top: 85%;
             left: -155%;
             transition: opacity 0.3s;
             box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
@@ -340,7 +341,7 @@
 @media (min-width: 600px) {
     .menu {
         width: 100px;
-        left: calc(100% - 110px);
+        left: calc(100% - 118px);
         top: calc(50% - 270px);
     }
 }
