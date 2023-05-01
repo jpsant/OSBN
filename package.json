@@ -28,7 +28,7 @@
     "react-youtube": "^7.9.0",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "ua-parser-js": "^0.7.28",
+    "ua-parser-js": "^0.7.33",
     "uniqid": "^5.0.3",
     "video-react": "^0.13.9"
   },
